@@ -17,14 +17,14 @@ export function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-background/70 border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border">
       <div className="mx-auto max-w-[1440px] px-8 lg:px-14 h-16 flex items-center justify-between">
         <Link
           href="/"
           className="inline-flex items-center text-foreground"
           aria-label="Matrix — home"
         >
-          <LogoLockup height={48} />
+          <LogoLockup height={60} />
         </Link>
         <nav className="hidden md:flex items-center gap-8">
           {nav.map((n) => {
@@ -58,7 +58,7 @@ export function Footer() {
     <footer className="border-t border-border mt-32">
       <div className="mx-auto max-w-[1440px] px-8 lg:px-14 py-20 grid grid-cols-12 gap-8">
         <div className="col-span-12 md:col-span-4">
-          <LogoLockup height={46} />
+          <LogoLockup height={64} />
           <p className="font-display text-2xl leading-tight mt-8 max-w-xs">
             Designing intelligence.
             <br />
