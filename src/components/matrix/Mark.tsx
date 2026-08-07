@@ -30,7 +30,7 @@ export function LogoMark({ size = 22, className = "" }: { size?: number; classNa
 /** Horizontal lockup — mark + mātṛkā wordmark. */
 export function LogoLockup({
   height = 30,
-  tagline = "mātṛkā — Evolution of Intelligence",
+  tagline = "Evolution of Intelligence",
   showTagline = true,
   className = "",
 }: {
