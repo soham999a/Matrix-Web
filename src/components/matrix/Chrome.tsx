@@ -18,13 +18,13 @@ export function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background border-b border-border">
-      <div className="mx-auto max-w-[1440px] px-8 lg:px-14 h-16 flex items-center justify-between">
+      <div className="mx-auto max-w-[1440px] px-8 lg:px-14 h-20 flex items-center justify-between">
         <Link
           href="/"
           className="inline-flex items-center text-foreground"
           aria-label="Matrix — home"
         >
-          <LogoLockup height={60} />
+          <LogoLockup height={54} />
         </Link>
         <nav className="hidden md:flex items-center gap-8">
           {nav.map((n) => {
@@ -147,7 +147,7 @@ export function PageShell({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
-      <main className="pt-16">{children}</main>
+      <main className="pt-20">{children}</main>
       <Footer />
     </div>
   );

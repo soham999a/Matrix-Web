@@ -30,19 +30,30 @@ export function LogoMark({ size = 22, className = "" }: { size?: number; classNa
 /** Horizontal lockup — mark + mātṛkā wordmark. */
 export function LogoLockup({
   height = 30,
+  tagline = "mātṛkā — Evolution of Intelligence",
+  showTagline = true,
   className = "",
 }: {
   height?: number;
+  tagline?: string;
+  showTagline?: boolean;
   className?: string;
 }) {
   return (
-    <img
-      src="/matrix-web-logo-final2.png"
-      alt="MATRIX · mātṛkā — Evolution of Intelligence"
-      className={`block select-none w-auto box-border border border-gold/40 p-1 ${className}`}
-      style={{ height }}
-      draggable={false}
-    />
+    <div className={`inline-flex flex-col items-center ${className}`}>
+      <img
+        src="/matrix-web-logo-final2.png"
+        alt="MATRIX · mātṛkā — Evolution of Intelligence"
+        className="block select-none w-auto box-border border border-gold/40 p-1"
+        style={{ height }}
+        draggable={false}
+      />
+      {showTagline && (
+        <span className="mt-1.5 font-mono text-[9px] leading-none tracking-[0.3em] uppercase text-gold/80 whitespace-nowrap">
+          {tagline}
+        </span>
+      )}
+    </div>
   );
 }
 
