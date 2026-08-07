@@ -27,12 +27,19 @@ export default function Index() {
     <PageShell>
       {/* ————— ACT I · COVER ————— */}
       <Section className="grain relative isolate overflow-hidden min-h-[100svh] pt-28 pb-20 flex flex-col">
-        {/* hero background image */}
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 -z-10 bg-cover bg-center opacity-[0.1]"
-          style={{ backgroundImage: "url('/matrix-hero-page-back.png')" }}
-        />
+        {/* hero background — looping neural animation */}
+        <div aria-hidden="true" className="absolute inset-0 -z-10 overflow-hidden">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="h-full w-full object-cover opacity-40"
+          >
+            <source src="/neuron-hero.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/30 to-background" />
+        </div>
         {/* corner registration marks */}
         <div className="absolute top-24 left-8 lg:left-14 font-mono text-[10px] tracking-[0.28em] uppercase text-gold">
           Cohered by Design
