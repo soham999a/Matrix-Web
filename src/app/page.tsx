@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
 import { NetworkIntelligence } from "@/components/matrix/NetworkIntelligence";
 import {
-  Constellation,
-  Iceberg,
-  Threads,
-  Prism,
-  Origami,
-  Observatory,
-  Ripple,
-} from "@/components/matrix/Metaphors";
+  RecursiveIntelligence,
+  CenteredCoherence,
+  Resonance,
+  RelationalIntelligence,
+  Transformation,
+  EmergenceObservation,
+} from "@/components/matrix/Figures";
+import { Ripple } from "@/components/matrix/Metaphors";
 
 export const metadata: Metadata = {
   title: "Matrix — The Invisible Architecture Behind the Future",
@@ -164,40 +164,40 @@ export default function Index() {
 
         {[
           {
-            N: Iceberg,
-            t: "The Iceberg",
-            k: "What you see is the smallest honest part.",
-            d: "We design the submerged structure first. The visible surface is what remains after the structure has been correctly built.",
+            N: RecursiveIntelligence,
+            t: "Recursive Intelligence",
+            k: "Patterns repeat across every scale.",
+            d: "Complexity emerges from remarkably simple rules. We design the rule, not the outcome — and let the structure grow itself.",
           },
           {
-            N: Constellation,
-            t: "The Constellation",
-            k: "Intelligence is a relation, not an object.",
+            N: CenteredCoherence,
+            t: "Centered Coherence",
+            k: "Intelligence begins with internal coherence.",
+            d: "Before external complexity, a system must agree with itself. We establish the centre first; everything else is measured from it.",
+          },
+          {
+            N: Resonance,
+            t: "Resonance & Frequency",
+            k: "Structure emerges when vibration becomes ordered.",
+            d: "Standing waves, interference, alignment. Organisations and models both hold form only where their frequencies agree.",
+          },
+          {
+            N: RelationalIntelligence,
+            t: "Relational Intelligence",
+            k: "Meaning exists between entities, not within them.",
             d: "Models, agents, humans, and instruments are nodes. Our work is the geometry that lets them think together.",
           },
           {
-            N: Threads,
-            t: "The Threads",
-            k: "Orchestration is the new composition.",
-            d: "Dozens of cooperating systems, woven so quietly that the user only hears the single note they expected.",
+            N: Transformation,
+            t: "Transformation",
+            k: "Knowledge changes form without losing truth.",
+            d: "One brief enters; research, product, policy and form emerge. Refraction, not distortion — the light is conserved.",
           },
           {
-            N: Prism,
-            t: "The Prism",
-            k: "One input. Many true answers.",
-            d: "Strategy is light passed through a discipline. We refract a single brief into research, product, policy, and form.",
-          },
-          {
-            N: Origami,
-            t: "The Origami",
-            k: "Transformation through folds, not force.",
-            d: "We change institutions by introducing one fold at a time — never by tearing the paper.",
-          },
-          {
-            N: Observatory,
-            t: "The Observatory",
-            k: "Patience is the most expensive instrument.",
-            d: "We measure phenomena that take years to resolve. Our research is calibrated for decades, not quarters.",
+            N: EmergenceObservation,
+            t: "Emergence & Observation",
+            k: "Reality reveals itself to careful observation.",
+            d: "We fold slowly and watch patiently. Discovery is a construction discipline, calibrated for decades rather than quarters.",
           },
         ].map((row, i) => (
           <article
@@ -218,6 +218,9 @@ export default function Index() {
               </h3>
               <p className="font-display text-2xl md:text-3xl italic text-ink/70 mt-5">{row.k}</p>
               <p className="mt-6 max-w-xl text-ink/75 leading-relaxed">{row.d}</p>
+              <p className="mt-6 font-mono text-[10px] tracking-[0.24em] uppercase text-ink/40">
+                Hover the figure · construction before form
+              </p>
             </div>
           </article>
         ))}
