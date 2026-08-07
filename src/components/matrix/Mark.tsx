@@ -42,7 +42,7 @@ export function LogoLockup({
   return (
     <div className={`inline-flex flex-col items-center ${className}`}>
       <img
-        src="/matrix-web-logo-final2.png"
+        src="/matrix-logo-website-final.png"
         alt="MATRIX · mātṛkā — Evolution of Intelligence"
         className="block select-none w-auto box-border border border-gold/40 p-1"
         style={{ height }}
