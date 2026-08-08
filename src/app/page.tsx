@@ -1,6 +1,6 @@
 import Link from "next/link";
-import type { Metadata } from "next";
 import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
+import { pageSeo } from "@/lib/seo";
 import { NetworkIntelligence } from "@/components/matrix/NetworkIntelligence";
 import {
   RecursiveIntelligence,
@@ -12,15 +12,28 @@ import {
 } from "@/components/matrix/Figures";
 import { Ripple } from "@/components/matrix/Metaphors";
 
-export const metadata: Metadata = {
-  title: "Matrix — The Invisible Architecture Behind the Future",
+export const metadata = pageSeo({
+  path: "/",
+  title: { absolute: "Matrix — Intelligence Architecture Studio for AI, Research & Design" },
   description:
-    "Matrix is a studio for civilization-scale intelligence. Research, counsel, products, and future systems for the institutions that will shape the next century.",
-  openGraph: {
+    "Matrix is an intelligence architecture studio in Kolkata designing the invisible architecture behind the future — original AI research, strategic counsel, custom AI agents, and applied intelligence platforms for civilization-scale institutions.",
+  keywords: [
+    "Matrix",
+    "intelligence architecture",
+    "artificial intelligence studio",
+    "AI research",
+    "AI consulting",
+    "custom AI agents",
+    "AI agency",
+    "intelligent systems design",
+    "AI products",
+    "Kolkata AI",
+  ],
+  og: {
     title: "Matrix — The Invisible Architecture Behind the Future",
     description: "Designing intelligence. Invisible systems. Visible impact.",
   },
-};
+});
 
 export default function Index() {
   return (
@@ -35,10 +48,10 @@ export default function Index() {
           <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/30 to-background" />
         </div>
         {/* corner registration marks */}
-        <div className="absolute top-24 left-8 lg:left-14 font-mono text-[10px] tracking-[0.28em] uppercase text-gold">
+        <div className="absolute top-24 left-5 sm:left-8 lg:left-14 font-mono text-[10px] tracking-[0.28em] uppercase text-gold pointer-events-none">
           Cohered by Design
         </div>
-        <div className="absolute top-24 right-8 lg:right-14 font-mono text-[10px] tracking-[0.28em] uppercase text-muted-foreground">
+        <div className="hidden sm:block absolute top-24 right-5 sm:right-8 lg:right-14 font-mono text-[10px] tracking-[0.28em] uppercase text-muted-foreground pointer-events-none">
           Intelligence · Architecture · Impact
         </div>
 
@@ -56,7 +69,10 @@ export default function Index() {
             </h1>
           </div>
           <div className="col-span-12 lg:col-span-5 flex justify-center lg:justify-end">
-            <NetworkIntelligence size={340} className="text-foreground" />
+            <NetworkIntelligence
+              size={340}
+              className="w-full h-auto max-w-[340px] text-foreground"
+            />
           </div>
         </div>
 
@@ -114,7 +130,7 @@ export default function Index() {
       </Section>
 
       {/* ————— ACT II · MANIFESTO FRAGMENT ————— */}
-      <Section id="manifesto" className="py-40 border-t border-border">
+      <Section id="manifesto" className="py-24 md:py-40 border-t border-border">
         <div className="grid grid-cols-12 gap-8 mb-20">
           <div className="col-span-12 md:col-span-3">
             <Eyebrow index="§ I">Manifesto · Fragment</Eyebrow>
@@ -150,7 +166,7 @@ export default function Index() {
       </Section>
 
       {/* ————— ACT III · METAPHOR SEQUENCE ————— */}
-      <Section variant="paper" className="py-32">
+      <Section variant="paper" className="py-20 md:py-32">
         <div className="grid grid-cols-12 gap-8 mb-20">
           <div className="col-span-12 md:col-span-3">
             <Eyebrow index="§ II">Sequence</Eyebrow>
@@ -227,7 +243,7 @@ export default function Index() {
       </Section>
 
       {/* ————— ACT IV · CAPABILITIES ————— */}
-      <Section className="py-40">
+      <Section className="py-24 md:py-40">
         <div className="grid grid-cols-12 gap-8 mb-20">
           <div className="col-span-12 md:col-span-3">
             <Eyebrow index="§ III">Capabilities</Eyebrow>
@@ -273,7 +289,7 @@ export default function Index() {
           ].map((c, i) => (
             <div
               key={c.n}
-              className={`col-span-12 md:col-span-4 group border-border p-10 min-h-[260px] flex flex-col justify-between
+              className={`col-span-12 md:col-span-4 group border-border p-8 md:p-10 min-h-[220px] md:min-h-[260px] flex flex-col justify-between
                           ${i < 9 ? "border-t" : ""}
                           ${i % 3 !== 2 ? "md:border-r" : ""}
                           ${i >= 6 ? "md:border-b" : ""}
@@ -297,7 +313,7 @@ export default function Index() {
       </Section>
 
       {/* ————— ACT V · QUIET POSITION ————— */}
-      <Section className="py-40 border-t border-border">
+      <Section className="py-24 md:py-40 border-t border-border">
         <div className="grid grid-cols-12 gap-8 items-center">
           <div className="col-span-12 md:col-span-5">
             <Ripple className="w-full text-foreground/80 breathe" />
@@ -315,7 +331,7 @@ export default function Index() {
       </Section>
 
       {/* ————— ACT VI · CLOSING & EXPANSION HINT ————— */}
-      <Section className="py-40 border-t border-border">
+      <Section className="py-24 md:py-40 border-t border-border">
         <div className="grid grid-cols-12 gap-8">
           <div className="col-span-12 md:col-span-7">
             <Eyebrow index="§ IV">Closing</Eyebrow>
@@ -336,7 +352,7 @@ export default function Index() {
             </p>
             <a
               href="mailto:system@matrka.net"
-              className="inline-block border border-foreground px-8 py-5 font-mono text-[11px] tracking-[0.28em] uppercase hover:bg-foreground hover:text-background transition-colors duration-500 w-fit"
+              className="inline-block border border-foreground px-8 py-5 font-mono text-[11px] tracking-[0.28em] uppercase hover:bg-foreground hover:text-background transition-colors duration-500 w-full sm:w-fit text-center"
             >
               Begin a Correspondence →
             </a>
@@ -368,7 +384,7 @@ export default function Index() {
                 key={d.to}
                 href={d.to}
                 className={[
-                  "group border-t border-l border-border p-8 min-h-[180px] flex flex-col justify-between hover:bg-foreground/[0.03] transition-colors duration-700",
+                  "group border-t border-l border-border p-6 sm:p-8 min-h-[140px] sm:min-h-[180px] flex flex-col justify-between hover:bg-foreground/[0.03] transition-colors duration-700",
                   "col-span-12",
                   i === 0 ? "md:col-span-4" : "md:col-span-2",
                   i === 4 ? "md:border-r" : "",

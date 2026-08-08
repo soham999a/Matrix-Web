@@ -1,17 +1,30 @@
-import type { Metadata } from "next";
 import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
+import { pageSeo } from "@/lib/seo";
 import { Origami } from "@/components/matrix/Metaphors";
 
-export const metadata: Metadata = {
-  title: "Applied Intelligence Portfolio — Matrix",
+export const metadata = pageSeo({
+  path: "/products",
+  title: "AI Products & Applied Intelligence Platforms",
   description:
-    "Nine platforms and services designed around one architecture: QiDS, Humming, ARPS, Mangrove, Datum, MindMuse Suite, AlgoVista, Digital and Consulting.",
-  openGraph: {
+    "Nine AI platforms and services from Matrix, one architecture: QiDS, Humming, ARPS, Mangrove, Datum, MindMuse Suite, AlgoVista, Digital and Consulting — built on the CES-QN and KALPA research frameworks.",
+  keywords: [
+    "Matrix products",
+    "AI products",
+    "applied intelligence platforms",
+    "QiDS",
+    "Humming AI",
+    "ARPS supply chain AI",
+    "Mangrove ESG",
+    "AI platform India",
+    "human intelligence platform",
+    "AI portfolio",
+  ],
+  og: {
     title: "Matrix — Applied Intelligence Portfolio",
     description:
       "Designed around one architecture. Nine platforms and services, two research frameworks.",
   },
-};
+});
 
 const portfolio = [
   {
@@ -188,7 +201,7 @@ export default function Products() {
           {portfolio.map((p, i) => (
             <article
               key={p.t}
-              className={`col-span-12 md:col-span-6 border-t border-border p-10 min-h-[300px] flex flex-col justify-between
+              className={`col-span-12 md:col-span-6 border-t border-border p-8 md:p-10 min-h-[260px] md:min-h-[300px] flex flex-col justify-between
                           ${i % 2 === 0 ? "md:border-r" : ""}
                           ${i >= portfolio.length - 2 ? "md:border-b" : ""}
                           hover:bg-foreground/[0.025] transition-colors duration-700`}

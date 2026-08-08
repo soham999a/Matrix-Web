@@ -1,16 +1,26 @@
-import type { Metadata } from "next";
 import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
+import { pageSeo } from "@/lib/seo";
 import { Roots } from "@/components/matrix/Metaphors";
 
-export const metadata: Metadata = {
-  title: "About — Matrix",
+export const metadata = pageSeo({
+  path: "/about",
+  title: "About — The Studio Behind Invisible Architecture",
   description:
-    "Matrix is a small studio working at the intersection of research, design, and intelligent systems.",
-  openGraph: {
+    "Matrix is a small intelligence architecture studio in Kolkata — researchers, designers, and engineers working on AI, intelligent systems, and design that should disappear into experience.",
+  keywords: [
+    "about Matrix",
+    "Matrix studio",
+    "intelligence architecture studio",
+    "AI studio Kolkata",
+    "intelligent systems design",
+    "Matrix team",
+    "research design engineering studio",
+  ],
+  og: {
     title: "About Matrix",
     description: "A small studio. A long horizon.",
   },
-};
+});
 
 export default function About() {
   return (

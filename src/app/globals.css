@@ -127,6 +127,8 @@
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     font-feature-settings: "ss01", "cv11";
+    -webkit-tap-highlight-color: transparent;
+    overflow-x: clip;
   }
 
   body {
@@ -135,6 +137,7 @@
     font-family: var(--font-sans);
     font-weight: 300;
     letter-spacing: 0.005em;
+    overflow-x: clip;
   }
 
   ::selection {

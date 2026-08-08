@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { ComponentType } from "react";
-import type { Metadata } from "next";
 import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
+import { pageSeo } from "@/lib/seo";
 import { MarkLattice, MarkAperture, MarkMeridian } from "@/components/matrix/Mark";
 import {
   Constellation,
@@ -12,16 +12,26 @@ import {
   Observatory,
 } from "@/components/matrix/Metaphors";
 
-export const metadata: Metadata = {
-  title: "Matrix — Visual Identity System",
+export const metadata = pageSeo({
+  path: "/identity",
+  title: "Visual Identity System — Logo, Palette & Typography",
   description:
-    "The Matrix visual foundation: three logo directions, palette, typography, design tokens, and iconography.",
-  openGraph: {
+    "The Matrix visual foundation: three logo directions, brand palette, typography, design tokens, and iconography behind the intelligence architecture studio.",
+  keywords: [
+    "Matrix logo",
+    "Matrix brand identity",
+    "visual identity system",
+    "brand palette",
+    "typography",
+    "design tokens",
+    "Matrix branding",
+  ],
+  og: {
     title: "Matrix — Visual Identity System",
     description:
       "Three logo directions. One quiet system. The visual foundation behind invisible architecture.",
   },
-};
+});
 
 function Swatch({
   name,

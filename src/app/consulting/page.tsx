@@ -1,16 +1,27 @@
-import type { Metadata } from "next";
 import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
+import { pageSeo } from "@/lib/seo";
 import { Bridge, Compass } from "@/components/matrix/Metaphors";
 
-export const metadata: Metadata = {
-  title: "Consulting — Matrix",
+export const metadata = pageSeo({
+  path: "/consulting",
+  title: "AI Strategy & Intelligence Consulting",
   description:
-    "Strategic counsel for governments, institutions, and founders navigating intelligent systems.",
-  openGraph: {
+    "Strategic AI counsel for governments, institutions, and founders — discovery, architecture, embedded partnerships, and standing counsel from the Matrix studio in Kolkata.",
+  keywords: [
+    "AI consulting firm",
+    "AI strategy consulting",
+    "intelligence consulting",
+    "AI architecture",
+    "AI counsel for institutions",
+    "AI advisory India",
+    "Matrix consulting",
+    "government AI consulting",
+  ],
+  og: {
     title: "Matrix Consulting",
     description: "A bridge between where you are and what you intend.",
   },
-};
+});
 
 export default function Consulting() {
   return (

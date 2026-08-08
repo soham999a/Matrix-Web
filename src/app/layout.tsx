@@ -3,32 +3,105 @@ import type { ReactNode } from "react";
 
 import "./globals.css";
 
+const SITE_NAME = "Matrix";
+const SITE_URL = "https://matrka.net";
 const SITE_DESCRIPTION =
-  "Matrix designs the invisible architecture behind intelligent systems — research, products, and counsel for the next civilization.";
-
-const SOCIAL_IMAGE =
-  "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/61841d94-d203-43e0-801f-4dfc902b9374/id-preview-2e6fa600--a05ffef3-b4cb-4857-904a-eba706cf3a3d.lovable.app-1781635108350.png";
+  "Matrix is an intelligence architecture studio for civilization-scale AI — original research, strategic counsel, and applied intelligence platforms built in Kolkata, India.";
+const SOCIAL_IMAGE = "/matrix-logo-website-final.png";
 
 export const metadata: Metadata = {
-  title: "Matrix — Connected Intelligence",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Matrix — Intelligence Architecture Studio for AI, Research & Design",
+    template: "%s — Matrix",
+  },
   description: SITE_DESCRIPTION,
-  authors: [{ name: "Matrix" }],
+  keywords: [
+    "Matrix",
+    "mātṛkā",
+    "intelligence architecture",
+    "artificial intelligence studio",
+    "AI research",
+    "AI consulting firm",
+    "custom AI agents",
+    "AI agency India",
+    "intelligent systems design",
+    "AI products",
+    "Kolkata AI",
+  ],
+  applicationName: SITE_NAME,
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  verification: {
+    google: "NevVuHtmgugEI74Ed8M1pveUqKc59iHT3O8bAGjG0oY",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
-    title: "Matrix — Connected Intelligence",
-    description: SITE_DESCRIPTION,
     type: "website",
-    images: [SOCIAL_IMAGE],
+    locale: "en_IN",
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    title: "Matrix — Intelligence Architecture Studio",
+    description: SITE_DESCRIPTION,
+    images: [
+      {
+        url: SOCIAL_IMAGE,
+        width: 1774,
+        height: 887,
+        alt: "mātṛkā — Evolution of Intelligence",
+      },
+    ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     site: "@matrix",
-    title: "Matrix — Connected Intelligence",
+    title: "Matrix — Intelligence Architecture Studio",
     description: SITE_DESCRIPTION,
     images: [SOCIAL_IMAGE],
   },
   icons: {
-    icon: "/favicon.png",
+    icon: "/matrix-mark.png",
+    shortcut: "/matrix-mark.png",
+    apple: "/matrix-mark.png",
   },
+};
+
+const orgJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Matrix",
+  alternateName: "mātṛkā",
+  url: SITE_URL,
+  logo: `${SITE_URL}/matrix-logo-website-final.png`,
+  email: "system@matrka.net",
+  telephone: "+91-9875663417",
+  description: SITE_DESCRIPTION,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Kolkata",
+    addressRegion: "West Bengal",
+    addressCountry: "IN",
+  },
+  knowsAbout: [
+    "Artificial intelligence",
+    "Intelligence architecture",
+    "AI research",
+    "AI consulting",
+    "AI agents",
+    "AI products",
+    "Intelligent systems design",
+  ],
+  sameAs: [],
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -42,7 +115,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@200;300;400;500&family=IBM+Plex+Mono:wght@300;400&display=swap"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

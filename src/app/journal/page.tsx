@@ -1,15 +1,25 @@
-import type { Metadata } from "next";
 import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
+import { pageSeo } from "@/lib/seo";
 import { Ripple } from "@/components/matrix/Metaphors";
 
-export const metadata: Metadata = {
-  title: "Journal — Matrix",
-  description: "Field notes, dispatches, and slow essays from the Matrix studio.",
-  openGraph: {
+export const metadata = pageSeo({
+  path: "/journal",
+  title: "Journal — Essays on Intelligence & AI",
+  description:
+    "The Matrix journal: field notes, dispatches, and slow essays on artificial intelligence, perception, and the systems beneath public life — published when something has settled.",
+  keywords: [
+    "Matrix journal",
+    "AI essays",
+    "intelligence essays",
+    "AI field notes",
+    "artificial intelligence writing",
+    "Matrix blog",
+  ],
+  og: {
     title: "Matrix Journal",
     description: "Cascading thought. Slow writing.",
   },
-};
+});
 
 const kinds = [
   {

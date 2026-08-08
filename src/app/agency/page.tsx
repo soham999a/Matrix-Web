@@ -1,16 +1,27 @@
-import type { Metadata } from "next";
 import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
+import { pageSeo } from "@/lib/seo";
 import { Threads } from "@/components/matrix/Metaphors";
 
-export const metadata: Metadata = {
-  title: "AI Agency — Matrix",
+export const metadata = pageSeo({
+  path: "/agency",
+  title: "Custom AI Agents, Models & Orchestration",
   description:
-    "Custom intelligence designed to disappear: agents, models, and orchestration for specific worlds.",
-  openGraph: {
+    "Matrix AI Agency designs custom intelligence that disappears into experience — AI agents with memory and manners, fine-tuned models, orchestration, and evaluation for specific worlds.",
+  keywords: [
+    "AI agency",
+    "custom AI agents",
+    "AI model development",
+    "AI orchestration",
+    "AI evaluation",
+    "custom AI solutions India",
+    "AI development studio",
+    "Matrix AI agency",
+  ],
+  og: {
     title: "Matrix AI Agency",
     description: "Threads woven into fabric. Custom intelligence for specific problems.",
   },
-};
+});
 
 export default function Agency() {
   return (

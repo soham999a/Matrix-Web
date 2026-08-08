@@ -1,16 +1,29 @@
-import type { Metadata } from "next";
 import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
+import { pageSeo } from "@/lib/seo";
 import { Observatory } from "@/components/matrix/Metaphors";
 
-export const metadata: Metadata = {
-  title: "Research — Matrix",
+export const metadata = pageSeo({
+  path: "/research",
+  title: "AI Research & Intelligence Architecture",
   description:
-    "Matrix Research: long-form inquiry into intelligence, perception, computation, and the systems beneath them.",
-  openGraph: {
+    "Matrix Research: original long-form inquiry into artificial intelligence, perception, and computation — QiDS, CES-QN and KALPA frameworks, open questions, and open-access whitepapers.",
+  keywords: [
+    "Matrix research",
+    "AI research",
+    "artificial intelligence research",
+    "intelligence architecture",
+    "QiDS",
+    "CES-QN",
+    "KALPA",
+    "AI frameworks",
+    "AI whitepapers",
+    "human intelligence development",
+  ],
+  og: {
     title: "Matrix Research",
     description: "An observatory for ideas that take a decade to fall into place.",
   },
-};
+});
 
 const questions = [
   { t: "What must remain human when reasoning can be delegated?", k: "Foundations" },

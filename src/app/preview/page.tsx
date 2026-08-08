@@ -1,10 +1,13 @@
-import type { Metadata } from "next";
 import { Juggler, type JugglerVariant } from "@/components/matrix/Juggler";
 import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
+import { pageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Juggler · Preview",
-};
+export const metadata = pageSeo({
+  path: "/preview",
+  title: { absolute: "Juggler · Preview" },
+  description: "Internal preview of Matrix's Juggler figure variants.",
+  noindex: true,
+});
 
 const variants: { variant: JugglerVariant; t: string; k: string }[] = [
   {
@@ -43,9 +46,13 @@ export default function PreviewPage() {
           {variants.map((v) => (
             <article
               key={v.variant}
-              className="col-span-12 md:col-span-4 border border-border p-10 flex flex-col items-center"
+              className="col-span-12 md:col-span-4 border border-border p-8 md:p-10 flex flex-col items-center"
             >
-              <Juggler variant={v.variant} size={300} className="text-foreground" />
+              <Juggler
+                variant={v.variant}
+                size={300}
+                className="w-full h-auto max-w-[300px] text-foreground"
+              />
               <h2 className="mt-8 font-display text-3xl tracking-tight">{v.t}</h2>
               <p className="mt-3 text-center text-sm text-muted-foreground leading-relaxed">
                 {v.k}

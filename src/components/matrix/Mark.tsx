@@ -40,11 +40,11 @@ export function LogoLockup({
   className?: string;
 }) {
   return (
-    <div className={`inline-flex flex-col items-center ${className}`}>
+    <div className="inline-flex flex-col items-center">
       <img
         src="/matrix-logo-website-final.png"
         alt="MATRIX · mātṛkā — Evolution of Intelligence"
-        className="block select-none w-auto box-border border border-gold/40 p-1"
+        className={`block select-none w-auto box-border border border-gold/40 p-1 ${className}`}
         style={{ height }}
         draggable={false}
       />

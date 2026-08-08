@@ -1,16 +1,25 @@
 import Link from "next/link";
-import type { Metadata } from "next";
 import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
+import { pageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Manifesto — Matrix",
+export const metadata = pageSeo({
+  path: "/manifesto",
+  title: "The Manifesto — Ten Beliefs About Intelligence",
   description:
-    "The Matrix Manifesto: ten beliefs about intelligence, design, and the systems that hold civilization together.",
-  openGraph: {
+    "The Matrix Manifesto: ten earned beliefs about intelligence, design, complexity, and the systems that hold civilization together.",
+  keywords: [
+    "Matrix manifesto",
+    "intelligence philosophy",
+    "design principles",
+    "AI philosophy",
+    "invisible architecture",
+    "Matrix beliefs",
+  ],
+  og: {
     title: "The Matrix Manifesto",
     description: "Ten beliefs about intelligence and invisible architecture.",
   },
-};
+});
 
 const tenets = [
   {
