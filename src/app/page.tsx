@@ -29,10 +29,6 @@ export const metadata = pageSeo({
     "AI products",
     "Kolkata AI",
   ],
-  og: {
-    title: "Matrix — The Invisible Architecture Behind the Future",
-    description: "Designing intelligence. Invisible systems. Visible impact.",
-  },
 });
 
 export default function Index() {
