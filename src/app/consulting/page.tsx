@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
 import { pageSeo } from "@/lib/seo";
 import { Bridge, Compass } from "@/components/matrix/Metaphors";
@@ -39,6 +40,15 @@ export default function Consulting() {
               <br />
               and what you intend.
             </h1>
+            <p className="mt-10 font-mono text-[11px] tracking-[0.22em] uppercase text-muted-foreground">
+              Domain IV of the Nine ·{" "}
+              <Link
+                href="/domains/consulting"
+                className="text-gold hover:text-foreground transition-colors duration-500"
+              >
+                Consulting →
+              </Link>
+            </p>
           </div>
         </div>
         <div className="mt-20">

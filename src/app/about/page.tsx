@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
 import { pageSeo } from "@/lib/seo";
 import { Roots } from "@/components/matrix/Metaphors";
@@ -120,6 +121,13 @@ export default function About() {
             ))}
           </div>
         </div>
+        <p className="mt-12 font-mono text-[10px] tracking-[0.22em] uppercase text-ink/60">
+          Organised as nine domains —{" "}
+          <Link href="/domains" className="text-gold hover:text-ink transition-colors duration-500">
+            Artificial Intelligence · Systems · Engineering · Consulting · Futurology ·
+            Sustainability · Education &amp; Social · Quanta · Design →
+          </Link>
+        </p>
       </Section>
 
       <Section className="py-32 border-t border-border">

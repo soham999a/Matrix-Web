@@ -257,34 +257,60 @@ export default function Index() {
               n: "I",
               t: "Artificial Intelligence",
               d: "Foundation, alignment, agents, evaluation.",
+              slug: "ai",
             },
-            { n: "II", t: "Systems", d: "Architectures that outlive their authors." },
-            { n: "III", t: "Engineering", d: "The craft that makes an idea load-bearing." },
-            { n: "IV", t: "Consulting", d: "Counsel for governments, founders, institutions." },
-            { n: "V", t: "Futurology", d: "Disciplined study of the century ahead." },
+            {
+              n: "II",
+              t: "Systems",
+              d: "Architectures that outlive their authors.",
+              slug: "systems",
+            },
+            {
+              n: "III",
+              t: "Engineering",
+              d: "The craft that makes an idea load-bearing.",
+              slug: "engineering",
+            },
+            {
+              n: "IV",
+              t: "Consulting",
+              d: "Counsel for governments, founders, institutions.",
+              slug: "consulting",
+            },
+            {
+              n: "V",
+              t: "Futurology",
+              d: "Disciplined study of the century ahead.",
+              slug: "futurology",
+            },
             {
               n: "VI",
               t: "Sustainability",
               d: "Systems accountable to the century they are built in.",
+              slug: "sustainability",
             },
             {
               n: "VII",
               t: "Education & Social Innovation",
               d: "A curriculum architecture for those who help others live on the ground.",
+              slug: "education",
             },
             {
               n: "VIII",
               t: "Quanta",
               d: "Superposition, entanglement, and probability as methods.",
+              slug: "quanta",
             },
             {
               n: "IX",
               t: "Design & Human Intelligence",
               d: "The discipline that quietly governs the rest — and how humans and machines think together.",
+              slug: "design",
             },
           ].map((c, i) => (
-            <div
+            <Link
               key={c.n}
+              href={`/domains/${c.slug}`}
               className={`col-span-12 md:col-span-4 group border-border p-8 md:p-10 min-h-[220px] md:min-h-[260px] flex flex-col justify-between
                           ${i < 9 ? "border-t" : ""}
                           ${i % 3 !== 2 ? "md:border-r" : ""}
@@ -293,8 +319,11 @@ export default function Index() {
             >
               <div className="flex items-baseline justify-between">
                 <span className="font-mono text-[10px] tracking-[0.28em] text-gold">{c.n}</span>
-                <span className="font-mono text-[10px] tracking-[0.22em] uppercase text-muted-foreground">
+                <span className="flex items-center gap-2 font-mono text-[10px] tracking-[0.22em] uppercase text-muted-foreground">
                   Discipline
+                  <span className="text-gold opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    →
+                  </span>
                 </span>
               </div>
               <div>
@@ -303,7 +332,7 @@ export default function Index() {
                 </h3>
                 <p className="mt-4 text-muted-foreground leading-relaxed">{c.d}</p>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </Section>

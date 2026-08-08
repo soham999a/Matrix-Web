@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
 import { pageSeo } from "@/lib/seo";
 import { Origami } from "@/components/matrix/Metaphors";
@@ -32,6 +33,7 @@ const portfolio = [
     t: "QiDS",
     tag: "Human Intelligence Platform",
     domain: "Education · Career · Talent",
+    dh: "/domains/education",
     caps: [
       "Psychometric assessment (IQ/EQ/SQ/AQ)",
       "Individual Quotient Profile",
@@ -45,6 +47,7 @@ const portfolio = [
     t: "Humming",
     tag: "Operational Intelligence Platform",
     domain: "Enterprise · Management",
+    dh: "/domains/systems",
     caps: [
       "Executive Dashboards",
       "Decision Intelligence",
@@ -59,6 +62,7 @@ const portfolio = [
     t: "ARPS",
     tag: "Supply Chain Intelligence Platform",
     domain: "Procurement · Logistics · Risk",
+    dh: "/domains/systems",
     caps: [
       "Demand Forecasting",
       "Procurement Intelligence",
@@ -73,6 +77,7 @@ const portfolio = [
     t: "Mangrove",
     tag: "Sustainability Intelligence Platform",
     domain: "ESG · Climate · Compliance",
+    dh: "/domains/sustainability",
     caps: [
       "Carbon Intelligence",
       "Water Intelligence",
@@ -87,6 +92,7 @@ const portfolio = [
     t: "Datum",
     tag: "Analytics Made Easy",
     domain: "Business Intelligence",
+    dh: "/domains/systems",
     caps: [],
     s: "Research",
   },
@@ -95,6 +101,7 @@ const portfolio = [
     t: "MindMuse Suite",
     tag: "Creative Intelligence Platform · Hertz · Resonance · Sonata",
     domain: "Music · Creative Systems · Knowledge",
+    dh: "/domains/design",
     caps: [],
     s: "Research",
   },
@@ -103,6 +110,7 @@ const portfolio = [
     t: "AlgoVista",
     tag: "Algorithm Visualisation Platform",
     domain: "Education · Research · Computer Science",
+    dh: "/domains/education",
     caps: [],
     s: "Research",
   },
@@ -111,6 +119,7 @@ const portfolio = [
     t: "Digital + Consulting",
     tag: "Knowledge Assets & Advisory",
     domain: "Enterprise · Institutional",
+    dh: "/domains/consulting",
     caps: [],
     s: "Active practice",
   },
@@ -189,6 +198,12 @@ export default function Products() {
                 <p className="eyebrow mt-2">Research Frameworks</p>
               </div>
             </div>
+            <Link
+              href="/domains"
+              className="inline-block mt-8 font-mono text-[10px] tracking-[0.22em] uppercase text-gold border-b border-gold/0 hover:border-gold transition-colors duration-500"
+            >
+              Mapped across nine domains →
+            </Link>
           </div>
           <div className="col-span-12 md:col-span-5">
             <Origami className="w-full text-foreground/80 breathe" />
@@ -209,9 +224,18 @@ export default function Products() {
               <div>
                 <div className="flex items-baseline justify-between">
                   <span className="font-mono text-[10px] tracking-[0.28em] text-gold">{p.n}</span>
-                  <span className="font-mono text-[10px] tracking-[0.22em] uppercase text-muted-foreground">
-                    {p.domain}
-                  </span>
+                  {p.dh ? (
+                    <Link
+                      href={p.dh}
+                      className="font-mono text-[10px] tracking-[0.22em] uppercase text-muted-foreground hover:text-gold transition-colors duration-500"
+                    >
+                      {p.domain} ↗
+                    </Link>
+                  ) : (
+                    <span className="font-mono text-[10px] tracking-[0.22em] uppercase text-muted-foreground">
+                      {p.domain}
+                    </span>
+                  )}
                 </div>
                 <h2 className="font-display text-4xl md:text-5xl tracking-tight leading-[1.02] mt-8">
                   {p.t}

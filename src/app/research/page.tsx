@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
 import { pageSeo } from "@/lib/seo";
 import { Observatory } from "@/components/matrix/Metaphors";
@@ -46,30 +47,35 @@ const papers = [
   {
     t: "The Quadrant Intelligence Development System (QiDS): A Scientific Architecture for Human Capability Development in the Age of Artificial Intelligence",
     k: "Human Intelligence",
+    dh: "/domains/design",
     d: "26 July 2026",
     href: "https://zenodo.org/records/21610823",
   },
   {
     t: "The Quadrant Intelligence Development System (QiDS): A Scientific Architecture for Human Sensemaking in the Age of Artificial Intelligence",
     k: "Human Intelligence",
+    dh: "/domains/design",
     d: "6 June 2026",
     href: "https://zenodo.org/records/20573620",
   },
   {
     t: "India 2026: A New Developmental Paradigm — Social Innovation, Liberal Arts and the Orange Economy",
     k: "Education & Social Innovation",
+    dh: "/domains/education",
     d: "2 June 2026",
     href: "https://zenodo.org/records/20502701",
   },
   {
     t: "Autonomous Procurement Systems for Resilient Global Supply Networks",
     k: "Systems",
+    dh: "/domains/systems",
     d: "1 June 2026",
     href: "https://zenodo.org/records/20492207",
   },
   {
     t: "CES-QN: A Causal–Self-Evolving–Quantum-Neuromorphic Framework",
     k: "Quanta",
+    dh: "/domains/quanta",
     d: "24 May 2026",
     href: "https://zenodo.org/records/20364601",
   },
@@ -230,7 +236,16 @@ export default function Research() {
                 </p>
               </div>
               <div className="col-span-12 md:col-span-3 self-center">
-                <p className="eyebrow !text-muted-foreground">{p.k}</p>
+                {p.dh ? (
+                  <Link
+                    href={p.dh}
+                    className="eyebrow !text-muted-foreground hover:!text-gold transition-colors duration-500"
+                  >
+                    {p.k} ↗
+                  </Link>
+                ) : (
+                  <p className="eyebrow !text-muted-foreground">{p.k}</p>
+                )}
                 <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-muted-foreground mt-2">
                   {p.d}
                 </p>
