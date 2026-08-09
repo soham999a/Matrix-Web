@@ -64,7 +64,7 @@ export default function Index() {
               behind the future.
             </h1>
           </div>
-          <div className="col-span-12 lg:col-span-5 flex justify-center lg:justify-end">
+          <div className="col-span-12 lg:col-span-5 flex justify-center lg:justify-end -mt-12 sm:-mt-16 lg:mt-0">
             <NetworkIntelligence
               size={340}
               className="w-full h-auto max-w-[340px] text-foreground"
