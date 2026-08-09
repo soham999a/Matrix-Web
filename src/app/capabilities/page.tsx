@@ -46,16 +46,24 @@ export default function Capabilities() {
               engineering to futurology and the human sciences. Each is a way of seeing. Together
               they are the architecture.
             </p>
-            <ul className="mt-8 grid grid-cols-3 gap-y-3 text-sm font-mono uppercase tracking-[0.18em] text-muted-foreground">
-              <li>I &nbsp;·&nbsp; AI</li>
-              <li>IV &nbsp;·&nbsp; Consulting</li>
-              <li>VII &nbsp;·&nbsp; Education</li>
-              <li>II &nbsp;·&nbsp; Systems</li>
-              <li>V &nbsp;·&nbsp; Futurology</li>
-              <li>VIII &nbsp;·&nbsp; Quanta</li>
-              <li>III &nbsp;·&nbsp; Engineering</li>
-              <li>VI &nbsp;·&nbsp; Sustainability</li>
-              <li>IX &nbsp;·&nbsp; Design</li>
+            <ul className="mt-8 grid grid-cols-3 gap-x-8 gap-y-4 font-mono text-[13px] uppercase tracking-[0.08em] text-muted-foreground">
+              {[
+                ["I", "AI"],
+                ["II", "Systems"],
+                ["III", "Engineering"],
+                ["IV", "Consulting"],
+                ["V", "Futurology"],
+                ["VI", "Sustainability"],
+                ["VII", "Education"],
+                ["VIII", "Quanta"],
+                ["IX", "Design"],
+              ].map(([n, t]) => (
+                <li key={n} className="flex items-baseline gap-2 whitespace-nowrap">
+                  <span className="min-w-6 text-muted-foreground/50">{n}</span>
+                  <span aria-hidden="true">·</span>
+                  <span>{t}</span>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

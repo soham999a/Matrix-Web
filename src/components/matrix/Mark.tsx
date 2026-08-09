@@ -48,11 +48,22 @@ export function LogoLockup({
         style={{ height }}
         draggable={false}
       />
-      {showTagline && (
-        <span className="mt-1.5 font-mono text-[9px] leading-none tracking-[0.3em] uppercase text-gold/80 whitespace-nowrap">
-          {tagline}
-        </span>
-      )}
+      {showTagline &&
+        (() => {
+          const i = tagline.lastIndexOf(" ");
+          const first = i === -1 ? tagline : tagline.slice(0, i);
+          const second = i === -1 ? null : tagline.slice(i + 1);
+          return (
+            <span className="mt-1.5 flex flex-col items-end font-mono text-[9px] leading-[1.5] tracking-[0.3em] uppercase text-gold/80 whitespace-nowrap">
+              <span>{first}</span>
+              {second && (
+                <span className="tracking-[0.15em]" style={{ marginRight: -74.5 }}>
+                  {second}
+                </span>
+              )}
+            </span>
+          );
+        })()}
     </div>
   );
 }
