@@ -57,7 +57,7 @@ export function LogoLockup({
             <span className="mt-1.5 flex flex-col items-end font-mono text-[9px] leading-[1.5] tracking-[0.3em] uppercase text-gold/80 whitespace-nowrap">
               <span>{first}</span>
               {second && (
-                <span className="tracking-[0.15em]" style={{ marginRight: -74.5 }}>
+                <span className="tracking-[0.15em]" style={{ marginRight: 10 }}>
                   {second}
                 </span>
               )}
