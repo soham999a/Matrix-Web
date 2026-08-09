@@ -33,7 +33,7 @@ export default function Capabilities() {
       <Section className="pt-32 pb-20">
         <div className="grid grid-cols-12 gap-8 items-end">
           <div className="col-span-12 md:col-span-7">
-            <Eyebrow index="The Nine">Capabilities</Eyebrow>
+            <Eyebrow index="◈ The Nine">Capabilities</Eyebrow>
             <h1 className="font-display text-[clamp(3rem,8vw,8rem)] leading-[0.92] tracking-tight mt-10">
               Nine capabilities,
               <br />

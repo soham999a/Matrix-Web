@@ -11,9 +11,25 @@ const nav = [
   { to: "/products", label: "Products" },
   { to: "/capabilities", label: "Capabilities" },
   { to: "/agency", label: "Agency" },
-  { to: "/journal", label: "Journal" },
+  { to: "/newsletter", label: "Newsletter" },
   { to: "/manifesto", label: "Manifesto" },
 ] as const;
+
+const researchSubLinks = [
+  { t: "Whitepapers", to: "/research#whitepapers" },
+  { t: "Frameworks", to: "/research#frameworks" },
+  { t: "Case Studies", to: "/research#case-studies" },
+  { t: "Journal", to: "/journal" },
+] as const;
+
+function FooterItem({ label }: { label: string }) {
+  return (
+    <li className="flex items-baseline gap-2.5 text-sm">
+      <span className="font-mono text-gold/60">◌</span>
+      <span className="text-muted-foreground">{label}</span>
+    </li>
+  );
+}
 
 export function Header() {
   const pathname = usePathname();
@@ -50,14 +66,33 @@ export function Header() {
         <nav className="hidden lg:flex items-center gap-8" aria-label="Primary">
           {nav.map((n) => {
             const active = pathname === n.to;
+            const linkClass = `font-mono text-[10px] tracking-[0.22em] uppercase transition-colors duration-500 ${
+              active ? "text-foreground" : "text-muted-foreground hover:text-foreground"
+            }`;
+            if (n.to === "/research") {
+              return (
+                <div key={n.to} className="group relative">
+                  <Link href={n.to} className={linkClass}>
+                    {n.label}
+                  </Link>
+                  <div className="invisible opacity-0 translate-y-1 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-0 absolute left-0 top-full pt-4 z-50 transition-all duration-300">
+                    <div className="border border-border bg-background min-w-60 shadow-2xl">
+                      {researchSubLinks.map((s) => (
+                        <Link
+                          key={s.to}
+                          href={s.to}
+                          className="block px-5 py-3 font-mono text-[10px] tracking-[0.22em] uppercase text-muted-foreground hover:text-foreground hover:bg-foreground/[0.04] transition-colors duration-300"
+                        >
+                          {s.t}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              );
+            }
             return (
-              <Link
-                key={n.to}
-                href={n.to}
-                className={`font-mono text-[10px] tracking-[0.22em] uppercase transition-colors duration-500 ${
-                  active ? "text-foreground" : "text-muted-foreground hover:text-foreground"
-                }`}
-              >
+              <Link key={n.to} href={n.to} className={linkClass}>
                 {n.label}
               </Link>
             );
@@ -128,6 +163,20 @@ export function Header() {
                       →
                     </span>
                   </Link>
+                  {n.to === "/research" && (
+                    <ul className="pb-6 pl-12 space-y-3">
+                      {researchSubLinks.map((s) => (
+                        <li key={s.to}>
+                          <Link
+                            href={s.to}
+                            className="font-mono text-[10px] tracking-[0.22em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-300"
+                          >
+                            {s.t} →
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </li>
               ))}
             </ul>
@@ -160,48 +209,10 @@ export function Footer() {
             <br />
             <span className="text-muted-foreground italic">Invisible systems. Visible impact.</span>
           </p>
-        </div>
-        <div className="col-span-6 md:col-span-2">
-          <p className="eyebrow mb-5">Practices</p>
-          <ul className="space-y-2 text-sm text-muted-foreground">
-            <li>
-              <Link href="/research" className="hover:text-foreground">
-                Research
-              </Link>
-            </li>
-            <li>
-              <Link href="/consulting" className="hover:text-foreground">
-                Consulting
-              </Link>
-            </li>
-            <li>
-              <Link href="/products" className="hover:text-foreground">
-                Products
-              </Link>
-            </li>
-            <li>
-              <Link href="/capabilities" className="hover:text-foreground">
-                Capabilities
-              </Link>
-            </li>
-            <li>
-              <Link href="/agency" className="hover:text-foreground">
-                AI Agency
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div className="col-span-6 md:col-span-2">
-          <p className="eyebrow mb-5">Studio</p>
-          <ul className="space-y-2 text-sm text-muted-foreground">
+          <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
             <li>
               <Link href="/about" className="hover:text-foreground">
-                About
-              </Link>
-            </li>
-            <li>
-              <Link href="/journal" className="hover:text-foreground">
-                Journal
+                About · Contact
               </Link>
             </li>
             <li>
@@ -209,6 +220,25 @@ export function Footer() {
                 Manifesto
               </Link>
             </li>
+          </ul>
+        </div>
+        <div className="col-span-6 md:col-span-2">
+          <p className="eyebrow mb-5">Research &amp; Insights</p>
+          <ul className="space-y-2.5">
+            <FooterItem label="Case Studies" />
+            <FooterItem label="Research Notes" />
+            <FooterItem label="Whitepapers" />
+            <FooterItem label="Frameworks" />
+            <FooterItem label="Publications" />
+          </ul>
+        </div>
+        <div className="col-span-6 md:col-span-2">
+          <p className="eyebrow mb-5">Stay Connected</p>
+          <ul className="space-y-2.5">
+            <FooterItem label="Newsletter" />
+            <FooterItem label="Announcements" />
+            <FooterItem label="New Research" />
+            <FooterItem label="Product Updates" />
           </ul>
         </div>
         <div className="col-span-12 md:col-span-4">

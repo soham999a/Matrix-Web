@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       (d) => [`/capabilities/${d.slug}`, "0.7", "monthly"] as [string, string, "monthly"],
     ),
     ["/journal", "0.5", "monthly"],
+    ["/newsletter", "0.5", "monthly"],
     ["/manifesto", "0.6", "monthly"],
     ["/identity", "0.3", "yearly"],
   ];

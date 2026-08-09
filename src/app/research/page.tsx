@@ -154,7 +154,7 @@ export default function Research() {
                 {String(i + 1).padStart(2, "0")}
               </div>
               <div className="col-span-10 md:col-span-7 font-display text-2xl md:text-3xl leading-tight tracking-tight">
-                {p.t}
+                <span className="text-gold">∴</span> {p.t}
               </div>
               <div className="col-span-12 md:col-span-3 eyebrow !text-muted-foreground self-center">
                 {p.k}
@@ -164,7 +164,7 @@ export default function Research() {
         </div>
       </Section>
 
-      <Section variant="paper" className="py-32">
+      <Section variant="paper" id="frameworks" className="py-32">
         <div className="grid grid-cols-12 gap-8 mb-16">
           <div className="col-span-12 md:col-span-3">
             <Eyebrow index="Frameworks">Foundations</Eyebrow>
@@ -202,7 +202,7 @@ export default function Research() {
         </div>
       </Section>
 
-      <Section className="py-20 border-t border-border">
+      <Section id="whitepapers" className="py-20 border-t border-border">
         <div className="grid grid-cols-12 gap-8 mb-10">
           <div className="col-span-12 md:col-span-3">
             <Eyebrow index="Published">Whitepapers</Eyebrow>
@@ -214,23 +214,22 @@ export default function Research() {
         </div>
         <div className="border-t border-border">
           {papers.map((p, i) => (
-            <a
+            <div
               key={p.href}
-              href={p.href}
-              target="_blank"
-              rel="noreferrer"
               className="group grid grid-cols-12 gap-8 py-8 border-b border-border hover:bg-foreground/[0.03] transition-colors duration-500"
             >
               <div className="col-span-2 font-mono text-xs tracking-widest text-gold">
-                {String(i + 1).padStart(2, "0")}
+                ⌬ {String(i + 1).padStart(2, "0")}
               </div>
               <div className="col-span-10 md:col-span-7">
-                <h3 className="font-display text-2xl md:text-3xl leading-tight tracking-tight">
-                  {p.t}
-                  <span className="inline-block ml-2 text-gold opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    ↗
-                  </span>
-                </h3>
+                <a href={p.href} target="_blank" rel="noreferrer" className="block">
+                  <h3 className="font-display text-2xl md:text-3xl leading-tight tracking-tight">
+                    {p.t}
+                    <span className="inline-block ml-2 text-gold opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                      ↗
+                    </span>
+                  </h3>
+                </a>
                 <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-muted-foreground mt-3">
                   Zenodo · Open Access · Preprint
                 </p>
@@ -250,8 +249,25 @@ export default function Research() {
                   {p.d}
                 </p>
               </div>
-            </a>
+            </div>
           ))}
+        </div>
+      </Section>
+
+      <Section id="case-studies" className="py-20 border-t border-border">
+        <div className="grid grid-cols-12 gap-8 mb-10">
+          <div className="col-span-12 md:col-span-3">
+            <Eyebrow index="◎ Field">Case Studies</Eyebrow>
+          </div>
+          <p className="col-span-12 md:col-span-9 text-muted-foreground leading-relaxed max-w-2xl">
+            Reconstructions of real engagements — what was asked, what we built, and what the
+            systems did in the world. Written only once the work has settled.
+          </p>
+        </div>
+        <div className="border-t border-border py-12">
+          <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gold/60">
+            ◌ First studies are being prepared · coming soon
+          </p>
         </div>
       </Section>
 
