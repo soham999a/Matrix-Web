@@ -1,9 +1,9 @@
-export type DomainSection = {
+export type CapabilitySection = {
   label: string;
   items: string[];
 };
 
-export type Domain = {
+export type Capability = {
   slug: string;
   numeral: string;
   title: string;
@@ -14,10 +14,10 @@ export type Domain = {
     description: string;
     keywords: string[];
   };
-  sections: DomainSection[];
+  sections: CapabilitySection[];
 };
 
-export const DOMAINS: Domain[] = [
+export const CAPABILITIES: Capability[] = [
   {
     slug: "ai",
     numeral: "I",
@@ -28,7 +28,7 @@ export const DOMAINS: Domain[] = [
     seo: {
       title: "Artificial Intelligence — Copilots, Agents & AI Research",
       description:
-        "Matrix domain I: enterprise AI, AI copilots, custom agents, natural-language analytics, decision intelligence, and research into causal, agentic, and self-evolving intelligence.",
+        "Matrix capability I: enterprise AI, AI copilots, custom agents, natural-language analytics, decision intelligence, and research into causal, agentic, and self-evolving intelligence.",
       keywords: [
         "Matrix AI",
         "artificial intelligence",
@@ -78,7 +78,7 @@ export const DOMAINS: Domain[] = [
     seo: {
       title: "Systems — Enterprise Architecture, ARPS & Operational Intelligence",
       description:
-        "Matrix domain II: enterprise architecture, ERP and supply-chain intelligence, digital twins, decision systems — anchored by the Humming, ARPS, and Datum platforms.",
+        "Matrix capability II: enterprise architecture, ERP and supply-chain intelligence, digital twins, decision systems — anchored by the Humming, ARPS, and Datum platforms.",
       keywords: [
         "Matrix systems",
         "enterprise architecture",
@@ -137,7 +137,7 @@ export const DOMAINS: Domain[] = [
     seo: {
       title: "Engineering — Robotics, Sensors & Cymatics Instruments",
       description:
-        "Matrix domain III: edge computing, intelligent sensors, embedded intelligence, robotics, photonic devices, scientific instruments, and resonance and cymatics research.",
+        "Matrix capability III: edge computing, intelligent sensors, embedded intelligence, robotics, photonic devices, scientific instruments, and resonance and cymatics research.",
       keywords: [
         "Matrix engineering",
         "edge computing",
@@ -193,7 +193,7 @@ export const DOMAINS: Domain[] = [
     seo: {
       title: "Consulting — AI Strategy, Advisory & Digital Products",
       description:
-        "Matrix domain IV: AI strategy, digital transformation, technology advisory, enterprise architecture, research and grant counsel, plus custom digital products and micro-apps.",
+        "Matrix capability IV: AI strategy, digital transformation, technology advisory, enterprise architecture, research and grant counsel, plus custom digital products and micro-apps.",
       keywords: [
         "Matrix consulting",
         "AI strategy consulting",
@@ -249,7 +249,7 @@ export const DOMAINS: Domain[] = [
     seo: {
       title: "Futurology — Post-Smartphone AI & Civilization-Scale R&D",
       description:
-        "Matrix domain V: Neo post-smartphone personal intelligence, ambient and spatial computing, future cities, space systems, and civilization-scale research.",
+        "Matrix capability V: Neo post-smartphone personal intelligence, ambient and spatial computing, future cities, space systems, and civilization-scale research.",
       keywords: [
         "Matrix futurology",
         "post-smartphone intelligence",
@@ -307,7 +307,7 @@ export const DOMAINS: Domain[] = [
     seo: {
       title: "Sustainability — Mangrove, Climate & Clean Energy Intelligence",
       description:
-        "Matrix domain VI: Mangrove sustainability platform, water, carbon and climate intelligence, biodiversity, ecological modelling, and clean energy research.",
+        "Matrix capability VI: Mangrove sustainability platform, water, carbon and climate intelligence, biodiversity, ecological modelling, and clean energy research.",
       keywords: [
         "Matrix sustainability",
         "Mangrove",
@@ -363,11 +363,11 @@ export const DOMAINS: Domain[] = [
     title: "Education & Social Innovation",
     tagline: "Capability is the original infrastructure.",
     description:
-      "QiDS — the Quadrant Intelligence Development System — anchors this domain. Around it, the studio works on public-sector intelligence, civic innovation, digital inclusion, and the liberal arts as instruments of human capability.",
+      "QiDS — the Quadrant Intelligence Development System — anchors this capability. Around it, the studio works on public-sector intelligence, civic innovation, digital inclusion, and the liberal arts as instruments of human capability.",
     seo: {
       title: "Education & Social Innovation — QiDS & Civic Intelligence",
       description:
-        "Matrix domain VII: QiDS human intelligence platform, public-sector intelligence, civic innovation, digital inclusion, and future-of-work systems.",
+        "Matrix capability VII: QiDS human intelligence platform, public-sector intelligence, civic innovation, digital inclusion, and future-of-work systems.",
       keywords: [
         "Matrix education",
         "QiDS",
@@ -413,7 +413,7 @@ export const DOMAINS: Domain[] = [
     seo: {
       title: "Quanta — Quantum Computing, Photonics & Energy Research",
       description:
-        "Matrix domain VIII: quantum computing, quantum machine learning and sensing, quantum photonics and materials, bio-photonics, and fundamental energy research.",
+        "Matrix capability VIII: quantum computing, quantum machine learning and sensing, quantum photonics and materials, bio-photonics, and fundamental energy research.",
       keywords: [
         "Matrix Quanta",
         "quantum computing",
@@ -473,7 +473,7 @@ export const DOMAINS: Domain[] = [
     seo: {
       title: "Design & Human Intelligence — QiDS, MindMuse & Liberal Arts",
       description:
-        "Matrix domain IX: QiDS human intelligence assessment, MindMuse creative intelligence, IQ/EQ/SQ/AQ profiling, and the liberal arts that keep intelligence human.",
+        "Matrix capability IX: QiDS human intelligence assessment, MindMuse creative intelligence, IQ/EQ/SQ/AQ profiling, and the liberal arts that keep intelligence human.",
       keywords: [
         "Matrix design",
         "human intelligence",
@@ -529,6 +529,6 @@ export const DOMAINS: Domain[] = [
   },
 ];
 
-export function getDomain(slug: string): Domain | undefined {
-  return DOMAINS.find((d) => d.slug === slug);
+export function getCapability(slug: string): Capability | undefined {
+  return CAPABILITIES.find((d) => d.slug === slug);
 }

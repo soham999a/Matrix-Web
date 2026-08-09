@@ -41,9 +41,9 @@ export default function Consulting() {
               and what you intend.
             </h1>
             <p className="mt-10 font-mono text-[11px] tracking-[0.22em] uppercase text-muted-foreground">
-              Domain IV of the Nine ·{" "}
+              Capability IV of the Nine ·{" "}
               <Link
-                href="/domains/consulting"
+                href="/capabilities/consulting"
                 className="text-gold hover:text-foreground transition-colors duration-500"
               >
                 Consulting →

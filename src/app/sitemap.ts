@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { DOMAINS } from "@/lib/domains";
+import { CAPABILITIES } from "@/lib/capabilities";
 
 const BASE = "https://matrka.net";
 
@@ -12,8 +12,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ["/consulting", "0.8", "monthly"],
     ["/agency", "0.7", "monthly"],
     ["/products", "0.8", "monthly"],
-    ["/domains", "0.8", "monthly"],
-    ...DOMAINS.map((d) => [`/domains/${d.slug}`, "0.7", "monthly"] as [string, string, "monthly"]),
+    ["/capabilities", "0.8", "monthly"],
+    ...CAPABILITIES.map(
+      (d) => [`/capabilities/${d.slug}`, "0.7", "monthly"] as [string, string, "monthly"],
+    ),
     ["/journal", "0.5", "monthly"],
     ["/manifesto", "0.6", "monthly"],
     ["/identity", "0.3", "yearly"],

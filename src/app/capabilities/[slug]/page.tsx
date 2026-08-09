@@ -3,10 +3,10 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
 import { pageSeo } from "@/lib/seo";
-import { DOMAINS, getDomain } from "@/lib/domains";
+import { CAPABILITIES, getCapability } from "@/lib/capabilities";
 
 export function generateStaticParams() {
-  return DOMAINS.map((d) => ({ slug: d.slug }));
+  return CAPABILITIES.map((d) => ({ slug: d.slug }));
 }
 
 export async function generateMetadata({
@@ -15,10 +15,10 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const domain = getDomain(slug);
+  const domain = getCapability(slug);
   if (!domain) return {};
   return pageSeo({
-    path: `/domains/${domain.slug}`,
+    path: `/capabilities/${domain.slug}`,
     title: domain.seo.title,
     description: domain.seo.description,
     keywords: domain.seo.keywords,
@@ -29,19 +29,19 @@ export async function generateMetadata({
   });
 }
 
-export default async function DomainPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function CapabilityPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const domain = getDomain(slug);
+  const domain = getCapability(slug);
   if (!domain) notFound();
 
-  const others = DOMAINS.filter((d) => d.slug !== domain.slug);
+  const others = CAPABILITIES.filter((d) => d.slug !== domain.slug);
 
   return (
     <PageShell>
       <Section className="pt-32 pb-20">
         <div className="grid grid-cols-12 gap-8 items-end">
           <div className="col-span-12 md:col-span-8">
-            <Eyebrow index={`Domain ${domain.numeral}`}>The Nine</Eyebrow>
+            <Eyebrow index={`Capability ${domain.numeral}`}>The Nine</Eyebrow>
             <h1 className="font-display text-[clamp(3rem,8vw,8rem)] leading-[0.92] tracking-tight mt-10">
               {domain.title}
             </h1>
@@ -51,10 +51,10 @@ export default async function DomainPage({ params }: { params: Promise<{ slug: s
           </div>
           <div className="col-span-12 md:col-span-4 md:text-right">
             <Link
-              href="/domains"
+              href="/capabilities"
               className="inline-block border border-foreground px-6 py-4 font-mono text-[10px] tracking-[0.28em] uppercase hover:bg-foreground hover:text-background transition-colors duration-500"
             >
-              ← All Domains
+              ← All Capabilities
             </Link>
           </div>
         </div>
@@ -86,13 +86,13 @@ export default async function DomainPage({ params }: { params: Promise<{ slug: s
       <Section className="py-24 border-t border-border">
         <div className="grid grid-cols-12 gap-8">
           <div className="col-span-12 md:col-span-3">
-            <Eyebrow>Adjacent domains</Eyebrow>
+            <Eyebrow>Adjacent capabilities</Eyebrow>
           </div>
           <div className="col-span-12 md:col-span-9 grid grid-cols-2 md:grid-cols-4 gap-px bg-border border border-border">
             {others.map((d) => (
               <Link
                 key={d.slug}
-                href={`/domains/${d.slug}`}
+                href={`/capabilities/${d.slug}`}
                 className="group bg-background p-6 hover:bg-foreground/[0.03] transition-colors duration-500"
               >
                 <div className="font-mono text-[10px] tracking-[0.28em] text-gold">{d.numeral}</div>
@@ -105,7 +105,7 @@ export default async function DomainPage({ params }: { params: Promise<{ slug: s
         </div>
         <div className="grid grid-cols-12 gap-8 mt-16 items-end">
           <p className="col-span-12 md:col-span-7 font-display text-3xl md:text-4xl leading-tight">
-            Every domain becomes a system or a study.{" "}
+            Every capability becomes a system or a study.{" "}
             <span className="italic text-muted-foreground">See the portfolio.</span>
           </p>
           <div className="col-span-12 md:col-span-5 md:text-right">

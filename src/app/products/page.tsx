@@ -33,7 +33,7 @@ const portfolio = [
     t: "QiDS",
     tag: "Human Intelligence Platform",
     domain: "Education · Career · Talent",
-    dh: "/domains/education",
+    dh: "/capabilities/education",
     caps: [
       "Psychometric assessment (IQ/EQ/SQ/AQ)",
       "Individual Quotient Profile",
@@ -47,7 +47,7 @@ const portfolio = [
     t: "Humming",
     tag: "Operational Intelligence Platform",
     domain: "Enterprise · Management",
-    dh: "/domains/systems",
+    dh: "/capabilities/systems",
     caps: [
       "Executive Dashboards",
       "Decision Intelligence",
@@ -62,7 +62,7 @@ const portfolio = [
     t: "ARPS",
     tag: "Supply Chain Intelligence Platform",
     domain: "Procurement · Logistics · Risk",
-    dh: "/domains/systems",
+    dh: "/capabilities/systems",
     caps: [
       "Demand Forecasting",
       "Procurement Intelligence",
@@ -77,7 +77,7 @@ const portfolio = [
     t: "Mangrove",
     tag: "Sustainability Intelligence Platform",
     domain: "ESG · Climate · Compliance",
-    dh: "/domains/sustainability",
+    dh: "/capabilities/sustainability",
     caps: [
       "Carbon Intelligence",
       "Water Intelligence",
@@ -92,7 +92,7 @@ const portfolio = [
     t: "Datum",
     tag: "Analytics Made Easy",
     domain: "Business Intelligence",
-    dh: "/domains/systems",
+    dh: "/capabilities/systems",
     caps: [],
     s: "Research",
   },
@@ -101,7 +101,7 @@ const portfolio = [
     t: "MindMuse Suite",
     tag: "Creative Intelligence Platform · Hertz · Resonance · Sonata",
     domain: "Music · Creative Systems · Knowledge",
-    dh: "/domains/design",
+    dh: "/capabilities/design",
     caps: [],
     s: "Research",
   },
@@ -110,7 +110,7 @@ const portfolio = [
     t: "AlgoVista",
     tag: "Algorithm Visualisation Platform",
     domain: "Education · Research · Computer Science",
-    dh: "/domains/education",
+    dh: "/capabilities/education",
     caps: [],
     s: "Research",
   },
@@ -119,7 +119,7 @@ const portfolio = [
     t: "Digital + Consulting",
     tag: "Knowledge Assets & Advisory",
     domain: "Enterprise · Institutional",
-    dh: "/domains/consulting",
+    dh: "/capabilities/consulting",
     caps: [],
     s: "Active practice",
   },
@@ -199,10 +199,10 @@ export default function Products() {
               </div>
             </div>
             <Link
-              href="/domains"
+              href="/capabilities"
               className="inline-block mt-8 font-mono text-[10px] tracking-[0.22em] uppercase text-gold border-b border-gold/0 hover:border-gold transition-colors duration-500"
             >
-              Mapped across nine domains →
+              Mapped across nine capabilities →
             </Link>
           </div>
           <div className="col-span-12 md:col-span-5">

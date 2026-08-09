@@ -1,16 +1,16 @@
 import Link from "next/link";
 import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
 import { pageSeo } from "@/lib/seo";
-import { DOMAINS } from "@/lib/domains";
+import { CAPABILITIES } from "@/lib/capabilities";
 
 export const metadata = pageSeo({
-  path: "/domains",
-  title: "Nine Domains — AI, Systems, Engineering & Human Intelligence",
+  path: "/capabilities",
+  title: "Nine Capabilities — AI, Systems, Engineering & Human Intelligence",
   description:
-    "Matrix works across nine domains: Artificial Intelligence, Systems, Engineering, Consulting, Futurology, Sustainability, Education & Social Innovation, Quanta, and Design & Human Intelligence — one architecture, many manifestations.",
+    "Matrix works across nine capabilities: Artificial Intelligence, Systems, Engineering, Consulting, Futurology, Sustainability, Education & Social Innovation, Quanta, and Design & Human Intelligence — one architecture, many manifestations.",
   keywords: [
-    "Matrix domains",
-    "nine domains",
+    "Matrix capabilities",
+    "nine capabilities",
     "intelligence architecture",
     "AI engineering",
     "systems architecture",
@@ -21,21 +21,21 @@ export const metadata = pageSeo({
     "Matrix studio",
   ],
   og: {
-    title: "Matrix — Nine Domains, One Architecture",
+    title: "Matrix — Nine Capabilities, One Architecture",
     description:
-      "From artificial intelligence to quantum science. Nine domains, one coherent studio.",
+      "From artificial intelligence to quantum science. Nine capabilities, one coherent studio.",
   },
 });
 
-export default function Domains() {
+export default function Capabilities() {
   return (
     <PageShell>
       <Section className="pt-32 pb-20">
         <div className="grid grid-cols-12 gap-8 items-end">
           <div className="col-span-12 md:col-span-7">
-            <Eyebrow index="The Nine">Domains</Eyebrow>
+            <Eyebrow index="The Nine">Capabilities</Eyebrow>
             <h1 className="font-display text-[clamp(3rem,8vw,8rem)] leading-[0.92] tracking-tight mt-10">
-              Nine domains,
+              Nine capabilities,
               <br />
               <span className="italic text-muted-foreground">one architecture.</span>
             </h1>
@@ -63,10 +63,10 @@ export default function Domains() {
 
       <Section className="pb-20">
         <div className="border-t border-border">
-          {DOMAINS.map((d) => (
+          {CAPABILITIES.map((d) => (
             <Link
               key={d.slug}
-              href={`/domains/${d.slug}`}
+              href={`/capabilities/${d.slug}`}
               className="group grid grid-cols-12 gap-4 md:gap-8 py-10 border-b border-border hover:bg-foreground/[0.03] transition-colors duration-500 items-start"
             >
               <div className="col-span-2 md:col-span-1 font-mono text-xs tracking-widest text-gold pt-1">
@@ -96,7 +96,7 @@ export default function Domains() {
       <Section className="py-24 border-t border-border">
         <div className="grid grid-cols-12 gap-8 items-end">
           <p className="col-span-12 md:col-span-7 font-display text-3xl md:text-5xl leading-tight">
-            Nine domains hold one portfolio.
+            Nine capabilities hold one portfolio.
             <br />
             <span className="italic text-muted-foreground">See how they become products.</span>
           </p>

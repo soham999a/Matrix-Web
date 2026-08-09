@@ -310,7 +310,7 @@ export default function Index() {
           ].map((c, i) => (
             <Link
               key={c.n}
-              href={`/domains/${c.slug}`}
+              href={`/capabilities/${c.slug}`}
               className={`col-span-12 md:col-span-4 group border-border p-8 md:p-10 min-h-[220px] md:min-h-[260px] flex flex-col justify-between
                           ${i < 9 ? "border-t" : ""}
                           ${i % 3 !== 2 ? "md:border-r" : ""}

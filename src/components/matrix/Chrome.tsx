@@ -9,7 +9,7 @@ const nav = [
   { to: "/research", label: "Research" },
   { to: "/consulting", label: "Consulting" },
   { to: "/products", label: "Products" },
-  { to: "/domains", label: "Domains" },
+  { to: "/capabilities", label: "Capabilities" },
   { to: "/agency", label: "Agency" },
   { to: "/journal", label: "Journal" },
   { to: "/manifesto", label: "Manifesto" },
@@ -180,8 +180,8 @@ export function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/domains" className="hover:text-foreground">
-                Domains
+              <Link href="/capabilities" className="hover:text-foreground">
+                Capabilities
               </Link>
             </li>
             <li>
