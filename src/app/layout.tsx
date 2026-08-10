@@ -70,9 +70,9 @@ export const metadata: Metadata = {
     images: [SOCIAL_IMAGE],
   },
   icons: {
-    icon: "/matrix-mark.png",
-    shortcut: "/matrix-mark.png",
-    apple: "/matrix-mark.png",
+    icon: "/Matrix_Favicon.png",
+    shortcut: "/Matrix_Favicon.png",
+    apple: "/Matrix_Favicon.png",
   },
 };
 

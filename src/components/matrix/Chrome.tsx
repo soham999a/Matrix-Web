@@ -202,7 +202,7 @@ export function Footer() {
   return (
     <footer className="border-t border-border mt-24 lg:mt-32">
       <div className="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14 py-16 md:py-20 grid grid-cols-12 gap-8">
-        <div className="col-span-12 md:col-span-4">
+        <div className="col-span-12 md:col-span-3">
           <LogoLockup height={64} />
           <p className="font-display text-2xl leading-tight mt-8 max-w-xs">
             Designing intelligence.
@@ -235,13 +235,33 @@ export function Footer() {
         <div className="col-span-6 md:col-span-2">
           <p className="eyebrow mb-5">Stay Connected</p>
           <ul className="space-y-2.5">
-            <FooterItem label="Newsletter" />
             <FooterItem label="Announcements" />
             <FooterItem label="New Research" />
             <FooterItem label="Product Updates" />
           </ul>
         </div>
-        <div className="col-span-12 md:col-span-4">
+        <div className="col-span-6 md:col-span-2">
+          <p className="eyebrow mb-5">Newsletters and Blog</p>
+          <ul className="space-y-2.5">
+            <li>
+              <Link href="/newsletter" className="group flex items-baseline gap-2.5 text-sm">
+                <span className="font-mono text-gold/60">◌</span>
+                <span className="text-muted-foreground group-hover:text-foreground transition-colors">
+                  Newsletter
+                </span>
+              </Link>
+            </li>
+            <li>
+              <Link href="/journal" className="group flex items-baseline gap-2.5 text-sm">
+                <span className="font-mono text-gold/60">◌</span>
+                <span className="text-muted-foreground group-hover:text-foreground transition-colors">
+                  Blog
+                </span>
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div className="col-span-12 md:col-span-3">
           <p className="eyebrow mb-5">Correspondence</p>
           <p className="text-sm text-muted-foreground leading-relaxed">
             For research collaboration, counsel, or careers — write to us.
