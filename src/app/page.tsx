@@ -11,6 +11,7 @@ import {
   EmergenceObservation,
 } from "@/components/matrix/Figures";
 import { Ripple } from "@/components/matrix/Metaphors";
+import { DisciplineCard } from "@/components/matrix/DisciplineCard";
 
 export const metadata = pageSeo({
   path: "/",
@@ -258,81 +259,111 @@ export default function Index() {
               t: "Artificial Intelligence",
               d: "Foundation, alignment, agents, evaluation.",
               slug: "ai",
+              points: [
+                "Causal AI",
+                "Self-Evolving Models",
+                "Agentic Systems",
+                "AI Evaluation Systems",
+              ],
             },
             {
               n: "II",
               t: "Systems",
               d: "Architectures that outlive their authors.",
               slug: "systems",
+              points: [
+                "Enterprise Architecture",
+                "Digital Twins",
+                "Decision Systems",
+                "Operational Intelligence",
+              ],
             },
             {
               n: "III",
               t: "Engineering",
               d: "The craft that makes an idea load-bearing.",
               slug: "engineering",
+              points: [
+                "Edge Computing",
+                "Robotics",
+                "Cymatics Instrumentation",
+                "Scientific Instruments",
+              ],
             },
             {
               n: "IV",
               t: "Consulting",
               d: "Counsel for governments, founders, institutions.",
               slug: "consulting",
+              points: [
+                "AI Strategy",
+                "Enterprise Architecture",
+                "Grant / R&D Advisory",
+                "Micro-apps & Dashboards",
+              ],
             },
             {
               n: "V",
               t: "Futurology",
               d: "Disciplined study of the century ahead.",
               slug: "futurology",
+              points: [
+                "Post-Smartphone Intelligence",
+                "Ambient Computing",
+                "Space Systems",
+                "Future Governance",
+              ],
             },
             {
               n: "VI",
               t: "Sustainability",
               d: "Systems accountable to the century they are built in.",
               slug: "sustainability",
+              points: [
+                "Mangrove Platform",
+                "Water & Carbon Intelligence",
+                "Climate Intelligence",
+                "Clean Energy",
+              ],
             },
             {
               n: "VII",
               t: "Education & Social Innovation",
               d: "A curriculum architecture for those who help others live on the ground.",
               slug: "education",
+              points: [
+                "QiDS — Human Intelligence",
+                "Public-Sector Intelligence",
+                "Civic Innovation",
+                "Digital Inclusion",
+              ],
             },
             {
               n: "VIII",
               t: "Quanta",
               d: "Superposition, entanglement, and probability as methods.",
               slug: "quanta",
+              points: [
+                "Quantum Computing",
+                "Quantum Machine Learning",
+                "Quantum Photonics",
+                "Fusion Research",
+              ],
             },
             {
               n: "IX",
               t: "Design & Human Intelligence",
               d: "The discipline that quietly governs the rest — and how humans and machines think together.",
               slug: "design",
+              points: [
+                "IQ / EQ / SQ / AQ",
+                "Human Capability Assessment",
+                "MindMuse — Creative Intelligence",
+                "Liberal Arts",
+              ],
             },
           ].map((c, i) => (
-            <Link
-              key={c.n}
-              href={`/capabilities/${c.slug}`}
-              className={`col-span-12 md:col-span-4 group border-border p-8 md:p-10 min-h-[220px] md:min-h-[260px] flex flex-col justify-between
-                          ${i < 9 ? "border-t" : ""}
-                          ${i % 3 !== 2 ? "md:border-r" : ""}
-                          ${i >= 6 ? "md:border-b" : ""}
-                          hover:bg-foreground/[0.025] transition-colors duration-700`}
-            >
-              <div className="flex items-baseline justify-between">
-                <span className="font-mono text-[10px] tracking-[0.28em] text-gold">{c.n}</span>
-                <span className="flex items-center gap-2 font-mono text-[10px] tracking-[0.22em] uppercase text-muted-foreground">
-                  Discipline
-                  <span className="text-gold opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    →
-                  </span>
-                </span>
-              </div>
-              <div>
-                <h3 className="font-display text-3xl md:text-4xl tracking-tight leading-[1.05] mt-10">
-                  {c.t}
-                </h3>
-                <p className="mt-4 text-muted-foreground leading-relaxed">{c.d}</p>
-              </div>
-            </Link>
+            <DisciplineCard key={c.n} c={c} i={i} />
           ))}
         </div>
       </Section>

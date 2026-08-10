@@ -33,28 +33,44 @@ export function LogoLockup({
   tagline = "Evolution of Intelligence",
   showTagline = true,
   className = "",
+  light = false,
 }: {
   height?: number;
   tagline?: string;
   showTagline?: boolean;
   className?: string;
+  light?: boolean;
 }) {
   return (
     <div className="inline-flex flex-col items-center">
-      <img
-        src="/matrix-logo-website-final.png"
-        alt="MATRIX · mātṛkā — Evolution of Intelligence"
-        className={`block select-none w-auto box-border border border-gold/40 p-1 ${className}`}
-        style={{ height }}
-        draggable={false}
-      />
+      {light ? (
+        <span
+          className={`flex items-center gap-3 box-border border border-gold/40 p-2 ${className}`}
+          style={{ height }}
+        >
+          <MarkLattice size={Math.round(height * 0.5)} className="text-ink shrink-0" />
+          <span className="font-mono text-[11px] tracking-[0.28em] uppercase text-ink">Matrix</span>
+        </span>
+      ) : (
+        <img
+          src="/matrix-logo-website-final.png"
+          alt="MATRIX · mātṛkā — Evolution of Intelligence"
+          className={`block select-none w-auto box-border border border-gold/40 p-1 ${className}`}
+          style={{ height }}
+          draggable={false}
+        />
+      )}
       {showTagline &&
         (() => {
           const i = tagline.lastIndexOf(" ");
           const first = i === -1 ? tagline : tagline.slice(0, i);
           const second = i === -1 ? null : tagline.slice(i + 1);
           return (
-            <span className="mt-1.5 flex flex-col items-end font-mono text-[9px] leading-[1.5] tracking-[0.3em] uppercase text-gold/80 whitespace-nowrap">
+            <span
+              className={`mt-1.5 flex flex-col items-end font-mono text-[9px] leading-[1.5] tracking-[0.3em] uppercase whitespace-nowrap ${
+                light ? "text-ink/50" : "text-gold/80"
+              }`}
+            >
               <span>{first}</span>
               {second && (
                 <span className="tracking-[0.15em]" style={{ marginRight: 10 }}>

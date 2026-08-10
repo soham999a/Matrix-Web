@@ -11,7 +11,6 @@ const nav = [
   { to: "/products", label: "Products" },
   { to: "/capabilities", label: "Capabilities" },
   { to: "/agency", label: "Agency" },
-  { to: "/newsletter", label: "Newsletter" },
   { to: "/manifesto", label: "Manifesto" },
 ] as const;
 
@@ -25,8 +24,8 @@ const researchSubLinks = [
 function FooterItem({ label }: { label: string }) {
   return (
     <li className="flex items-baseline gap-2.5 text-sm">
-      <span className="font-mono text-gold/60">◌</span>
-      <span className="text-muted-foreground">{label}</span>
+      <span className="font-mono text-gold">◌</span>
+      <span className="text-ink/70">{label}</span>
     </li>
   );
 }
@@ -200,30 +199,30 @@ export function Header() {
 
 export function Footer() {
   return (
-    <footer className="border-t border-border mt-24 lg:mt-32">
+    <footer className="border-t border-ink/10 bg-fog text-ink mt-24 lg:mt-32">
       <div className="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14 py-16 md:py-20 grid grid-cols-12 gap-8">
         <div className="col-span-12 md:col-span-3">
           <LogoLockup height={64} />
-          <p className="font-display text-2xl leading-tight mt-8 max-w-xs">
+          <p className="font-display text-2xl leading-tight mt-8 max-w-xs text-ink">
             Designing intelligence.
             <br />
-            <span className="text-muted-foreground italic">Invisible systems. Visible impact.</span>
+            <span className="text-ink/60 italic">Invisible systems. Visible impact.</span>
           </p>
-          <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
+          <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-ink/70">
             <li>
-              <Link href="/about" className="hover:text-foreground">
+              <Link href="/about" className="hover:text-ink">
                 About · Contact
               </Link>
             </li>
             <li>
-              <Link href="/manifesto" className="hover:text-foreground">
+              <Link href="/manifesto" className="hover:text-ink">
                 Manifesto
               </Link>
             </li>
           </ul>
         </div>
         <div className="col-span-6 md:col-span-2">
-          <p className="eyebrow mb-5">Research &amp; Insights</p>
+          <p className="eyebrow mb-5 !text-ink/60">Research &amp; Insights</p>
           <ul className="space-y-2.5">
             <FooterItem label="Case Studies" />
             <FooterItem label="Research Notes" />
@@ -233,7 +232,7 @@ export function Footer() {
           </ul>
         </div>
         <div className="col-span-6 md:col-span-2">
-          <p className="eyebrow mb-5">Stay Connected</p>
+          <p className="eyebrow mb-5 !text-ink/60">Stay Connected</p>
           <ul className="space-y-2.5">
             <FooterItem label="Announcements" />
             <FooterItem label="New Research" />
@@ -241,51 +240,49 @@ export function Footer() {
           </ul>
         </div>
         <div className="col-span-6 md:col-span-2">
-          <p className="eyebrow mb-5">Newsletters and Blog</p>
+          <p className="eyebrow mb-5 !text-ink/60">Newsletters and Blog</p>
           <ul className="space-y-2.5">
             <li>
               <Link href="/newsletter" className="group flex items-baseline gap-2.5 text-sm">
-                <span className="font-mono text-gold/60">◌</span>
-                <span className="text-muted-foreground group-hover:text-foreground transition-colors">
+                <span className="font-mono text-gold">◌</span>
+                <span className="text-ink/70 group-hover:text-ink transition-colors">
                   Newsletter
                 </span>
               </Link>
             </li>
             <li>
               <Link href="/journal" className="group flex items-baseline gap-2.5 text-sm">
-                <span className="font-mono text-gold/60">◌</span>
-                <span className="text-muted-foreground group-hover:text-foreground transition-colors">
-                  Blog
-                </span>
+                <span className="font-mono text-gold">◌</span>
+                <span className="text-ink/70 group-hover:text-ink transition-colors">Blog</span>
               </Link>
             </li>
           </ul>
         </div>
         <div className="col-span-12 md:col-span-3">
-          <p className="eyebrow mb-5">Correspondence</p>
-          <p className="text-sm text-muted-foreground leading-relaxed">
+          <p className="eyebrow mb-5 !text-ink/60">Correspondence</p>
+          <p className="text-sm text-ink/70 leading-relaxed">
             For research collaboration, counsel, or careers — write to us.
           </p>
           <a
             href="mailto:system@matrka.net"
-            className="block mt-4 font-display text-2xl hover:text-gold transition-colors"
+            className="block mt-4 font-display text-2xl text-ink hover:text-gold transition-colors"
           >
             system@matrka.net
           </a>
           <a
             href="tel:+919875663417"
-            className="block mt-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+            className="block mt-2 text-sm text-ink/70 hover:text-ink transition-colors"
           >
             +91 98756 63417
           </a>
-          <p className="mt-6 eyebrow">Studio</p>
-          <p className="mt-2 text-sm text-muted-foreground leading-relaxed">Kolkata, India</p>
+          <p className="mt-6 eyebrow !text-ink/60">Studio</p>
+          <p className="mt-2 text-sm text-ink/70 leading-relaxed">Kolkata, India</p>
         </div>
-        <div className="col-span-12 mt-16 pt-8 border-t border-border flex flex-col md:flex-row justify-between gap-4">
-          <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-muted-foreground">
+        <div className="col-span-12 mt-16 pt-8 border-t border-ink/10 flex flex-col md:flex-row justify-between gap-4">
+          <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ink/50">
             © {new Date().getFullYear()} Matrix
           </p>
-          <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-muted-foreground">
+          <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ink/50">
             Cohered by design
           </p>
         </div>
