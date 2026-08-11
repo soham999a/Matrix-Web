@@ -97,12 +97,9 @@ export function DisciplineCard({ c, i }: { c: Discipline; i: number }) {
                 <span className="h-px w-8 bg-gold/50" />
                 <span className="h-1.5 w-1.5 rotate-45 bg-gold" />
               </div>
-              <ul className="mt-4 space-y-2">
+              <ul className="mx-auto mt-4 w-max max-w-full space-y-2 text-[13px] leading-snug text-ink/80">
                 {c.points.map((p) => (
-                  <li
-                    key={p}
-                    className="flex items-center justify-center gap-2 text-center text-[13px] leading-snug text-ink/80"
-                  >
+                  <li key={p} className="flex items-center gap-2">
                     <span className="block h-[6px] w-[6px] shrink-0 rotate-45 bg-gold" />
                     <span>{p}</span>
                   </li>
