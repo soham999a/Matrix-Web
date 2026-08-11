@@ -104,6 +104,7 @@ const portfolio = [
     dh: "/capabilities/design",
     caps: [],
     s: "Research",
+    live: "http://fm.matrka.net/",
   },
   {
     n: "07",
@@ -113,6 +114,7 @@ const portfolio = [
     dh: "/capabilities/education",
     caps: [],
     s: "Research",
+    live: "https://algovista.matrka.net/",
   },
   {
     n: "08",
@@ -251,10 +253,20 @@ export default function Products() {
                   </ul>
                 )}
               </div>
-              <div className="mt-10 border-t border-border pt-5">
+              <div className="mt-10 border-t border-border pt-5 flex items-center justify-between gap-4">
                 <span className="font-mono text-[10px] tracking-[0.22em] uppercase text-gold">
                   {p.s}
                 </span>
+                {p.live && (
+                  <a
+                    href={p.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-mono text-[10px] tracking-[0.22em] uppercase text-foreground border-b border-gold/0 hover:border-gold transition-colors duration-500"
+                  >
+                    Live ↗
+                  </a>
+                )}
               </div>
             </article>
           ))}
