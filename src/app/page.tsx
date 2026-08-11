@@ -52,7 +52,7 @@ export default function Index() {
           Intelligence · Architecture · Impact
         </div>
 
-        <div className="flex-1 grid grid-cols-12 gap-8 items-center mt-12">
+        <div className="flex-1 grid grid-cols-12 gap-6 sm:gap-8 items-center mt-12">
           <div className="col-span-12 lg:col-span-7 rise">
             <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-muted-foreground mb-8">
               A Studio for Civilization-Scale Intelligence
@@ -74,7 +74,7 @@ export default function Index() {
         </div>
 
         {/* lower band */}
-        <div className="mt-16 grid grid-cols-12 gap-8 border-t border-border pt-8 items-end">
+        <div className="mt-16 grid grid-cols-12 gap-6 sm:gap-8 border-t border-border pt-8 items-end">
           <div className="col-span-12 md:col-span-3 eyebrow">M · A · T · R · I · X</div>
           <p className="col-span-12 md:col-span-6 font-display text-2xl md:text-3xl leading-[1.2] text-foreground/90">
             Intelligence. Architecture. Impact.
@@ -92,7 +92,7 @@ export default function Index() {
 
       {/* ————— LITANY · POWER WORDS ————— */}
       <Section className="py-24 border-t border-border">
-        <div className="grid grid-cols-12 gap-8">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 md:col-span-3">
             <Eyebrow index="Litany">Mātṛkā · the mother-forms</Eyebrow>
           </div>
@@ -128,14 +128,14 @@ export default function Index() {
 
       {/* ————— ACT II · MANIFESTO FRAGMENT ————— */}
       <Section id="manifesto" className="py-24 md:py-40 border-t border-border">
-        <div className="grid grid-cols-12 gap-8 mb-20">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-20">
           <div className="col-span-12 md:col-span-3">
             <Eyebrow index="§ I">Manifesto · Fragment</Eyebrow>
           </div>
           <p className="col-span-12 md:col-span-3 eyebrow">Read in one breath</p>
         </div>
 
-        <div className="grid grid-cols-12 gap-8">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 md:col-span-10 md:col-start-2">
             <p className="font-display text-[clamp(2rem,5vw,4.75rem)] leading-[1.08] tracking-[-0.015em] text-foreground">
               We do not build software.
@@ -164,7 +164,7 @@ export default function Index() {
 
       {/* ————— ACT III · METAPHOR SEQUENCE ————— */}
       <Section variant="paper" className="py-20 md:py-32">
-        <div className="grid grid-cols-12 gap-8 mb-20">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-20">
           <div className="col-span-12 md:col-span-3">
             <Eyebrow index="§ II">Sequence</Eyebrow>
           </div>
@@ -215,7 +215,7 @@ export default function Index() {
         ].map((row, i) => (
           <article
             key={row.t}
-            className="grid grid-cols-12 gap-8 items-center border-t border-ink/15 py-16"
+            className="grid grid-cols-12 gap-6 sm:gap-8 items-center border-t border-ink/15 py-16"
           >
             <div className={`col-span-12 md:col-span-5 ${i % 2 ? "md:order-2" : ""}`}>
               <div className="aspect-[4/3] flex items-center justify-center text-ink/80">
@@ -241,7 +241,7 @@ export default function Index() {
 
       {/* ————— ACT IV · CAPABILITIES ————— */}
       <Section className="py-24 md:py-40">
-        <div className="grid grid-cols-12 gap-8 mb-20">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-20">
           <div className="col-span-12 md:col-span-3">
             <Eyebrow index="§ III">Capabilities</Eyebrow>
           </div>
@@ -332,7 +332,7 @@ export default function Index() {
               d: "A curriculum architecture for those who help others live on the ground.",
               slug: "education",
               points: [
-                "QiDS — Human Intelligence",
+                "QiDS : Human Intelligence",
                 "Public-Sector Intelligence",
                 "Civic Innovation",
                 "Digital Inclusion",
@@ -358,7 +358,7 @@ export default function Index() {
               points: [
                 "IQ / EQ / SQ / AQ",
                 "Human Capability Assessment",
-                "MindMuse — Creative Intelligence",
+                "MindMuse : Creative Intelligence",
                 "Liberal Arts",
               ],
             },
@@ -370,7 +370,7 @@ export default function Index() {
 
       {/* ————— ACT V · QUIET POSITION ————— */}
       <Section className="py-24 md:py-40 border-t border-border">
-        <div className="grid grid-cols-12 gap-8 items-center">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 items-center">
           <div className="col-span-12 md:col-span-5">
             <Ripple className="w-full text-foreground/80 breathe" />
           </div>
@@ -388,7 +388,7 @@ export default function Index() {
 
       {/* ————— ACT VI · CLOSING & EXPANSION HINT ————— */}
       <Section className="py-24 md:py-40 border-t border-border">
-        <div className="grid grid-cols-12 gap-8">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 md:col-span-7">
             <Eyebrow index="§ IV">Closing</Eyebrow>
             <h2 className="font-display text-5xl md:text-8xl tracking-tight leading-[0.92] mt-8">

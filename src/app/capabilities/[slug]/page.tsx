@@ -39,7 +39,7 @@ export default async function CapabilityPage({ params }: { params: Promise<{ slu
   return (
     <PageShell>
       <Section className="pt-32 pb-20">
-        <div className="grid grid-cols-12 gap-8 items-end">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
           <div className="col-span-12 md:col-span-8">
             <Eyebrow index={`Capability ${domain.numeral}`}>The Nine</Eyebrow>
             <h1 className="font-display text-[clamp(3rem,8vw,8rem)] leading-[0.92] tracking-tight mt-10">
@@ -66,14 +66,17 @@ export default async function CapabilityPage({ params }: { params: Promise<{ slu
       <Section className="pb-20">
         <div className="border-t border-border">
           {domain.sections.map((s) => (
-            <div key={s.label} className="grid grid-cols-12 gap-8 py-10 border-b border-border">
+            <div
+              key={s.label}
+              className="grid grid-cols-12 gap-6 sm:gap-8 py-10 border-b border-border"
+            >
               <div className="col-span-12 md:col-span-3">
                 <p className="eyebrow !text-muted-foreground">{s.label}</p>
               </div>
               <ul className="col-span-12 md:col-span-9 grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-3">
                 {s.items.map((item) => (
                   <li key={item} className="flex gap-4 text-sm text-foreground/80 leading-relaxed">
-                    <span className="text-gold">—</span>
+                    <span className="text-gold">:</span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -84,7 +87,7 @@ export default async function CapabilityPage({ params }: { params: Promise<{ slu
       </Section>
 
       <Section className="py-24 border-t border-border">
-        <div className="grid grid-cols-12 gap-8">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 md:col-span-3">
             <Eyebrow>Adjacent capabilities</Eyebrow>
           </div>
@@ -103,7 +106,7 @@ export default async function CapabilityPage({ params }: { params: Promise<{ slu
             ))}
           </div>
         </div>
-        <div className="grid grid-cols-12 gap-8 mt-16 items-end">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 mt-16 items-end">
           <p className="col-span-12 md:col-span-7 font-display text-3xl md:text-4xl leading-tight">
             Every capability becomes a system or a study.{" "}
             <span className="italic text-muted-foreground">See the portfolio.</span>

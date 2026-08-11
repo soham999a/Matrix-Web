@@ -89,7 +89,7 @@ function LogoPlate({
             {kicker}
           </div>
           <Glyph size={180} className="breathe" />
-          <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between">
+          <div className="absolute bottom-5 left-5 right-5 flex flex-wrap items-end justify-between gap-x-4 gap-y-2">
             <div
               className="font-display text-2xl tracking-[0.4em] uppercase"
               style={{ letterSpacing: "0.45em" }}
@@ -148,7 +148,7 @@ export default function Identity() {
           <br />
           <span className="italic text-muted-foreground">the systems.</span>
         </h1>
-        <div className="mt-16 grid grid-cols-12 gap-8 border-t border-border pt-8">
+        <div className="mt-16 grid grid-cols-12 gap-6 sm:gap-8 border-t border-border pt-8">
           <p className="col-span-12 md:col-span-6 text-lg leading-relaxed text-foreground/80 font-light">
             Before a single product is built, an architecture must hold its own weight. What follows
             is the visual grammar of Matrix — three candidate marks, a disciplined palette, a
@@ -168,7 +168,7 @@ export default function Identity() {
 
       {/* I — Marks */}
       <Section className="py-32">
-        <div className="grid grid-cols-12 gap-8 mb-16">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-16">
           <div className="col-span-12 md:col-span-3">
             <Eyebrow index="N° 001">Marks</Eyebrow>
           </div>
@@ -221,7 +221,7 @@ export default function Identity() {
 
       {/* II — Palette */}
       <Section variant="paper" className="py-32">
-        <div className="grid grid-cols-12 gap-8 mb-12">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-12">
           <div className="col-span-12 md:col-span-3">
             <Eyebrow index="N° 002">Palette</Eyebrow>
           </div>
@@ -241,7 +241,7 @@ export default function Identity() {
           <Swatch name="Gold" hex="#C9A14A" token="--gold" fg="text-ink" />
         </div>
 
-        <div className="mt-12 grid grid-cols-12 gap-8 border-t border-ink/10 pt-8 text-sm">
+        <div className="mt-12 grid grid-cols-12 gap-6 sm:gap-8 border-t border-ink/10 pt-8 text-sm">
           <p className="col-span-12 md:col-span-6 leading-relaxed text-ink/80">
             The palette is monochrome by ratio — 90% ink and grey, 10% gold. Gold is never
             decorative; it appears only where the system makes a decision: an anchor, a hyperlink, a
@@ -259,7 +259,7 @@ export default function Identity() {
 
       {/* III — Typography */}
       <Section className="py-32">
-        <div className="grid grid-cols-12 gap-8 mb-12">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-12">
           <div className="col-span-12 md:col-span-3">
             <Eyebrow index="N° 003">Typography</Eyebrow>
           </div>
@@ -270,12 +270,12 @@ export default function Identity() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-12 gap-8">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 md:col-span-7 border border-border p-10">
             <div className="font-mono text-[10px] tracking-[0.28em] uppercase text-gold">
               Display · Instrument Serif
             </div>
-            <p className="font-display text-[clamp(4rem,10vw,9rem)] leading-[0.9] tracking-[-0.02em] mt-4">
+            <p className="font-display text-[clamp(2.5rem,10vw,9rem)] leading-[0.9] tracking-[-0.02em] mt-4">
               The quiet
               <br />
               <span className="italic">architecture.</span>
@@ -311,55 +311,57 @@ export default function Identity() {
         </div>
 
         {/* Type scale */}
-        <div className="mt-10 border border-border">
-          <div className="grid grid-cols-12 border-b border-border font-mono text-[10px] tracking-[0.22em] uppercase text-muted-foreground">
-            <div className="col-span-2 p-4 border-r border-border">Token</div>
-            <div className="col-span-2 p-4 border-r border-border">Size</div>
-            <div className="col-span-2 p-4 border-r border-border">Leading</div>
-            <div className="col-span-6 p-4">Specimen</div>
-          </div>
-          {[
-            { t: "display/xl", s: "9.5rem", l: "0.92", x: "Invisible" },
-            { t: "display/lg", s: "5rem", l: "0.95", x: "Architecture" },
-            { t: "display/md", s: "3rem", l: "1.00", x: "Doctrine" },
-            {
-              t: "body/lg",
-              s: "1.125rem",
-              l: "1.7",
-              x: "We design the part you don't see, so the part you do feels inevitable.",
-            },
-            { t: "mono/eyebrow", s: "0.625rem", l: "1.0", x: "N° 001 · INTELLIGENCE" },
-          ].map((r) => (
-            <div
-              key={r.t}
-              className="grid grid-cols-12 border-b border-border last:border-b-0 items-baseline"
-            >
-              <div className="col-span-2 p-4 border-r border-border font-mono text-[10px] tracking-[0.22em] uppercase text-gold">
-                {r.t}
-              </div>
-              <div className="col-span-2 p-4 border-r border-border font-mono text-xs text-muted-foreground">
-                {r.s}
-              </div>
-              <div className="col-span-2 p-4 border-r border-border font-mono text-xs text-muted-foreground">
-                {r.l}
-              </div>
-              <div
-                className={`col-span-6 p-4 ${r.t.startsWith("display") ? "font-display" : r.t.startsWith("mono") ? "font-mono tracking-[0.22em] uppercase" : ""}`}
-                style={{
-                  fontSize: r.t.startsWith("display") ? `min(${r.s}, 12vw)` : r.s,
-                  lineHeight: r.l,
-                }}
-              >
-                {r.x}
-              </div>
+        <div className="mt-10 overflow-x-auto">
+          <div className="border border-border min-w-[640px]">
+            <div className="grid grid-cols-12 border-b border-border font-mono text-[10px] tracking-[0.22em] uppercase text-muted-foreground">
+              <div className="col-span-2 p-4 border-r border-border">Token</div>
+              <div className="col-span-2 p-4 border-r border-border">Size</div>
+              <div className="col-span-2 p-4 border-r border-border">Leading</div>
+              <div className="col-span-6 p-4">Specimen</div>
             </div>
-          ))}
+            {[
+              { t: "display/xl", s: "9.5rem", l: "0.92", x: "Invisible" },
+              { t: "display/lg", s: "5rem", l: "0.95", x: "Architecture" },
+              { t: "display/md", s: "3rem", l: "1.00", x: "Doctrine" },
+              {
+                t: "body/lg",
+                s: "1.125rem",
+                l: "1.7",
+                x: "We design the part you don't see, so the part you do feels inevitable.",
+              },
+              { t: "mono/eyebrow", s: "0.625rem", l: "1.0", x: "N° 001 · INTELLIGENCE" },
+            ].map((r) => (
+              <div
+                key={r.t}
+                className="grid grid-cols-12 border-b border-border last:border-b-0 items-baseline"
+              >
+                <div className="col-span-2 p-4 border-r border-border font-mono text-[10px] tracking-[0.22em] uppercase text-gold">
+                  {r.t}
+                </div>
+                <div className="col-span-2 p-4 border-r border-border font-mono text-xs text-muted-foreground">
+                  {r.s}
+                </div>
+                <div className="col-span-2 p-4 border-r border-border font-mono text-xs text-muted-foreground">
+                  {r.l}
+                </div>
+                <div
+                  className={`col-span-6 p-4 ${r.t.startsWith("display") ? "font-display" : r.t.startsWith("mono") ? "font-mono tracking-[0.22em] uppercase" : ""}`}
+                  style={{
+                    fontSize: r.t.startsWith("display") ? `min(${r.s}, 12vw)` : r.s,
+                    lineHeight: r.l,
+                  }}
+                >
+                  {r.x}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </Section>
 
       {/* IV — Tokens */}
       <Section variant="paper" className="py-32">
-        <div className="grid grid-cols-12 gap-8 mb-12">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-12">
           <div className="col-span-12 md:col-span-3">
             <Eyebrow index="N° 004">Design Tokens</Eyebrow>
           </div>
@@ -422,14 +424,16 @@ export default function Identity() {
                   stable
                 </span>
               </div>
-              <table className="w-full">
+              <table className="w-full table-fixed">
                 <tbody>
                   {g.rows.map(([k, v]) => (
                     <tr key={k} className="border-b border-ink/10 last:border-b-0">
                       <td className="px-5 py-3 font-mono text-xs text-ink/70 w-1/2 align-top">
                         {k}
                       </td>
-                      <td className="px-5 py-3 font-mono text-xs text-ink align-top">{v}</td>
+                      <td className="px-5 py-3 font-mono text-xs text-ink align-top [overflow-wrap:anywhere]">
+                        {v}
+                      </td>
                     </tr>
                   ))}
                 </tbody>
@@ -441,7 +445,7 @@ export default function Identity() {
 
       {/* V — Iconography & Metaphors */}
       <Section className="py-32">
-        <div className="grid grid-cols-12 gap-8 mb-12">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-12">
           <div className="col-span-12 md:col-span-3">
             <Eyebrow index="N° 005">Iconography</Eyebrow>
           </div>
@@ -486,7 +490,7 @@ export default function Identity() {
 
       {/* VI — Closing */}
       <Section className="py-32 border-t border-border">
-        <div className="grid grid-cols-12 gap-8">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 md:col-span-7">
             <Eyebrow index="N° 006">Onward</Eyebrow>
             <h2 className="font-display text-5xl md:text-7xl tracking-tight leading-[0.95] mt-8">

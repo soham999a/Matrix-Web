@@ -25,7 +25,7 @@ export default function Newsletter() {
   return (
     <PageShell>
       <Section className="pt-32 pb-12">
-        <div className="grid grid-cols-12 gap-8 items-end">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
           <div className="col-span-12 md:col-span-7">
             <Eyebrow index="Correspondence">Newsletter</Eyebrow>
             <h1 className="font-display text-[clamp(3rem,8vw,8rem)] leading-[0.95] tracking-tight mt-10">
@@ -41,7 +41,7 @@ export default function Newsletter() {
       </Section>
 
       <Section className="py-16">
-        <div className="grid grid-cols-12 gap-8 border-y border-border py-16">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 border-y border-border py-16">
           <div className="col-span-12 md:col-span-3">
             <Eyebrow index="✦ The premise">The premise</Eyebrow>
           </div>
@@ -59,7 +59,7 @@ export default function Newsletter() {
       </Section>
 
       <Section variant="paper" className="py-24 mt-12">
-        <div className="grid grid-cols-12 gap-8 items-end">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
           <div className="col-span-12 md:col-span-7">
             <Eyebrow>Subscribe</Eyebrow>
             <h2 className="font-display text-4xl md:text-5xl leading-tight tracking-tight mt-4">
@@ -70,11 +70,11 @@ export default function Newsletter() {
             <input
               type="email"
               placeholder="your@correspondence"
-              className="flex-1 bg-transparent py-4 text-base placeholder:text-foreground/40 focus:outline-none"
+              className="min-w-0 flex-1 bg-transparent py-4 text-base placeholder:text-foreground/40 focus:outline-none"
             />
             <button
               type="button"
-              className="font-mono text-[10px] tracking-[0.28em] uppercase px-4 hover:text-gold"
+              className="shrink-0 whitespace-nowrap font-mono text-[10px] tracking-[0.28em] uppercase px-3 sm:px-4 hover:text-gold"
             >
               Subscribe →
             </button>

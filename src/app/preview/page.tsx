@@ -42,7 +42,7 @@ export default function PreviewPage() {
           trembling on its fulcrum.
         </p>
 
-        <div className="grid grid-cols-12 gap-8 mt-20">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 mt-20">
           {variants.map((v) => (
             <article
               key={v.variant}

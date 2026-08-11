@@ -85,7 +85,7 @@ export default function Research() {
   return (
     <PageShell>
       <Section className="pt-32 pb-20">
-        <div className="grid grid-cols-12 gap-8 items-end">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
           <div className="col-span-12 md:col-span-7">
             <Eyebrow index="Practice I">Research</Eyebrow>
             <h1 className="font-display text-[clamp(3rem,8vw,8rem)] leading-[0.95] tracking-tight mt-10">
@@ -98,7 +98,7 @@ export default function Research() {
             <Observatory className="w-full text-foreground/80 drift" />
           </div>
         </div>
-        <div className="mt-20 grid grid-cols-12 gap-8 border-t border-border pt-10">
+        <div className="mt-20 grid grid-cols-12 gap-6 sm:gap-8 border-t border-border pt-10">
           <div className="col-span-12 md:col-span-4 eyebrow">— On instruments and patience</div>
           <p className="col-span-12 md:col-span-8 font-display text-3xl md:text-4xl leading-tight">
             We study what intelligence is doing to perception, memory, and the texture of public
@@ -108,7 +108,7 @@ export default function Research() {
       </Section>
 
       <Section className="py-20">
-        <div className="grid grid-cols-12 gap-8 mb-16">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-16">
           <div className="col-span-12 md:col-span-3">
             <Eyebrow index="Lines">Programs</Eyebrow>
           </div>
@@ -138,7 +138,7 @@ export default function Research() {
       </Section>
 
       <Section className="py-20">
-        <div className="grid grid-cols-12 gap-8 mb-10">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-10">
           <div className="col-span-12 md:col-span-3">
             <Eyebrow index="Open">Questions</Eyebrow>
           </div>
@@ -149,7 +149,7 @@ export default function Research() {
         </div>
         <div className="border-t border-border">
           {questions.map((p, i) => (
-            <div key={p.t} className="grid grid-cols-12 gap-8 py-8 border-b border-border">
+            <div key={p.t} className="grid grid-cols-12 gap-6 sm:gap-8 py-8 border-b border-border">
               <div className="col-span-2 font-mono text-xs tracking-widest text-gold">
                 {String(i + 1).padStart(2, "0")}
               </div>
@@ -165,7 +165,7 @@ export default function Research() {
       </Section>
 
       <Section variant="paper" id="frameworks" className="py-32">
-        <div className="grid grid-cols-12 gap-8 mb-16">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-16">
           <div className="col-span-12 md:col-span-3">
             <Eyebrow index="Frameworks">Foundations</Eyebrow>
           </div>
@@ -176,7 +176,7 @@ export default function Research() {
             organisational systems are understood and designed.
           </p>
         </div>
-        <div className="grid grid-cols-12 gap-12 border-t border-ink/15 pt-12">
+        <div className="grid grid-cols-12 gap-6 md:gap-12 border-t border-ink/15 pt-12">
           {[
             {
               t: "CES-QN",
@@ -203,7 +203,7 @@ export default function Research() {
       </Section>
 
       <Section id="whitepapers" className="py-20 border-t border-border">
-        <div className="grid grid-cols-12 gap-8 mb-10">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-10">
           <div className="col-span-12 md:col-span-3">
             <Eyebrow index="Published">Whitepapers</Eyebrow>
           </div>
@@ -216,7 +216,7 @@ export default function Research() {
           {papers.map((p, i) => (
             <div
               key={p.href}
-              className="group grid grid-cols-12 gap-8 py-8 border-b border-border hover:bg-foreground/[0.03] transition-colors duration-500"
+              className="group grid grid-cols-12 gap-6 sm:gap-8 py-8 border-b border-border hover:bg-foreground/[0.03] transition-colors duration-500"
             >
               <div className="col-span-2 font-mono text-xs tracking-widest text-gold">
                 ⌬ {String(i + 1).padStart(2, "0")}
@@ -255,7 +255,7 @@ export default function Research() {
       </Section>
 
       <Section id="case-studies" className="py-20 border-t border-border">
-        <div className="grid grid-cols-12 gap-8 mb-10">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-10">
           <div className="col-span-12 md:col-span-3">
             <Eyebrow index="◎ Field">Case Studies</Eyebrow>
           </div>
@@ -272,7 +272,7 @@ export default function Research() {
       </Section>
 
       <Section className="py-32">
-        <div className="grid grid-cols-12 gap-8 items-center border-t border-border pt-16">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 items-center border-t border-border pt-16">
           <div className="col-span-12 md:col-span-7">
             <Eyebrow>Collaboration</Eyebrow>
             <p className="font-display text-3xl md:text-4xl leading-tight mt-6">

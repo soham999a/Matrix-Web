@@ -31,7 +31,7 @@ export default function Capabilities() {
   return (
     <PageShell>
       <Section className="pt-32 pb-20">
-        <div className="grid grid-cols-12 gap-8 items-end">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
           <div className="col-span-12 md:col-span-7">
             <Eyebrow index="◈ The Nine">Capabilities</Eyebrow>
             <h1 className="font-display text-[clamp(3rem,8vw,8rem)] leading-[0.92] tracking-tight mt-10">
@@ -46,7 +46,7 @@ export default function Capabilities() {
               engineering to futurology and the human sciences. Each is a way of seeing. Together
               they are the architecture.
             </p>
-            <ul className="mt-8 grid grid-cols-3 gap-x-8 gap-y-4 font-mono text-[13px] uppercase tracking-[0.08em] text-muted-foreground">
+            <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-3 font-mono text-[13px] uppercase tracking-[0.08em] text-muted-foreground">
               {[
                 ["I", "AI"],
                 ["II", "Systems"],
@@ -58,7 +58,7 @@ export default function Capabilities() {
                 ["VIII", "Quanta"],
                 ["IX", "Design"],
               ].map(([n, t]) => (
-                <li key={n} className="flex items-baseline gap-2 whitespace-nowrap">
+                <li key={n} className="flex items-baseline gap-2">
                   <span className="min-w-6 text-muted-foreground/50">{n}</span>
                   <span aria-hidden="true">·</span>
                   <span>{t}</span>
@@ -102,7 +102,7 @@ export default function Capabilities() {
       </Section>
 
       <Section className="py-24 border-t border-border">
-        <div className="grid grid-cols-12 gap-8 items-end">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
           <p className="col-span-12 md:col-span-7 font-display text-3xl md:text-5xl leading-tight">
             Nine capabilities hold one portfolio.
             <br />

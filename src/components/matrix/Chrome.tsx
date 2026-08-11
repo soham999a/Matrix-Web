@@ -200,7 +200,7 @@ export function Header() {
 export function Footer() {
   return (
     <footer className="border-t border-ink/10 bg-fog text-ink mt-24 lg:mt-32">
-      <div className="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14 py-16 md:py-20 grid grid-cols-12 gap-8">
+      <div className="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14 py-16 md:py-20 grid grid-cols-12 gap-6 sm:gap-8">
         <div className="col-span-12 md:col-span-3">
           <LogoLockup height={64} />
           <p className="font-display text-2xl leading-tight mt-8 max-w-xs text-ink">
@@ -239,7 +239,7 @@ export function Footer() {
             <FooterItem label="Product Updates" />
           </ul>
         </div>
-        <div className="col-span-6 md:col-span-2">
+        <div className="col-span-12 md:col-span-2">
           <p className="eyebrow mb-5 !text-ink/60">Newsletters and Blog</p>
           <ul className="space-y-2.5">
             <li>

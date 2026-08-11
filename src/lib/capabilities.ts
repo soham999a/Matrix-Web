@@ -110,9 +110,9 @@ export const CAPABILITIES: Capability[] = [
       {
         label: "Products",
         items: [
-          "Humming — Operational Intelligence Platform",
-          "ARPS — Supply Chain Intelligence Platform",
-          "Datum — Analytics Intelligence",
+          "Humming : Operational Intelligence Platform",
+          "ARPS : Supply Chain Intelligence Platform",
+          "Datum : Analytics Intelligence",
         ],
       },
       {
@@ -323,7 +323,7 @@ export const CAPABILITIES: Capability[] = [
     sections: [
       {
         label: "Platform",
-        items: ["Mangrove — Sustainability Intelligence Platform"],
+        items: ["Mangrove : Sustainability Intelligence Platform"],
       },
       {
         label: "Research",

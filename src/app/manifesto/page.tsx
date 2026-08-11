@@ -78,7 +78,7 @@ export default function Manifesto() {
   return (
     <PageShell>
       <Section className="grain pt-32 pb-24">
-        <div className="grid grid-cols-12 gap-8">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 md:col-span-3">
             <Eyebrow index="Volume I">Manifesto</Eyebrow>
             <p className="mt-12 font-mono text-[10px] tracking-[0.22em] uppercase text-muted-foreground leading-relaxed">
@@ -104,7 +104,10 @@ export default function Manifesto() {
       <Section className="py-20">
         <div className="border-t border-border">
           {tenets.map((t) => (
-            <article key={t.n} className="grid grid-cols-12 gap-8 py-14 border-b border-border">
+            <article
+              key={t.n}
+              className="grid grid-cols-12 gap-6 sm:gap-8 py-14 border-b border-border"
+            >
               <div className="col-span-2 md:col-span-2 font-mono text-[11px] tracking-[0.22em] text-gold pt-4">
                 § {t.n}
               </div>
@@ -120,7 +123,7 @@ export default function Manifesto() {
       </Section>
 
       <Section className="py-32">
-        <div className="grid grid-cols-12 gap-8 items-end">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
           <p className="col-span-12 md:col-span-7 font-display text-3xl md:text-4xl italic text-muted-foreground leading-tight">
             &quot;If we live by this, the work will recognize itself.&quot;
           </p>

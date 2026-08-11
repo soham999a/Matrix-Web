@@ -27,7 +27,7 @@ export default function About() {
   return (
     <PageShell>
       <Section className="pt-32 pb-16 grain">
-        <div className="grid grid-cols-12 gap-8">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 md:col-span-3">
             <Eyebrow index="The Studio">About</Eyebrow>
           </div>
@@ -40,7 +40,7 @@ export default function About() {
       </Section>
 
       <Section className="py-16">
-        <div className="grid grid-cols-12 gap-12 items-start">
+        <div className="grid grid-cols-12 gap-6 md:gap-12 items-start">
           <div className="col-span-12 md:col-span-5">
             <Roots className="w-full text-foreground/80" />
           </div>
@@ -65,7 +65,7 @@ export default function About() {
 
       <Section className="py-24">
         <Eyebrow>How we work</Eyebrow>
-        <div className="grid grid-cols-12 gap-8 mt-10 border-t border-border pt-12">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 mt-10 border-t border-border pt-12">
           {[
             {
               n: "Small by design",
@@ -94,7 +94,7 @@ export default function About() {
       </Section>
 
       <Section variant="paper" className="py-32">
-        <div className="grid grid-cols-12 gap-8">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 md:col-span-3">
             <Eyebrow>Disciplines</Eyebrow>
           </div>
@@ -134,7 +134,7 @@ export default function About() {
       </Section>
 
       <Section className="py-32 border-t border-border">
-        <div className="grid grid-cols-12 gap-8 items-end">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
           <h2 className="col-span-12 md:col-span-7 font-display text-4xl md:text-6xl leading-tight tracking-tight">
             If your work calls for ours,{" "}
             <span className="italic text-muted-foreground">write to us.</span>
@@ -149,7 +149,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className="grid grid-cols-12 gap-8 mt-20 border-t border-border pt-12">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 mt-20 border-t border-border pt-12">
           <div className="col-span-12 md:col-span-3">
             <Eyebrow>Studio</Eyebrow>
           </div>

@@ -175,7 +175,7 @@ export default function Products() {
   return (
     <PageShell>
       <Section className="pt-32 pb-16">
-        <div className="grid grid-cols-12 gap-8">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 md:col-span-7">
             <Eyebrow index="Practice III">Applied Intelligence Portfolio</Eyebrow>
             <h1 className="font-display text-[clamp(3rem,8vw,8rem)] leading-[0.95] tracking-tight mt-10">
@@ -188,7 +188,7 @@ export default function Products() {
               architecture — the Omega Model. Where conventional firms ship features, we design
               systems: reasoning infrastructure an organisation can depend on across decades.
             </p>
-            <div className="mt-12 flex gap-16">
+            <div className="mt-12 flex flex-wrap gap-x-8 gap-y-6 sm:gap-x-16">
               <div>
                 <div className="font-display text-6xl">9</div>
                 <p className="eyebrow mt-2">Platforms &amp; Services</p>
@@ -262,7 +262,7 @@ export default function Products() {
       </Section>
 
       <Section variant="paper" className="py-32">
-        <div className="grid grid-cols-12 gap-8 mb-16">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-16">
           <div className="col-span-12 md:col-span-3">
             <Eyebrow index="Omega">The Model</Eyebrow>
           </div>
@@ -274,7 +274,7 @@ export default function Products() {
         </div>
         <div className="border-t border-ink/15">
           {layers.map((l, i) => (
-            <div key={l.t} className="grid grid-cols-12 gap-8 py-8 border-b border-ink/15">
+            <div key={l.t} className="grid grid-cols-12 gap-6 sm:gap-8 py-8 border-b border-ink/15">
               <div className="col-span-2 font-mono text-[10px] tracking-[0.28em] text-ink/50">
                 L{String(layers.length - i).padStart(2, "0")}
               </div>
@@ -290,12 +290,12 @@ export default function Products() {
       </Section>
 
       <Section className="py-32">
-        <div className="grid grid-cols-12 gap-8 mb-12">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-12">
           <div className="col-span-12 md:col-span-3">
             <Eyebrow index="Horizon">Roadmap</Eyebrow>
           </div>
         </div>
-        <div className="grid grid-cols-12 gap-8">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8">
           {roadmap.map((r) => (
             <div key={r.h} className="col-span-12 md:col-span-4 border-t border-border pt-8">
               <p className="eyebrow">{r.h}</p>
@@ -312,7 +312,7 @@ export default function Products() {
       </Section>
 
       <Section className="py-24 border-t border-border">
-        <div className="grid grid-cols-12 gap-8">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <blockquote className="col-span-12 md:col-span-8 font-display text-3xl md:text-4xl italic text-muted-foreground leading-tight">
             &ldquo;We do not build disconnected software. We design the invisible architecture
             through which intelligence becomes trustworthy, scalable, and beneficial.&rdquo;

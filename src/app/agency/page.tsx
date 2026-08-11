@@ -27,7 +27,7 @@ export default function Agency() {
   return (
     <PageShell>
       <Section className="pt-32 pb-12">
-        <div className="grid grid-cols-12 gap-8">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 md:col-span-3">
             <Eyebrow index="Practice IV">AI Agency</Eyebrow>
           </div>
@@ -43,7 +43,7 @@ export default function Agency() {
       </Section>
 
       <Section className="py-24">
-        <div className="grid grid-cols-12 gap-8">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 md:col-span-5">
             <p className="font-display text-3xl md:text-4xl leading-tight">
               We design custom intelligence for organizations whose problems will not be answered by
@@ -90,7 +90,7 @@ export default function Agency() {
         <h2 className="font-display text-4xl md:text-6xl leading-[1] tracking-tight mt-6 max-w-4xl">
           We begin with the decision, <span className="italic">not the model.</span>
         </h2>
-        <div className="grid grid-cols-12 gap-8 mt-16">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 mt-16">
           {[
             { k: "I", l: "Name the decision the system must support" },
             { k: "II", l: "Design the evaluation before the architecture" },
@@ -106,7 +106,7 @@ export default function Agency() {
       </Section>
 
       <Section className="py-24 border-t border-border">
-        <div className="grid grid-cols-12 gap-8 items-end">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
           <p className="col-span-12 md:col-span-7 font-display text-3xl md:text-5xl leading-tight">
             If your problem is unusual,{" "}
             <span className="italic text-muted-foreground">we may be the right studio.</span>

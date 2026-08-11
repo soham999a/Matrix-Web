@@ -28,7 +28,7 @@ export default function Consulting() {
   return (
     <PageShell>
       <Section className="pt-32 pb-24 grain">
-        <div className="grid grid-cols-12 gap-8">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 md:col-span-3">
             <Eyebrow index="Practice II">Consulting</Eyebrow>
           </div>
@@ -57,7 +57,7 @@ export default function Consulting() {
       </Section>
 
       <Section className="py-24">
-        <div className="grid grid-cols-12 gap-8">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 md:col-span-4">
             <Eyebrow>Engagements</Eyebrow>
             <h2 className="font-display text-4xl md:text-5xl leading-tight tracking-tight mt-6">
@@ -108,7 +108,7 @@ export default function Consulting() {
       </Section>
 
       <Section variant="paper" className="py-32">
-        <div className="grid grid-cols-12 gap-8 items-end">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
           <div className="col-span-12 md:col-span-7">
             <Eyebrow>For whom</Eyebrow>
             <h2 className="font-display text-4xl md:text-6xl leading-[0.98] tracking-tight mt-6">
@@ -140,7 +140,7 @@ export default function Consulting() {
       </Section>
 
       <Section className="py-32">
-        <div className="grid grid-cols-12 gap-8 border-t border-border pt-16">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 border-t border-border pt-16">
           <div className="col-span-12 md:col-span-7">
             <h2 className="font-display text-4xl md:text-6xl leading-tight tracking-tight">
               We take on a small number of engagements. The door is narrow on purpose.
