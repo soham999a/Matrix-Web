@@ -53,7 +53,7 @@ export function LogoLockup({
         </span>
       ) : (
         <img
-          src="/matrix-logo-website-final.png"
+          src="/cropped%20logo%20for%20now.png"
           alt="MATRIX · mātṛkā — Evolution of Intelligence"
           className={`block select-none w-auto ${className}`}
           style={{ height }}
@@ -67,7 +67,7 @@ export function LogoLockup({
           const second = i === -1 ? null : tagline.slice(i + 1);
           return (
             <span
-              className={`mt-1.5 flex flex-col items-end font-mono text-[9px] leading-[1.5] tracking-[0.3em] uppercase whitespace-nowrap ${
+              className={`mt-1 flex flex-col items-end font-mono text-[9px] leading-[1.5] tracking-[0.3em] uppercase whitespace-nowrap ${
                 light ? "text-ink/50" : "text-gold/80"
               }`}
             >
