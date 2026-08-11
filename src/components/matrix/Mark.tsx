@@ -55,7 +55,7 @@ export function LogoLockup({
         <img
           src="/matrix-logo-website-final.png"
           alt="MATRIX · mātṛkā — Evolution of Intelligence"
-          className={`block select-none w-auto box-border border border-gold/40 p-1 ${className}`}
+          className={`block select-none w-auto ${className}`}
           style={{ height }}
           draggable={false}
         />

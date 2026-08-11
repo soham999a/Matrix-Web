@@ -60,7 +60,7 @@ export function Header() {
           className="inline-flex items-center text-foreground shrink-0"
           aria-label="Matrix — home"
         >
-          <LogoLockup height={44} className="h-9! sm:h-10! lg:h-[44px]!" />
+          <LogoLockup height={52} className="h-10! sm:h-11! lg:h-[52px]!" />
         </Link>
         <nav className="hidden lg:flex items-center gap-8" aria-label="Primary">
           {nav.map((n) => {
@@ -202,7 +202,7 @@ export function Footer() {
     <footer className="border-t border-ink/10 bg-fog text-ink mt-24 lg:mt-32">
       <div className="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14 py-16 md:py-20 grid grid-cols-12 gap-6 sm:gap-8">
         <div className="col-span-12 md:col-span-3">
-          <LogoLockup height={64} />
+          <LogoLockup height={74} />
           <p className="font-display text-2xl leading-tight mt-8 max-w-xs text-ink">
             Designing intelligence.
             <br />

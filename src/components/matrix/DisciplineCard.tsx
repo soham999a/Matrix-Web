@@ -90,10 +90,10 @@ export function DisciplineCard({ c, i }: { c: Discipline; i: number }) {
             </div>
 
             <div className="flex flex-1 flex-col justify-center">
-              <h3 className="font-display text-2xl md:text-3xl tracking-tight leading-[1.05] text-ink">
+              <h3 className="font-display text-2xl md:text-3xl tracking-tight leading-[1.05] text-ink text-center">
                 {c.t}
               </h3>
-              <div aria-hidden="true" className="mt-3 flex items-center gap-2">
+              <div aria-hidden="true" className="mt-3 flex items-center justify-center gap-2">
                 <span className="h-px w-8 bg-gold/50" />
                 <span className="h-1.5 w-1.5 rotate-45 bg-gold" />
               </div>
@@ -101,9 +101,9 @@ export function DisciplineCard({ c, i }: { c: Discipline; i: number }) {
                 {c.points.map((p) => (
                   <li
                     key={p}
-                    className="flex items-start gap-2 text-[13px] leading-snug text-ink/80"
+                    className="flex items-center justify-center gap-2 text-center text-[13px] leading-snug text-ink/80"
                   >
-                    <span className="mt-[5px] block h-[6px] w-[6px] shrink-0 rotate-45 bg-gold" />
+                    <span className="block h-[6px] w-[6px] shrink-0 rotate-45 bg-gold" />
                     <span>{p}</span>
                   </li>
                 ))}
