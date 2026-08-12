@@ -3,7 +3,9 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
 import { pageSeo } from "@/lib/seo";
+import { SITE } from "@/lib/seo";
 import { CAPABILITIES, getCapability } from "@/lib/capabilities";
+import { JsonLd } from "@/components/matrix/JsonLd";
 
 export function generateStaticParams() {
   return CAPABILITIES.map((d) => ({ slug: d.slug }));
@@ -35,9 +37,53 @@ export default async function CapabilityPage({ params }: { params: Promise<{ slu
   if (!domain) notFound();
 
   const others = CAPABILITIES.filter((d) => d.slug !== domain.slug);
+  const url = `${SITE.url}/capabilities/${domain.slug}`;
 
   return (
     <PageShell>
+      <JsonLd
+        data={[
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: SITE.url,
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Capabilities",
+                item: `${SITE.url}/capabilities`,
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: domain.title,
+                item: url,
+              },
+            ],
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: `Matrix — Capability ${domain.numeral} · ${domain.title}`,
+            serviceType: domain.title,
+            description: domain.description,
+            url,
+            provider: { "@id": `${SITE.url}/#organization` },
+            areaServed: "Worldwide",
+            availableChannel: {
+              "@type": "ServiceChannel",
+              serviceUrl: `${SITE.url}/capabilities/${domain.slug}`,
+              availableLanguage: "en",
+            },
+          },
+        ]}
+      />
       <Section className="pt-32 pb-20">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
           <div className="col-span-12 md:col-span-8">

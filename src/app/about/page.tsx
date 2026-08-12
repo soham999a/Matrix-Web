@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
 import { pageSeo } from "@/lib/seo";
+import { SITE } from "@/lib/seo";
 import { Roots } from "@/components/matrix/Metaphors";
+import { JsonLd } from "@/components/matrix/JsonLd";
 
 export const metadata = pageSeo({
   path: "/about",
@@ -26,6 +28,17 @@ export const metadata = pageSeo({
 export default function About() {
   return (
     <PageShell>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          name: "About Matrix",
+          description:
+            "Matrix is a small intelligence architecture studio in Kolkata — researchers, designers, and engineers working on AI, intelligent systems, and design.",
+          url: `${SITE.url}/about`,
+          mainEntity: { "@id": `${SITE.url}/#organization` },
+        }}
+      />
       <Section className="pt-32 pb-16 grain">
         <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 md:col-span-3">

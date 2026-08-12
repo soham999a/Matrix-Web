@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
 import { pageSeo } from "@/lib/seo";
+import { SITE } from "@/lib/seo";
 import { CAPABILITIES } from "@/lib/capabilities";
+import { JsonLd } from "@/components/matrix/JsonLd";
 
 export const metadata = pageSeo({
   path: "/capabilities",
@@ -30,6 +32,27 @@ export const metadata = pageSeo({
 export default function Capabilities() {
   return (
     <PageShell>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          name: "Matrix — Nine Capabilities",
+          description: "The nine disciplines of the Matrix intelligence architecture studio.",
+          url: `${SITE.url}/capabilities`,
+          numberOfItems: CAPABILITIES.length,
+          itemListElement: CAPABILITIES.map((d, i) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            item: {
+              "@type": "Service",
+              name: d.title,
+              description: d.description,
+              url: `${SITE.url}/capabilities/${d.slug}`,
+              provider: { "@id": `${SITE.url}/#organization` },
+            },
+          })),
+        }}
+      />
       <Section className="pt-32 pb-20">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
           <div className="col-span-12 md:col-span-7">

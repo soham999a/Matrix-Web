@@ -1,6 +1,8 @@
 import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
 import { pageSeo } from "@/lib/seo";
+import { SITE } from "@/lib/seo";
 import { Ripple } from "@/components/matrix/Metaphors";
+import { JsonLd } from "@/components/matrix/JsonLd";
 
 export const metadata = pageSeo({
   path: "/journal",
@@ -39,6 +41,18 @@ const kinds = [
 export default function Journal() {
   return (
     <PageShell>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Blog",
+          name: "Matrix Journal",
+          description:
+            "The Matrix journal: field notes, dispatches, and slow essays on artificial intelligence, perception, and the systems beneath public life.",
+          url: `${SITE.url}/journal`,
+          inLanguage: "en",
+          publisher: { "@id": `${SITE.url}/#organization` },
+        }}
+      />
       <Section className="pt-32 pb-12">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
           <div className="col-span-12 md:col-span-7">

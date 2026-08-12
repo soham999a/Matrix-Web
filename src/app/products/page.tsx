@@ -2,6 +2,8 @@ import Link from "next/link";
 import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
 import { pageSeo } from "@/lib/seo";
 import { Origami } from "@/components/matrix/Metaphors";
+import { JsonLd } from "@/components/matrix/JsonLd";
+import { SITE } from "@/lib/seo";
 
 export const metadata = pageSeo({
   path: "/products",
@@ -176,6 +178,40 @@ const roadmap = [
 export default function Products() {
   return (
     <PageShell>
+      <JsonLd
+        data={[
+          {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: "Matrix — Applied Intelligence Portfolio",
+            description:
+              "Nine AI platforms and services from Matrix, one architecture: QiDS, Humming, ARPS, Mangrove, Datum, MindMuse Suite, AlgoVista, Digital and Consulting.",
+            url: `${SITE.url}/products`,
+            numberOfItems: portfolio.length,
+            itemListElement: portfolio.map((p, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              item: {
+                "@type": "SoftwareApplication",
+                name: p.t,
+                description: p.tag,
+                applicationCategory: "BusinessApplication",
+                operatingSystem: "Web",
+                url: p.live ?? `${SITE.url}/products#${p.n}`,
+                publisher: { "@id": `${SITE.url}/#organization` },
+              },
+            })),
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: "Somnath Banerjee",
+            jobTitle: "Founder, Matrix",
+            url: SITE.url,
+            worksFor: { "@id": `${SITE.url}/#organization` },
+          },
+        ]}
+      />
       <Section className="pt-32 pb-16">
         <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 md:col-span-7">

@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { SITE } from "@/lib/seo";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -6,9 +7,9 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/preview"],
+        disallow: ["/preview", "/api/"],
       },
     ],
-    sitemap: "https://matrka.net/sitemap.xml",
+    sitemap: `${SITE.url}/sitemap.xml`,
   };
 }

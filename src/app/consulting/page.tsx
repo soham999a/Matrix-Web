@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
 import { pageSeo } from "@/lib/seo";
+import { SITE } from "@/lib/seo";
 import { Bridge, Compass } from "@/components/matrix/Metaphors";
+import { JsonLd } from "@/components/matrix/JsonLd";
 
 export const metadata = pageSeo({
   path: "/consulting",
@@ -24,9 +26,61 @@ export const metadata = pageSeo({
   },
 });
 
+const engagements = [
+  {
+    n: "α",
+    t: "Discovery",
+    p: "6 weeks",
+    d: "We sit with the question until it changes shape. We leave with a map, not a deck.",
+  },
+  {
+    n: "β",
+    t: "Architecture",
+    p: "3–6 months",
+    d: "A blueprint for the system, the team, and the first year of decisions. Tested where it matters.",
+  },
+  {
+    n: "γ",
+    t: "Embedded",
+    p: "12 months",
+    d: "Two partners join your studio in residence. We build alongside, with full skin in the game.",
+  },
+  {
+    n: "δ",
+    t: "Counsel",
+    p: "Ongoing",
+    d: "A standing line to the studio. Quarterly retreats. Quiet, slow, decisive.",
+  },
+];
+
 export default function Consulting() {
   return (
     <PageShell>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: "Matrix Consulting",
+          serviceType: "AI Strategy & Intelligence Consulting",
+          description:
+            "Strategic AI counsel for governments, institutions, and founders — discovery, architecture, embedded partnerships, and standing counsel from the Matrix studio in Kolkata.",
+          url: `${SITE.url}/consulting`,
+          provider: { "@id": `${SITE.url}/#organization` },
+          areaServed: ["Worldwide"],
+          audience: {
+            "@type": "Audience",
+            audienceType: "Governments, institutions, and long-horizon founders",
+          },
+          hasOfferCatalog: {
+            "@type": "OfferCatalog",
+            name: "Engagement shapes",
+            itemListElement: engagements.map((e) => ({
+              "@type": "Offer",
+              itemOffered: { "@type": "Service", name: e.t, description: e.d },
+            })),
+          },
+        }}
+      />
       <Section className="pt-32 pb-24 grain">
         <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 md:col-span-3">
@@ -66,32 +120,7 @@ export default function Consulting() {
             <Compass className="w-2/3 mt-12 text-foreground/70" />
           </div>
           <div className="col-span-12 md:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-12">
-            {[
-              {
-                n: "α",
-                t: "Discovery",
-                p: "6 weeks",
-                d: "We sit with the question until it changes shape. We leave with a map, not a deck.",
-              },
-              {
-                n: "β",
-                t: "Architecture",
-                p: "3–6 months",
-                d: "A blueprint for the system, the team, and the first year of decisions. Tested where it matters.",
-              },
-              {
-                n: "γ",
-                t: "Embedded",
-                p: "12 months",
-                d: "Two partners join your studio in residence. We build alongside, with full skin in the game.",
-              },
-              {
-                n: "δ",
-                t: "Counsel",
-                p: "Ongoing",
-                d: "A standing line to the studio. Quarterly retreats. Quiet, slow, decisive.",
-              },
-            ].map((e) => (
+            {engagements.map((e) => (
               <div key={e.n} className="border-t border-border pt-6">
                 <div className="flex items-baseline justify-between">
                   <span className="font-mono text-[11px] tracking-[0.22em] text-gold">{e.n}</span>
