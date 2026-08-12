@@ -12,6 +12,7 @@ import {
 } from "@/components/matrix/Figures";
 import { Ripple } from "@/components/matrix/Metaphors";
 import { DisciplineCard } from "@/components/matrix/DisciplineCard";
+import { LiveProductsPill } from "@/components/matrix/LiveProductsPill";
 
 export const metadata = pageSeo({
   path: "/",
@@ -461,6 +462,7 @@ export default function Index() {
           </div>
         </div>
       </Section>
+      <LiveProductsPill />
     </PageShell>
   );
 }
