@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const liveProducts = [
-  { t: "MindMuse Suite", href: "http://fm.matrka.net/" },
+  { t: "Hertz Radio", href: "http://fm.matrka.net/" },
   { t: "AlgoVista", href: "https://algovista.matrka.net/" },
 ];
 
