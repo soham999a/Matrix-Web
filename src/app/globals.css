@@ -56,9 +56,9 @@
   --color-fog: var(--fog);
   --color-silver: var(--silver);
   --color-gold: var(--gold);
-  --font-display: "Instrument Serif", "Times New Roman", serif;
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --font-display: var(--font-instrument-serif), "Times New Roman", serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
 }
 
 :root {

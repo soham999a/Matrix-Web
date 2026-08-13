@@ -1,7 +1,33 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
+import { IBM_Plex_Mono, Instrument_Serif, Inter } from "next/font/google";
 
 import "./globals.css";
+
+const fontInter = Inter({
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500"],
+  variable: "--font-inter",
+  display: "swap",
+  preload: true,
+});
+
+const fontInstrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
+  variable: "--font-instrument-serif",
+  display: "swap",
+  preload: true,
+});
+
+const fontPlexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["300", "400"],
+  variable: "--font-plex-mono",
+  display: "swap",
+  preload: true,
+});
 
 const SITE_NAME = "Matrix";
 const SITE_URL = "https://matrka.net";
@@ -80,9 +106,10 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
   },
   icons: {
-    icon: "/Matrix_New_Favicon.png",
-    shortcut: "/Matrix_New_Favicon.png",
-    apple: "/Matrix_New_Favicon.png",
+    icon: "/favicon-32x32.png",
+    shortcut: "/favicon-32x32.png",
+    apple: "/apple-touch-icon.png",
+    other: [{ rel: "icon", url: "/favicon-192.png", sizes: "192x192", type: "image/png" }],
   },
   appleWebApp: {
     capable: true,
@@ -91,7 +118,7 @@ export const metadata: Metadata = {
   },
   other: {
     "msapplication-TileColor": "#080808",
-    "msapplication-TileImage": "/Matrix_New_Favicon.png",
+    "msapplication-TileImage": "/favicon-192.png",
   },
 };
 
@@ -158,22 +185,18 @@ const orgJsonLd = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" dir="ltr">
+    <html
+      lang="en"
+      dir="ltr"
+      className={`${fontInter.variable} ${fontInstrumentSerif.variable} ${fontPlexMono.variable}`}
+    >
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@200;300;400;500&family=IBM+Plex+Mono:wght@300;400&display=swap"
-        />
-      </head>
-      <body>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
         />
-        {children}
-      </body>
+      </head>
+      <body>{children}</body>
     </html>
   );
 }
