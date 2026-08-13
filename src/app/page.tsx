@@ -40,8 +40,15 @@ export default function Index() {
       <Section className="grain relative isolate overflow-hidden min-h-[100svh] pt-28 pb-20 flex flex-col">
         {/* hero background — looping neural animation */}
         <div aria-hidden="true" className="absolute inset-0 -z-10 overflow-hidden">
-          <video autoPlay muted loop playsInline className="h-full w-full object-cover opacity-40">
-            <source src="/neuron-hero.mp4" type="video/mp4" />
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster="/neuron-hero-poster.jpg"
+            className="h-full w-full object-cover opacity-40"
+          >
+            <source src="/neuron-hero-720p.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/30 to-background" />
         </div>
@@ -427,10 +434,10 @@ export default function Index() {
           <div className="grid grid-cols-12">
             {[
               {
-                to: "/identity",
+                to: "/agency",
                 n: "00",
-                t: "Visual Foundation",
-                k: "The system before the systems",
+                t: "Our Portfolio",
+                k: "Every project and platform, one place",
               },
               { to: "/manifesto", n: "01", t: "The Manifesto", k: "Twelve theses, in full" },
               { to: "/research", n: "02", t: "Research", k: "Open notebooks, slow questions" },
