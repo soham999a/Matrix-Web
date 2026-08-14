@@ -21,6 +21,11 @@ const researchSubLinks = [
   { t: "Journal", to: "/journal" },
 ] as const;
 
+const agencySubLinks = [
+  { t: "Our Portfolio", to: "/agency#portfolio" },
+  { t: "Digital Consulting", to: "/agency#consulting" },
+] as const;
+
 function FooterItem({ label }: { label: string }) {
   return (
     <li className="flex items-baseline gap-2.5 text-sm">
@@ -68,7 +73,8 @@ export function Header() {
             const linkClass = `font-mono text-[10px] tracking-[0.22em] uppercase transition-colors duration-500 ${
               active ? "text-foreground" : "text-muted-foreground hover:text-foreground"
             }`;
-            if (n.to === "/research") {
+            if (n.to === "/research" || n.to === "/agency") {
+              const subs = n.to === "/research" ? researchSubLinks : agencySubLinks;
               return (
                 <div key={n.to} className="group relative">
                   <Link href={n.to} className={linkClass}>
@@ -76,7 +82,7 @@ export function Header() {
                   </Link>
                   <div className="invisible opacity-0 translate-y-1 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-0 absolute left-0 top-full pt-4 z-50 transition-all duration-300">
                     <div className="border border-border bg-background min-w-60 shadow-2xl">
-                      {researchSubLinks.map((s) => (
+                      {subs.map((s) => (
                         <Link
                           key={s.to}
                           href={s.to}
@@ -162,9 +168,9 @@ export function Header() {
                       →
                     </span>
                   </Link>
-                  {n.to === "/research" && (
+                  {(n.to === "/research" || n.to === "/agency") && (
                     <ul className="pb-6 pl-12 space-y-3">
-                      {researchSubLinks.map((s) => (
+                      {(n.to === "/research" ? researchSubLinks : agencySubLinks).map((s) => (
                         <li key={s.to}>
                           <Link
                             href={s.to}
