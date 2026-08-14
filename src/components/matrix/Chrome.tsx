@@ -7,7 +7,6 @@ import { LogoLockup } from "./Mark";
 
 const nav = [
   { to: "/research", label: "Research" },
-  { to: "/consulting", label: "Consulting" },
   { to: "/products", label: "Products" },
   { to: "/capabilities", label: "Capabilities" },
   { to: "/agency", label: "Agency" },
@@ -23,7 +22,7 @@ const researchSubLinks = [
 
 const agencySubLinks = [
   { t: "Our Portfolio", to: "/agency#portfolio" },
-  { t: "Digital Consulting", to: "/agency#consulting" },
+  { t: "Consulting", to: "/agency#consulting" },
 ] as const;
 
 function FooterItem({ label }: { label: string }) {

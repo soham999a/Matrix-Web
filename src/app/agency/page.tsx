@@ -150,7 +150,7 @@ export default function Agency() {
       </Section>
 
       <Section className="py-24" id="consulting">
-        <Eyebrow index="Practice IV">Digital Consulting</Eyebrow>
+        <Eyebrow index="Practice IV">Consulting</Eyebrow>
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mt-12">
           <div className="col-span-12 md:col-span-5">
             <p className="font-display text-3xl md:text-4xl leading-tight">
