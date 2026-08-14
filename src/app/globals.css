@@ -194,6 +194,25 @@
 }
 
 /* Slow, calm motion */
+@keyframes mtx-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+.mtx-caret {
+  display: inline-block;
+  width: 1px;
+  height: 1em;
+  margin-left: 3px;
+  background: currentColor;
+  vertical-align: text-bottom;
+  animation: mtx-blink 1.1s steps(1) infinite;
+}
 @keyframes mtx-breathe {
   0%,
   100% {
@@ -782,6 +801,10 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .mtx-caret {
+    animation: none;
+    opacity: 1;
+  }
   .mtx-assemble,
   .mtx-assemble * {
     animation: none !important;

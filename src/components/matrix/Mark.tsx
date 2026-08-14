@@ -1,4 +1,5 @@
 import type { SVGProps } from "react";
+import { TypeTagline } from "./TypeTagline";
 
 /**
  * MATRIX — Three logo directions, one wordmark.
@@ -65,20 +66,7 @@ export function LogoLockup({
           const i = tagline.lastIndexOf(" ");
           const first = i === -1 ? tagline : tagline.slice(0, i);
           const second = i === -1 ? null : tagline.slice(i + 1);
-          return (
-            <span
-              className={`mt-1 flex flex-col items-end font-mono text-[9px] leading-[1.5] tracking-[0.3em] uppercase whitespace-nowrap ${
-                light ? "text-ink/50" : "text-gold/80"
-              }`}
-            >
-              <span>{first}</span>
-              {second && (
-                <span className="tracking-[0.15em]" style={{ marginRight: 10 }}>
-                  {second}
-                </span>
-              )}
-            </span>
-          );
+          return <TypeTagline first={first} second={second} light={light} />;
         })()}
     </div>
   );
