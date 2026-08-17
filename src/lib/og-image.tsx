@@ -1,4 +1,6 @@
 import { ImageResponse } from "next/og";
+import { readFileSync } from "fs";
+import { join } from "path";
 
 export const OG_WIDTH = 1200;
 export const OG_HEIGHT = 630;
@@ -17,20 +19,16 @@ type LoadedFont = {
   style: "normal";
 };
 
-// Satori (next/og) cannot parse WOFF2, so pull TTF fonts directly from the
-// google/fonts repository. These are stable, versioned paths.
-const FONT_URLS: Record<string, string> = {
-  "Instrument Serif":
-    "https://github.com/google/fonts/raw/main/ofl/instrumentserif/InstrumentSerif-Regular.ttf",
-  "IBM Plex Mono":
-    "https://github.com/google/fonts/raw/main/ofl/ibmplexmono/IBMPlexMono-Regular.ttf",
-};
-
-async function loadFont(family: string): Promise<LoadedFont | null> {
-  const url = FONT_URLS[family];
-  if (!url) return null;
+function loadFont(family: string): LoadedFont | null {
+  const fontMap: Record<string, string> = {
+    "Instrument Serif": "InstrumentSerif-Regular.ttf",
+    "IBM Plex Mono": "IBMPlexMono-Regular.ttf",
+  };
+  const fileName = fontMap[family];
+  if (!fileName) return null;
   try {
-    const data = await fetch(url, { next: { revalidate: 86400 } }).then((r) => r.arrayBuffer());
+    const filePath = join(process.cwd(), "public", "fonts", fileName);
+    const data = readFileSync(filePath).buffer;
     return { name: family, data, weight: 400, style: "normal" };
   } catch {
     return null;
@@ -63,9 +61,9 @@ type OgProps = {
 };
 
 export async function MatrixOgImage({ eyebrow, title, subtitle }: OgProps): Promise<ImageResponse> {
-  const fonts = (
-    await Promise.all([loadFont("Instrument Serif"), loadFont("IBM Plex Mono")])
-  ).filter((f): f is LoadedFont => f !== null);
+  const fonts = [loadFont("Instrument Serif"), loadFont("IBM Plex Mono")].filter(
+    (f): f is LoadedFont => f !== null,
+  );
 
   const serif = fonts.find((f) => f.name === "Instrument Serif") ? "Instrument Serif" : undefined;
   const mono = fonts.find((f) => f.name === "IBM Plex Mono") ? "IBM Plex Mono" : undefined;
