@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { IBM_Plex_Mono, Instrument_Serif, Inter } from "next/font/google";
 
 import "./globals.css";
+import { GoogleAnalytics } from "@/components/matrix/Analytics";
 
 const fontInter = Inter({
   subsets: ["latin"],
@@ -196,7 +197,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <GoogleAnalytics />
+        {children}
+      </body>
     </html>
   );
 }

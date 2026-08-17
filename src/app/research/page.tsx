@@ -289,6 +289,29 @@ export default function Research() {
           </div>
         </div>
       </Section>
+
+      <Section className="py-24 border-t border-border">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
+          <p className="col-span-12 md:col-span-7 font-display text-3xl md:text-5xl leading-tight">
+            Research becomes platforms. Platforms become products.{" "}
+            <span className="italic text-muted-foreground">Explore the architecture.</span>
+          </p>
+          <div className="col-span-12 md:col-span-5 md:text-right flex md:justify-end gap-6 flex-col md:flex-row">
+            <Link
+              href="/products"
+              className="inline-block border border-foreground px-7 py-4 font-mono text-[11px] tracking-[0.28em] uppercase hover:bg-foreground hover:text-background transition-colors duration-500 w-fit"
+            >
+              The Portfolio →
+            </Link>
+            <Link
+              href="/capabilities"
+              className="inline-block border border-foreground px-7 py-4 font-mono text-[11px] tracking-[0.28em] uppercase hover:bg-foreground hover:text-background transition-colors duration-500 w-fit"
+            >
+              Nine Capabilities →
+            </Link>
+          </div>
+        </div>
+      </Section>
     </PageShell>
   );
 }

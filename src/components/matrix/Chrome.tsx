@@ -10,6 +10,7 @@ const nav = [
   { to: "/products", label: "Products" },
   { to: "/capabilities", label: "Capabilities" },
   { to: "/agency", label: "Agency" },
+  { to: "/consulting", label: "Consulting" },
   { to: "/manifesto", label: "Manifesto" },
 ] as const;
 
@@ -103,10 +104,10 @@ export function Header() {
           })}
         </nav>
         <Link
-          href="/about"
+          href="/contact"
           className="hidden lg:block font-mono text-[10px] tracking-[0.22em] uppercase text-foreground border-b border-gold/0 hover:border-gold transition-colors duration-500"
         >
-          About · Contact
+          Contact
         </Link>
 
         {/* mobile / tablet menu toggle */}
@@ -186,10 +187,16 @@ export function Header() {
             </ul>
             <div className="mt-10 flex flex-col gap-5 rise" style={{ animationDelay: "380ms" }}>
               <Link
+                href="/contact"
+                className="font-mono text-[11px] tracking-[0.28em] uppercase text-foreground border-b border-gold/0 hover:border-gold transition-colors duration-500 w-fit"
+              >
+                Contact
+              </Link>
+              <Link
                 href="/about"
                 className="font-mono text-[11px] tracking-[0.28em] uppercase text-foreground border-b border-gold/0 hover:border-gold transition-colors duration-500 w-fit"
               >
-                About · Contact
+                About
               </Link>
               <span className="font-mono text-[10px] tracking-[0.28em] uppercase text-muted-foreground">
                 M · A · T · R · I · X
@@ -215,8 +222,13 @@ export function Footer() {
           </p>
           <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-ink/70">
             <li>
+              <Link href="/contact" className="hover:text-ink">
+                Contact
+              </Link>
+            </li>
+            <li>
               <Link href="/about" className="hover:text-ink">
-                About · Contact
+                About
               </Link>
             </li>
             <li>
