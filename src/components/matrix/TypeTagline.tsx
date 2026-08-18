@@ -8,10 +8,12 @@ export function TypeTagline({
   first,
   second,
   light = false,
+  className = "",
 }: {
   first: string;
   second: string | null;
   light?: boolean;
+  className?: string;
 }) {
   const full = second ? `${first} ${second}` : first;
   const [count, setCount] = useState(0);
@@ -47,7 +49,7 @@ export function TypeTagline({
       aria-hidden="true"
       className={`mt-1 flex flex-col items-end font-mono text-[9px] leading-[1.5] tracking-[0.3em] uppercase whitespace-nowrap ${
         light ? "text-ink/50" : "text-gold/80"
-      }`}
+      } ${className}`}
     >
       <span>
         {firstPart}

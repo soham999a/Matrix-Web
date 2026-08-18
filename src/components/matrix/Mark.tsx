@@ -25,12 +25,14 @@ export function LogoLockup({
   tagline = "Evolution of Intelligence",
   showTagline = true,
   className = "",
+  taglineClassName = "",
   light = false,
 }: {
   height?: number;
   tagline?: string;
   showTagline?: boolean;
   className?: string;
+  taglineClassName?: string;
   light?: boolean;
 }) {
   return (
@@ -61,7 +63,7 @@ export function LogoLockup({
           const i = tagline.lastIndexOf(" ");
           const first = i === -1 ? tagline : tagline.slice(0, i);
           const second = i === -1 ? null : tagline.slice(i + 1);
-          return <TypeTagline first={first} second={second} light={light} />;
+          return <TypeTagline first={first} second={second} light={light} className={taglineClassName} />;
         })()}
     </div>
   );
