@@ -214,7 +214,11 @@ export function Footer() {
     <footer className="border-t border-ink/10 bg-fog text-ink mt-24 lg:mt-32">
       <div className="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14 py-16 md:py-20 grid grid-cols-12 gap-6 sm:gap-8">
         <div className="col-span-12 md:col-span-3">
-          <LogoLockup height={38} className="h-[30px]! sm:h-[34px]! lg:h-[38px]!" taglineClassName="!text-[#B8924A]" />
+          <LogoLockup
+            height={38}
+            className="h-[30px]! sm:h-[34px]! lg:h-[38px]!"
+            taglineClassName="!text-[#B8924A]"
+          />
           <p className="font-display text-2xl leading-tight mt-8 max-w-xs text-ink">
             Designing intelligence.
             <br />

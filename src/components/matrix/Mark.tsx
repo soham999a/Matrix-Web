@@ -63,7 +63,9 @@ export function LogoLockup({
           const i = tagline.lastIndexOf(" ");
           const first = i === -1 ? tagline : tagline.slice(0, i);
           const second = i === -1 ? null : tagline.slice(i + 1);
-          return <TypeTagline first={first} second={second} light={light} className={taglineClassName} />;
+          return (
+            <TypeTagline first={first} second={second} light={light} className={taglineClassName} />
+          );
         })()}
     </div>
   );
