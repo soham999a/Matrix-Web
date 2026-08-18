@@ -267,7 +267,7 @@ export default function Index() {
                 "Causal AI",
                 "Self-Evolving Models",
                 "Agentic Systems",
-                "AI Evaluation Systems",
+                "Context Engineering",
               ],
             },
             {
@@ -288,10 +288,10 @@ export default function Index() {
               d: "The craft that makes an idea load-bearing.",
               slug: "engineering",
               points: [
-                "Edge Computing",
-                "Robotics",
-                "Cymatics Instrumentation",
-                "Scientific Instruments",
+                "Hardware",
+                "Software",
+                "Origami & Crafts",
+                "Sound Engineering",
               ],
             },
             {
@@ -301,9 +301,9 @@ export default function Index() {
               slug: "consulting",
               points: [
                 "AI Strategy",
-                "Enterprise Architecture",
-                "Grant / R&D Advisory",
-                "Micro-apps & Dashboards",
+                "Training & Workshops",
+                "R&D Advisory",
+                "SaaS & Analytics",
               ],
             },
             {
@@ -314,8 +314,8 @@ export default function Index() {
               points: [
                 "Post-Smartphone Intelligence",
                 "Ambient Computing",
-                "Space Systems",
-                "Future Governance",
+                "Graph Network Intelligence",
+                "Energy Tech",
               ],
             },
             {
@@ -337,9 +337,9 @@ export default function Index() {
               slug: "education",
               points: [
                 "QiDS : Human Intelligence",
-                "Public-Sector Intelligence",
-                "Civic Innovation",
-                "Digital Inclusion",
+                "Knowledge Systems",
+                "Learning Society",
+                "Human Science Development",
               ],
             },
             {
@@ -360,10 +360,10 @@ export default function Index() {
               d: "The discipline that quietly governs the rest — and how humans and machines think together.",
               slug: "design",
               points: [
-                "IQ / EQ / SQ / AQ",
-                "Human Capability Assessment",
-                "MindMuse : Creative Intelligence",
                 "Liberal Arts",
+                "Cymatics",
+                "Human–AI Interaction",
+                "Creative Cognition",
               ],
             },
           ].map((c, i) => (
