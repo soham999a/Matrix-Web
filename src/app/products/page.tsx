@@ -282,7 +282,10 @@ export default function Products() {
                 {p.caps.length > 0 && (
                   <ul className="mt-6 space-y-2">
                     {p.caps.map((c) => (
-                      <li key={c} className="text-sm text-foreground/75 leading-relaxed flex items-start gap-2">
+                      <li
+                        key={c}
+                        className="text-sm text-foreground/75 leading-relaxed flex items-start gap-2"
+                      >
                         <span className="text-gold mt-0.5">•</span>
                         {c}
                       </li>
