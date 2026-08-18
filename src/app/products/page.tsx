@@ -120,7 +120,7 @@ const portfolio = [
   },
   {
     n: "08",
-    t: "Digital + Consulting",
+    t: "Digital Consulting",
     tag: "Knowledge Assets & Advisory",
     domain: "Enterprise · Institutional",
     dh: "/capabilities/consulting",
