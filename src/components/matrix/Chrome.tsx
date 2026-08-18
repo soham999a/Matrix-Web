@@ -65,7 +65,7 @@ export function Header() {
           className="inline-flex items-center text-foreground shrink-0"
           aria-label="Matrix — home"
         >
-          <LogoLockup height={38} className="h-[30px]! sm:h-[34px]! lg:h-[38px]!" />
+          <LogoLockup height={48} className="h-[38px]! sm:h-[42px]! lg:h-[48px]!" />
         </Link>
         <nav className="hidden lg:flex items-center gap-8" aria-label="Primary">
           {nav.map((n) => {

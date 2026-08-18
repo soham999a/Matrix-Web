@@ -98,7 +98,7 @@ export default function Index() {
       <Section className="py-24 border-t border-border">
         <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 md:col-span-3">
-            <Eyebrow index="Litany">Mātṛkā · the mother-forms</Eyebrow>
+            <Eyebrow index="Litany">the mother-forms</Eyebrow>
           </div>
           <ul className="col-span-12 md:col-span-9 space-y-6 md:space-y-8">
             {[

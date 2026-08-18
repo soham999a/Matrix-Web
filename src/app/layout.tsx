@@ -107,10 +107,10 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
   },
   icons: {
-    icon: "/favicon-32x32.png",
-    shortcut: "/favicon-32x32.png",
-    apple: "/apple-touch-icon.png",
-    other: [{ rel: "icon", url: "/favicon-192.png", sizes: "192x192", type: "image/png" }],
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+    other: [{ rel: "icon", url: "/favicon.png", sizes: "any", type: "image/png" }],
   },
   appleWebApp: {
     capable: true,
@@ -119,7 +119,7 @@ export const metadata: Metadata = {
   },
   other: {
     "msapplication-TileColor": "#080808",
-    "msapplication-TileImage": "/favicon-192.png",
+    "msapplication-TileImage": "/favicon.png",
   },
 };
 
@@ -134,7 +134,7 @@ const orgJsonLd = {
       url: SITE_URL,
       logo: {
         "@type": "ImageObject",
-        url: `${SITE_URL}/matrix-logo-website-final.png`,
+        url: `${SITE_URL}/matrix-new-logo.png`,
         width: 1774,
         height: 887,
       },

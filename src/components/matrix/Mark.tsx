@@ -45,7 +45,7 @@ export function LogoLockup({
         </span>
       ) : (
         <Image
-          src="/cropped logo for now.png"
+          src="/matrix-new-logo.png"
           alt="MATRIX · mātṛkā — Evolution of Intelligence"
           width={0}
           height={0}

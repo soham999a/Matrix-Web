@@ -4,7 +4,7 @@ export const SITE = {
   name: "Matrix",
   url: "https://matrka.net",
   tagline: "Intelligence Architecture Studio",
-  ogImage: "/matrix-logo-website-final.png",
+  ogImage: "/matrix-new-logo.png",
   ogImageWidth: 1774,
   ogImageHeight: 887,
   ogImageAlt: "mātṛkā — Evolution of Intelligence",
