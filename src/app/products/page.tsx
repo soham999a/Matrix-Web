@@ -283,7 +283,7 @@ export default function Products() {
                   <ul className="mt-6 space-y-2">
                     {p.caps.map((c) => (
                       <li key={c} className="text-sm text-foreground/75 leading-relaxed">
-                        — {c}
+                        {c}
                       </li>
                     ))}
                   </ul>

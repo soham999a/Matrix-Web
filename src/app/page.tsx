@@ -13,6 +13,7 @@ import {
 import { Ripple } from "@/components/matrix/Metaphors";
 import { DisciplineCard } from "@/components/matrix/DisciplineCard";
 import { LiveProductsPill } from "@/components/matrix/LiveProductsPill";
+import { LazyVideo } from "@/components/matrix/LazyVideo";
 
 export const metadata = pageSeo({
   path: "/",
@@ -40,16 +41,11 @@ export default function Index() {
       <Section className="grain relative isolate overflow-hidden min-h-[100svh] pt-28 pb-20 flex flex-col">
         {/* hero background — looping neural animation */}
         <div aria-hidden="true" className="absolute inset-0 -z-10 overflow-hidden">
-          <video
-            autoPlay
-            muted
-            loop
-            playsInline
+          <LazyVideo
             poster="/neuron-hero-poster.jpg"
-            className="h-full w-full object-cover opacity-40"
-          >
-            <source src="/neuron-hero-720p.mp4" type="video/mp4" />
-          </video>
+            src="/neuron-hero-720p.mp4"
+            className="h-full w-full"
+          />
           <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/30 to-background" />
         </div>
         {/* corner registration marks */}

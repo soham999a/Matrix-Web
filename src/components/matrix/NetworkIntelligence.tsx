@@ -141,12 +141,31 @@ export function NetworkIntelligence({ size = 340, className = "" }: Props) {
   const nodeRefs = useRef<(SVGGElement | null)[]>([]);
   const edgeRefs = useRef<(SVGLineElement | null)[]>([]);
   const pulseRefs = useRef<(SVGGElement | null)[]>([]);
+  const svgRef = useRef<SVGSVGElement>(null);
 
   useEffect(() => {
     if (reduced) return;
     let raf = 0;
+    let visible = true;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        visible = entry.isIntersecting;
+        if (visible && raf === 0) {
+          raf = requestAnimationFrame(tick);
+        }
+      },
+      { threshold: 0 },
+    );
+
+    if (svgRef.current) observer.observe(svgRef.current);
+
     const t0 = performance.now();
     const tick = (now: number) => {
+      if (!visible) {
+        raf = 0;
+        return;
+      }
       const t = (now - t0) / 1000;
       NODES.forEach((_, i) => {
         const [x, y] = ep(i, t);
@@ -178,11 +197,15 @@ export function NetworkIntelligence({ size = 340, className = "" }: Props) {
       raf = requestAnimationFrame(tick);
     };
     raf = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(raf);
+    return () => {
+      cancelAnimationFrame(raf);
+      observer.disconnect();
+    };
   }, [reduced]);
 
   return (
     <svg
+      ref={svgRef}
       width={size}
       height={size}
       viewBox="0 0 340 340"

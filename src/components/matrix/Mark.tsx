@@ -1,4 +1,5 @@
 import type { SVGProps } from "react";
+import Image from "next/image";
 import { TypeTagline } from "./TypeTagline";
 
 /**
@@ -13,19 +14,9 @@ import { TypeTagline } from "./TypeTagline";
 
 type MarkProps = { size?: number; className?: string; accent?: string } & SVGProps<SVGSVGElement>;
 
-/** The official MATRIX logo mark (panels + node lattice). */
+/** The official MATRIX logo mark (SVG lattice). */
 export function LogoMark({ size = 22, className = "" }: { size?: number; className?: string }) {
-  return (
-    <img
-      src="/matrix-mark.png"
-      alt="MATRIX"
-      width={size}
-      height={size}
-      className={`block select-none ${className}`}
-      style={{ width: size, height: size, objectFit: "contain" }}
-      draggable={false}
-    />
-  );
+  return <MarkLattice size={size} className={className} />;
 }
 
 /** Horizontal lockup — mark + mātṛkā wordmark. */
@@ -53,12 +44,16 @@ export function LogoLockup({
           <span className="font-mono text-[11px] tracking-[0.28em] uppercase text-ink">Matrix</span>
         </span>
       ) : (
-        <img
-          src="/cropped%20logo%20for%20now.png"
+        <Image
+          src="/cropped logo for now.png"
           alt="MATRIX · mātṛkā — Evolution of Intelligence"
+          width={0}
+          height={0}
+          sizes={`${height * 4}px`}
           className={`block select-none w-auto ${className}`}
           style={{ height }}
           draggable={false}
+          priority
         />
       )}
       {showTagline &&
