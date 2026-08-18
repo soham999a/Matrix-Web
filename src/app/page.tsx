@@ -250,7 +250,7 @@ export default function Index() {
             <Eyebrow index="§ III">Capabilities</Eyebrow>
           </div>
           <h2 className="col-span-12 md:col-span-9 font-display text-5xl md:text-7xl leading-[0.95] tracking-tight">
-            Eight disciplines
+            Nine disciplines
             <br />
             <span className="italic text-muted-foreground">held by a single hand.</span>
           </h2>
@@ -296,18 +296,30 @@ export default function Index() {
             },
             {
               n: "IV",
-              t: "Futurology",
-              d: "Disciplined study of the century ahead.",
-              slug: "futurology",
+              t: "Consulting",
+              d: "Counsel for governments, founders, institutions.",
+              slug: "consulting",
               points: [
-                "SaaS & Analytics",
-                "Futurology",
-                "Quantum Bio-Photonics",
-                "Energy Tech",
+                "AI Strategy",
+                "Enterprise Architecture",
+                "Grant / R&D Advisory",
+                "Micro-apps & Dashboards",
               ],
             },
             {
               n: "V",
+              t: "Futurology",
+              d: "Disciplined study of the century ahead.",
+              slug: "futurology",
+              points: [
+                "Post-Smartphone Intelligence",
+                "Ambient Computing",
+                "Space Systems",
+                "Future Governance",
+              ],
+            },
+            {
+              n: "VI",
               t: "Sustainability",
               d: "Systems accountable to the century they are built in.",
               slug: "sustainability",
@@ -319,18 +331,19 @@ export default function Index() {
               ],
             },
             {
-              n: "VI",
+              n: "VII",
               t: "Education & Social Innovation",
               d: "A curriculum architecture for those who help others live on the ground.",
               slug: "education",
               points: [
-                "Knowledge Systems",
-                "Learning Society",
-                "Human Science Development",
+                "QiDS : Human Intelligence",
+                "Public-Sector Intelligence",
+                "Civic Innovation",
+                "Digital Inclusion",
               ],
             },
             {
-              n: "VII",
+              n: "VIII",
               t: "Quanta",
               d: "Superposition, entanglement, and probability as methods.",
               slug: "quanta",
@@ -342,15 +355,15 @@ export default function Index() {
               ],
             },
             {
-              n: "VIII",
+              n: "IX",
               t: "Design & Human Intelligence",
               d: "The discipline that quietly governs the rest — and how humans and machines think together.",
               slug: "design",
               points: [
+                "IQ / EQ / SQ / AQ",
+                "Human Capability Assessment",
+                "MindMuse : Creative Intelligence",
                 "Liberal Arts",
-                "Cymatics",
-                "Human–AI Interaction",
-                "Creative Cognition",
               ],
             },
           ].map((c, i) => (
