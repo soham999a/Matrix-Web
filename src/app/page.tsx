@@ -287,24 +287,14 @@ export default function Index() {
               t: "Engineering",
               d: "The craft that makes an idea load-bearing.",
               slug: "engineering",
-              points: [
-                "Hardware",
-                "Software",
-                "Origami & Crafts",
-                "Sound Engineering",
-              ],
+              points: ["Hardware", "Software", "Origami & Crafts", "Sound Engineering"],
             },
             {
               n: "IV",
               t: "Consulting",
               d: "Counsel for governments, founders, institutions.",
               slug: "consulting",
-              points: [
-                "AI Strategy",
-                "Training & Workshops",
-                "R&D Advisory",
-                "SaaS & Analytics",
-              ],
+              points: ["AI Strategy", "Training & Workshops", "R&D Advisory", "SaaS & Analytics"],
             },
             {
               n: "V",
@@ -359,12 +349,7 @@ export default function Index() {
               t: "Design & Human Intelligence",
               d: "The discipline that quietly governs the rest — and how humans and machines think together.",
               slug: "design",
-              points: [
-                "Liberal Arts",
-                "Cymatics",
-                "Human–AI Interaction",
-                "Creative Cognition",
-              ],
+              points: ["Liberal Arts", "Cymatics", "Human–AI Interaction", "Creative Cognition"],
             },
           ].map((c, i) => (
             <DisciplineCard key={c.n} c={c} i={i} />
