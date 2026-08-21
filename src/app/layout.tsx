@@ -31,7 +31,7 @@ const fontPlexMono = IBM_Plex_Mono({
 });
 
 const SITE_NAME = "Matrix";
-const SITE_URL = "https://matrka.net";
+const SITE_URL = "https://www.matrka.net";
 const SITE_DESCRIPTION =
   "Matrix is an intelligence architecture studio for civilization-scale AI — original research, strategic counsel, and applied intelligence platforms built in Kolkata, India.";
 

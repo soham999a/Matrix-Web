@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 
 export const SITE = {
   name: "Matrix",
-  url: "https://matrka.net",
+  // Keep in sync with SITE_URL in src/app/layout.tsx — www is the primary
+  // domain; the apex redirects to it with a 308 that link crawlers dislike.
+  url: "https://www.matrka.net",
   tagline: "Intelligence Architecture Studio",
   ogImage: "/matrix-new-logo.png",
   ogImageWidth: 1774,

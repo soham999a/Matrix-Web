@@ -4,7 +4,7 @@ import { SITE, pageSeo } from "@/lib/seo";
 describe("seo", () => {
   it("SITE should have all required properties", () => {
     expect(SITE.name).toBe("Matrix");
-    expect(SITE.url).toBe("https://matrka.net");
+    expect(SITE.url).toBe("https://www.matrka.net");
     expect(SITE.tagline).toBeTruthy();
     expect(SITE.email).toBeTruthy();
     expect(SITE.description).toBeTruthy();
