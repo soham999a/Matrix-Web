@@ -35,6 +35,17 @@ function loadFont(family: string): LoadedFont | null {
   }
 }
 
+/** The official brand logo as a base64 data URI (2:1 aspect ratio). */
+function loadLogo(): string | null {
+  try {
+    const filePath = join(process.cwd(), "public", "matrix-new-logo.png");
+    const data = readFileSync(filePath);
+    return `data:image/png;base64,${data.toString("base64")}`;
+  } catch {
+    return null;
+  }
+}
+
 function LatticeMark({ size = 40, accent = GOLD }: { size?: number; accent?: string }) {
   return (
     <svg width={size} height={size} viewBox="0 0 40 40" fill="none">
@@ -64,6 +75,7 @@ export async function MatrixOgImage({ eyebrow, title, subtitle }: OgProps): Prom
   const fonts = [loadFont("Instrument Serif"), loadFont("IBM Plex Mono")].filter(
     (f): f is LoadedFont => f !== null,
   );
+  const logo = loadLogo();
 
   const serif = fonts.find((f) => f.name === "Instrument Serif") ? "Instrument Serif" : undefined;
   const mono = fonts.find((f) => f.name === "IBM Plex Mono") ? "IBM Plex Mono" : undefined;
@@ -78,36 +90,11 @@ export async function MatrixOgImage({ eyebrow, title, subtitle }: OgProps): Prom
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
-        padding: 64,
+        padding: 56,
         fontFamily: "sans-serif",
       }}
     >
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-          <LatticeMark />
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: 2,
-            }}
-          >
-            <span style={{ fontSize: 22, letterSpacing: 10, fontWeight: 700, fontFamily: mono }}>
-              MATRIX
-            </span>
-            <span
-              style={{
-                fontSize: 11,
-                letterSpacing: 5,
-                textTransform: "uppercase",
-                color: MUTED,
-                fontFamily: mono,
-              }}
-            >
-              Intelligence Architecture Studio
-            </span>
-          </div>
-        </div>
         <span
           style={{
             fontSize: 15,
@@ -119,21 +106,49 @@ export async function MatrixOgImage({ eyebrow, title, subtitle }: OgProps): Prom
         >
           {eyebrow}
         </span>
+        <LatticeMark size={34} />
+      </div>
+
+      {/* brand lockup — the real site logo + tagline */}
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: 18,
+        }}
+      >
+        {logo ? (
+          <img src={logo} alt="mātṛkā" width={430} height={215} style={{ display: "block" }} />
+        ) : (
+          <span style={{ fontSize: 40, letterSpacing: 12, fontFamily: mono }}>M · A · T · R · K · A</span>
+        )}
+        <span
+          style={{
+            fontSize: 14,
+            letterSpacing: 9,
+            textTransform: "uppercase",
+            color: MUTED,
+            fontFamily: mono,
+          }}
+        >
+          Evolution of Intelligence
+        </span>
       </div>
 
       <div
         style={{
           display: "flex",
           flexDirection: "column",
-          gap: 20,
-          maxWidth: 980,
+          gap: 18,
+          maxWidth: 1000,
         }}
       >
         <div style={{ width: 96, height: 2, background: GOLD }} />
         <div
           style={{
-            fontSize: 72,
-            lineHeight: 1.02,
+            fontSize: 58,
+            lineHeight: 1.05,
             letterSpacing: "-0.01em",
             fontFamily: serif,
             fontWeight: 400,
@@ -142,7 +157,7 @@ export async function MatrixOgImage({ eyebrow, title, subtitle }: OgProps): Prom
           {title}
         </div>
         {subtitle && (
-          <div style={{ fontSize: 26, lineHeight: 1.3, color: MUTED, fontFamily: mono }}>
+          <div style={{ fontSize: 24, lineHeight: 1.3, color: MUTED, fontFamily: mono }}>
             {subtitle}
           </div>
         )}
