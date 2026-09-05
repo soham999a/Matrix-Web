@@ -9,15 +9,17 @@ export const metadata = pageSeo({
   path: "/products",
   title: "AI Products & Applied Intelligence Platforms",
   description:
-    "Nine AI platforms and services from Matrix, one architecture: QiDS, Humming, ARPS, Mangrove, Datum, MindMuse Suite, AlgoVista, Digital and Consulting — built on the CES-QN and KALPA research frameworks.",
+    "Nine AI platforms and services from Matrix, one architecture — Gravity, QiDS, Humming, ARPS, Mangrove, Datum, MindMuse, Digital Products, and Consulting — built on the CES-QN and KALPA research frameworks.",
   keywords: [
     "Matrix products",
     "AI products",
     "applied intelligence platforms",
-    "QiDS",
+    "Gravity decision intelligence",
+    "QiDS human intelligence",
     "Humming AI",
     "ARPS supply chain AI",
     "Mangrove ESG",
+    "MindMuse creative intelligence",
     "AI platform India",
     "human intelligence platform",
     "AI portfolio",
@@ -25,15 +27,27 @@ export const metadata = pageSeo({
   og: {
     title: "Matrix — Applied Intelligence Portfolio",
     description:
-      "Designed around one architecture. Nine platforms and services, two research frameworks.",
+      "Nine platforms. One architecture. Gravity · QiDS · Humming · ARPS · Mangrove · Datum · MindMuse · Digital Products · Consulting.",
   },
 });
 
 const portfolio = [
   {
     n: "01",
+    t: "Gravity",
+    tag: "Decision & Adaptive Intelligence · Multi-Agent Architecture",
+    d: "The most direct commercial expression of the Omega Model. A multi-agent decision intelligence framework built around computationally adaptive intelligence — the capacity to reconfigure reasoning strategies in response to the structure of the problem, not apply a fixed algorithm uniformly. The foundation for enterprise intelligence deployments across the MATRIX product suite.",
+    domain: "Decision Intelligence · Multi-Agent Systems",
+    dh: "/capabilities/engineering",
+    caps: [],
+    s: "In Development",
+    live: "https://gravity.matrka.net/",
+  },
+  {
+    n: "02",
     t: "QiDS",
-    tag: "Human Intelligence Platform",
+    tag: "Human Intelligence · Education · Career · Talent",
+    d: "The Quadrant Intelligence Development System — MATRIX's flagship education platform and primary commercial IP asset. Integrates IQ, EQ, SQ, and AQ into a unified assessment and development lifecycle, producing personalised Individual Quotient Profiles with six-month roadmaps. Patent Application 202631019776 A.",
     domain: "Education · Career · Talent",
     dh: "/capabilities/education",
     caps: [
@@ -41,13 +55,16 @@ const portfolio = [
       "Individual Quotient Profile",
       "Career Intelligence",
       "Human Development Roadmap",
+      "Configurations: School · Individual · Interview · University · Corporate · Custom",
     ],
-    s: "Prototype · Patent 202631019776 A",
+    s: "Prototype · Patent",
+    live: "https://qids.matrka.net/",
   },
   {
-    n: "02",
+    n: "03",
     t: "Humming",
-    tag: "Operational Intelligence Platform",
+    tag: "Frequency Intelligence · Operational Wellness · Enterprise",
+    d: "Operational intelligence and frequency-informed wellness platform — an AI copilot for executive decision-making integrating executive dashboards, decision intelligence, management AI, and continuous business monitoring into a unified operational layer.",
     domain: "Enterprise · Management",
     dh: "/capabilities/systems",
     caps: [
@@ -58,11 +75,13 @@ const portfolio = [
       "AI Copilot",
     ],
     s: "Research + MVP",
+    live: "https://humming.matrka.net/",
   },
   {
-    n: "03",
+    n: "04",
     t: "ARPS",
-    tag: "Supply Chain Intelligence Platform",
+    tag: "Autonomous Procurement · Supply Chain Intelligence",
+    d: "Autonomous Procurement and Supply Chain Intelligence — applying the CES-QN framework to supply chain decision-making through demand forecasting, procurement intelligence, inventory optimisation, logistics intelligence, and risk modelling.",
     domain: "Procurement · Logistics · Risk",
     dh: "/capabilities/systems",
     caps: [
@@ -73,11 +92,13 @@ const portfolio = [
       "Risk Intelligence",
     ],
     s: "Research + MVP",
+    live: "https://arps.matrka.net/",
   },
   {
-    n: "04",
+    n: "05",
     t: "Mangrove",
-    tag: "Sustainability Intelligence Platform",
+    tag: "Sustainability Intelligence · ESG · Climate · Water",
+    d: "Sustainability intelligence engine for ESG measurement, climate risk assessment, and compliance — providing carbon intelligence, water intelligence, climate risk modelling, and scenario analysis. Aligned with MATRIX's XPrize Water Scarcity research programme (2027 submission).",
     domain: "ESG · Climate · Compliance",
     dh: "/capabilities/sustainability",
     caps: [
@@ -88,44 +109,106 @@ const portfolio = [
       "Compliance Reporting",
     ],
     s: "Research",
-  },
-  {
-    n: "05",
-    t: "Datum",
-    tag: "Analytics Made Easy",
-    domain: "Business Intelligence",
-    dh: "/capabilities/systems",
-    caps: [],
-    s: "Research",
+    live: "https://mangrove.matrka.net/",
   },
   {
     n: "06",
-    t: "MindMuse Suite",
-    tag: "Creative Intelligence Platform · Hertz · Resonance · Sonata",
-    domain: "Music · Creative Systems · Knowledge",
-    dh: "/capabilities/design",
-    caps: [],
-    s: "Research",
-    live: "http://fm.matrka.net/",
+    t: "Datum",
+    tag: "Enterprise Data Intelligence · Self-Service Analytics",
+    d: "Enterprise data intelligence through natural language analytics, self-service BI, enterprise reporting, and decision support — making advanced analytical intelligence accessible to organisations without dedicated data science teams.",
+    domain: "Business Intelligence",
+    dh: "/capabilities/systems",
+    caps: [
+      "Natural Language Analytics",
+      "Self-Service BI",
+      "Enterprise Reporting",
+      "Decision Support",
+    ],
+    s: "Prototype",
+    live: "https://datum.matrka.net/",
   },
   {
     n: "07",
-    t: "AlgoVista",
-    tag: "Algorithm Visualisation Platform",
-    domain: "Education · Research · Computer Science",
-    dh: "/capabilities/education",
+    t: "MindMuse",
+    tag: "AI Creativity & Cognition · Creative Intelligence Engine",
+    d: "AI creativity and cognition engine applying the KALPA framework to music, knowledge, and creative systems — including Hertz (FM radio & intelligent curation), Resonance (recommendation engine), Sonata (music dictionary), and AlgoVista (algorithm visualisation). Serving the Orange Economy.",
+    domain: "Creative Intelligence · Orange Economy",
+    dh: "/capabilities/design",
     caps: [],
-    s: "Research",
-    live: "https://algovista.matrka.net/",
+    apps: [
+      { name: "Hertz", href: "https://hertz.matrka.net/" },
+      { name: "Resonance", href: "https://resonance.matrka.net/" },
+      { name: "Sonata", href: "https://sonata.matrka.net/" },
+      { name: "AlgoVista", href: "https://algovista.matrka.net/" },
+    ],
+    s: "Designed · In Dev.",
   },
   {
     n: "08",
-    t: "Digital Consulting",
-    tag: "Knowledge Assets & Advisory",
-    domain: "Enterprise · Institutional",
+    t: "Digital Products",
+    tag: "End-to-End Product Engineering · Knowledge Assets",
+    d: "Commercial knowledge assets and enterprise advisory services — prompt engineering packs, AI strategy frameworks, automation playbooks, BI dashboard templates, and enterprise transformation consulting. Currently operational and generating revenue.",
+    domain: "Enterprise · Knowledge Assets",
     dh: "/capabilities/consulting",
+    caps: [
+      "Prompt Engineering Packs",
+      "AI Strategy Frameworks",
+      "Automation Playbooks",
+      "BI Dashboard Templates",
+      "Enterprise Transformation Consulting",
+    ],
+    s: "Commercial",
+  },
+  {
+    n: "09",
+    t: "Consulting",
+    tag: "Applied AI Strategic Advisory · Enterprise Transformation",
+    d: "Applied AI strategic advisory covering AI readiness assessment, intelligence architecture design, responsible AI governance, enterprise transformation, and technology strategy. MATRIX's consulting practice is the primary client entry point — consulting engagements generate product requirements, pilot relationships, and long-term platform deployments.",
+    domain: "Strategic Advisory · Enterprise",
+    dh: "/capabilities/consulting",
+    caps: [
+      "AI Readiness Assessment",
+      "Intelligence Architecture Design",
+      "Responsible AI Governance",
+      "Enterprise Transformation",
+      "Technology Strategy",
+    ],
+    s: "Commercial",
+  },
+];
+
+const inDevelopment = [
+  {
+    n: "10",
+    t: "Agile Plus",
+    tag: "Intelligent Project Management",
+    domain: "Project Management · Enterprise",
     caps: [],
-    s: "Active practice",
+    s: "In Development",
+    live: "https://agile.matrka.net/",
+  },
+  {
+    n: "11",
+    t: "Metacare",
+    tag: "Intelligent Healthcare",
+    domain: "Healthcare · AI",
+    caps: [],
+    s: "In Development",
+    live: "https://metacare.matrka.net/",
+  },
+  {
+    n: "12",
+    t: "Quantum Learning Platform",
+    tag: "QuantumLab · Quantum Education",
+    domain: "Education · Quantum Computing",
+    caps: [
+      "Quantum Computing Fundamentals",
+      "Quantum Visualisation & Labs",
+      "Interactive Simulations",
+      "Curriculum for Schools & Universities",
+    ],
+    s: "In Development",
+    live: "https://quantumlab.matrka.net/",
   },
 ];
 
@@ -148,29 +231,27 @@ const layers = [
   },
   {
     t: "Products",
-    d: "QiDS · Humming · ARPS · Mangrove · Datum · MindMuse Suite · AlgoVista · Digital · Consulting",
+    d: "Gravity · QiDS · Humming · ARPS · Mangrove · Datum · MindMuse · Digital Products · Consulting",
   },
 ];
 
 const roadmap = [
-  { h: "Near term", items: ["QiDS", "Humming", "ARPS", "Datum", "MindMuse Suite", "Mangrove"] },
+  {
+    h: "Near term",
+    items: ["Gravity", "QiDS", "Humming", "ARPS", "Datum", "MindMuse", "Mangrove"],
+  },
   {
     h: "Medium term",
-    items: [
-      "Decision Intelligence",
-      "Institutional AI",
-      "Enterprise Intelligence",
-      "Sustainability Intelligence",
-    ],
+    items: ["Agile Plus", "Metacare", "Digital Products", "Consulting"],
   },
   {
     h: "Long term",
     items: [
+      "Quantum Learning Platform",
       "AI-native Infrastructure",
       "Advanced Compute",
       "Human-Machine Intelligence",
       "Cognitive Devices",
-      "Civilisation-scale Decision Systems",
     ],
   },
 ];
@@ -185,7 +266,7 @@ export default function Products() {
             "@type": "ItemList",
             name: "Matrix — Applied Intelligence Portfolio",
             description:
-              "Nine AI platforms and services from Matrix, one architecture: QiDS, Humming, ARPS, Mangrove, Datum, MindMuse Suite, AlgoVista, Digital and Consulting.",
+              "Nine AI platforms and services from Matrix, one architecture — Gravity, QiDS, Humming, ARPS, Mangrove, Datum, MindMuse, Digital Products, and Consulting.",
             url: `${SITE.url}/products`,
             numberOfItems: portfolio.length,
             itemListElement: portfolio.map((p, i) => ({
@@ -194,7 +275,7 @@ export default function Products() {
               item: {
                 "@type": "SoftwareApplication",
                 name: p.t,
-                description: p.tag,
+                description: p.d || p.tag,
                 applicationCategory: "BusinessApplication",
                 operatingSystem: "Web",
                 url: p.live ?? `${SITE.url}/products#${p.n}`,
@@ -212,19 +293,21 @@ export default function Products() {
           },
         ]}
       />
+
       <Section className="pt-32 pb-16">
         <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 md:col-span-7">
             <Eyebrow index="Practice III">Applied Intelligence Portfolio</Eyebrow>
             <h1 className="font-display text-[clamp(3rem,8vw,8rem)] leading-[0.95] tracking-tight mt-10">
-              Designed around
+              Nine platforms.
               <br />
-              <span className="italic text-muted-foreground">one architecture.</span>
+              <span className="italic text-muted-foreground">One architecture.</span>
             </h1>
             <p className="mt-10 text-lg text-foreground/80 max-w-xl leading-relaxed">
-              Each product is a distinct manifestation of a single coherent intelligence
-              architecture — the Omega Model. Where conventional firms ship features, we design
-              systems: reasoning infrastructure an organisation can depend on across decades.
+              Each platform in the MATRIX suite is a distinct commercial manifestation of the Omega
+              Model reasoning infrastructure. They are not standalone products — they are nodes in a
+              single compounding intelligence ecosystem. Maturity varies; this is stated plainly for
+              each platform.
             </p>
             <div className="mt-12 flex flex-wrap gap-x-8 gap-y-6 sm:gap-x-16">
               <div>
@@ -279,6 +362,26 @@ export default function Products() {
                   {p.t}
                 </h2>
                 <p className="font-display text-xl italic text-muted-foreground mt-3">{p.tag}</p>
+                {"d" in p && p.d && (
+                  <p className="mt-4 text-sm text-foreground/70 leading-relaxed line-clamp-3">
+                    {p.d}
+                  </p>
+                )}
+                {"apps" in p && p.apps && p.apps.length > 0 && (
+                  <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2">
+                    {p.apps.map((app: { name: string; href: string }) => (
+                      <a
+                        key={app.name}
+                        href={app.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-mono text-[10px] tracking-[0.22em] uppercase text-gold border-b border-gold/30 hover:border-gold transition-colors duration-500"
+                      >
+                        {app.name} ↗
+                      </a>
+                    ))}
+                  </div>
+                )}
                 {p.caps.length > 0 && (
                   <ul className="mt-6 space-y-2">
                     {p.caps.map((c) => (
@@ -292,6 +395,49 @@ export default function Products() {
                     ))}
                   </ul>
                 )}
+              </div>
+              <div className="mt-10 border-t border-border pt-5 flex items-center justify-between gap-4">
+                <span className="font-mono text-[10px] tracking-[0.22em] uppercase text-gold">
+                  {p.s}
+                </span>
+                {p.live && (
+                  <a
+                    href={p.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-mono text-[10px] tracking-[0.22em] uppercase text-foreground border-b border-gold/0 hover:border-gold transition-colors duration-500"
+                  >
+                    Live ↗
+                  </a>
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section className="py-16 border-t border-border">
+        <Eyebrow index="Pipeline">Coming Soon</Eyebrow>
+        <div className="grid grid-cols-12 mt-8">
+          {inDevelopment.map((p, i) => (
+            <article
+              key={p.t}
+              className={`col-span-12 md:col-span-6 border-t border-border p-8 md:p-10 min-h-[260px] md:min-h-[300px] flex flex-col justify-between
+                          ${i % 2 === 0 ? "md:border-r" : ""}
+                          ${i >= inDevelopment.length - 2 ? "md:border-b" : ""}
+                          hover:bg-foreground/[0.025] transition-colors duration-700`}
+            >
+              <div>
+                <div className="flex items-baseline justify-between">
+                  <span className="font-mono text-[10px] tracking-[0.28em] text-gold">{p.n}</span>
+                  <span className="font-mono text-[10px] tracking-[0.22em] uppercase text-muted-foreground">
+                    {p.domain}
+                  </span>
+                </div>
+                <h2 className="font-display text-4xl md:text-5xl tracking-tight leading-[1.02] mt-8">
+                  {p.t}
+                </h2>
+                <p className="font-display text-xl italic text-muted-foreground mt-3">{p.tag}</p>
               </div>
               <div className="mt-10 border-t border-border pt-5 flex items-center justify-between gap-4">
                 <span className="font-mono text-[10px] tracking-[0.22em] uppercase text-gold">

@@ -6,6 +6,6 @@ export default function Image() {
   return MatrixOgImage({
     eyebrow: "Products · Matrix",
     title: "Nine platforms. One architecture.",
-    subtitle: "QiDS · Humming · ARPS · Mangrove · Datum & more",
+    subtitle: "Gravity · QiDS · Humming · ARPS · Mangrove · Datum · MindMuse & more",
   });
 }
