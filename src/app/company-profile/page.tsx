@@ -558,9 +558,9 @@ export default function CompanyProfile() {
           k="Building the research foundations the next generation of products will need."
         />
         <p className="text-muted-foreground leading-relaxed max-w-3xl mb-8">
-          MATRIX's frontier research is not presented as current capability. These are proposed,
+          MATRIX’s frontier research is not presented as current capability. These are proposed,
           preclinical, and research-stage programmes — organised into four horizons. They represent
-          the intellectual investment that will differentiate MATRIX's next-generation IP.
+          the intellectual investment that will differentiate MATRIX’s next-generation IP.
           Institutional partnership discussions are in progress for several programmes.
         </p>
         <Horizon
@@ -617,7 +617,7 @@ export default function CompanyProfile() {
       <Section variant="paper" className="py-20 md:py-28 border-t border-ink/10">
         <Head n="08" t="Who We Work With" k="Stakeholders across the intelligence economy." />
         <p className="text-ink/80 leading-relaxed max-w-3xl mb-6">
-          MATRIX's work is relevant to a broad spectrum of stakeholders — each engaging with a
+          MATRIX’s work is relevant to a broad spectrum of stakeholders — each engaging with a
           different dimension of the intelligence architecture. The commercial portfolio, research
           IP, and frontier programmes serve distinct but complementary audiences.
         </p>
