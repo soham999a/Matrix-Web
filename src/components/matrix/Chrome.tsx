@@ -211,99 +211,103 @@ export function Header() {
 
 export function Footer() {
   return (
-    <footer className="border-t border-ink/10 bg-fog text-ink mt-24 lg:mt-32">
-      <div className="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14 py-16 md:py-20 grid grid-cols-12 gap-6 sm:gap-8">
-        <div className="col-span-12 md:col-span-3">
-          <LogoLockup
-            height={38}
-            className="h-[30px]! sm:h-[34px]! lg:h-[38px]!"
-            taglineClassName="!text-[#B8924A]"
-          />
-          <p className="font-display text-2xl leading-tight mt-8 max-w-xs text-ink">
-            Designing intelligence.
-            <br />
-            <span className="text-ink/60 italic">Invisible systems. Visible impact.</span>
-          </p>
-          <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-ink/70">
-            <li>
-              <Link href="/contact" className="hover:text-ink">
-                Contact
-              </Link>
-            </li>
-            <li>
-              <Link href="/about" className="hover:text-ink">
-                About
-              </Link>
-            </li>
-            <li>
-              <Link href="/manifesto" className="hover:text-ink">
-                Manifesto
-              </Link>
-            </li>
-          </ul>
+    <footer className="mt-24 lg:mt-32">
+      <div className="border-t border-ink/10 bg-bone text-ink">
+        <div className="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14 py-16 md:py-20 grid grid-cols-12 gap-6 sm:gap-8">
+          <div className="col-span-12 md:col-span-3">
+            <LogoLockup
+              height={38}
+              className="h-[30px]! sm:h-[34px]! lg:h-[38px]!"
+              taglineClassName="!text-[#B8924A]"
+            />
+            <p className="font-display text-2xl leading-tight mt-8 max-w-xs text-ink">
+              Designing intelligence.
+              <br />
+              <span className="text-ink/60 italic">Invisible systems. Visible impact.</span>
+            </p>
+            <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-ink/70">
+              <li>
+                <Link href="/contact" className="hover:text-ink">
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className="hover:text-ink">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href="/manifesto" className="hover:text-ink">
+                  Manifesto
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className="col-span-6 md:col-span-2">
+            <p className="eyebrow mb-5 !text-ink/60">Research &amp; Insights</p>
+            <ul className="space-y-2.5">
+              <FooterItem label="Case Studies" />
+              <FooterItem label="Research Notes" />
+              <FooterItem label="Whitepapers" />
+              <FooterItem label="Frameworks" />
+              <FooterItem label="Publications" />
+            </ul>
+          </div>
+          <div className="col-span-6 md:col-span-2">
+            <p className="eyebrow mb-5 !text-ink/60">Stay Connected</p>
+            <ul className="space-y-2.5">
+              <FooterItem label="Announcements" />
+              <FooterItem label="New Research" />
+              <FooterItem label="Product Updates" />
+            </ul>
+          </div>
+          <div className="col-span-12 md:col-span-2">
+            <p className="eyebrow mb-5 !text-ink/60">Newsletters and Blog</p>
+            <ul className="space-y-2.5">
+              <li>
+                <Link href="/newsletter" className="group flex items-baseline gap-2.5 text-sm">
+                  <span className="font-mono text-gold">◌</span>
+                  <span className="text-ink/70 group-hover:text-ink transition-colors">
+                    Newsletter
+                  </span>
+                </Link>
+              </li>
+              <li>
+                <Link href="/journal" className="group flex items-baseline gap-2.5 text-sm">
+                  <span className="font-mono text-gold">◌</span>
+                  <span className="text-ink/70 group-hover:text-ink transition-colors">Blog</span>
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div className="col-span-12 md:col-span-3">
+            <p className="eyebrow mb-5 !text-ink/60">Correspondence</p>
+            <p className="text-sm text-ink/70 leading-relaxed">
+              For research collaboration, counsel, or careers — write to us.
+            </p>
+            <a
+              href="mailto:system@matrka.net"
+              className="block mt-4 font-display text-2xl text-ink hover:text-gold transition-colors"
+            >
+              system@matrka.net
+            </a>
+            <a
+              href="tel:+919875663417"
+              className="block mt-2 text-sm text-ink/70 hover:text-ink transition-colors"
+            >
+              +91 98756 63417
+            </a>
+            <p className="mt-6 eyebrow !text-ink/60">Studio</p>
+            <p className="mt-2 text-sm text-ink/70 leading-relaxed">Kolkata, India</p>
+          </div>
         </div>
-        <div className="col-span-6 md:col-span-2">
-          <p className="eyebrow mb-5 !text-ink/60">Research &amp; Insights</p>
-          <ul className="space-y-2.5">
-            <FooterItem label="Case Studies" />
-            <FooterItem label="Research Notes" />
-            <FooterItem label="Whitepapers" />
-            <FooterItem label="Frameworks" />
-            <FooterItem label="Publications" />
-          </ul>
-        </div>
-        <div className="col-span-6 md:col-span-2">
-          <p className="eyebrow mb-5 !text-ink/60">Stay Connected</p>
-          <ul className="space-y-2.5">
-            <FooterItem label="Announcements" />
-            <FooterItem label="New Research" />
-            <FooterItem label="Product Updates" />
-          </ul>
-        </div>
-        <div className="col-span-12 md:col-span-2">
-          <p className="eyebrow mb-5 !text-ink/60">Newsletters and Blog</p>
-          <ul className="space-y-2.5">
-            <li>
-              <Link href="/newsletter" className="group flex items-baseline gap-2.5 text-sm">
-                <span className="font-mono text-gold">◌</span>
-                <span className="text-ink/70 group-hover:text-ink transition-colors">
-                  Newsletter
-                </span>
-              </Link>
-            </li>
-            <li>
-              <Link href="/journal" className="group flex items-baseline gap-2.5 text-sm">
-                <span className="font-mono text-gold">◌</span>
-                <span className="text-ink/70 group-hover:text-ink transition-colors">Blog</span>
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div className="col-span-12 md:col-span-3">
-          <p className="eyebrow mb-5 !text-ink/60">Correspondence</p>
-          <p className="text-sm text-ink/70 leading-relaxed">
-            For research collaboration, counsel, or careers — write to us.
-          </p>
-          <a
-            href="mailto:system@matrka.net"
-            className="block mt-4 font-display text-2xl text-ink hover:text-gold transition-colors"
-          >
-            system@matrka.net
-          </a>
-          <a
-            href="tel:+919875663417"
-            className="block mt-2 text-sm text-ink/70 hover:text-ink transition-colors"
-          >
-            +91 98756 63417
-          </a>
-          <p className="mt-6 eyebrow !text-ink/60">Studio</p>
-          <p className="mt-2 text-sm text-ink/70 leading-relaxed">Kolkata, India</p>
-        </div>
-        <div className="col-span-12 mt-16 pt-8 border-t border-ink/10 flex flex-col md:flex-row justify-between gap-4">
-          <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ink/50">
+      </div>
+      <div className="bg-gold text-ink">
+        <div className="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14 py-6 flex flex-col md:flex-row justify-between gap-4">
+          <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ink/70">
             © {new Date().getFullYear()} Matrix
           </p>
-          <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ink/50">
+          <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-ink/70">
             Cohered by design
           </p>
         </div>
