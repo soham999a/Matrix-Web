@@ -212,7 +212,7 @@ export function Header() {
 export function Footer() {
   return (
     <footer className="mt-24 lg:mt-32">
-      <div className="border-t border-ink/10 bg-bone text-ink">
+      <div className="border-t border-ink/10 bg-fog text-ink">
         <div className="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14 py-16 md:py-20 grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 md:col-span-3">
             <LogoLockup

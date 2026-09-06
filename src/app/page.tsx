@@ -134,7 +134,7 @@ export default function Index() {
       <Section id="manifesto" className="py-24 md:py-40 border-t border-border">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-20">
           <div className="col-span-12 md:col-span-3">
-            <Eyebrow index="§ I">Manifesto · Fragment</Eyebrow>
+            <Eyebrow index="I">Manifesto · Fragment</Eyebrow>
           </div>
           <p className="col-span-12 md:col-span-3 eyebrow">Read in one breath</p>
         </div>
@@ -159,7 +159,7 @@ export default function Index() {
             <div className="mt-20 flex items-center gap-6">
               <span className="rule-gold !w-16" />
               <span className="font-mono text-[10px] tracking-[0.28em] uppercase text-foreground/70">
-                Matrix · § I · The Quiet Vow
+                Matrix · I · The Quiet Vow
               </span>
             </div>
           </div>
@@ -170,7 +170,7 @@ export default function Index() {
       <Section variant="paper" className="py-20 md:py-32">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-20">
           <div className="col-span-12 md:col-span-3">
-            <Eyebrow index="§ II">Sequence</Eyebrow>
+            <Eyebrow index="II">Sequence</Eyebrow>
           </div>
           <h2 className="col-span-12 md:col-span-9 font-display text-5xl md:text-7xl leading-[0.95] tracking-tight">
             Six figures
@@ -247,7 +247,7 @@ export default function Index() {
       <Section className="py-24 md:py-40">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-20">
           <div className="col-span-12 md:col-span-3">
-            <Eyebrow index="§ III">Capabilities</Eyebrow>
+            <Eyebrow index="III">Capabilities</Eyebrow>
           </div>
           <h2 className="col-span-12 md:col-span-9 font-display text-5xl md:text-7xl leading-[0.95] tracking-tight">
             Nine disciplines
@@ -369,17 +369,17 @@ export default function Index() {
             light, has grain and consequence — we treat it with the seriousness of any element we
             choose to build with.<span className="text-gold">”</span>
             <footer className="mt-12 font-mono text-[10px] tracking-[0.22em] uppercase text-muted-foreground not-italic">
-              — Matrix Manifesto · § II
+              — Matrix Manifesto · II
             </footer>
           </blockquote>
         </div>
       </Section>
 
-      {/* ————— ACT VI · CLOSING & EXPANSION HINT ————— */}
-      <Section className="py-24 md:py-40 border-t border-border">
+      {/* ————— ACT VI · CLOSING ————— */}
+      <Section variant="paper" className="py-24 md:py-40 border-t border-border">
         <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 md:col-span-7">
-            <Eyebrow index="§ IV">Closing</Eyebrow>
+            <Eyebrow index="IV">Closing</Eyebrow>
             <h2 className="font-display text-5xl md:text-8xl tracking-tight leading-[0.92] mt-8">
               Cohered
               <br />
@@ -403,11 +403,13 @@ export default function Index() {
             </a>
           </div>
         </div>
+      </Section>
 
-        {/* expansion hint — the doors */}
-        <div className="mt-32 border-t border-border pt-12">
+      {/* ————— FURTHER · THE DOORS ————— */}
+      <Section className="py-24">
+        <div className="border-t border-border pt-12">
           <div className="flex items-baseline justify-between mb-10">
-            <Eyebrow index="§ V">Further</Eyebrow>
+            <Eyebrow index="V">Further</Eyebrow>
             <span className="font-mono text-[10px] tracking-[0.22em] uppercase text-muted-foreground">
               Five chambers · One studio
             </span>

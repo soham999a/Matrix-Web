@@ -129,6 +129,38 @@ const portfolio = [
   },
   {
     n: "07",
+    t: "Agile Plus",
+    tag: "Intelligent Project Management",
+    domain: "Project Management · Enterprise",
+    caps: [],
+    s: "In Development",
+    live: "https://agile.matrka.net/",
+  },
+  {
+    n: "08",
+    t: "Metacare",
+    tag: "Intelligent Healthcare",
+    domain: "Healthcare · AI",
+    caps: [],
+    s: "In Development",
+    live: "https://metacare.matrka.net/",
+  },
+  {
+    n: "09",
+    t: "Quantum Learning Platform",
+    tag: "QuantumLab · Quantum Education",
+    domain: "Education · Quantum Computing",
+    caps: [
+      "Quantum Computing Fundamentals",
+      "Quantum Visualisation & Labs",
+      "Interactive Simulations",
+      "Curriculum for Schools & Universities",
+    ],
+    s: "In Development",
+    live: "https://quantumlab.matrka.net/",
+  },
+  {
+    n: "10",
     t: "MindMuse",
     tag: "AI Creativity & Cognition · Creative Intelligence Engine",
     d: "AI creativity and cognition engine applying the KALPA framework to music, knowledge, and creative systems — including Hertz (FM radio & intelligent curation), Resonance (recommendation engine), Sonata (music dictionary), and AlgoVista (algorithm visualisation). Serving the Orange Economy.",
@@ -144,7 +176,7 @@ const portfolio = [
     s: "Designed · In Dev.",
   },
   {
-    n: "08",
+    n: "11",
     t: "Digital Products",
     tag: "End-to-End Product Engineering · Knowledge Assets",
     d: "Commercial knowledge assets and enterprise advisory services — prompt engineering packs, AI strategy frameworks, automation playbooks, BI dashboard templates, and enterprise transformation consulting. Currently operational and generating revenue.",
@@ -160,7 +192,7 @@ const portfolio = [
     s: "Commercial",
   },
   {
-    n: "09",
+    n: "12",
     t: "Consulting",
     tag: "Applied AI Strategic Advisory · Enterprise Transformation",
     d: "Applied AI strategic advisory covering AI readiness assessment, intelligence architecture design, responsible AI governance, enterprise transformation, and technology strategy. MATRIX's consulting practice is the primary client entry point — consulting engagements generate product requirements, pilot relationships, and long-term platform deployments.",
@@ -174,41 +206,6 @@ const portfolio = [
       "Technology Strategy",
     ],
     s: "Commercial",
-  },
-];
-
-const inDevelopment = [
-  {
-    n: "10",
-    t: "Agile Plus",
-    tag: "Intelligent Project Management",
-    domain: "Project Management · Enterprise",
-    caps: [],
-    s: "In Development",
-    live: "https://agile.matrka.net/",
-  },
-  {
-    n: "11",
-    t: "Metacare",
-    tag: "Intelligent Healthcare",
-    domain: "Healthcare · AI",
-    caps: [],
-    s: "In Development",
-    live: "https://metacare.matrka.net/",
-  },
-  {
-    n: "12",
-    t: "Quantum Learning Platform",
-    tag: "QuantumLab · Quantum Education",
-    domain: "Education · Quantum Computing",
-    caps: [
-      "Quantum Computing Fundamentals",
-      "Quantum Visualisation & Labs",
-      "Interactive Simulations",
-      "Curriculum for Schools & Universities",
-    ],
-    s: "In Development",
-    live: "https://quantumlab.matrka.net/",
   },
 ];
 
@@ -395,49 +392,6 @@ export default function Products() {
                     ))}
                   </ul>
                 )}
-              </div>
-              <div className="mt-10 border-t border-border pt-5 flex items-center justify-between gap-4">
-                <span className="font-mono text-[10px] tracking-[0.22em] uppercase text-gold">
-                  {p.s}
-                </span>
-                {p.live && (
-                  <a
-                    href={p.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-mono text-[10px] tracking-[0.22em] uppercase text-foreground border-b border-gold/0 hover:border-gold transition-colors duration-500"
-                  >
-                    Live ↗
-                  </a>
-                )}
-              </div>
-            </article>
-          ))}
-        </div>
-      </Section>
-
-      <Section className="py-16 border-t border-border">
-        <Eyebrow index="Pipeline">Coming Soon</Eyebrow>
-        <div className="grid grid-cols-12 mt-8">
-          {inDevelopment.map((p, i) => (
-            <article
-              key={p.t}
-              className={`col-span-12 md:col-span-6 border-t border-border p-8 md:p-10 min-h-[260px] md:min-h-[300px] flex flex-col justify-between
-                          ${i % 2 === 0 ? "md:border-r" : ""}
-                          ${i >= inDevelopment.length - 2 ? "md:border-b" : ""}
-                          hover:bg-foreground/[0.025] transition-colors duration-700`}
-            >
-              <div>
-                <div className="flex items-baseline justify-between">
-                  <span className="font-mono text-[10px] tracking-[0.28em] text-gold">{p.n}</span>
-                  <span className="font-mono text-[10px] tracking-[0.22em] uppercase text-muted-foreground">
-                    {p.domain}
-                  </span>
-                </div>
-                <h2 className="font-display text-4xl md:text-5xl tracking-tight leading-[1.02] mt-8">
-                  {p.t}
-                </h2>
-                <p className="font-display text-xl italic text-muted-foreground mt-3">{p.tag}</p>
               </div>
               <div className="mt-10 border-t border-border pt-5 flex items-center justify-between gap-4">
                 <span className="font-mono text-[10px] tracking-[0.22em] uppercase text-gold">

@@ -54,7 +54,6 @@
   --color-graphite: var(--graphite);
   --color-carbon: var(--carbon);
   --color-fog: var(--fog);
-  --color-bone: var(--bone);
   --color-silver: var(--silver);
   --color-gold: var(--gold);
   --font-display: var(--font-instrument-serif), "Times New Roman", serif;
@@ -70,7 +69,6 @@
   --graphite: oklch(0.16 0 0); /* #151515 */
   --carbon: oklch(0.22 0 0); /* #222222 */
   --fog: oklch(0.96 0 0); /* #F2F2F2 */
-  --bone: oklch(0.92 0.03 85); /* warm ivory/bone #E9E0CE */
   --silver: oklch(0.83 0 0); /* #C9C9C9 */
   --gold: oklch(0.72 0.1 85); /* #C9A14A metallic gold */
 
