@@ -193,6 +193,26 @@
   vertical-align: middle;
 }
 
+@utility field-line {
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid color-mix(in oklab, var(--color-foreground) 30%, transparent);
+  border-radius: 0;
+  padding: 12px 0;
+  font-size: 16px;
+  transition:
+    border-color 300ms ease,
+    color 300ms ease;
+  &:focus {
+    outline: none;
+    border-bottom-color: var(--color-gold);
+  }
+  &::placeholder {
+    color: color-mix(in oklab, var(--color-foreground) 30%, transparent);
+  }
+}
+
 /* Slow, calm motion */
 @keyframes mtx-blink {
   0%,

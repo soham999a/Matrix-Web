@@ -1,7 +1,7 @@
 import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
 import { pageSeo } from "@/components/../lib/seo";
 import { SITE } from "@/lib/seo";
-import { ContactForm } from "@/components/matrix/ContactForm";
+import { IntakeForm } from "@/components/matrix/IntakeForm";
 import { JsonLd } from "@/components/matrix/JsonLd";
 
 export const metadata = pageSeo({
@@ -49,8 +49,9 @@ export default function Contact() {
               <span className="italic text-muted-foreground">correspondence.</span>
             </h1>
             <p className="mt-10 max-w-2xl text-lg text-foreground/80 leading-relaxed">
-              We take on a small number of engagements each year. Write to us with the shape of your
-              challenge, and we will respond within a few working days.
+              We take on a small number of engagements each year. Tell us the shape of your
+              challenge through the intelligence assessment below, and we will respond within a few
+              working days.
             </p>
           </div>
         </div>
@@ -86,7 +87,7 @@ export default function Contact() {
             </div>
           </div>
           <div className="col-span-12 md:col-span-9 border-t border-border pt-10 md:pt-0 md:border-t-0 md:pl-10">
-            <ContactForm />
+            <IntakeForm />
           </div>
         </div>
       </Section>
