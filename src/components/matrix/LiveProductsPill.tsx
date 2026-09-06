@@ -3,6 +3,8 @@ import Link from "next/link";
 const liveProducts = [
   { t: "Hertz Radio", href: "http://fm.matrka.net/" },
   { t: "AlgoVista", href: "https://algovista.matrka.net/" },
+  { t: "Gravity", href: "https://gravity.matrka.net/" },
+  { t: "Auditor", href: "https://audit.matrka.net/" },
 ];
 
 export function LiveProductsPill() {
@@ -34,7 +36,7 @@ export function LiveProductsPill() {
           href="/products"
           className="sm:hidden font-mono text-[10px] tracking-[0.2em] uppercase text-muted-foreground hover:text-foreground transition-colors duration-300 whitespace-nowrap"
         >
-          2 live ↗
+          4 live ↗
         </Link>
       </div>
     </aside>
