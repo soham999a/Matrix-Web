@@ -67,16 +67,16 @@ export function Header() {
         >
           <LogoLockup height={48} className="h-[38px]! sm:h-[42px]! lg:h-[48px]!" />
         </Link>
-        <nav className="hidden lg:flex items-center gap-8" aria-label="Primary">
+        <nav className="hidden lg:flex items-center gap-8 flex-nowrap" aria-label="Primary">
           {nav.map((n) => {
             const active = pathname === n.to;
-            const linkClass = `font-mono text-[10px] tracking-[0.22em] uppercase transition-colors duration-500 ${
+            const linkClass = `inline-flex items-center whitespace-nowrap leading-none font-mono text-[10px] tracking-[0.22em] uppercase transition-colors duration-500 ${
               active ? "text-foreground" : "text-muted-foreground hover:text-foreground"
             }`;
             if (n.to === "/research" || n.to === "/agency") {
               const subs = n.to === "/research" ? researchSubLinks : agencySubLinks;
               return (
-                <div key={n.to} className="group relative">
+                <div key={n.to} className="group relative inline-flex items-center">
                   <Link href={n.to} className={linkClass}>
                     {n.label}
                   </Link>
