@@ -7,7 +7,11 @@ import process from "node:process";
 export function getServerConfig() {
   return {
     nodeEnv: process.env.NODE_ENV,
-    googleFormId: process.env.GOOGLE_FORM_ID,
+    baserow: {
+      apiUrl: process.env.BASEROW_API_URL,
+      token: process.env.BASEROW_TOKEN,
+      tableId: process.env.BASEROW_TABLE_ID,
+    },
     // Add server-only values here, e.g.:
     //   databaseUrl: process.env.DATABASE_URL,
     //   stripeSecretKey: process.env.STRIPE_SECRET_KEY,

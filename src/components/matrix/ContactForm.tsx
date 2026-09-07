@@ -36,6 +36,7 @@ const engagementOptions = [
 export function ContactForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const {
     register,
@@ -48,14 +49,36 @@ export function ContactForm() {
 
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
-
-    // Simulate API call - replace with actual endpoint
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-
-    console.log("Contact form submitted:", data);
-    setIsSubmitted(true);
-    setIsSubmitting(false);
-    reset();
+    setSubmitError(null);
+    try {
+      const res = await fetch("/api/intake", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: "correspondence",
+          correspondence: {
+            name: data.name,
+            email: data.email,
+            subject: data.subject,
+            organisation: data.organisation,
+            engagement: data.engagement,
+            message: data.message,
+          },
+        }),
+      });
+      const json = await res.json();
+      if (!res.ok || !json.ok) throw new Error("Intake gateway error");
+      setIsSubmitted(true);
+      reset();
+    } catch (err) {
+      setSubmitError(
+        err instanceof Error && err.message === "Intake gateway error"
+          ? "The correspondence channel is not configured yet. Write to system@matrka.net directly."
+          : "Something went wrong sending your message. Please try again.",
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSubmitted) {
@@ -205,6 +228,8 @@ export function ContactForm() {
           {isSubmitting ? "Sending..." : "Send Correspondence →"}
         </button>
       </div>
+
+      {submitError && <p className="mt-4 text-sm text-red-500">{submitError}</p>}
     </form>
   );
 }

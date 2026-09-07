@@ -395,12 +395,12 @@ export default function Index() {
               A small number of engagements each year. Research collaboration, strategic counsel, or
               product partnership. The door is narrow on purpose.
             </p>
-            <a
-              href="mailto:system@matrka.net"
+            <Link
+              href="/contact"
               className="inline-block border border-foreground px-8 py-5 font-mono text-[11px] tracking-[0.28em] uppercase hover:bg-foreground hover:text-background transition-colors duration-500 w-full sm:w-fit text-center"
             >
               Begin a Correspondence →
-            </a>
+            </Link>
           </div>
         </div>
       </Section>

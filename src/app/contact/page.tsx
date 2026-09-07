@@ -2,6 +2,7 @@ import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
 import { pageSeo } from "@/components/../lib/seo";
 import { SITE } from "@/lib/seo";
 import { IntakeForm } from "@/components/matrix/IntakeForm";
+import { ContactForm } from "@/components/matrix/ContactForm";
 import { JsonLd } from "@/components/matrix/JsonLd";
 
 export const metadata = pageSeo({
@@ -88,6 +89,26 @@ export default function Contact() {
           </div>
           <div className="col-span-12 md:col-span-9 border-t border-border pt-10 md:pt-0 md:border-t-0 md:pl-10">
             <IntakeForm />
+          </div>
+        </div>
+      </Section>
+
+      <Section variant="paper" className="py-20 md:py-28 border-t border-border">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8">
+          <div className="col-span-12 md:col-span-3">
+            <Eyebrow>C</Eyebrow>
+            <h2 className="font-display text-3xl md:text-5xl tracking-tight mt-6">
+              Direct
+              <br />
+              <span className="italic text-muted-foreground">correspondence.</span>
+            </h2>
+            <p className="mt-6 text-muted-foreground leading-relaxed max-w-sm">
+              Prefer a direct line? Write to us the classic way — name, subject, and the shape of
+              what you are reaching for.
+            </p>
+          </div>
+          <div className="col-span-12 md:col-span-9 border-t border-border pt-10 md:pt-0 md:border-t-0 md:pl-10">
+            <ContactForm />
           </div>
         </div>
       </Section>
