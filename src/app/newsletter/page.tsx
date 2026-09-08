@@ -1,4 +1,5 @@
 import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
+import { NewsletterSubscribeForm } from "@/components/matrix/NewsletterSubscribeForm";
 import { pageSeo } from "@/lib/seo";
 import { Ripple } from "@/components/matrix/Metaphors";
 
@@ -66,21 +67,9 @@ export default function Newsletter() {
               A letter when there is something to say. Nothing else.
             </h2>
           </div>
-          <form className="col-span-12 md:col-span-5 flex items-stretch border-b border-foreground/40">
-            <input
-              type="email"
-              placeholder="your@correspondence"
-              className="min-w-0 flex-1 bg-transparent py-4 text-base placeholder:text-foreground/40 focus:outline-none"
-            />
-            <button
-              type="button"
-              className="shrink-0 whitespace-nowrap font-mono text-[10px] tracking-[0.28em] uppercase px-3 sm:px-4 hover:text-gold"
-            >
-              Subscribe →
-            </button>
-          </form>
+          <NewsletterSubscribeForm className="col-span-12 md:col-span-5" />
           <p className="col-span-12 md:col-span-5 md:ml-auto font-mono text-[10px] tracking-[0.22em] uppercase text-ink/50">
-            Subscription opening soon
+            Occasional · Unscheduled · Unhurried
           </p>
         </div>
       </Section>

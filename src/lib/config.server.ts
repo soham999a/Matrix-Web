@@ -12,6 +12,10 @@ export function getServerConfig() {
       token: process.env.BASEROW_TOKEN,
       tableId: process.env.BASEROW_TABLE_ID,
     },
+    resend: {
+      apiKey: process.env.RESEND_API_KEY,
+      audienceId: process.env.RESEND_AUDIENCE_ID,
+    },
     // Add server-only values here, e.g.:
     //   databaseUrl: process.env.DATABASE_URL,
     //   stripeSecretKey: process.env.STRIPE_SECRET_KEY,
