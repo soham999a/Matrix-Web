@@ -70,8 +70,8 @@ export function Header() {
         <nav className="hidden lg:flex items-center gap-8 flex-nowrap" aria-label="Primary">
           {nav.map((n) => {
             const active = pathname === n.to;
-            const linkClass = `inline-flex items-center whitespace-nowrap leading-none font-mono text-[10px] tracking-[0.22em] uppercase transition-colors duration-500 ${
-              active ? "text-foreground" : "text-muted-foreground hover:text-foreground"
+            const linkClass = `inline-flex items-center whitespace-nowrap leading-none font-mono text-[10px] tracking-[0.22em] uppercase transition-[color,text-shadow] duration-500 ${
+              active ? "nav-glow" : "nav-glow-dim hover:nav-glow"
             }`;
             if (n.to === "/research" || n.to === "/agency") {
               const subs = n.to === "/research" ? researchSubLinks : agencySubLinks;
@@ -86,7 +86,7 @@ export function Header() {
                         <Link
                           key={s.to}
                           href={s.to}
-                          className="block px-5 py-3 font-mono text-[10px] tracking-[0.22em] uppercase text-muted-foreground hover:text-foreground hover:bg-foreground/[0.04] transition-colors duration-300"
+                          className="block px-5 py-3 font-mono text-[10px] tracking-[0.22em] uppercase nav-glow-dim hover:nav-glow hover:bg-foreground/[0.04] transition-[color,text-shadow] duration-300"
                         >
                           {s.t}
                         </Link>
@@ -105,7 +105,7 @@ export function Header() {
         </nav>
         <Link
           href="/contact"
-          className="hidden lg:block font-mono text-[10px] tracking-[0.22em] uppercase text-foreground border-b border-gold/0 hover:border-gold transition-colors duration-500"
+          className="hidden lg:block font-mono text-[10px] tracking-[0.22em] uppercase nav-glow-dim hover:nav-glow border-b border-gold/0 hover:border-gold transition-[color,text-shadow,border-color] duration-500"
         >
           Contact
         </Link>

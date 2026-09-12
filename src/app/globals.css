@@ -286,6 +286,23 @@
   animation: mtx-drift 11s ease-in-out infinite;
 }
 
+/* Gold glow for the primary navigation — always lit, quiet in its
+   resting state, igniting fully on hover and staying lit on the active
+   page. */
+@utility nav-glow {
+  color: var(--color-gold);
+  text-shadow:
+    0 0 6px color-mix(in oklab, var(--color-gold) 45%, transparent),
+    0 0 20px color-mix(in oklab, var(--color-gold) 22%, transparent);
+}
+
+@utility nav-glow-dim {
+  color: var(--color-gold);
+  text-shadow:
+    0 0 6px color-mix(in oklab, var(--color-gold) 22%, transparent),
+    0 0 14px color-mix(in oklab, var(--color-gold) 10%, transparent);
+}
+
 /* ---------- Interactive metaphor figures ---------- */
 /* Tap, click, hover or focus a figure to wake it. */
 
