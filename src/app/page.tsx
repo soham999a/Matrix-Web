@@ -64,7 +64,7 @@ export default function Index() {
             <h1 className="font-display text-[clamp(2.75rem,8vw,8rem)] leading-[0.92] tracking-[-0.02em]">
               The invisible
               <br />
-              <span className="italic text-muted-foreground">architecture</span>
+              <span className="italic text-gold">architecture</span>
               <br />
               behind the future.
             </h1>
