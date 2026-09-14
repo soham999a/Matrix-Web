@@ -3,6 +3,7 @@ import { pageSeo } from "@/components/../lib/seo";
 import { SITE } from "@/lib/seo";
 import { IntakeForm } from "@/components/matrix/IntakeForm";
 import { ContactForm } from "@/components/matrix/ContactForm";
+import { WhorlFigure } from "@/components/matrix/OrigamiFigures";
 import { JsonLd } from "@/components/matrix/JsonLd";
 
 export const metadata = pageSeo({
@@ -49,11 +50,16 @@ export default function Contact() {
               <br />
               <span className="italic text-muted-foreground">correspondence.</span>
             </h1>
-            <p className="mt-10 max-w-2xl text-lg text-foreground/80 leading-relaxed">
-              We take on a small number of engagements each year. Tell us the shape of your
-              challenge through the intelligence assessment below, and we will respond within a few
-              working days.
-            </p>
+            <div className="mt-10 grid grid-cols-12 gap-6 sm:gap-8 items-end">
+              <p className="col-span-12 md:col-span-7 max-w-2xl text-lg text-foreground/80 leading-relaxed">
+                We take on a small number of engagements each year. Tell us the shape of your
+                challenge through the intelligence assessment below, and we will respond within a
+                few working days.
+              </p>
+              <div className="col-span-12 md:col-span-5 flex justify-end">
+                <WhorlFigure className="w-full max-w-xs text-foreground/70" />
+              </div>
+            </div>
           </div>
         </div>
       </Section>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
+import { CymaticArchFigure } from "@/components/matrix/OrigamiFigures";
 import { pageSeo } from "@/lib/seo";
 
 export const metadata = pageSeo({
@@ -93,10 +94,15 @@ export default function Manifesto() {
               <br />
               we have <span className="italic text-muted-foreground">earned.</span>
             </h1>
-            <p className="mt-12 max-w-2xl text-lg leading-relaxed text-foreground/80">
-              This is not a strategy. It is a temperament. A way of holding the tools. We publish it
-              not to convince anyone, but to be held to it.
-            </p>
+            <div className="mt-12 grid grid-cols-12 gap-6 sm:gap-8 items-end">
+              <p className="col-span-12 md:col-span-7 max-w-2xl text-lg leading-relaxed text-foreground/80">
+                This is not a strategy. It is a temperament. A way of holding the tools. We publish
+                it not to convince anyone, but to be held to it.
+              </p>
+              <div className="col-span-12 md:col-span-5 flex justify-end">
+                <CymaticArchFigure className="w-full max-w-xs text-foreground/70" />
+              </div>
+            </div>
           </div>
         </div>
       </Section>

@@ -3,6 +3,7 @@ import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
 import { pageSeo } from "@/lib/seo";
 import { SITE } from "@/lib/seo";
 import { Roots } from "@/components/matrix/Metaphors";
+import { GoldenSpiralFigure } from "@/components/matrix/OrigamiFigures";
 import { JsonLd } from "@/components/matrix/JsonLd";
 
 export const metadata = pageSeo({
@@ -43,6 +44,7 @@ export default function About() {
         <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 md:col-span-3">
             <Eyebrow index="The Studio">About</Eyebrow>
+            <GoldenSpiralFigure className="mt-14 w-full max-w-[240px] text-foreground/70" />
           </div>
           <h1 className="col-span-12 md:col-span-9 font-display text-[clamp(3rem,8vw,8rem)] leading-[0.95] tracking-tight">
             A small studio.

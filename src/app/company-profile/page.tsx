@@ -1,4 +1,5 @@
 import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
+import { RhombicDodecahedronFigure } from "@/components/matrix/OrigamiFigures";
 import { pageSeo, SITE } from "@/lib/seo";
 import { JsonLd } from "@/components/matrix/JsonLd";
 
@@ -381,10 +382,15 @@ export default function CompanyProfile() {
         <p className="font-display text-3xl md:text-6xl leading-[1.02] tracking-tight mt-16 max-w-4xl">
           Applied AI Research Studio
         </p>
-        <p className="mt-8 max-w-2xl text-lg text-foreground/80 leading-relaxed">
-          Designing the invisible architecture through which intelligence becomes trustworthy,
-          scalable, and beneficial — for governments, enterprises, universities, and society.
-        </p>
+        <div className="mt-8 grid grid-cols-12 gap-6 sm:gap-8 items-end">
+          <p className="col-span-12 md:col-span-7 max-w-2xl text-lg text-foreground/80 leading-relaxed">
+            Designing the invisible architecture through which intelligence becomes trustworthy,
+            scalable, and beneficial — for governments, enterprises, universities, and society.
+          </p>
+          <div className="col-span-12 md:col-span-5 flex justify-end">
+            <RhombicDodecahedronFigure className="w-full max-w-xs text-foreground/70" />
+          </div>
+        </div>
         <div className="mt-16 flex flex-col gap-3 font-mono text-[10px] tracking-[0.28em] uppercase text-muted-foreground">
           <span className="text-foreground/80">
             Intelligence<span className="text-gold"> · </span>Architecture

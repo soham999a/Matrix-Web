@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { ComponentType } from "react";
 import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
 import { pageSeo } from "@/lib/seo";
+import { RhombicDodecahedronFigure } from "@/components/matrix/OrigamiFigures";
 import { MarkLattice, MarkAperture, MarkMeridian } from "@/components/matrix/Mark";
 import {
   Constellation,
@@ -148,6 +149,9 @@ export default function Identity() {
           <br />
           <span className="italic text-muted-foreground">the systems.</span>
         </h1>
+        <div className="mt-12 flex justify-end">
+          <RhombicDodecahedronFigure className="w-56 md:w-64 xl:w-72 text-foreground/70" />
+        </div>
         <div className="mt-16 grid grid-cols-12 gap-6 sm:gap-8 border-t border-border pt-8">
           <p className="col-span-12 md:col-span-6 text-lg leading-relaxed text-foreground/80 font-light">
             Before a single product is built, an architecture must hold its own weight. What follows
