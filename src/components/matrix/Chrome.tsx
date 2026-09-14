@@ -301,6 +301,78 @@ export function Footer() {
             <p className="mt-2 text-sm text-ink/70 leading-relaxed">Kolkata, India</p>
           </div>
         </div>
+        <div className="border-t border-ink/10">
+          <div className="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14 py-10">
+            <p className="eyebrow mb-6 !text-ink/60">Legal</p>
+            <ul className="flex flex-wrap gap-x-8 gap-y-3">
+              <li>
+                <a
+                  href="https://privacypolicymatrix.oneapp.dev/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-baseline gap-2.5 text-sm"
+                >
+                  <span className="font-mono text-gold">◌</span>
+                  <span className="text-ink/70 group-hover:text-ink transition-colors">
+                    Privacy Policy
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://termsofservice.oneapp.dev/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-baseline gap-2.5 text-sm"
+                >
+                  <span className="font-mono text-gold">◌</span>
+                  <span className="text-ink/70 group-hover:text-ink transition-colors">
+                    Terms of Service
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://imprintcolophon.oneapp.dev/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-baseline gap-2.5 text-sm"
+                >
+                  <span className="font-mono text-gold">◌</span>
+                  <span className="text-ink/70 group-hover:text-ink transition-colors">
+                    Imprint &amp; Colophon
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://accessibilitystatement.oneapp.dev/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-baseline gap-2.5 text-sm"
+                >
+                  <span className="font-mono text-gold">◌</span>
+                  <span className="text-ink/70 group-hover:text-ink transition-colors">
+                    Accessibility Statement
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://responsibledisclosure.oneapp.dev/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-baseline gap-2.5 text-sm"
+                >
+                  <span className="font-mono text-gold">◌</span>
+                  <span className="text-ink/70 group-hover:text-ink transition-colors">
+                    Responsible Disclosure
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
       <div className="bg-gold text-ink">
         <div className="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14 py-6 flex flex-col md:flex-row justify-between gap-4">
