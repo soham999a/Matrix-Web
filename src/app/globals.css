@@ -144,6 +144,35 @@
     background: var(--color-gold);
     color: var(--color-ink);
   }
+
+  /* Quiet instrument-like scrollbar */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-carbon) transparent;
+  }
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-carbon);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    border-radius: 8px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-gold);
+    background-clip: padding-box;
+  }
+
+  /* Native cursor is replaced by the gold reticle on precision pointers */
+  html.cursor-none,
+  html.cursor-none * {
+    cursor: none !important;
+  }
 }
 
 /* ——— Typographic utilities ——— */
@@ -191,6 +220,18 @@
   height: 1px;
   background-color: var(--color-gold);
   vertical-align: middle;
+}
+
+@keyframes mtx-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@utility fade-in {
+  animation: mtx-fade-in 0.9s ease-out both;
 }
 
 @utility field-line {
@@ -865,5 +906,16 @@
   }
   .mtx-fig .cx {
     opacity: 0.28 !important;
+  }
+
+  .rise,
+  .breathe,
+  .drift,
+  .draw,
+  .fade-in {
+    animation: none !important;
+  }
+  .draw {
+    stroke-dashoffset: 0 !important;
   }
 }

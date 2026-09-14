@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
+import { PageShell, Section } from "@/components/matrix/Chrome";
 import { pageSeo } from "@/lib/seo";
 import { NetworkIntelligence } from "@/components/matrix/NetworkIntelligence";
 import {
@@ -14,6 +14,9 @@ import { Ripple } from "@/components/matrix/Metaphors";
 import { DisciplineCard } from "@/components/matrix/DisciplineCard";
 import { LiveProductsPill } from "@/components/matrix/LiveProductsPill";
 import { LazyVideo } from "@/components/matrix/LazyVideo";
+import { HeroNetwork } from "@/components/matrix/HeroNetwork";
+import { Reveal } from "@/components/matrix/Reveal";
+import { Magnetic } from "@/components/matrix/Magnetic";
 
 export const metadata = pageSeo({
   path: "/",
@@ -38,14 +41,18 @@ export default function Index() {
   return (
     <PageShell>
       {/* ————— ACT I · COVER ————— */}
-      <Section className="grain relative isolate overflow-hidden min-h-[100svh] pt-28 pb-20 flex flex-col">
-        {/* hero background — looping neural animation */}
+      <Section
+        rail="Act I · Cover"
+        className="grain relative isolate overflow-hidden min-h-[100svh] pt-28 pb-20 flex flex-col"
+      >
+        {/* hero background — looping neural animation + ambient field */}
         <div aria-hidden="true" className="absolute inset-0 -z-10 overflow-hidden">
           <LazyVideo
             poster="/neuron-hero-poster.jpg"
             src="/neuron-hero-720p.mp4"
             className="h-full w-full"
           />
+          <HeroNetwork className="pointer-events-none absolute inset-0 h-full w-full opacity-80" />
           <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/30 to-background" />
         </div>
         {/* corner registration marks */}
@@ -62,11 +69,13 @@ export default function Index() {
               A Studio for Civilization-Scale Intelligence
             </div>
             <h1 className="font-display text-[clamp(2.75rem,8vw,8rem)] leading-[0.92] tracking-[-0.02em]">
-              The invisible
+              <Reveal>The invisible</Reveal>
               <br />
-              <span className="italic text-gold">architecture</span>
+              <Reveal className="italic text-gold" delay={110}>
+                architecture
+              </Reveal>
               <br />
-              behind the future.
+              <Reveal delay={220}>behind the future.</Reveal>
             </h1>
           </div>
           <div className="col-span-12 lg:col-span-5 flex justify-center lg:justify-end -mt-12 sm:-mt-16 lg:mt-0">
@@ -84,61 +93,55 @@ export default function Index() {
             Intelligence. Architecture. Impact.
           </p>
           <div className="col-span-12 md:col-span-3 md:text-right">
-            <a
-              href="#manifesto"
-              className="font-mono text-[10px] tracking-[0.28em] uppercase border-b border-gold pb-1 hover:text-gold transition-colors"
-            >
-              Descend ↓
-            </a>
+            <Magnetic>
+              <a
+                href="#manifesto"
+                className="inline-block font-mono text-[10px] tracking-[0.28em] uppercase border-b border-gold pb-1 hover:text-gold transition-colors"
+              >
+                Descend ↓
+              </a>
+            </Magnetic>
           </div>
         </div>
       </Section>
 
       {/* ————— LITANY · POWER WORDS ————— */}
-      <Section className="py-24 border-t border-border">
-        <div className="grid grid-cols-12 gap-6 sm:gap-8">
-          <div className="col-span-12 md:col-span-3">
-            <Eyebrow index="Litany">the mother-forms</Eyebrow>
-          </div>
-          <ul className="col-span-12 md:col-span-9 space-y-6 md:space-y-8">
-            {[
-              { n: "i.", t: "Cohered by Design." },
-              { n: "ii.", t: "The Real Revolution is the evolution of consciousness." },
-              {
-                n: "iii.",
-                t: "The end of science is not to prove a theory — but to improve mankind.",
-              },
-              {
-                n: "iv.",
-                t: "An intelligence architecture firm designing the next intelligence layer of civilization.",
-              },
-              { n: "v.", t: "Not a company. A culture. A phenomenon." },
-            ].map((l) => (
-              <li
-                key={l.n}
-                className="grid grid-cols-12 gap-6 items-baseline border-b border-border/60 pb-6 last:border-b-0"
-              >
-                <span className="col-span-2 md:col-span-1 font-mono text-[10px] tracking-[0.28em] uppercase text-gold">
-                  {l.n}
-                </span>
-                <p className="col-span-10 md:col-span-11 font-display text-2xl md:text-4xl leading-[1.2] tracking-tight text-foreground/90">
-                  {l.t}
-                </p>
-              </li>
-            ))}
-          </ul>
-        </div>
+      <Section rail="Litany" className="py-24 border-t border-border">
+        <ul className="col-span-12 space-y-6 md:space-y-8">
+          {[
+            { n: "i.", t: "Cohered by Design." },
+            { n: "ii.", t: "The Real Revolution is the evolution of consciousness." },
+            {
+              n: "iii.",
+              t: "The end of science is not to prove a theory — but to improve mankind.",
+            },
+            {
+              n: "iv.",
+              t: "An intelligence architecture firm designing the next intelligence layer of civilization.",
+            },
+            { n: "v.", t: "Not a company. A culture. A phenomenon." },
+          ].map((l) => (
+            <li
+              key={l.n}
+              className="grid grid-cols-12 gap-6 items-baseline border-b border-border/60 pb-6 last:border-b-0"
+            >
+              <span className="col-span-2 md:col-span-1 font-mono text-[10px] tracking-[0.28em] uppercase text-gold">
+                {l.n}
+              </span>
+              <p className="col-span-10 md:col-span-11 font-display text-2xl md:text-4xl leading-[1.2] tracking-tight text-foreground/90">
+                {l.t}
+              </p>
+            </li>
+          ))}
+        </ul>
       </Section>
 
       {/* ————— ACT II · MANIFESTO FRAGMENT ————— */}
-      <Section id="manifesto" className="py-24 md:py-40 border-t border-border">
-        <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-20">
-          <div className="col-span-12 md:col-span-3">
-            <Eyebrow index="I">Manifesto · Fragment</Eyebrow>
-          </div>
-          <p className="col-span-12 md:col-span-3 eyebrow">Read in one breath</p>
-        </div>
-
+      <Section
+        rail="Act II · Manifesto"
+        id="manifesto"
+        className="py-24 md:py-40 border-t border-border"
+      >
         <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 md:col-span-10 md:col-start-2">
             <p className="font-display text-[clamp(2rem,5vw,4.75rem)] leading-[1.08] tracking-[-0.015em] text-foreground">
@@ -167,15 +170,14 @@ export default function Index() {
       </Section>
 
       {/* ————— ACT III · METAPHOR SEQUENCE ————— */}
-      <Section variant="paper" className="py-20 md:py-32">
+      <Section rail="Act III · Sequence" variant="paper" className="py-20 md:py-32">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-20">
-          <div className="col-span-12 md:col-span-3">
-            <Eyebrow index="II">Sequence</Eyebrow>
-          </div>
-          <h2 className="col-span-12 md:col-span-9 font-display text-5xl md:text-7xl leading-[0.95] tracking-tight">
-            Six figures
+          <h2 className="col-span-12 font-display text-5xl md:text-7xl leading-[0.95] tracking-tight">
+            <Reveal>Six figures</Reveal>
             <br />
-            <span className="italic">for one method.</span>
+            <Reveal className="italic" delay={120}>
+              for one method.
+            </Reveal>
           </h2>
         </div>
 
@@ -244,15 +246,14 @@ export default function Index() {
       </Section>
 
       {/* ————— ACT IV · CAPABILITIES ————— */}
-      <Section className="py-24 md:py-40">
+      <Section rail="Act IV · Capabilities" className="py-24 md:py-40">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-20">
-          <div className="col-span-12 md:col-span-3">
-            <Eyebrow index="III">Capabilities</Eyebrow>
-          </div>
-          <h2 className="col-span-12 md:col-span-9 font-display text-5xl md:text-7xl leading-[0.95] tracking-tight">
-            Nine disciplines
+          <h2 className="col-span-12 font-display text-5xl md:text-7xl leading-[0.95] tracking-tight">
+            <Reveal>Nine disciplines</Reveal>
             <br />
-            <span className="italic text-muted-foreground">held by a single hand.</span>
+            <Reveal className="italic text-muted-foreground" delay={120}>
+              held by a single hand.
+            </Reveal>
           </h2>
         </div>
 
@@ -358,7 +359,7 @@ export default function Index() {
       </Section>
 
       {/* ————— ACT V · QUIET POSITION ————— */}
-      <Section className="py-24 md:py-40 border-t border-border">
+      <Section rail="Act V · Quiet Position" className="py-24 md:py-40 border-t border-border">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 items-center">
           <div className="col-span-12 md:col-span-5">
             <Ripple className="w-full text-foreground/80 breathe" />
@@ -376,14 +377,19 @@ export default function Index() {
       </Section>
 
       {/* ————— ACT VI · CLOSING ————— */}
-      <Section variant="paper" className="py-24 md:py-40 border-t border-border">
+      <Section
+        rail="Act VI · Closing"
+        variant="paper"
+        className="py-24 md:py-40 border-t border-border"
+      >
         <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 md:col-span-7">
-            <Eyebrow index="IV">Closing</Eyebrow>
-            <h2 className="font-display text-5xl md:text-8xl tracking-tight leading-[0.92] mt-8">
-              Cohered
+            <h2 className="font-display text-5xl md:text-8xl tracking-tight leading-[0.92]">
+              <Reveal>Cohered</Reveal>
               <br />
-              <span className="italic text-muted-foreground">by design.</span>
+              <Reveal className="italic text-muted-foreground" delay={120}>
+                by design.
+              </Reveal>
             </h2>
             <p className="mt-8 max-w-xl text-muted-foreground leading-relaxed">
               An intelligence architecture firm designing the next intelligence layer of
@@ -395,21 +401,22 @@ export default function Index() {
               A small number of engagements each year. Research collaboration, strategic counsel, or
               product partnership. The door is narrow on purpose.
             </p>
-            <Link
-              href="/contact"
-              className="inline-block border border-foreground px-8 py-5 font-mono text-[11px] tracking-[0.28em] uppercase hover:bg-foreground hover:text-background transition-colors duration-500 w-full sm:w-fit text-center"
-            >
-              Begin a Correspondence →
-            </Link>
+            <Magnetic className="block w-full sm:w-fit">
+              <Link
+                href="/contact"
+                className="block border border-foreground px-8 py-5 font-mono text-[11px] tracking-[0.28em] uppercase text-center hover:bg-foreground hover:text-background transition-colors duration-500"
+              >
+                Begin a Correspondence →
+              </Link>
+            </Magnetic>
           </div>
         </div>
       </Section>
 
       {/* ————— FURTHER · THE DOORS ————— */}
-      <Section className="py-24">
+      <Section rail="Further" className="py-24">
         <div className="border-t border-border pt-12">
-          <div className="flex items-baseline justify-between mb-10">
-            <Eyebrow index="V">Further</Eyebrow>
+          <div className="flex items-baseline justify-end mb-10">
             <span className="font-mono text-[10px] tracking-[0.22em] uppercase text-muted-foreground">
               Five chambers · One studio
             </span>

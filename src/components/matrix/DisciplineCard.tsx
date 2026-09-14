@@ -79,18 +79,17 @@ export function DisciplineCard({ c, i }: { c: Discipline; i: number }) {
             flipped ? "" : "pointer-events-none"
           }`}
         >
-          <span aria-hidden="true" className="absolute top-0 left-0 h-[2px] w-16 bg-gold" />
+          <span
+            aria-hidden="true"
+            className="absolute top-0 left-1/2 h-[2px] w-16 -translate-x-1/2 bg-gold"
+          />
 
           <div className="flex h-full flex-col">
-            <div className="flex items-baseline justify-between">
-              <span className="font-mono text-[10px] tracking-[0.28em] text-gold">{c.n}</span>
-              <span className="font-mono text-[10px] tracking-[0.22em] uppercase text-ink/50">
-                Discipline
+            <div className="flex flex-1 flex-col items-center justify-center">
+              <span className="font-mono text-[10px] tracking-[0.28em] text-gold">
+                {c.n} · Discipline
               </span>
-            </div>
-
-            <div className="flex flex-1 flex-col justify-center">
-              <h3 className="font-display text-2xl md:text-3xl tracking-tight leading-[1.05] text-ink text-center">
+              <h3 className="font-display text-2xl md:text-3xl tracking-tight leading-[1.05] text-ink text-center mt-4 px-6">
                 {c.t}
               </h3>
               <div aria-hidden="true" className="mt-3 flex items-center justify-center gap-2">
@@ -107,16 +106,13 @@ export function DisciplineCard({ c, i }: { c: Discipline; i: number }) {
               </ul>
             </div>
 
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-center pb-1">
               <span className="font-mono text-[10px] tracking-[0.22em] uppercase text-ink border-b border-ink/40">
                 Open
                 <span className="inline-block text-gold group-hover:translate-x-1 transition-transform duration-300">
                   {" "}
                   →
                 </span>
-              </span>
-              <span className="grid h-8 w-8 place-items-center border border-ink/20 font-mono text-[11px] text-ink/60">
-                {c.n}
               </span>
             </div>
           </div>
