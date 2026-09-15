@@ -112,14 +112,16 @@ export default function Index() {
           <div className="col-span-12 lg:col-span-9">
             <Eyebrow index="01">About Matrix</Eyebrow>
             <h1 className="mt-8 font-display text-[clamp(2rem,4.5vw,4rem)] leading-[1.08] tracking-[-0.015em]">
-              A Deep Technology Research &amp; Innovation Organization developing AI-powered
-              software, intelligent systems, and research-driven technologies.
+              An Applied Intelligence firm building AI, analytics, intelligent software, and
+              decision systems that help organisations solve complex problems and make better
+              decisions.
             </h1>
             <p className="mt-8 max-w-3xl text-muted-foreground leading-relaxed">
-              MATRIX helps organizations make smarter, faster, and more reliable decisions. Our
-              integrated AI ecosystem serves education, enterprises, manufacturing, supply chains,
-              sustainability, and government sectors through scalable, explainable, and practical
-              solutions.
+              MATRIX operates across nine interconnected disciplines — from applied AI, systems,
+              and engineering to consulting, design, human intelligence, education, and social
+              innovation. Our integrated intelligence ecosystem serves education, enterprises,
+              manufacturing, supply chains, sustainability, and government sectors through scalable,
+              explainable, and practical solutions.
             </p>
           </div>
         </div>
