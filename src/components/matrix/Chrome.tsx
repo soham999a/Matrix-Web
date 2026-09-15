@@ -305,9 +305,9 @@ export function Footer() {
             <p className="mt-2 text-sm text-ink/70 leading-relaxed">Kolkata, India</p>
           </div>
         </div>
-        <div className="border-t border-ink/10">
+        <div className="border-t border-ink/10 bg-graphite">
           <div className="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14 py-10">
-            <p className="eyebrow mb-6 !text-ink/60">Legal</p>
+            <p className="eyebrow mb-6 !text-silver">Legal</p>
             <ul className="flex flex-wrap gap-x-8 gap-y-3">
               <li>
                 <a
@@ -317,7 +317,7 @@ export function Footer() {
                   className="group flex items-baseline gap-2.5 text-sm"
                 >
                   <span className="font-mono text-gold">◌</span>
-                  <span className="text-ink/70 group-hover:text-ink transition-colors">
+                  <span className="text-silver group-hover:text-fog transition-colors">
                     Privacy Policy
                   </span>
                 </a>
@@ -330,7 +330,7 @@ export function Footer() {
                   className="group flex items-baseline gap-2.5 text-sm"
                 >
                   <span className="font-mono text-gold">◌</span>
-                  <span className="text-ink/70 group-hover:text-ink transition-colors">
+                  <span className="text-silver group-hover:text-fog transition-colors">
                     Terms of Service
                   </span>
                 </a>
@@ -343,7 +343,7 @@ export function Footer() {
                   className="group flex items-baseline gap-2.5 text-sm"
                 >
                   <span className="font-mono text-gold">◌</span>
-                  <span className="text-ink/70 group-hover:text-ink transition-colors">
+                  <span className="text-silver group-hover:text-fog transition-colors">
                     Imprint &amp; Colophon
                   </span>
                 </a>
@@ -356,7 +356,7 @@ export function Footer() {
                   className="group flex items-baseline gap-2.5 text-sm"
                 >
                   <span className="font-mono text-gold">◌</span>
-                  <span className="text-ink/70 group-hover:text-ink transition-colors">
+                  <span className="text-silver group-hover:text-fog transition-colors">
                     Accessibility Statement
                   </span>
                 </a>
@@ -369,7 +369,7 @@ export function Footer() {
                   className="group flex items-baseline gap-2.5 text-sm"
                 >
                   <span className="font-mono text-gold">◌</span>
-                  <span className="text-ink/70 group-hover:text-ink transition-colors">
+                  <span className="text-silver group-hover:text-fog transition-colors">
                     Responsible Disclosure
                   </span>
                 </a>
