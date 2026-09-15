@@ -227,6 +227,112 @@ export function RhombicDodecahedronFigure({ className }: Props) {
   );
 }
 
+/* ——— 05 · Golden Spiral / The Nautilus ——— */
+/* A bright, continuously-drawing golden spiral with orbiting node and
+   central pulse. The form stays luminous against any background. */
+export function NautilusFigure({ className }: Props) {
+  /* two-ish turns of an Archimedean spiral — r = a + b·θ, ro growing
+     outward every full circle so the line keeps a luminous presence */
+  const pts: string[] = [];
+  const turns = 2.2;
+  const steps = 220;
+  const cx = 320;
+  const cy = 260;
+  const r0 = 8;
+  const rmax = 218;
+  for (let i = 0; i <= steps; i++) {
+    const th = (i / steps) * turns * Math.PI * 2;
+    const r = r0 + (rmax - r0) * (i / steps);
+    pts.push(`${(cx + r * Math.cos(th)).toFixed(2)} ${(cy + r * Math.sin(th)).toFixed(2)}`);
+  }
+  const outer = `M ${cx} ${cy} L ${cx + rmax} ${cy}`;
+
+  return (
+    <Frame
+      className={className}
+      label="A golden spiral in constant rotation — growth defined by ratio, not speed"
+    >
+      <defs>
+        <radialGradient id="nautilus-glow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stopColor="var(--color-gold)" stopOpacity="0.35" />
+          <stop offset="100%" stopColor="var(--color-gold)" stopOpacity="0" />
+        </radialGradient>
+      </defs>
+
+      {/* luminous halo behind the whole spiral */}
+      <circle cx={cx} cy={cy} r={rmax + 14} fill="url(#nautilus-glow)" />
+
+      {/* spirals of golden ratio — construction rings */}
+      <g className="cx" stroke="var(--color-gold)" strokeOpacity="0.45" strokeWidth="0.4">
+        {[3, 5, 8, 13, 21, 34, 55, 89, 144, 233].slice(2, 9).map((n) => (
+          <circle key={n} cx={cx} cy={cy} r={(n / 233) * rmax} strokeDasharray="2 5" />
+        ))}
+        <line x1="120" y1="260" x2="520" y2="260" strokeDasharray="2 5" strokeOpacity="0.4" />
+        <line x1="320" y1="60" x2="320" y2="460" strokeDasharray="2 5" strokeOpacity="0.4" />
+        <Cross x={cx} y={60} />
+        <Cross x={cx} y={460} />
+      </g>
+
+      {/* construction golden rectangle spiral faintly behind */}
+      <g className="cx" stroke="var(--color-gold)" strokeOpacity="0.3" strokeWidth="0.4">
+        <rect x="138" y="78" width="364" height="364" strokeDasharray="2 5" />
+        <rect x="322" y="78" width="180" height="180" strokeDasharray="2 5" />
+        <rect x="322" y="258" width="180" height="180" strokeDasharray="2 5" />
+        <rect x="416" y="258" width="86" height="180" strokeDasharray="2 5" />
+      </g>
+
+      {/* form — the luminous spiral */}
+      <g
+        className="form fig-breathe"
+        stroke="currentColor"
+        strokeWidth="0.75"
+        strokeLinecap="round"
+      >
+        <polyline
+          points={pts.join(" ")}
+          strokeOpacity="0.95"
+          className="draw"
+          style={{ strokeDashoffset: 1400 }}
+        />
+        {/* orbiting node riding the outer arm */}
+        <g className="fig-rotate">
+          <polyline points={outer} strokeDasharray="2 5" strokeOpacity="0.3" />
+          <circle
+            cx={cx + rmax}
+            cy={cy}
+            r="2.6"
+            fill="var(--color-gold)"
+            stroke="none"
+            className="fig-node"
+          />
+        </g>
+        {/* second thin gold ring counter-rotating */}
+        <g className="fig-counter" stroke="var(--color-gold)" strokeOpacity="0.5" strokeWidth="0.5">
+          <circle cx={cx} cy={cy} r={rmax * 0.62} strokeDasharray="3 7" />
+          <circle
+            cx={cx + rmax * 0.62}
+            cy={cy}
+            r="1.8"
+            fill="var(--color-gold)"
+            stroke="none"
+            className="fig-node"
+          />
+        </g>
+        {/* central pulse */}
+        <g
+          className="fig-ripple"
+          stroke="var(--color-gold)"
+          strokeOpacity="0.5"
+          strokeDasharray="3 5"
+        >
+          <circle cx={cx} cy={cy} r="24" />
+        </g>
+        <Gold x={cx} y={cy} r={3.2} />
+      </g>
+    </Frame>
+  );
+}
+
 /* ——— 04 · Cymatic Arch ——— */
 export function CymaticArchFigure({ className }: Props) {
   return (

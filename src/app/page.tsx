@@ -11,7 +11,7 @@ import {
   EmergenceObservation,
 } from "@/components/matrix/Figures";
 import { Ripple } from "@/components/matrix/Metaphors";
-import { RhombicDodecahedronFigure } from "@/components/matrix/OrigamiFigures";
+import { NautilusFigure } from "@/components/matrix/OrigamiFigures";
 import { DisciplineCard } from "@/components/matrix/DisciplineCard";
 import { LiveProductsPill } from "@/components/matrix/LiveProductsPill";
 import { LazyVideo } from "@/components/matrix/LazyVideo";
@@ -108,10 +108,10 @@ export default function Index() {
 
       {/* ————— IDENTITY · ABOUT MATRIX ————— */}
       <Section rail="Identity" className="py-24 border-t border-border">
-        <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-16">
-          <div className="col-span-12 lg:col-span-7">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-8">
+          <div className="col-span-12 lg:col-span-7 lg:pl-8">
             <Eyebrow index="01">About Matrix</Eyebrow>
-            <h1 className="mt-8 font-display text-[clamp(2rem,4.5vw,4rem)] leading-[1.08] tracking-[-0.015em]">
+            <h1 className="mt-8 font-display text-[clamp(1.75rem,3.2vw,2.75rem)] leading-[1.15] tracking-[-0.015em]">
               An Applied Intelligence firm building AI, analytics, intelligent software, and
               decision systems that help organisations solve complex problems and make better
               decisions.
@@ -125,12 +125,12 @@ export default function Index() {
             </p>
           </div>
           <div className="hidden lg:flex col-span-5 items-center justify-center">
-            <RhombicDodecahedronFigure className="w-full max-w-[420px] h-auto text-foreground/80" />
+            <NautilusFigure className="w-full max-w-[420px] h-auto text-foreground/80" />
           </div>
         </div>
 
         {/* floating identity statements */}
-        <ul className="col-span-12 lg:w-7/12 mb-24 space-y-4 md:space-y-5">
+        <ul className="col-span-12 lg:w-7/12 lg:pl-8 mb-24 space-y-4 md:space-y-5">
           {[
             { n: "i.", t: "Cohered by Design." },
             { n: "ii.", t: "The Real Revolution is the evolution of consciousness." },
@@ -488,9 +488,9 @@ export default function Index() {
       </Section>
 
       {/* ————— FURTHER · THE DOORS ————— */}
-      <Section rail="Further" className="py-24">
-        <div className="pt-12">
-          <div className="flex items-baseline justify-end mb-10">
+      <Section rail="Further" className="py-16 md:py-20">
+        <div className="pt-0">
+          <div className="flex items-baseline justify-end mb-8">
             <span className="font-mono text-[10px] tracking-[0.22em] uppercase text-muted-foreground">
               Five chambers · One studio
             </span>
