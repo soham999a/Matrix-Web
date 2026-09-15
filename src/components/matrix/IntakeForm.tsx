@@ -221,225 +221,249 @@ export function IntakeForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
-      <div>
+    <form onSubmit={handleSubmit(onSubmit)}>
+      {/* Header */}
+      <div className="mb-10">
         <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-gold">
           MATRIX · Intelligence Assessment
         </p>
-        <p className="eyebrow !text-muted-foreground mt-2">
+        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-muted-foreground/60 mt-2">
           Adaptive Intelligence Allocation · Market Intelligence Intake
         </p>
       </div>
 
-      <div className="grid grid-cols-12 gap-6 sm:gap-8">
-        <div className="col-span-12 md:col-span-6">
-          <FieldLabel htmlFor="industry" required>
-            Industry
-          </FieldLabel>
-          <input
-            id="industry"
-            type="text"
-            {...register("industry")}
-            className="field-line"
-            placeholder="Financial services, manufacturing, education…"
-          />
-          <FieldError message={errors.industry?.message} />
-        </div>
-
-        <div className="col-span-12 md:col-span-6">
-          <FieldLabel htmlFor="companyName" required>
-            Company name
-          </FieldLabel>
-          <input
-            id="companyName"
-            type="text"
-            {...register("companyName")}
-            className="field-line"
-            placeholder="Your organisation"
-          />
-          <FieldError message={errors.companyName?.message} />
-        </div>
-
-        <div className="col-span-12 md:col-span-6">
-          <FieldLabel htmlFor="companySize">Company size</FieldLabel>
-          <select
-            id="companySize"
-            {...register("companySize")}
-            className="field-line appearance-none cursor-pointer"
-          >
-            <option value="" className="bg-background text-foreground">
-              Select range
-            </option>
-            {["1-10", "11-50", "51-200", "201-1000", "1000+"].map((o) => (
-              <option key={o} value={o} className="bg-background text-foreground">
-                {o}
+      {/* Section 1 — Company Profile */}
+      <fieldset className="border border-border p-6 sm:p-8 mb-8">
+        <legend className="font-mono text-[10px] tracking-[0.28em] uppercase text-gold px-3 -mt-0.5">
+          01 · Company Profile
+        </legend>
+        <div className="grid grid-cols-12 gap-x-6 gap-y-8">
+          <div className="col-span-12 md:col-span-6">
+            <FieldLabel htmlFor="industry" required>
+              Industry
+            </FieldLabel>
+            <input
+              id="industry"
+              type="text"
+              {...register("industry")}
+              className="field-line"
+              placeholder="Financial services, manufacturing, education…"
+            />
+            <FieldError message={errors.industry?.message} />
+          </div>
+          <div className="col-span-12 md:col-span-6">
+            <FieldLabel htmlFor="companyName" required>
+              Company name
+            </FieldLabel>
+            <input
+              id="companyName"
+              type="text"
+              {...register("companyName")}
+              className="field-line"
+              placeholder="Your organisation"
+            />
+            <FieldError message={errors.companyName?.message} />
+          </div>
+          <div className="col-span-12 md:col-span-4">
+            <FieldLabel htmlFor="companySize">Company size</FieldLabel>
+            <select
+              id="companySize"
+              {...register("companySize")}
+              className="field-line appearance-none cursor-pointer"
+            >
+              <option value="" className="bg-background text-foreground">
+                Select range
               </option>
-            ))}
-          </select>
-        </div>
-
-        <div className="col-span-12 md:col-span-6">
-          <FieldLabel htmlFor="geography">Geography</FieldLabel>
-          <input
-            id="geography"
-            type="text"
-            {...register("geography")}
-            className="field-line"
-            placeholder="Country / region of operations"
-          />
-        </div>
-
-        <div className="col-span-12">
-          <FieldLabel htmlFor="stack">Current systems / technology stack</FieldLabel>
-          <input
-            id="stack"
-            type="text"
-            {...register("stack")}
-            className="field-line"
-            placeholder="ERP, CRM, data warehouse, in-flight automation…"
-          />
-        </div>
-
-        <div className="col-span-12">
-          <FieldLabel htmlFor="problem" required>
-            Biggest operational problem
-          </FieldLabel>
-          <textarea
-            id="problem"
-            {...register("problem")}
-            rows={4}
-            className="field-line resize-none"
-            placeholder="Describe the operational pain you are trying to solve…"
-          />
-          <FieldError message={errors.problem?.message} />
-        </div>
-
-        <div className="col-span-12">
-          <FieldLabel htmlFor="useCase">Desired AI use case</FieldLabel>
-          <input
-            id="useCase"
-            type="text"
-            {...register("useCase")}
-            className="field-line"
-            placeholder="Forecasting, decision support, agentic workflows, analytics…"
-          />
-        </div>
-
-        <div className="col-span-12 md:col-span-4">
-          <FieldLabel htmlFor="dataAvailability">Data availability</FieldLabel>
-          <select
-            id="dataAvailability"
-            {...register("dataAvailability")}
-            className="field-line appearance-none cursor-pointer"
-          >
-            <option value="" className="bg-background text-foreground">
-              Select
-            </option>
-            {["Limited / siloed", "Moderate / some structure", "High / well-structured"].map(
-              (o) => (
+              {["1-10", "11-50", "51-200", "201-1000", "1000+"].map((o) => (
                 <option key={o} value={o} className="bg-background text-foreground">
                   {o}
                 </option>
-              ),
-            )}
-          </select>
-          <FieldError message={errors.dataAvailability?.message} />
-        </div>
-
-        <div className="col-span-12 md:col-span-4">
-          <FieldLabel htmlFor="timeline">Decision timeline</FieldLabel>
-          <select
-            id="timeline"
-            {...register("timeline")}
-            className="field-line appearance-none cursor-pointer"
-          >
-            <option value="" className="bg-background text-foreground">
-              Select
-            </option>
-            {[
-              "Immediate (0-3 months)",
-              "Short-term (3-6 months)",
-              "Medium-term (6-12 months)",
-              "Long-term (12+ months)",
-            ].map((o) => (
-              <option key={o} value={o} className="bg-background text-foreground">
-                {o}
-              </option>
-            ))}
-          </select>
-          <FieldError message={errors.timeline?.message} />
-        </div>
-
-        <div className="col-span-12 md:col-span-4">
-          <FieldLabel htmlFor="budget">Project scale / budget</FieldLabel>
-          <select
-            id="budget"
-            {...register("budget")}
-            className="field-line appearance-none cursor-pointer"
-          >
-            <option value="" className="bg-background text-foreground">
-              Select
-            </option>
-            {["< 50k", "50k - 200k", "200k - 1M", "1M+"].map((o) => (
-              <option key={o} value={o} className="bg-background text-foreground">
-                {o}
-              </option>
-            ))}
-          </select>
-          <FieldError message={errors.budget?.message} />
-        </div>
-
-        <div className="col-span-12">
-          <FieldLabel htmlFor="decisionMaker">Decision-maker role</FieldLabel>
-          <input
-            id="decisionMaker"
-            type="text"
-            {...register("decisionMaker")}
-            className="field-line"
-            placeholder="CTO, Founder, COO, Head of Innovation…"
-          />
-        </div>
-
-        <div className="col-span-12">
-          <p className="block font-mono text-[10px] tracking-[0.22em] uppercase text-muted-foreground mb-3">
-            Interest area
-            <span className="text-muted-foreground/60"> (select all that apply)</span>
-          </p>
-          <div className="flex flex-wrap gap-3">
-            {interestOptions.map((opt) => {
-              const active = interests.includes(opt);
-              return (
-                <button
-                  key={opt}
-                  type="button"
-                  onClick={() => toggleInterest(opt)}
-                  aria-pressed={active}
-                  className={`border px-5 py-2.5 font-mono text-[10px] tracking-[0.22em] uppercase transition-colors duration-300 ${
-                    active
-                      ? "border-gold text-gold"
-                      : "border-foreground/30 text-muted-foreground hover:border-foreground"
-                  }`}
-                >
-                  {opt}
-                </button>
-              );
-            })}
+              ))}
+            </select>
           </div>
+          <div className="col-span-12 md:col-span-4">
+            <FieldLabel htmlFor="geography">Geography</FieldLabel>
+            <input
+              id="geography"
+              type="text"
+              {...register("geography")}
+              className="field-line"
+              placeholder="Country / region of operations"
+            />
+          </div>
+          <div className="col-span-12 md:col-span-4">
+            <FieldLabel htmlFor="decisionMaker">Decision-maker role</FieldLabel>
+            <input
+              id="decisionMaker"
+              type="text"
+              {...register("decisionMaker")}
+              className="field-line"
+              placeholder="CTO, Founder, COO…"
+            />
+          </div>
+        </div>
+      </fieldset>
+
+      {/* Section 2 — Project Context */}
+      <fieldset className="border border-border p-6 sm:p-8 mb-8">
+        <legend className="font-mono text-[10px] tracking-[0.28em] uppercase text-gold px-3 -mt-0.5">
+          02 · Project Context
+        </legend>
+        <div className="grid grid-cols-12 gap-x-6 gap-y-8">
+          <div className="col-span-12">
+            <FieldLabel htmlFor="problem" required>
+              Biggest operational problem
+            </FieldLabel>
+            <textarea
+              id="problem"
+              {...register("problem")}
+              rows={4}
+              className="field-line resize-none"
+              placeholder="Describe the operational pain you are trying to solve…"
+            />
+            <FieldError message={errors.problem?.message} />
+          </div>
+          <div className="col-span-12">
+            <FieldLabel htmlFor="useCase">Desired AI use case</FieldLabel>
+            <input
+              id="useCase"
+              type="text"
+              {...register("useCase")}
+              className="field-line"
+              placeholder="Forecasting, decision support, agentic workflows, analytics…"
+            />
+          </div>
+          <div className="col-span-12">
+            <FieldLabel htmlFor="stack">Current systems / technology stack</FieldLabel>
+            <input
+              id="stack"
+              type="text"
+              {...register("stack")}
+              className="field-line"
+              placeholder="ERP, CRM, data warehouse, in-flight automation…"
+            />
+          </div>
+        </div>
+      </fieldset>
+
+      {/* Section 3 — Assessment Parameters */}
+      <fieldset className="border border-border p-6 sm:p-8 mb-8">
+        <legend className="font-mono text-[10px] tracking-[0.28em] uppercase text-gold px-3 -mt-0.5">
+          03 · Assessment Parameters
+        </legend>
+        <div className="grid grid-cols-12 gap-x-6 gap-y-8">
+          <div className="col-span-12 md:col-span-4">
+            <FieldLabel htmlFor="dataAvailability">Data availability</FieldLabel>
+            <select
+              id="dataAvailability"
+              {...register("dataAvailability")}
+              className="field-line appearance-none cursor-pointer"
+            >
+              <option value="" className="bg-background text-foreground">
+                Select
+              </option>
+              {["Limited / siloed", "Moderate / some structure", "High / well-structured"].map(
+                (o) => (
+                  <option key={o} value={o} className="bg-background text-foreground">
+                    {o}
+                  </option>
+                ),
+              )}
+            </select>
+            <FieldError message={errors.dataAvailability?.message} />
+          </div>
+          <div className="col-span-12 md:col-span-4">
+            <FieldLabel htmlFor="timeline">Decision timeline</FieldLabel>
+            <select
+              id="timeline"
+              {...register("timeline")}
+              className="field-line appearance-none cursor-pointer"
+            >
+              <option value="" className="bg-background text-foreground">
+                Select
+              </option>
+              {[
+                "Immediate (0-3 months)",
+                "Short-term (3-6 months)",
+                "Medium-term (6-12 months)",
+                "Long-term (12+ months)",
+              ].map((o) => (
+                <option key={o} value={o} className="bg-background text-foreground">
+                  {o}
+                </option>
+              ))}
+            </select>
+            <FieldError message={errors.timeline?.message} />
+          </div>
+          <div className="col-span-12 md:col-span-4">
+            <FieldLabel htmlFor="budget">Project scale / budget</FieldLabel>
+            <select
+              id="budget"
+              {...register("budget")}
+              className="field-line appearance-none cursor-pointer"
+            >
+              <option value="" className="bg-background text-foreground">
+                Select
+              </option>
+              {["< 50k", "50k - 200k", "200k - 1M", "1M+"].map((o) => (
+                <option key={o} value={o} className="bg-background text-foreground">
+                  {o}
+                </option>
+              ))}
+            </select>
+            <FieldError message={errors.budget?.message} />
+          </div>
+        </div>
+      </fieldset>
+
+      {/* Section 4 — Interest Area */}
+      <div className="border border-border p-6 sm:p-8 mb-8">
+        <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-gold mb-6">
+          04 · Interest Area
+          <span className="text-muted-foreground/50 ml-2">(select all that apply)</span>
+        </p>
+        <div className="flex flex-wrap gap-3">
+          {interestOptions.map((opt) => {
+            const active = interests.includes(opt);
+            return (
+              <button
+                key={opt}
+                type="button"
+                onClick={() => toggleInterest(opt)}
+                aria-pressed={active}
+                className={`px-5 py-2.5 font-mono text-[10px] tracking-[0.22em] uppercase transition-all duration-300 ${
+                  active
+                    ? "border border-gold text-gold bg-gold/10"
+                    : "border border-foreground/20 text-muted-foreground hover:border-gold/40 hover:text-foreground"
+                }`}
+              >
+                {active && <span className="mr-2 text-gold">✓</span>}
+                {opt}
+              </button>
+            );
+          })}
         </div>
       </div>
 
-      {submitError && <p className="text-sm text-red-500">{submitError}</p>}
+      {submitError && (
+        <div className="border border-red-500/30 bg-red-500/5 p-4 mb-6">
+          <p className="text-sm text-red-400">{submitError}</p>
+        </div>
+      )}
 
-      <div className="flex items-center justify-between pt-4">
-        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-muted-foreground">
+      {/* Submit */}
+      <div className="flex items-center justify-between pt-2">
+        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-muted-foreground/50">
           * Required fields
         </p>
         <button
           type="submit"
           disabled={isSubmitting}
-          className="inline-block border border-foreground px-8 py-4 font-mono text-[11px] tracking-[0.28em] uppercase hover:bg-foreground hover:text-background transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          className="group relative border border-gold/60 px-10 py-4 font-mono text-[11px] tracking-[0.28em] uppercase text-gold hover:bg-gold hover:text-ink transition-all duration-500 disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          {isSubmitting ? "Assessing..." : "Submit · Intelligence Assessment →"}
+          <span className="relative z-10">
+            {isSubmitting ? "Assessing…" : "Submit · Intelligence Assessment →"}
+          </span>
         </button>
       </div>
     </form>
@@ -468,5 +492,5 @@ function FieldLabel({
 
 function FieldError({ message }: { message?: string }) {
   if (!message) return null;
-  return <p className="mt-2 text-sm text-red-500">{message}</p>;
+  return <p className="mt-2 text-xs text-red-400">{message}</p>;
 }

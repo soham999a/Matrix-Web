@@ -109,7 +109,7 @@ export default function Index() {
       {/* ————— IDENTITY · ABOUT MATRIX ————— */}
       <Section rail="Identity" className="py-24 border-t border-border">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-16">
-          <div className="col-span-12 lg:col-span-7 lg:pl-8">
+          <div className="col-span-12 lg:col-span-7">
             <Eyebrow index="01">About Matrix</Eyebrow>
             <h1 className="mt-8 font-display text-[clamp(2rem,4.5vw,4rem)] leading-[1.08] tracking-[-0.015em]">
               An Applied Intelligence firm building AI, analytics, intelligent software, and
@@ -130,7 +130,7 @@ export default function Index() {
         </div>
 
         {/* floating identity statements */}
-        <ul className="col-span-12 lg:w-7/12 lg:pl-8 mb-24 space-y-4 md:space-y-5">
+        <ul className="col-span-12 lg:w-7/12 mb-24 space-y-4 md:space-y-5">
           {[
             { n: "i.", t: "Cohered by Design." },
             { n: "ii.", t: "The Real Revolution is the evolution of consciousness." },
@@ -162,7 +162,7 @@ export default function Index() {
         </ul>
 
         {/* Vision / Mission / Invisible Architecture grid */}
-        <div className="grid grid-cols-12 border border-border bg-card">
+        <div className="grid grid-cols-12 border-t border-l border-r border-border bg-card">
           {[
             {
               h: "Vision",
@@ -215,13 +215,9 @@ export default function Index() {
       </Section>
 
       {/* ————— ACT II · MANIFESTO FRAGMENT ————— */}
-      <Section
-        rail="Act II · Manifesto"
-        id="manifesto"
-        className="py-24 md:py-40 border-t border-border"
-      >
+      <Section rail="Act II · Manifesto" id="manifesto" className="py-24 md:py-40">
         <div className="grid grid-cols-12 gap-6 sm:gap-8">
-          <div className="col-span-12 md:col-span-10 md:col-start-2">
+          <div className="col-span-12 md:col-span-10">
             <p className="font-display text-[clamp(2rem,5vw,4.75rem)] leading-[1.08] tracking-[-0.015em] text-foreground">
               We do not build software.
               <br />
@@ -250,7 +246,7 @@ export default function Index() {
       {/* ————— ACT III · METAPHOR SEQUENCE ————— */}
       <Section rail="Act III · Sequence" variant="paper" className="py-20 md:py-32">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-20">
-          <h2 className="col-span-12 font-display text-5xl md:text-7xl leading-[0.95] tracking-tight">
+          <h2 className="col-span-12 pl-[40px] font-display text-5xl md:text-7xl leading-[0.95] tracking-tight">
             <Reveal>Six figures</Reveal>
             <br />
             <Reveal className="italic" delay={120}>
@@ -299,7 +295,7 @@ export default function Index() {
         ].map((row, i) => (
           <article
             key={row.t}
-            className="grid grid-cols-12 gap-6 sm:gap-8 items-center border-t border-ink/15 py-16"
+            className={`grid grid-cols-12 gap-6 sm:gap-8 items-center ${i === 0 ? "py-16" : "border-t border-ink/15 py-16"}`}
           >
             <div className={`col-span-12 md:col-span-5 ${i % 2 ? "md:order-2" : ""}`}>
               <div className="aspect-[4/3] flex items-center justify-center text-ink/80">
@@ -326,7 +322,7 @@ export default function Index() {
       {/* ————— ACT IV · CAPABILITIES ————— */}
       <Section rail="Act IV · Capabilities" className="py-24 md:py-40">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-20">
-          <h2 className="col-span-12 font-display text-5xl md:text-7xl leading-[0.95] tracking-tight">
+          <h2 className="col-span-12 pl-[31px] font-display text-5xl md:text-7xl leading-[0.95] tracking-tight">
             <Reveal>Nine disciplines</Reveal>
             <br />
             <Reveal className="italic text-muted-foreground" delay={120}>
@@ -493,7 +489,7 @@ export default function Index() {
 
       {/* ————— FURTHER · THE DOORS ————— */}
       <Section rail="Further" className="py-24">
-        <div className="border-t border-border pt-12">
+        <div className="pt-12">
           <div className="flex items-baseline justify-end mb-10">
             <span className="font-mono text-[10px] tracking-[0.22em] uppercase text-muted-foreground">
               Five chambers · One studio
@@ -524,7 +520,9 @@ export default function Index() {
               >
                 <div className="font-mono text-[10px] tracking-[0.28em] text-gold">{d.n}</div>
                 <div>
-                  <h4 className="font-display text-2xl md:text-3xl leading-[1.05] tracking-tight">
+                  <h4
+                    className={`font-display leading-[1.05] tracking-tight ${i === 0 ? "text-3xl md:text-5xl" : "text-2xl md:text-3xl"}`}
+                  >
                     {d.t}
                     <span className="inline-block ml-2 text-gold opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-500">
                       →
