@@ -11,6 +11,7 @@ import {
   EmergenceObservation,
 } from "@/components/matrix/Figures";
 import { Ripple } from "@/components/matrix/Metaphors";
+import { RhombicDodecahedronFigure } from "@/components/matrix/OrigamiFigures";
 import { DisciplineCard } from "@/components/matrix/DisciplineCard";
 import { LiveProductsPill } from "@/components/matrix/LiveProductsPill";
 import { LazyVideo } from "@/components/matrix/LazyVideo";
@@ -122,6 +123,9 @@ export default function Index() {
               manufacturing, supply chains, sustainability, and government sectors through scalable,
               explainable, and practical solutions.
             </p>
+          </div>
+          <div className="hidden lg:flex col-span-5 items-center justify-center">
+            <RhombicDodecahedronFigure className="w-full max-w-[420px] h-auto text-foreground/80" />
           </div>
         </div>
 
