@@ -79,6 +79,12 @@ const papers = [
     d: "24 May 2026",
     href: "https://zenodo.org/records/20364601",
   },
+  {
+    t: "The Architecture of Intelligence: From Discrete Agency to Field-Based Cognition",
+    k: "Post-Agentic",
+    d: "2 September 2026",
+    href: "https://zenodo.org/records/22242899",
+  },
 ];
 
 export default function Research() {
@@ -171,8 +177,8 @@ export default function Research() {
           </div>
           <p className="col-span-12 md:col-span-9 text-ink/75 leading-relaxed max-w-3xl">
             Our products do not originate from feature development. They emerge from original
-            research. Every platform is grounded in at least one of two proprietary frameworks,
-            developed to address structural gaps in how intelligence, human development, and
+            research. Every platform is grounded in a family of proprietary frameworks, developed to
+            address structural gaps in how intelligence, human development, computation, and
             organisational systems are understood and designed.
           </p>
         </div>
@@ -180,15 +186,33 @@ export default function Research() {
           {[
             {
               t: "CES-QN",
-              s: "Coherence · Systems · Quantified Reasoning",
-              d: "An original systems framework for understanding coherence across intelligence, architecture, computation, and complex systems. CES-QN addresses civilisation-scale problems through structured reasoning, system coherence, and interdisciplinary intelligence.",
+              s: "Coherence · Systems · Quantified Neuromorphic Reasoning",
+              d: "An original systems framework for understanding coherence across intelligence, architecture, computation, and complex systems. CES-QN addresses civilisation-scale problems through structured reasoning, system coherence, and interdisciplinary intelligence — grounded in conservation laws, constructal theory, and scaling principles.",
               u: "The logic layer beneath Humming, ARPS, Mangrove, and Datum.",
             },
             {
               t: "KALPA",
               s: "Knowledge · Arts · Liberal Practice",
-              d: "A human development and liberal arts framework designed to bridge technology with culture, ethics, creativity, and human flourishing. KALPA focuses on education, creative intelligence, social innovation, and the Orange Economy.",
+              d: "A framework connecting intelligence, education, creativity, social innovation, culture, and human development. Bridges the gap between technical intelligence systems and human flourishing — the civilisational counterpart to CES-QN's computational principles.",
               u: "The philosophy behind QiDS, MindMuse Suite, and AlgoVista.",
+            },
+            {
+              t: "QiDS",
+              s: "Human Development Infrastructure",
+              d: "A single architecture parameterised across six contexts — school, college, university, corporate, government, and community — via a Dynamic Weightage mechanism rather than six separate products. Connects nine-method evidence triangulation, AI-assisted adaptive assessment (QSIA), longitudinal Growth Missions, and a seven-layer Human Intelligence Portfolio into one coherent development system. Assessment formally chains to intervention rather than terminating at a score. AI operates as a bounded internal capability, with a human-judgment requirement maintained in high-stakes decisions.",
+              u: "From Metacognitive and Resilience Intelligence to STREAM integration and the CARE model.",
+            },
+            {
+              t: "Adaptive Computation",
+              s: "The Backbone of Gravity and Matrix Core Architecture",
+              d: "A policy-driven, event-enabled orchestration architecture with heterogeneous execution lanes — selecting the minimum sufficient computational path for each task across deterministic, statistical, ML, optimisation, LLM, agentic, and multi-agent paradigms. Routes by intelligence type and resource availability simultaneously. Maintains a full Capability Registry rather than an agent registry alone. Records every routing decision with rationale in a Decision Ledger. Execution outcomes feed future routing decisions through closed-loop learning.",
+              u: "The intelligence layer that decides how intelligence should be used.",
+            },
+            {
+              t: "Nature-Inspired Algorithms",
+              s: "Frontier Research Platform",
+              d: "A research and applied innovation suite drawing from the computational principles embedded in physical and biological systems — field dynamics, swarm intelligence, bio-photonics, resonance, and constructal flow. Underpins MATRIX's frontier initiatives in frequency therapeutics, environmental biosensor networks, and atmospheric intelligence. Provides the algorithmic substrate for problems that fall outside the boundaries of conventional AI paradigms — where coherence, emergence, and physical law are the governing design principles rather than gradient descent or reward maximisation.",
+              u: "The substrate for problems where physical law governs the design — not gradient descent.",
             },
           ].map((f) => (
             <div key={f.t} className="col-span-12 md:col-span-6">
