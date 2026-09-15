@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { PageShell, Section } from "@/components/matrix/Chrome";
+import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
 import { pageSeo } from "@/lib/seo";
 import { NetworkIntelligence } from "@/components/matrix/NetworkIntelligence";
 import {
@@ -66,7 +66,8 @@ export default function Index() {
         <div className="flex-1 grid grid-cols-12 gap-6 sm:gap-8 items-center mt-12">
           <div className="col-span-12 lg:col-span-7 rise">
             <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-muted-foreground mb-8">
-              A Studio for Civilization-Scale Intelligence
+              An Applied Intelligence firm building AI, analytics, intelligent software, and
+              decision systems…
             </div>
             <h1 className="font-display text-[clamp(2.75rem,8vw,8rem)] leading-[0.92] tracking-[-0.02em]">
               <Reveal>The invisible</Reveal>
@@ -105,9 +106,27 @@ export default function Index() {
         </div>
       </Section>
 
-      {/* ————— LITANY · POWER WORDS ————— */}
-      <Section rail="Litany" className="py-24 border-t border-border">
-        <ul className="col-span-12 space-y-6 md:space-y-8">
+      {/* ————— IDENTITY · ABOUT MATRIX ————— */}
+      <Section rail="Identity" className="py-24 border-t border-border">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-16">
+          <div className="col-span-12 lg:col-span-9">
+            <Eyebrow index="01">About Matrix</Eyebrow>
+            <h1 className="mt-8 font-display text-[clamp(2rem,4.5vw,4rem)] leading-[1.08] tracking-[-0.015em]">
+              A Deep Technology Research &amp; Innovation Organization developing
+              AI-powered software, intelligent systems, and research-driven
+              technologies.
+            </h1>
+            <p className="mt-8 max-w-3xl text-muted-foreground leading-relaxed">
+              MATRIX helps organizations make smarter, faster, and more reliable
+              decisions. Our integrated AI ecosystem serves education, enterprises,
+              manufacturing, supply chains, sustainability, and government sectors
+              through scalable, explainable, and practical solutions.
+            </p>
+          </div>
+        </div>
+
+        {/* floating identity statements */}
+        <ul className="col-span-12 mb-24 space-y-4 md:space-y-5">
           {[
             { n: "i.", t: "Cohered by Design." },
             { n: "ii.", t: "The Real Revolution is the evolution of consciousness." },
@@ -120,20 +139,80 @@ export default function Index() {
               t: "An intelligence architecture firm designing the next intelligence layer of civilization.",
             },
             { n: "v.", t: "Not a company. A culture. A phenomenon." },
-          ].map((l) => (
+          ].map((l, i) => (
             <li
               key={l.n}
-              className="grid grid-cols-12 gap-6 items-baseline border-b border-border/60 pb-6 last:border-b-0"
+              className="grid grid-cols-12 gap-6 items-baseline"
             >
-              <span className="col-span-2 md:col-span-1 font-mono text-[10px] tracking-[0.28em] uppercase text-gold">
+              <span
+                className="col-span-2 md:col-span-1 font-mono text-[10px] tracking-[0.28em] uppercase text-gold float-line"
+                style={{ animationDelay: `${i * 0.9}s` }}
+              >
                 {l.n}
               </span>
-              <p className="col-span-10 md:col-span-11 font-display text-2xl md:text-4xl leading-[1.2] tracking-tight text-foreground/90">
+              <p
+                className="col-span-10 md:col-span-11 font-display text-2xl md:text-4xl leading-[1.2] tracking-tight text-foreground/90 float-line"
+                style={{ animationDelay: `${i * 0.9}s` }}
+              >
                 {l.t}
               </p>
             </li>
           ))}
         </ul>
+
+        {/* Vision / Mission / Invisible Architecture grid */}
+        <div className="grid grid-cols-12 border border-border bg-card">
+          {[
+            {
+              h: "Vision",
+              p: "Establish MATRIX as a globally recognized Deep Technology Research & Innovation Organization delivering trusted AI systems and intelligent solutions for industry and society. Position India as a leader in responsible AI.",
+            },
+            {
+              h: "Mission",
+              p: "Build a unified ecosystem of AI-powered products that convert complex data into trusted intelligence and actionable insights. Develop practical, scalable, explainable AI solutions while creating original IP.",
+            },
+            {
+              h: "The Invisible Architecture",
+              p: '"The Invisible Architecture Behind the Future." We design the reasoning infrastructure through which intelligence becomes trustworthy, scalable, and beneficial — cohered by design.',
+            },
+          ].map((c, i) => (
+            <div
+              key={c.h}
+              className={[
+                "col-span-12 md:col-span-4 p-8 border-b md:border-b-0 border-r border-border last:border-r-0",
+                i === 2 ? "md:border-r-0" : "",
+              ].join(" ")}
+            >
+              <h2 className="font-mono text-[11px] tracking-[0.1em] uppercase text-gold">
+                {c.h}
+              </h2>
+              <p className="mt-4 text-sm sm:text-[15px] leading-relaxed text-foreground/75">
+                {c.p}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        {/* capability pills */}
+        <div className="mt-12 flex flex-wrap justify-center gap-3 sm:gap-4">
+          {[
+            "Applied Intelligence",
+            "Artificial Intelligence",
+            "Applied Research",
+            "Enterprise Intelligence",
+            "Design & Consulting",
+            "Deep-tech",
+            "Frontier Research",
+            "Human Intelligence",
+          ].map((p) => (
+            <span
+              key={p}
+              className="border border-gold/40 text-gold font-mono text-[11px] tracking-[0.08em] uppercase px-5 py-2.5 transition-colors duration-300 hover:bg-gold/10"
+            >
+              {p}
+            </span>
+          ))}
+        </div>
       </Section>
 
       {/* ————— ACT II · MANIFESTO FRAGMENT ————— */}

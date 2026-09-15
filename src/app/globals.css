@@ -327,6 +327,33 @@
   animation: mtx-drift 11s ease-in-out infinite;
 }
 
+/* Word-reveal masks must never crop descenders (g, y, p, j, q) — display
+   line-heights below 1em leave no room for glyph ink below the baseline.
+   Padding gives the clip box breathing room; negative margins keep the
+   line box exactly as tight as before. */
+.mrv-m {
+  padding-top: 0.08em;
+  padding-bottom: 0.2em;
+  margin-top: -0.08em;
+  margin-bottom: -0.2em;
+}
+
+/* Gentle per-line float for the identity statements — the lines drift
+   slowly out of phase, as if suspended in the dark. */
+@keyframes mtx-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+@utility float-line {
+  animation: mtx-float 8s ease-in-out infinite;
+  will-change: transform;
+}
+
 /* Gold glow for the primary navigation — always lit, quiet in its
    resting state, igniting fully on hover and staying lit on the active
    page. */
@@ -912,7 +939,8 @@
   .breathe,
   .drift,
   .draw,
-  .fade-in {
+  .fade-in,
+  .float-line {
     animation: none !important;
   }
   .draw {

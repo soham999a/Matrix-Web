@@ -79,7 +79,7 @@ export function Cursor() {
   const ringScale = down ? 0.9 : hovering ? 0.62 : 1;
 
   return (
-    <div aria-hidden className="pointer-events-none fixed inset-0 z-[100] mix-blend-difference">
+    <div aria-hidden className="pointer-events-none fixed inset-0 z-[100]">
       {/* follower ring — lagged, contracts over interactives */}
       <div
         ref={ringRef}
@@ -93,7 +93,7 @@ export function Cursor() {
         <div
           className="flex h-full w-full items-center justify-center rounded-full border-[1px] transition-transform duration-300 ease-out"
           style={{
-            borderColor: hovering ? "rgba(201,161,74,0.95)" : "rgba(201,161,74,0.55)",
+            borderColor: hovering ? "rgba(201,161,74,0.95)" : "rgba(201,161,74,0.65)",
             transform: `scale(${ringScale})`,
           }}
         >

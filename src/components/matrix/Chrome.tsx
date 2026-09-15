@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { ActRail } from "./ActRail";
 import { Cursor } from "./Cursor";
-import { DecodeText } from "./DecodeText";
 import { Magnetic } from "./Magnetic";
 import { ScrollProgress } from "./ScrollProgress";
 import { LogoLockup } from "./Mark";
@@ -83,7 +82,7 @@ export function Header() {
               return (
                 <div key={n.to} className="group relative inline-flex items-center">
                   <Link href={n.to} className={linkClass}>
-                    <DecodeText text={n.label} />
+                    {n.label}
                   </Link>
                   <div className="invisible opacity-0 translate-y-1 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-0 absolute left-0 top-full pt-4 z-50 transition-all duration-300">
                     <div className="border border-border bg-background min-w-60 shadow-2xl">
@@ -103,7 +102,7 @@ export function Header() {
             }
             return (
               <Link key={n.to} href={n.to} className={linkClass}>
-                <DecodeText text={n.label} />
+                {n.label}
               </Link>
             );
           })}
@@ -112,7 +111,7 @@ export function Header() {
           href="/contact"
           className="hidden lg:block font-mono text-[10px] tracking-[0.22em] uppercase nav-glow-dim hover:nav-glow border-b border-gold/0 hover:border-gold transition-[color,text-shadow,border-color] duration-500"
         >
-          <DecodeText text="Contact" />
+          Contact
         </Link>
 
         {/* mobile / tablet menu toggle */}
@@ -295,7 +294,7 @@ export function Footer() {
               className="block mt-4 font-display text-2xl text-ink hover:text-gold transition-colors"
             >
               <Magnetic>
-                <DecodeText text="system@matrka.net" />
+                system@matrka.net
               </Magnetic>
             </a>
             <a
