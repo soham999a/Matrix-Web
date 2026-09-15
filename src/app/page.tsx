@@ -64,7 +64,7 @@ export default function Index() {
         </div>
 
         <div className="flex-1 grid grid-cols-12 gap-6 sm:gap-8 items-center mt-12">
-          <div className="col-span-12 lg:col-span-7 rise">
+          <div className="col-span-12 lg:col-span-7 lg:pl-12 xl:pl-20 rise">
             <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-muted-foreground mb-8">
               An Applied Intelligence firm building AI, analytics, intelligent software, and
               decision systems…
@@ -117,8 +117,8 @@ export default function Index() {
               decisions.
             </h1>
             <p className="mt-8 max-w-3xl text-muted-foreground leading-relaxed">
-              MATRIX operates across nine interconnected disciplines — from applied AI, systems,
-              and engineering to consulting, design, human intelligence, education, and social
+              MATRIX operates across nine interconnected disciplines — from applied AI, systems, and
+              engineering to consulting, design, human intelligence, education, and social
               innovation. Our integrated intelligence ecosystem serves education, enterprises,
               manufacturing, supply chains, sustainability, and government sectors through scalable,
               explainable, and practical solutions.
