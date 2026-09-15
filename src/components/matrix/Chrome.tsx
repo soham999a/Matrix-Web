@@ -293,9 +293,7 @@ export function Footer() {
               href="mailto:system@matrka.net"
               className="block mt-4 font-display text-2xl text-ink hover:text-gold transition-colors"
             >
-              <Magnetic>
-                system@matrka.net
-              </Magnetic>
+              <Magnetic>system@matrka.net</Magnetic>
             </a>
             <a
               href="tel:+919875663417"

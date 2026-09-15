@@ -112,15 +112,14 @@ export default function Index() {
           <div className="col-span-12 lg:col-span-9">
             <Eyebrow index="01">About Matrix</Eyebrow>
             <h1 className="mt-8 font-display text-[clamp(2rem,4.5vw,4rem)] leading-[1.08] tracking-[-0.015em]">
-              A Deep Technology Research &amp; Innovation Organization developing
-              AI-powered software, intelligent systems, and research-driven
-              technologies.
+              A Deep Technology Research &amp; Innovation Organization developing AI-powered
+              software, intelligent systems, and research-driven technologies.
             </h1>
             <p className="mt-8 max-w-3xl text-muted-foreground leading-relaxed">
-              MATRIX helps organizations make smarter, faster, and more reliable
-              decisions. Our integrated AI ecosystem serves education, enterprises,
-              manufacturing, supply chains, sustainability, and government sectors
-              through scalable, explainable, and practical solutions.
+              MATRIX helps organizations make smarter, faster, and more reliable decisions. Our
+              integrated AI ecosystem serves education, enterprises, manufacturing, supply chains,
+              sustainability, and government sectors through scalable, explainable, and practical
+              solutions.
             </p>
           </div>
         </div>
@@ -140,10 +139,7 @@ export default function Index() {
             },
             { n: "v.", t: "Not a company. A culture. A phenomenon." },
           ].map((l, i) => (
-            <li
-              key={l.n}
-              className="grid grid-cols-12 gap-6 items-baseline"
-            >
+            <li key={l.n} className="grid grid-cols-12 gap-6 items-baseline">
               <span
                 className="col-span-2 md:col-span-1 font-mono text-[10px] tracking-[0.28em] uppercase text-gold float-line"
                 style={{ animationDelay: `${i * 0.9}s` }}
@@ -183,9 +179,7 @@ export default function Index() {
                 i === 2 ? "md:border-r-0" : "",
               ].join(" ")}
             >
-              <h2 className="font-mono text-[11px] tracking-[0.1em] uppercase text-gold">
-                {c.h}
-              </h2>
+              <h2 className="font-mono text-[11px] tracking-[0.1em] uppercase text-gold">{c.h}</h2>
               <p className="mt-4 text-sm sm:text-[15px] leading-relaxed text-foreground/75">
                 {c.p}
               </p>
