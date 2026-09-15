@@ -64,10 +64,9 @@ export default function Index() {
         </div>
 
         <div className="flex-1 grid grid-cols-12 gap-6 sm:gap-8 items-center mt-12">
-          <div className="col-span-12 lg:col-span-7 lg:pl-12 xl:pl-20 rise">
+          <div className="col-span-12 lg:col-span-7 rise">
             <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-muted-foreground mb-8">
-              An Applied Intelligence firm building AI, analytics, intelligent software, and
-              decision systems…
+              A Studio for Civilization-Scale Intelligence
             </div>
             <h1 className="font-display text-[clamp(2.75rem,8vw,8rem)] leading-[0.92] tracking-[-0.02em]">
               <Reveal>The invisible</Reveal>
