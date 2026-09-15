@@ -334,8 +334,10 @@
 .mrv-m {
   padding-top: 0.15em;
   padding-bottom: 0.3em;
+  padding-right: 0.06em;
   margin-top: -0.15em;
   margin-bottom: -0.3em;
+  margin-right: -0.06em;
 }
 
 /* Gentle per-line float for the identity statements — the lines drift
