@@ -108,7 +108,7 @@ export default function Index() {
       {/* ————— IDENTITY · ABOUT MATRIX ————— */}
       <Section rail="Identity" className="py-24 border-t border-border">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-16">
-          <div className="col-span-12 lg:col-span-9">
+          <div className="col-span-12 lg:col-span-7">
             <Eyebrow index="01">About Matrix</Eyebrow>
             <h1 className="mt-8 font-display text-[clamp(2rem,4.5vw,4rem)] leading-[1.08] tracking-[-0.015em]">
               An Applied Intelligence firm building AI, analytics, intelligent software, and
@@ -126,7 +126,7 @@ export default function Index() {
         </div>
 
         {/* floating identity statements */}
-        <ul className="col-span-12 mb-24 space-y-4 md:space-y-5">
+        <ul className="col-span-12 lg:w-7/12 mb-24 space-y-4 md:space-y-5">
           {[
             { n: "i.", t: "Cohered by Design." },
             { n: "ii.", t: "The Real Revolution is the evolution of consciousness." },

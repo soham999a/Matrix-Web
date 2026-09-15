@@ -332,10 +332,10 @@
    Padding gives the clip box breathing room; negative margins keep the
    line box exactly as tight as before. */
 .mrv-m {
-  padding-top: 0.08em;
-  padding-bottom: 0.2em;
-  margin-top: -0.08em;
-  margin-bottom: -0.2em;
+  padding-top: 0.15em;
+  padding-bottom: 0.3em;
+  margin-top: -0.15em;
+  margin-bottom: -0.3em;
 }
 
 /* Gentle per-line float for the identity statements — the lines drift
