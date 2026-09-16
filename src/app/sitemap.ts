@@ -14,7 +14,6 @@ const ROUTES: RouteEntry[] = [
   { path: "/capabilities", priority: 0.9, changeFrequency: "monthly", lastModified: "2026-08-12" },
   { path: "/products", priority: 0.9, changeFrequency: "monthly", lastModified: "2026-08-12" },
   { path: "/research", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-08-12" },
-  { path: "/consulting", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-08-12" },
   { path: "/agency", priority: 0.7, changeFrequency: "monthly", lastModified: "2026-08-12" },
   { path: "/about", priority: 0.6, changeFrequency: "monthly", lastModified: "2026-08-12" },
   { path: "/manifesto", priority: 0.6, changeFrequency: "monthly", lastModified: "2026-08-12" },

@@ -439,7 +439,10 @@ export default function Index() {
       </Section>
 
       {/* ————— ACT V · QUIET POSITION ————— */}
-      <Section rail="Act V · Quiet Position" className="pt-14 md:pt-20 pb-24 md:pb-40 border-t border-border">
+      <Section
+        rail="Act V · Quiet Position"
+        className="pt-14 md:pt-20 pb-24 md:pb-40 border-t border-border"
+      >
         <div className="grid grid-cols-12 gap-6 sm:gap-8 items-center">
           <div className="col-span-12 md:col-span-5">
             <Ripple className="w-full text-foreground/80 breathe" />
@@ -511,7 +514,7 @@ export default function Index() {
               },
               { to: "/manifesto", n: "01", t: "The Manifesto", k: "Twelve theses, in full" },
               { to: "/research", n: "02", t: "Research", k: "Open notebooks, slow questions" },
-              { to: "/consulting", n: "03", t: "Consulting", k: "Counsel for the long now" },
+              { to: "/agency#consulting", n: "03", t: "Consulting", k: "Counsel for the long now" },
               { to: "/products", n: "04", t: "Products", k: "Quiet software, durable form" },
             ].map((d, i) => (
               <Link
