@@ -411,17 +411,20 @@ export function Section({
   variant = "dark",
   id,
   rail,
+  style,
 }: {
   children: React.ReactNode;
   className?: string;
   variant?: "dark" | "paper";
   id?: string;
   rail?: string;
+  style?: React.CSSProperties;
 }) {
   return (
     <section
       id={id}
       data-rail={rail}
+      style={style}
       className={`${variant === "paper" ? "paper" : ""} ${className}`}
     >
       <div className="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14">{children}</div>
