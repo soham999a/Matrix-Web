@@ -412,6 +412,7 @@ export function Section({
   id,
   rail,
   style,
+  cursorInvert,
 }: {
   children: React.ReactNode;
   className?: string;
@@ -419,11 +420,13 @@ export function Section({
   id?: string;
   rail?: string;
   style?: React.CSSProperties;
+  cursorInvert?: boolean;
 }) {
   return (
     <section
       id={id}
       data-rail={rail}
+      data-cursor-invert={cursorInvert ? "" : undefined}
       style={style}
       className={`${variant === "paper" ? "paper" : ""} ${className}`}
     >

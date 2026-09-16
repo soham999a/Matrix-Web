@@ -214,6 +214,12 @@ export default function Research() {
               d: "A research and applied innovation suite drawing from the computational principles embedded in physical and biological systems — field dynamics, swarm intelligence, bio-photonics, resonance, and constructal flow. Underpins MATRIX's frontier initiatives in frequency therapeutics, environmental biosensor networks, and atmospheric intelligence. Provides the algorithmic substrate for problems that fall outside the boundaries of conventional AI paradigms — where coherence, emergence, and physical law are the governing design principles rather than gradient descent or reward maximisation.",
               u: "The substrate for problems where physical law governs the design — not gradient descent.",
             },
+            {
+              t: "The Next Evolution of the Agent",
+              s: "Post-Agentic Intelligence Architecture · zenodo.org/records/22242899",
+              d: "A unified theoretical framework synthesising modular container-based architectures, Quantassical (quantum-classical hybrid) computation, and nature-inspired field-based algorithms toward post-agentic intelligence. Moves beyond tool-calling LLMs with planning loops toward systems where agency emerges from coherence rather than instruction — governed by physical and causal principles rather than prompt engineering. Multi-agent coordination becomes a property of the architecture, not an orchestration problem layered on top of it.",
+              u: "The next research frontier for the Gravity substrate and the CES-QN Framework applied to agent design itself.",
+            },
           ].map((f) => (
             <div key={f.t} className="col-span-12 md:col-span-6">
               <h3 className="font-display text-5xl md:text-6xl tracking-tight">{f.t}</h3>

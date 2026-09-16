@@ -16,6 +16,7 @@ export function Cursor() {
   const [hovering, setHovering] = useState(false);
   const [down, setDown] = useState(false);
   const [hidden, setHidden] = useState(true);
+  const [inverted, setInverted] = useState(false);
   const nodeRef = useRef<HTMLDivElement>(null);
   const ringRef = useRef<HTMLDivElement>(null);
 
@@ -52,7 +53,9 @@ export function Cursor() {
       target.x = e.clientX;
       target.y = e.clientY;
       setHidden(false);
-      setHovering(!!isInteractive(e.target instanceof Element ? e.target : null));
+      const el = e.target instanceof Element ? e.target : null;
+      setHovering(!!isInteractive(el));
+      setInverted(!!el?.closest("[data-cursor-invert]"));
     };
     const onDown = () => setDown(true);
     const onUp = () => setDown(false);
@@ -93,11 +96,20 @@ export function Cursor() {
         <div
           className="flex h-full w-full items-center justify-center rounded-full border-[1px] transition-transform duration-300 ease-out"
           style={{
-            borderColor: hovering ? "rgba(201,161,74,0.95)" : "rgba(201,161,74,0.65)",
+            borderColor: inverted
+              ? hovering
+                ? "rgba(23,19,12,0.95)"
+                : "rgba(23,19,12,0.65)"
+              : hovering
+                ? "rgba(201,161,74,0.95)"
+                : "rgba(201,161,74,0.65)",
             transform: `scale(${ringScale})`,
           }}
         >
-          <span className="block h-1 w-1 border border-gold/70" />
+          <span
+            className="block h-1 w-1 border"
+            style={{ borderColor: inverted ? "rgba(23,19,12,0.75)" : "transparent" }}
+          />
         </div>
       </div>
       {/* leader node — immediate, swells over interactives */}
@@ -111,8 +123,9 @@ export function Cursor() {
         }}
       >
         <span
-          className="block rounded-full bg-gold transition-transform duration-300 ease-out"
+          className="block rounded-full transition-transform duration-300 ease-out"
           style={{
+            backgroundColor: inverted ? "var(--color-ink)" : "var(--color-gold)",
             width: hovering ? 5 : 3,
             height: hovering ? 5 : 3,
             transform: down ? "scale(0.8)" : undefined,

@@ -218,8 +218,9 @@ export default function Index() {
       <Section
         rail="Act II · Manifesto"
         id="manifesto"
-        className="py-24 md:py-40 !text-ink"
-        style={{ backgroundColor: "#B8924A" }}
+        cursorInvert
+        className="pt-14 md:pt-20 pb-24 md:pb-40 !text-ink"
+        style={{ backgroundColor: "#D4B16C" }}
       >
         <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 md:col-span-10">
@@ -438,7 +439,7 @@ export default function Index() {
       </Section>
 
       {/* ————— ACT V · QUIET POSITION ————— */}
-      <Section rail="Act V · Quiet Position" className="py-24 md:py-40 border-t border-border">
+      <Section rail="Act V · Quiet Position" className="pt-14 md:pt-20 pb-24 md:pb-40 border-t border-border">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 items-center">
           <div className="col-span-12 md:col-span-5">
             <Ripple className="w-full text-foreground/80 breathe" />
