@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
+import { PageShell, Section } from "@/components/matrix/Chrome";
 import { pageSeo } from "@/lib/seo";
 import { Observatory } from "@/components/matrix/Metaphors";
 
@@ -90,10 +90,9 @@ const papers = [
 export default function Research() {
   return (
     <PageShell>
-      <Section className="pt-32 pb-20">
+      <Section rail="Practice I · Research" className="pt-32 pb-20">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
           <div className="col-span-12 md:col-span-7">
-            <Eyebrow index="Practice I">Research</Eyebrow>
             <h1 className="font-display text-[clamp(3rem,8vw,8rem)] leading-[0.95] tracking-tight mt-10">
               An observatory,
               <br />
@@ -113,12 +112,9 @@ export default function Research() {
         </div>
       </Section>
 
-      <Section className="py-20">
+      <Section rail="Programs" className="py-20">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-16">
-          <div className="col-span-12 md:col-span-3">
-            <Eyebrow index="Lines">Programs</Eyebrow>
-          </div>
-          <div className="col-span-12 md:col-span-9 grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="col-span-12 grid grid-cols-1 md:grid-cols-3 gap-12">
             {[
               {
                 t: "Foundations",
@@ -143,12 +139,9 @@ export default function Research() {
         </div>
       </Section>
 
-      <Section className="py-20">
+      <Section rail="Questions" className="py-20">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-10">
-          <div className="col-span-12 md:col-span-3">
-            <Eyebrow index="Open">Questions</Eyebrow>
-          </div>
-          <p className="col-span-12 md:col-span-9 text-muted-foreground leading-relaxed max-w-2xl">
+          <p className="col-span-12 text-muted-foreground leading-relaxed max-w-2xl">
             We keep our notebooks open rather than our publication list long. These are the
             questions currently under study. Findings are published only once they are settled.
           </p>
@@ -170,12 +163,9 @@ export default function Research() {
         </div>
       </Section>
 
-      <Section variant="paper" id="frameworks" className="py-32">
+      <Section rail="Foundations" variant="paper" id="frameworks" className="py-32">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-16">
-          <div className="col-span-12 md:col-span-3">
-            <Eyebrow index="Frameworks">Foundations</Eyebrow>
-          </div>
-          <p className="col-span-12 md:col-span-9 text-ink/75 leading-relaxed max-w-3xl">
+          <p className="col-span-12 text-ink/75 leading-relaxed max-w-3xl">
             Our products do not originate from feature development. They emerge from original
             research. Every platform is grounded in a family of proprietary frameworks, developed to
             address structural gaps in how intelligence, human development, computation, and
@@ -232,12 +222,9 @@ export default function Research() {
         </div>
       </Section>
 
-      <Section id="whitepapers" className="py-20 border-t border-border">
+      <Section rail="Whitepapers" id="whitepapers" className="py-20 border-t border-border">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-10">
-          <div className="col-span-12 md:col-span-3">
-            <Eyebrow index="Published">Whitepapers</Eyebrow>
-          </div>
-          <p className="col-span-12 md:col-span-9 text-muted-foreground leading-relaxed max-w-2xl">
+          <p className="col-span-12 text-muted-foreground leading-relaxed max-w-2xl">
             Open-access preprints, deposited on Zenodo with a permanent DOI. Each is published only
             once the argument has settled.
           </p>
@@ -284,12 +271,9 @@ export default function Research() {
         </div>
       </Section>
 
-      <Section id="case-studies" className="py-20 border-t border-border">
+      <Section rail="Case Studies" id="case-studies" className="py-20 border-t border-border">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-10">
-          <div className="col-span-12 md:col-span-3">
-            <Eyebrow index="◎ Field">Case Studies</Eyebrow>
-          </div>
-          <p className="col-span-12 md:col-span-9 text-muted-foreground leading-relaxed max-w-2xl">
+          <p className="col-span-12 text-muted-foreground leading-relaxed max-w-2xl">
             Reconstructions of real engagements — what was asked, what we built, and what the
             systems did in the world. Written only once the work has settled.
           </p>
@@ -301,10 +285,9 @@ export default function Research() {
         </div>
       </Section>
 
-      <Section className="py-32">
+      <Section rail="Collaboration" className="py-32">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 items-center border-t border-border pt-16">
           <div className="col-span-12 md:col-span-7">
-            <Eyebrow>Collaboration</Eyebrow>
             <p className="font-display text-3xl md:text-4xl leading-tight mt-6">
               If you are holding one of these questions too, we would rather study it together.
             </p>
@@ -320,7 +303,7 @@ export default function Research() {
         </div>
       </Section>
 
-      <Section className="py-24 border-t border-border">
+      <Section rail="The Portfolio" className="py-24 border-t border-border">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
           <p className="col-span-12 md:col-span-7 font-display text-3xl md:text-5xl leading-tight">
             Research becomes platforms. Platforms become products.{" "}

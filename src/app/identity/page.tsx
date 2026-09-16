@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { ComponentType } from "react";
-import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
+import { PageShell, Section } from "@/components/matrix/Chrome";
 import { pageSeo } from "@/lib/seo";
 import { RhombicDodecahedronFigure } from "@/components/matrix/OrigamiFigures";
 import { MarkLattice, MarkAperture, MarkMeridian } from "@/components/matrix/Mark";
@@ -142,8 +142,7 @@ export default function Identity() {
   return (
     <PageShell>
       {/* Cover */}
-      <Section className="grain pt-28 pb-28">
-        <Eyebrow index="N° 000">Visual Foundation · Vol. I</Eyebrow>
+      <Section rail="Visual Foundation" className="grain pt-28 pb-28">
         <h1 className="font-display text-[clamp(3rem,8vw,8rem)] leading-[0.92] tracking-[-0.02em] mt-10 max-w-5xl">
           The system before
           <br />
@@ -171,12 +170,9 @@ export default function Identity() {
       </Section>
 
       {/* I — Marks */}
-      <Section className="py-32">
+      <Section rail="Marks" className="py-32">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-16">
-          <div className="col-span-12 md:col-span-3">
-            <Eyebrow index="N° 001">Marks</Eyebrow>
-          </div>
-          <h2 className="col-span-12 md:col-span-9 font-display text-5xl md:text-7xl leading-[0.95] tracking-tight">
+          <h2 className="col-span-12 font-display text-5xl md:text-7xl leading-[0.95] tracking-tight">
             Three directions.
             <br />
             <span className="italic text-muted-foreground">One quiet intelligence.</span>
@@ -224,12 +220,9 @@ export default function Identity() {
       </Section>
 
       {/* II — Palette */}
-      <Section variant="paper" className="py-32">
+      <Section rail="Palette" variant="paper" className="py-32">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-12">
-          <div className="col-span-12 md:col-span-3">
-            <Eyebrow index="N° 002">Palette</Eyebrow>
-          </div>
-          <h2 className="col-span-12 md:col-span-9 font-display text-5xl md:text-7xl leading-[0.95] tracking-tight">
+          <h2 className="col-span-12 font-display text-5xl md:text-7xl leading-[0.95] tracking-tight">
             Six values.
             <br />
             <span className="italic">One per decade of grey.</span>
@@ -262,12 +255,9 @@ export default function Identity() {
       </Section>
 
       {/* III — Typography */}
-      <Section className="py-32">
+      <Section rail="Typography" className="py-32">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-12">
-          <div className="col-span-12 md:col-span-3">
-            <Eyebrow index="N° 003">Typography</Eyebrow>
-          </div>
-          <h2 className="col-span-12 md:col-span-9 font-display text-5xl md:text-7xl leading-[0.95] tracking-tight">
+          <h2 className="col-span-12 font-display text-5xl md:text-7xl leading-[0.95] tracking-tight">
             One serif for thought.
             <br />
             <span className="italic text-muted-foreground">One sans for record.</span>
@@ -364,12 +354,9 @@ export default function Identity() {
       </Section>
 
       {/* IV — Tokens */}
-      <Section variant="paper" className="py-32">
+      <Section rail="Design Tokens" variant="paper" className="py-32">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-12">
-          <div className="col-span-12 md:col-span-3">
-            <Eyebrow index="N° 004">Design Tokens</Eyebrow>
-          </div>
-          <h2 className="col-span-12 md:col-span-9 font-display text-5xl md:text-7xl leading-[0.95] tracking-tight">
+          <h2 className="col-span-12 font-display text-5xl md:text-7xl leading-[0.95] tracking-tight">
             The constants
             <br />
             <span className="italic">that compose everything else.</span>
@@ -448,12 +435,9 @@ export default function Identity() {
       </Section>
 
       {/* V — Iconography & Metaphors */}
-      <Section className="py-32">
+      <Section rail="Iconography" className="py-32">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-12">
-          <div className="col-span-12 md:col-span-3">
-            <Eyebrow index="N° 005">Iconography</Eyebrow>
-          </div>
-          <h2 className="col-span-12 md:col-span-9 font-display text-5xl md:text-7xl leading-[0.95] tracking-tight">
+          <h2 className="col-span-12 font-display text-5xl md:text-7xl leading-[0.95] tracking-tight">
             We do not use icons.
             <br />
             <span className="italic text-muted-foreground">We use metaphors.</span>
@@ -493,10 +477,9 @@ export default function Identity() {
       </Section>
 
       {/* VI — Closing */}
-      <Section className="py-32 border-t border-border">
+      <Section rail="Onward" className="py-32 border-t border-border">
         <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 md:col-span-7">
-            <Eyebrow index="N° 006">Onward</Eyebrow>
             <h2 className="font-display text-5xl md:text-7xl tracking-tight leading-[0.95] mt-8">
               The foundation holds.
               <br />

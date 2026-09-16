@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
+import { PageShell, Section } from "@/components/matrix/Chrome";
 import { pageSeo } from "@/lib/seo";
 import { SITE } from "@/lib/seo";
 import { CAPABILITIES, getCapability } from "@/lib/capabilities";
@@ -84,10 +84,9 @@ export default async function CapabilityPage({ params }: { params: Promise<{ slu
           },
         ]}
       />
-      <Section className="pt-32 pb-20">
+      <Section rail={`Capability ${domain.numeral}`} className="pt-32 pb-20">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
           <div className="col-span-12 md:col-span-8">
-            <Eyebrow index={`Capability ${domain.numeral}`}>The Nine</Eyebrow>
             <h1 className="font-display text-[clamp(3rem,8vw,8rem)] leading-[0.92] tracking-tight mt-10">
               {domain.title}
             </h1>
@@ -109,7 +108,7 @@ export default async function CapabilityPage({ params }: { params: Promise<{ slu
         </p>
       </Section>
 
-      <Section className="pb-20">
+      <Section rail="The Nine" className="pb-20">
         <div className="border-t border-border">
           {domain.sections.map((s) => (
             <div
@@ -132,12 +131,9 @@ export default async function CapabilityPage({ params }: { params: Promise<{ slu
         </div>
       </Section>
 
-      <Section className="py-24 border-t border-border">
+      <Section rail="Adjacent" className="py-24 border-t border-border">
         <div className="grid grid-cols-12 gap-6 sm:gap-8">
-          <div className="col-span-12 md:col-span-3">
-            <Eyebrow>Adjacent capabilities</Eyebrow>
-          </div>
-          <div className="col-span-12 md:col-span-9 grid grid-cols-2 md:grid-cols-4 gap-px bg-border border border-border">
+          <div className="col-span-12 grid grid-cols-2 md:grid-cols-4 gap-px bg-border border border-border">
             {others.map((d) => (
               <Link
                 key={d.slug}

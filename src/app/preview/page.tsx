@@ -1,5 +1,5 @@
 import { Juggler, type JugglerVariant } from "@/components/matrix/Juggler";
-import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
+import { PageShell, Section } from "@/components/matrix/Chrome";
 import { pageSeo } from "@/lib/seo";
 
 export const metadata = pageSeo({
@@ -30,8 +30,7 @@ const variants: { variant: JugglerVariant; t: string; k: string }[] = [
 export default function PreviewPage() {
   return (
     <PageShell>
-      <Section className="min-h-[100svh] pt-28 pb-24">
-        <Eyebrow index="DEV">Juggler · Preview</Eyebrow>
+      <Section rail="Juggler · Preview" className="min-h-[100svh] pt-28 pb-24">
         <h1 className="font-display text-5xl md:text-7xl tracking-tight leading-[0.95] mt-8">
           Three figures,
           <br />

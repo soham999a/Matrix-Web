@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
+import { PageShell, Section } from "@/components/matrix/Chrome";
 import { pageSeo } from "@/lib/seo";
 import { NetworkIntelligence } from "@/components/matrix/NetworkIntelligence";
 import {
@@ -110,7 +110,6 @@ export default function Index() {
       <Section rail="Identity" className="py-24 border-t border-border">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-8">
           <div className="col-span-12 lg:col-span-7 lg:pl-8">
-            <Eyebrow index="01">About Matrix</Eyebrow>
             <h1 className="mt-8 font-display text-[clamp(1.75rem,3.2vw,2.75rem)] leading-[1.15] tracking-[-0.015em]">
               An Applied Intelligence firm building AI, analytics, intelligent software, and
               decision systems that help organisations solve complex problems and make better

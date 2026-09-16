@@ -1,4 +1,4 @@
-import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
+import { PageShell, Section } from "@/components/matrix/Chrome";
 import { RhombicDodecahedronFigure } from "@/components/matrix/OrigamiFigures";
 import { pageSeo, SITE } from "@/lib/seo";
 import { JsonLd } from "@/components/matrix/JsonLd";
@@ -28,7 +28,7 @@ function Head({ n, t, k }: { n: string; t: string; k?: string }) {
   return (
     <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-12 md:mb-16">
       <div className="col-span-12 md:col-span-3">
-        <Eyebrow index={n}>{t}</Eyebrow>
+        <span className="font-mono text-[10px] tracking-[0.28em] uppercase text-gold">{n}</span>
       </div>
       <div className="col-span-12 md:col-span-9">
         {k && (
@@ -368,7 +368,7 @@ export default function CompanyProfile() {
       />
 
       {/* ——— COVER ——— */}
-      <Section className="pt-28 md:pt-40 pb-20 grain">
+      <Section rail="Company Profile" className="pt-28 md:pt-40 pb-20 grain">
         <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-gold">
           Company Profile · 2026
         </p>
@@ -404,7 +404,7 @@ export default function CompanyProfile() {
       </Section>
 
       {/* ——— 01 · WHO WE ARE ——— */}
-      <Section className="py-20 md:py-28 border-t border-border">
+      <Section rail="Who We Are" className="py-20 md:py-28 border-t border-border">
         <Head
           n="01"
           t="Who We Are"
@@ -436,7 +436,11 @@ export default function CompanyProfile() {
       </Section>
 
       {/* ——— 02 · VISION & MISSION ——— */}
-      <Section variant="paper" className="py-20 md:py-28 border-t border-ink/10">
+      <Section
+        rail="Vision & Mission"
+        variant="paper"
+        className="py-20 md:py-28 border-t border-ink/10"
+      >
         <Head
           n="02"
           t="Vision & Mission"
@@ -476,7 +480,7 @@ export default function CompanyProfile() {
       </Section>
 
       {/* ——— 03 · NINE DISCIPLINES ——— */}
-      <Section className="py-20 md:py-28">
+      <Section rail="Nine Disciplines" className="py-20 md:py-28">
         <Head n="03" t="Nine Disciplines" k="The breadth of the MATRIX remit." />
         <p className="text-muted-foreground leading-relaxed max-w-3xl mb-8">
           MATRIX operates across nine interconnected disciplines. These are not siloed departments —
@@ -489,7 +493,11 @@ export default function CompanyProfile() {
       </Section>
 
       {/* ——— 04 · RESEARCH FOUNDATIONS ——— */}
-      <Section variant="paper" className="py-20 md:py-28 border-t border-ink/10">
+      <Section
+        rail="Research Foundations"
+        variant="paper"
+        className="py-20 md:py-28 border-t border-ink/10"
+      >
         <Head n="04" t="Research Foundations" k="Every product emerges from original research." />
         <p className="text-ink/80 leading-relaxed max-w-3xl mb-6">
           MATRIX products do not originate from feature development. They are grounded in two
@@ -531,7 +539,7 @@ export default function CompanyProfile() {
       </Section>
 
       {/* ——— 05 · PLATFORM SUITE ——— */}
-      <Section className="py-20 md:py-28">
+      <Section rail="Platform Suite" className="py-20 md:py-28">
         <Head n="05" t="Platform Suite" k="Nine platforms. One architecture." />
         <p className="text-muted-foreground leading-relaxed max-w-3xl mb-6">
           Each platform in the MATRIX suite is a distinct commercial manifestation of the Omega
@@ -545,7 +553,11 @@ export default function CompanyProfile() {
       </Section>
 
       {/* ——— 06 · CORE CAPABILITIES ——— */}
-      <Section variant="paper" className="py-20 md:py-28 border-t border-ink/10">
+      <Section
+        rail="Core Capabilities"
+        variant="paper"
+        className="py-20 md:py-28 border-t border-ink/10"
+      >
         <Head n="06" t="Core Capabilities" k="What MATRIX brings to every engagement." />
         <p className="text-ink/80 leading-relaxed max-w-3xl mb-8">
           Nine capability domains, each grounded in the MATRIX research framework and deployable
@@ -557,7 +569,7 @@ export default function CompanyProfile() {
       </Section>
 
       {/* ——— 07 · FRONTIER RESEARCH ——— */}
-      <Section className="py-20 md:py-28 border-t border-border">
+      <Section rail="Frontier Research" className="py-20 md:py-28 border-t border-border">
         <Head
           n="07"
           t="Frontier Research"
@@ -620,7 +632,11 @@ export default function CompanyProfile() {
       </Section>
 
       {/* ——— 08 · WHO WE WORK WITH ——— */}
-      <Section variant="paper" className="py-20 md:py-28 border-t border-ink/10">
+      <Section
+        rail="Who We Work With"
+        variant="paper"
+        className="py-20 md:py-28 border-t border-ink/10"
+      >
         <Head n="08" t="Who We Work With" k="Stakeholders across the intelligence economy." />
         <p className="text-ink/80 leading-relaxed max-w-3xl mb-6">
           MATRIX’s work is relevant to a broad spectrum of stakeholders — each engaging with a
@@ -650,7 +666,7 @@ export default function CompanyProfile() {
       </Section>
 
       {/* ——— 09 · THE MATRIX IDENTITY ——— */}
-      <Section className="py-20 md:py-28">
+      <Section rail="The MATRIX Identity" className="py-20 md:py-28">
         <Head
           n="09"
           t="The MATRIX Identity"
@@ -694,7 +710,7 @@ export default function CompanyProfile() {
       </Section>
 
       {/* ——— BACK COVER ——— */}
-      <Section className="py-24 border-t border-border">
+      <Section rail="Back Cover" className="py-24 border-t border-border">
         <div className="text-center">
           <p className="font-display text-6xl md:text-8xl tracking-tight">MATRIX.</p>
           <p className="font-mono text-[10px] tracking-[0.4em] uppercase text-gold mt-6">

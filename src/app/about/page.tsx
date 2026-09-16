@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
+import { PageShell, Section } from "@/components/matrix/Chrome";
 import { pageSeo } from "@/lib/seo";
 import { SITE } from "@/lib/seo";
 import { Roots } from "@/components/matrix/Metaphors";
@@ -40,10 +40,9 @@ export default function About() {
           mainEntity: { "@id": `${SITE.url}/#organization` },
         }}
       />
-      <Section className="pt-32 pb-16 grain">
+      <Section rail="About" className="pt-32 pb-16 grain">
         <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 md:col-span-3">
-            <Eyebrow index="The Studio">About</Eyebrow>
             <GoldenSpiralFigure className="mt-14 w-full max-w-[240px] text-foreground/70" />
           </div>
           <h1 className="col-span-12 md:col-span-9 font-display text-[clamp(3rem,8vw,8rem)] leading-[0.95] tracking-tight">
@@ -54,7 +53,7 @@ export default function About() {
         </div>
       </Section>
 
-      <Section className="py-16">
+      <Section rail="The Studio" className="py-16">
         <div className="grid grid-cols-12 gap-6 md:gap-12 items-start">
           <div className="col-span-12 md:col-span-5">
             <Roots className="w-full text-foreground/80" />
@@ -78,8 +77,7 @@ export default function About() {
         </div>
       </Section>
 
-      <Section className="py-24">
-        <Eyebrow>How we work</Eyebrow>
+      <Section rail="How we work" className="py-24">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mt-10 border-t border-border pt-12">
           {[
             {
@@ -108,12 +106,9 @@ export default function About() {
         </div>
       </Section>
 
-      <Section variant="paper" className="py-32">
+      <Section rail="Disciplines" variant="paper" className="py-32">
         <div className="grid grid-cols-12 gap-6 sm:gap-8">
-          <div className="col-span-12 md:col-span-3">
-            <Eyebrow>Disciplines</Eyebrow>
-          </div>
-          <div className="col-span-12 md:col-span-9 grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="col-span-12 grid grid-cols-1 md:grid-cols-3 gap-12">
             {[
               {
                 c: "Intelligence",
@@ -148,7 +143,7 @@ export default function About() {
         </p>
       </Section>
 
-      <Section className="py-32 border-t border-border">
+      <Section rail="Studio" className="py-32 border-t border-border">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
           <h2 className="col-span-12 md:col-span-7 font-display text-4xl md:text-6xl leading-tight tracking-tight">
             If your work calls for ours,{" "}
@@ -165,10 +160,7 @@ export default function About() {
         </div>
 
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mt-20 border-t border-border pt-12">
-          <div className="col-span-12 md:col-span-3">
-            <Eyebrow>Studio</Eyebrow>
-          </div>
-          <div className="col-span-12 md:col-span-9 grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="col-span-12 grid grid-cols-1 md:grid-cols-3 gap-12">
             <div>
               <p className="eyebrow">Location</p>
               <p className="font-display text-2xl tracking-tight mt-3">Kolkata, India</p>

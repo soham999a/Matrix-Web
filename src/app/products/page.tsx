@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
+import { PageShell, Section } from "@/components/matrix/Chrome";
 import { pageSeo } from "@/lib/seo";
 import { Origami } from "@/components/matrix/Metaphors";
 import { JsonLd } from "@/components/matrix/JsonLd";
@@ -291,10 +291,9 @@ export default function Products() {
         ]}
       />
 
-      <Section className="pt-32 pb-16">
+      <Section rail="Applied Intelligence Portfolio" className="pt-32 pb-16">
         <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 md:col-span-7">
-            <Eyebrow index="Practice III">Applied Intelligence Portfolio</Eyebrow>
             <h1 className="font-display text-[clamp(3rem,8vw,8rem)] leading-[0.95] tracking-tight mt-10">
               Nine platforms.
               <br />
@@ -329,7 +328,7 @@ export default function Products() {
         </div>
       </Section>
 
-      <Section className="py-16">
+      <Section rail="The Portfolio" className="py-16">
         <div className="grid grid-cols-12">
           {portfolio.map((p, i) => (
             <article
@@ -413,12 +412,9 @@ export default function Products() {
         </div>
       </Section>
 
-      <Section variant="paper" className="py-32">
+      <Section rail="The Model" variant="paper" className="py-32">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-16">
-          <div className="col-span-12 md:col-span-3">
-            <Eyebrow index="Omega">The Model</Eyebrow>
-          </div>
-          <h2 className="col-span-12 md:col-span-9 font-display text-4xl md:text-6xl leading-[0.98] tracking-tight">
+          <h2 className="col-span-12 font-display text-4xl md:text-6xl leading-[0.98] tracking-tight">
             One architecture.
             <br />
             <span className="italic">Many manifestations.</span>
@@ -441,12 +437,7 @@ export default function Products() {
         </div>
       </Section>
 
-      <Section className="py-32">
-        <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-12">
-          <div className="col-span-12 md:col-span-3">
-            <Eyebrow index="Horizon">Roadmap</Eyebrow>
-          </div>
-        </div>
+      <Section rail="Roadmap" className="py-32">
         <div className="grid grid-cols-12 gap-6 sm:gap-8">
           {roadmap.map((r) => (
             <div key={r.h} className="col-span-12 md:col-span-4 border-t border-border pt-8">
@@ -463,7 +454,7 @@ export default function Products() {
         </div>
       </Section>
 
-      <Section className="py-24 border-t border-border">
+      <Section rail="Enquire" className="py-24 border-t border-border">
         <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <blockquote className="col-span-12 md:col-span-8 font-display text-3xl md:text-4xl italic text-muted-foreground leading-tight">
             &ldquo;We do not build disconnected software. We design the invisible architecture

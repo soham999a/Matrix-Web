@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
+import { PageShell, Section } from "@/components/matrix/Chrome";
 import { pageSeo } from "@/lib/seo";
 import { SITE } from "@/lib/seo";
 import { Threads, Bridge, Compass } from "@/components/matrix/Metaphors";
@@ -207,12 +207,9 @@ const faqItems = [
 export default function Agency() {
   return (
     <PageShell>
-      <Section className="pt-32 pb-12">
+      <Section rail="Practice IV · AI Agency" className="pt-32 pb-12">
         <div className="grid grid-cols-12 gap-6 sm:gap-8">
-          <div className="col-span-12 md:col-span-3">
-            <Eyebrow index="Practice IV">AI Agency</Eyebrow>
-          </div>
-          <h1 className="col-span-12 md:col-span-9 font-display text-[clamp(3rem,8vw,8rem)] leading-[0.95] tracking-tight">
+          <h1 className="col-span-12 font-display text-[clamp(3rem,8vw,8rem)] leading-[0.95] tracking-tight">
             Threads woven
             <br />
             into <span className="italic text-muted-foreground">fabric.</span>
@@ -223,8 +220,7 @@ export default function Agency() {
         </div>
       </Section>
 
-      <Section className="py-24">
-        <Eyebrow index="Practice IV">What We Build</Eyebrow>
+      <Section rail="What We Build" className="py-24">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mt-12">
           <div className="col-span-12 md:col-span-5">
             <p className="font-display text-3xl md:text-4xl leading-tight">
@@ -267,8 +263,7 @@ export default function Agency() {
         </div>
       </Section>
 
-      <Section variant="paper" className="py-32">
-        <Eyebrow>How an engagement runs</Eyebrow>
+      <Section rail="How an engagement runs" variant="paper" className="py-32">
         <h2 className="font-display text-4xl md:text-6xl leading-[1] tracking-tight mt-6 max-w-4xl">
           We begin with the decision, <span className="italic">not the model.</span>
         </h2>
@@ -287,12 +282,9 @@ export default function Agency() {
         </div>
       </Section>
 
-      <Section id="consulting" className="pt-24 border-t border-border">
+      <Section rail="Consulting" id="consulting" className="pt-24 border-t border-border">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
-          <div className="col-span-12 md:col-span-3">
-            <Eyebrow index="Practice IV">Consulting</Eyebrow>
-          </div>
-          <div className="col-span-12 md:col-span-9">
+          <div className="col-span-12">
             <h1 className="font-display text-[clamp(3rem,7vw,7rem)] leading-[0.95] tracking-tight">
               A bridge
               <br />
@@ -316,10 +308,9 @@ export default function Agency() {
         </div>
       </Section>
 
-      <Section className="py-24">
+      <Section rail="Engagements" className="py-24">
         <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 md:col-span-4">
-            <Eyebrow>Engagements</Eyebrow>
             <h2 className="font-display text-4xl md:text-5xl leading-tight tracking-tight mt-6">
               Four shapes of work.
             </h2>
@@ -342,10 +333,9 @@ export default function Agency() {
         </div>
       </Section>
 
-      <Section variant="paper" className="py-32">
+      <Section rail="For whom" variant="paper" className="py-32">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
           <div className="col-span-12 md:col-span-7">
-            <Eyebrow>For whom</Eyebrow>
             <h2 className="font-display text-4xl md:text-6xl leading-[0.98] tracking-tight mt-6">
               We work with serious institutions{" "}
               <span className="italic">— and a few unusual founders.</span>
@@ -374,7 +364,7 @@ export default function Agency() {
         </div>
       </Section>
 
-      <Section className="py-32">
+      <Section rail="The narrow door" className="py-32">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 border-t border-border pt-16">
           <div className="col-span-12 md:col-span-7">
             <h2 className="font-display text-4xl md:text-6xl leading-tight tracking-tight">
@@ -392,12 +382,9 @@ export default function Agency() {
         </div>
       </Section>
 
-      <Section variant="paper" className="py-32">
+      <Section rail="How it begins" variant="paper" className="py-32">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-16">
-          <div className="col-span-12 md:col-span-3">
-            <Eyebrow index="Process">How it begins</Eyebrow>
-          </div>
-          <div className="col-span-12 md:col-span-9">
+          <div className="col-span-12">
             <h2 className="font-display text-4xl md:text-6xl leading-[0.98] tracking-tight">
               From first letter to lasting system.
             </h2>
@@ -418,12 +405,9 @@ export default function Agency() {
         </div>
       </Section>
 
-      <Section className="py-32">
+      <Section rail="Questions" className="py-32">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-16">
-          <div className="col-span-12 md:col-span-3">
-            <Eyebrow index="FAQ">Questions</Eyebrow>
-          </div>
-          <div className="col-span-12 md:col-span-9">
+          <div className="col-span-12">
             <h2 className="font-display text-4xl md:text-6xl leading-[0.98] tracking-tight">
               Frequently asked.
             </h2>
@@ -439,12 +423,9 @@ export default function Agency() {
         </div>
       </Section>
 
-      <Section variant="paper" className="py-32">
+      <Section rail="Discovery Call" variant="paper" className="py-32">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-12">
-          <div className="col-span-12 md:col-span-3">
-            <Eyebrow index="Book">Discovery Call</Eyebrow>
-          </div>
-          <div className="col-span-12 md:col-span-9">
+          <div className="col-span-12">
             <h2 className="font-display text-4xl md:text-6xl leading-[0.98] tracking-tight">
               Schedule a conversation.
             </h2>
@@ -471,12 +452,9 @@ export default function Agency() {
         </div>
       </Section>
 
-      <Section className="py-24 border-t border-border" id="portfolio">
+      <Section rail="Our Portfolio" className="py-24 border-t border-border" id="portfolio">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-12">
-          <div className="col-span-12 md:col-span-3">
-            <Eyebrow index="Practice IV">Our Portfolio</Eyebrow>
-          </div>
-          <h2 className="col-span-12 md:col-span-9 font-display text-4xl md:text-5xl leading-[0.98] tracking-tight">
+          <h2 className="col-span-12 font-display text-4xl md:text-5xl leading-[0.98] tracking-tight">
             Work that ships,{" "}
             <span className="italic text-muted-foreground">live in the world.</span>
           </h2>
@@ -530,7 +508,7 @@ export default function Agency() {
         </div>
       </Section>
 
-      <Section className="py-24 border-t border-border">
+      <Section rail="Describe the Problem" className="py-24 border-t border-border">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
           <p className="col-span-12 md:col-span-7 font-display text-3xl md:text-5xl leading-tight">
             If your problem is unusual,{" "}
@@ -547,7 +525,7 @@ export default function Agency() {
         </div>
       </Section>
 
-      <Section className="py-24 border-t border-border">
+      <Section rail="Nine Capabilities" className="py-24 border-t border-border">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
           <p className="col-span-12 md:col-span-7 font-display text-3xl md:text-5xl leading-tight">
             Every project draws from the nine capabilities.{" "}

@@ -1,4 +1,4 @@
-import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
+import { PageShell, Section } from "@/components/matrix/Chrome";
 import { NewsletterSubscribeForm } from "@/components/matrix/NewsletterSubscribeForm";
 import { pageSeo } from "@/lib/seo";
 import { SITE } from "@/lib/seo";
@@ -54,10 +54,9 @@ export default function Journal() {
           publisher: { "@id": `${SITE.url}/#organization` },
         }}
       />
-      <Section className="pt-32 pb-12">
+      <Section rail="Journal" className="pt-32 pb-12">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
           <div className="col-span-12 md:col-span-7">
-            <Eyebrow index="Volume I">Journal</Eyebrow>
             <h1 className="font-display text-[clamp(3rem,8vw,8rem)] leading-[0.95] tracking-tight mt-10">
               Cascading
               <br />
@@ -70,12 +69,9 @@ export default function Journal() {
         </div>
       </Section>
 
-      <Section className="py-16">
+      <Section rail="The Premise" className="py-16">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 border-y border-border py-16">
-          <div className="col-span-12 md:col-span-3">
-            <Eyebrow>The premise</Eyebrow>
-          </div>
-          <div className="col-span-12 md:col-span-9">
+          <div className="col-span-12">
             <h2 className="font-display text-4xl md:text-6xl tracking-tight leading-[1.05]">
               We publish when something has settled —{" "}
               <span className="italic text-muted-foreground">not on a schedule.</span>
@@ -88,12 +84,9 @@ export default function Journal() {
         </div>
       </Section>
 
-      <Section className="py-12">
+      <Section rail="What Will Appear" className="py-12">
         <div className="grid grid-cols-12 gap-6 sm:gap-8">
-          <div className="col-span-12 md:col-span-3">
-            <Eyebrow>What will appear here</Eyebrow>
-          </div>
-          <div className="col-span-12 md:col-span-9 grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="col-span-12 grid grid-cols-1 md:grid-cols-3 gap-12">
             {kinds.map((k) => (
               <div key={k.t} className="border-t border-border pt-6">
                 <h3 className="font-display text-3xl tracking-tight">{k.t}</h3>
@@ -105,10 +98,9 @@ export default function Journal() {
         </div>
       </Section>
 
-      <Section variant="paper" className="py-24 mt-12">
+      <Section rail="Quarterly" variant="paper" className="py-24 mt-12">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
           <div className="col-span-12 md:col-span-7">
-            <Eyebrow>Quarterly</Eyebrow>
             <h2 className="font-display text-4xl md:text-5xl leading-tight tracking-tight mt-4">
               A letter when there is something to say. Nothing else.
             </h2>

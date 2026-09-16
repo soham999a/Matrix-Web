@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
+import { PageShell, Section } from "@/components/matrix/Chrome";
 import { pageSeo } from "@/lib/seo";
 import { SITE } from "@/lib/seo";
 import { CAPABILITIES } from "@/lib/capabilities";
@@ -53,10 +53,9 @@ export default function Capabilities() {
           })),
         }}
       />
-      <Section className="pt-32 pb-20">
+      <Section rail="Capabilities" className="pt-32 pb-20">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
           <div className="col-span-12 md:col-span-7">
-            <Eyebrow index="◈ The Nine">Capabilities</Eyebrow>
             <h1 className="font-display text-[clamp(3rem,8vw,8rem)] leading-[0.92] tracking-tight mt-10">
               Nine capabilities,
               <br />
@@ -92,7 +91,7 @@ export default function Capabilities() {
         </div>
       </Section>
 
-      <Section className="pb-20">
+      <Section rail="The Nine" className="pb-20">
         <div className="border-t border-border">
           {CAPABILITIES.map((d) => (
             <Link
@@ -124,7 +123,7 @@ export default function Capabilities() {
         </div>
       </Section>
 
-      <Section className="py-24 border-t border-border">
+      <Section rail="The Portfolio" className="py-24 border-t border-border">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
           <p className="col-span-12 md:col-span-7 font-display text-3xl md:text-5xl leading-tight">
             Nine capabilities hold one portfolio.

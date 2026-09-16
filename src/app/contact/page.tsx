@@ -1,4 +1,4 @@
-import { PageShell, Section, Eyebrow } from "@/components/matrix/Chrome";
+import { PageShell, Section } from "@/components/matrix/Chrome";
 import { pageSeo } from "@/components/../lib/seo";
 import { SITE } from "@/lib/seo";
 import { IntakeForm } from "@/components/matrix/IntakeForm";
@@ -39,12 +39,9 @@ export default function Contact() {
           mainEntity: { "@id": `${SITE.url}/#organization` },
         }}
       />
-      <Section className="pt-32 pb-12 grain">
+      <Section rail="Contact" className="pt-32 pb-12 grain">
         <div className="grid grid-cols-12 gap-6 sm:gap-8">
-          <div className="col-span-12 md:col-span-3">
-            <Eyebrow index="Correspondence">Contact</Eyebrow>
-          </div>
-          <div className="col-span-12 md:col-span-9">
+          <div className="col-span-12">
             <h1 className="font-display text-[clamp(3rem,8vw,8rem)] leading-[0.95] tracking-tight">
               Begin a
               <br />
@@ -64,10 +61,9 @@ export default function Contact() {
         </div>
       </Section>
 
-      <Section className="py-16">
+      <Section rail="Studio" className="py-16">
         <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 md:col-span-3">
-            <Eyebrow>Studio</Eyebrow>
             <div className="mt-8 space-y-6">
               <div>
                 <p className="eyebrow !text-muted-foreground">Location</p>
@@ -99,10 +95,13 @@ export default function Contact() {
         </div>
       </Section>
 
-      <Section variant="paper" className="py-20 md:py-28 border-t border-border">
+      <Section
+        rail="Direct Correspondence"
+        variant="paper"
+        className="py-20 md:py-28 border-t border-border"
+      >
         <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 md:col-span-3">
-            <Eyebrow>C</Eyebrow>
             <h2 className="font-display text-3xl md:text-5xl tracking-tight mt-6">
               Direct
               <br />
@@ -119,7 +118,7 @@ export default function Contact() {
         </div>
       </Section>
 
-      <Section className="py-24 border-t border-border">
+      <Section rail="The Narrow Door" className="py-24 border-t border-border">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
           <p className="col-span-12 md:col-span-7 font-display text-3xl md:text-4xl leading-tight">
             The door is narrow on purpose.{" "}
