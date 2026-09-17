@@ -343,6 +343,7 @@ export default function Index() {
               t: "Artificial Intelligence",
               d: "Foundation, alignment, agents, evaluation.",
               slug: "ai",
+              img: "/Artificial intellligence card 1 HD.png",
               points: [
                 "Causal AI",
                 "Self-Evolving Models",
@@ -355,6 +356,7 @@ export default function Index() {
               t: "Systems",
               d: "Architectures that outlive their authors.",
               slug: "systems",
+              img: "/systems card 2nd card HD.png",
               points: [
                 "Enterprise Architecture",
                 "Digital Twins",
@@ -367,6 +369,7 @@ export default function Index() {
               t: "Engineering",
               d: "The craft that makes an idea load-bearing.",
               slug: "engineering",
+              img: "/Engineering 3rd card HD.png",
               points: ["Hardware", "Software", "Origami & Crafts", "Sound Engineering"],
             },
             {
@@ -374,6 +377,7 @@ export default function Index() {
               t: "Consulting",
               d: "Counsel for governments, founders, institutions.",
               slug: "consulting",
+              img: "/consulting 4th card HD.png",
               points: ["AI Strategy", "Training & Workshops", "R&D Advisory", "SaaS & Analytics"],
             },
             {
@@ -381,6 +385,7 @@ export default function Index() {
               t: "Futurology",
               d: "Disciplined study of the century ahead.",
               slug: "futurology",
+              img: "/Futurology 5th card HD.png",
               points: [
                 "Post-Smartphone Intelligence",
                 "Ambient Computing",
@@ -393,6 +398,7 @@ export default function Index() {
               t: "Sustainability",
               d: "Systems accountable to the century they are built in.",
               slug: "sustainability",
+              img: "/Sustainibility 6th card HD.png",
               points: [
                 "Mangrove Platform",
                 "Water & Carbon Intelligence",
@@ -405,6 +411,7 @@ export default function Index() {
               t: "Education & Social Innovation",
               d: "A curriculum architecture for those who help others live on the ground.",
               slug: "education",
+              img: "/education 7th card HD.png",
               points: [
                 "QiDS : Human Intelligence",
                 "Knowledge Systems",
@@ -417,6 +424,7 @@ export default function Index() {
               t: "Quanta",
               d: "Superposition, entanglement, and probability as methods.",
               slug: "quanta",
+              img: "/quanta 8th card HD.png",
               points: [
                 "Quantum Computing",
                 "Quantum Machine Learning",
@@ -429,6 +437,7 @@ export default function Index() {
               t: "Design & Human Intelligence",
               d: "The discipline that quietly governs the rest — and how humans and machines think together.",
               slug: "design",
+              img: "/Design 9th card HD.png",
               points: ["Liberal Arts", "Cymatics", "Human–AI Interaction", "Creative Cognition"],
             },
           ].map((c, i) => (

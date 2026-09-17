@@ -2,12 +2,14 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 type Discipline = {
   n: string;
   t: string;
   d: string;
   slug: string;
+  img?: string;
   points: string[];
 };
 
@@ -52,25 +54,37 @@ export function DisciplineCard({ c, i }: { c: Discipline; i: number }) {
               setFlipped((f) => !f);
             }
           }}
-          className={`absolute inset-0 [backface-visibility:hidden] flex flex-col justify-between touch-manipulation hover:bg-foreground/[0.025] transition-colors duration-700 ${
+          className={`absolute inset-0 [backface-visibility:hidden] block touch-manipulation hover:bg-foreground/[0.025] transition-colors duration-700 ${
             flipped ? "pointer-events-none" : ""
           }`}
         >
-          <div className="flex items-baseline justify-between">
-            <span className="font-mono text-[10px] tracking-[0.28em] text-gold">{c.n}</span>
-            <span className="flex items-center gap-2 font-mono text-[10px] tracking-[0.22em] uppercase text-muted-foreground">
-              Discipline
-              <span className="text-gold opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                →
-              </span>
-            </span>
-          </div>
-          <div>
-            <h3 className="font-display text-3xl md:text-4xl tracking-tight leading-[1.05] mt-10">
-              {c.t}
-            </h3>
-            <p className="mt-4 text-muted-foreground leading-relaxed">{c.d}</p>
-          </div>
+          {c.img ? (
+            <Image
+              src={c.img}
+              alt={c.t}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 33vw, 25vw"
+              className="object-cover"
+            />
+          ) : (
+            <div className="flex h-full flex-col justify-between">
+              <div className="flex items-baseline justify-between">
+                <span className="font-mono text-[10px] tracking-[0.28em] text-gold">{c.n}</span>
+                <span className="flex items-center gap-2 font-mono text-[10px] tracking-[0.22em] uppercase text-muted-foreground">
+                  Discipline
+                  <span className="text-gold opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    →
+                  </span>
+                </span>
+              </div>
+              <div>
+                <h3 className="font-display text-3xl md:text-4xl tracking-tight leading-[1.05] mt-10">
+                  {c.t}
+                </h3>
+                <p className="mt-4 text-muted-foreground leading-relaxed">{c.d}</p>
+              </div>
+            </div>
+          )}
         </Link>
 
         <Link
