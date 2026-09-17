@@ -218,6 +218,7 @@ export default function Index() {
         rail="Act II · Manifesto"
         id="manifesto"
         cursorInvert
+        railInvert
         className="pt-14 md:pt-20 pb-24 md:pb-40 !text-ink"
         style={{ backgroundColor: "#D4B16C" }}
       >
@@ -325,7 +326,7 @@ export default function Index() {
       </Section>
 
       {/* ————— ACT IV · CAPABILITIES ————— */}
-      <Section rail="Act IV · Capabilities" className="pt-14 md:pt-20 pb-24 md:pb-40">
+      <Section rail="Act IV · Capabilities" className="pt-14 md:pt-20 pb-8 md:pb-12">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-20">
           <h2 className="col-span-12 font-display text-5xl md:text-7xl leading-[0.92] tracking-tight">
             <Reveal>Nine disciplines</Reveal>
