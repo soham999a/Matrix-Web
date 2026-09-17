@@ -592,7 +592,10 @@ export default function CompanyProfile() {
       </Section>
 
       {/* ——— 07 · FRONTIER RESEARCH ——— */}
-      <Section rail="Frontier Research" className="pt-14 md:pt-20 pb-20 md:pb-28 border-t border-border">
+      <Section
+        rail="Frontier Research"
+        className="pt-14 md:pt-20 pb-20 md:pb-28 border-t border-border"
+      >
         <Head
           n="07"
           t="Frontier Research"

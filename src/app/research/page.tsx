@@ -222,7 +222,11 @@ export default function Research() {
         </div>
       </Section>
 
-      <Section rail="Whitepapers" id="whitepapers" className="pt-14 md:pt-20 pb-20 border-t border-border">
+      <Section
+        rail="Whitepapers"
+        id="whitepapers"
+        className="pt-14 md:pt-20 pb-20 border-t border-border"
+      >
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-10">
           <p className="col-span-12 text-muted-foreground leading-relaxed max-w-2xl">
             Open-access preprints, deposited on Zenodo with a permanent DOI. Each is published only
@@ -271,7 +275,11 @@ export default function Research() {
         </div>
       </Section>
 
-      <Section rail="Case Studies" id="case-studies" className="pt-14 md:pt-20 pb-20 border-t border-border">
+      <Section
+        rail="Case Studies"
+        id="case-studies"
+        className="pt-14 md:pt-20 pb-20 border-t border-border"
+      >
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-10">
           <p className="col-span-12 text-muted-foreground leading-relaxed max-w-2xl">
             Reconstructions of real engagements — what was asked, what we built, and what the

@@ -452,7 +452,11 @@ export default function Agency() {
         </div>
       </Section>
 
-      <Section rail="Our Portfolio" className="pt-14 md:pt-20 pb-24 border-t border-border" id="portfolio">
+      <Section
+        rail="Our Portfolio"
+        className="pt-14 md:pt-20 pb-24 border-t border-border"
+        id="portfolio"
+      >
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-12">
           <h2 className="col-span-12 font-display text-4xl md:text-5xl leading-[0.98] tracking-tight">
             Work that ships,{" "}
