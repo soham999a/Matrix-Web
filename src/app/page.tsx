@@ -249,12 +249,12 @@ export default function Index() {
       </Section>
 
       {/* ————— ACT III · METAPHOR SEQUENCE ————— */}
-      <Section rail="Act III · Sequence" variant="paper" className="py-20 md:py-32">
+      <Section rail="Act III · Sequence" variant="paper" className="pt-14 md:pt-20 pb-20 md:pb-32">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-20">
-          <h2 className="col-span-12 pl-[40px] font-display text-5xl md:text-7xl leading-[0.95] tracking-tight">
+          <h2 className="col-span-12 pl-[40px] font-display text-5xl md:text-7xl leading-[0.92] tracking-tight">
             <Reveal>Six figures</Reveal>
             <br />
-            <Reveal className="italic" delay={120}>
+            <Reveal className="italic text-muted-foreground" delay={120}>
               for one method.
             </Reveal>
           </h2>
@@ -325,9 +325,9 @@ export default function Index() {
       </Section>
 
       {/* ————— ACT IV · CAPABILITIES ————— */}
-      <Section rail="Act IV · Capabilities" className="py-24 md:py-40">
+      <Section rail="Act IV · Capabilities" className="pt-14 md:pt-20 pb-24 md:pb-40">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-20">
-          <h2 className="col-span-12 pl-[31px] font-display text-5xl md:text-7xl leading-[0.95] tracking-tight">
+          <h2 className="col-span-12 pl-[31px] font-display text-5xl md:text-7xl leading-[0.92] tracking-tight">
             <Reveal>Nine disciplines</Reveal>
             <br />
             <Reveal className="italic text-muted-foreground" delay={120}>
@@ -462,7 +462,7 @@ export default function Index() {
       <Section
         rail="Act VI · Closing"
         variant="paper"
-        className="py-24 md:py-40 border-t border-border"
+        className="pt-14 md:pt-20 pb-24 md:pb-40 border-t border-border"
       >
         <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 md:col-span-7">
