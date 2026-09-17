@@ -9,7 +9,7 @@ export const metadata = pageSeo({
   path: "/products",
   title: "AI Products & Applied Intelligence Platforms",
   description:
-    "Nine AI platforms and services from Matrix, one architecture — Gravity, QiDS, Humming, ARPS, Mangrove, Datum, MindMuse, Digital Products, and Consulting — built on the CES-QN and KALPA research frameworks.",
+    "Twelve AI platforms and services from Matrix, one architecture — Gravity, QiDS, Humming, ARPS, Mangrove, Datum, Agile Plus, Metacare, Quantum Learning Platform, MindMuse, Digital Products, and Consulting — built on the CES-QN and KALPA research frameworks.",
   keywords: [
     "Matrix products",
     "AI products",
@@ -19,6 +19,9 @@ export const metadata = pageSeo({
     "Humming AI",
     "ARPS supply chain AI",
     "Mangrove ESG",
+    "Agile Plus project management",
+    "Metacare healthcare AI",
+    "Quantum Learning Platform",
     "MindMuse creative intelligence",
     "AI platform India",
     "human intelligence platform",
@@ -27,7 +30,7 @@ export const metadata = pageSeo({
   og: {
     title: "Matrix — Applied Intelligence Portfolio",
     description:
-      "Nine platforms. One architecture. Gravity · QiDS · Humming · ARPS · Mangrove · Datum · MindMuse · Digital Products · Consulting.",
+      "Twelve platforms. One architecture. Gravity · QiDS · Humming · ARPS · Mangrove · Datum · Agile Plus · Metacare · Quantum Learning Platform · MindMuse · Digital Products · Consulting.",
   },
 });
 
@@ -228,7 +231,7 @@ const layers = [
   },
   {
     t: "Products",
-    d: "Gravity · QiDS · Humming · ARPS · Mangrove · Datum · MindMuse · Digital Products · Consulting",
+    d: "Gravity · QiDS · Humming · ARPS · Mangrove · Datum · Agile Plus · Metacare · Quantum Learning Platform · MindMuse · Digital Products · Consulting",
   },
 ];
 
@@ -263,7 +266,7 @@ export default function Products() {
             "@type": "ItemList",
             name: "Matrix — Applied Intelligence Portfolio",
             description:
-              "Nine AI platforms and services from Matrix, one architecture — Gravity, QiDS, Humming, ARPS, Mangrove, Datum, MindMuse, Digital Products, and Consulting.",
+              "Twelve AI platforms and services from Matrix, one architecture — Gravity, QiDS, Humming, ARPS, Mangrove, Datum, Agile Plus, Metacare, Quantum Learning Platform, MindMuse, Digital Products, and Consulting.",
             url: `${SITE.url}/products`,
             numberOfItems: portfolio.length,
             itemListElement: portfolio.map((p, i) => ({
@@ -295,7 +298,7 @@ export default function Products() {
         <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 md:col-span-7">
             <h1 className="font-display text-[clamp(3rem,8vw,8rem)] leading-[0.95] tracking-tight mt-10">
-              Nine platforms.
+              Twelve platforms.
               <br />
               <span className="italic text-muted-foreground">One architecture.</span>
             </h1>
@@ -307,7 +310,7 @@ export default function Products() {
             </p>
             <div className="mt-12 flex flex-wrap gap-x-8 gap-y-6 sm:gap-x-16">
               <div>
-                <div className="font-display text-6xl">9</div>
+                <div className="font-display text-6xl">{portfolio.length}</div>
                 <p className="eyebrow mt-2">Platforms &amp; Services</p>
               </div>
               <div>
@@ -328,7 +331,7 @@ export default function Products() {
         </div>
       </Section>
 
-      <Section rail="The Portfolio" className="py-16">
+      <Section rail="The Portfolio" className="pt-14 md:pt-20 pb-16">
         <div className="grid grid-cols-12">
           {portfolio.map((p, i) => (
             <article
@@ -412,7 +415,7 @@ export default function Products() {
         </div>
       </Section>
 
-      <Section rail="The Model" variant="paper" className="py-32">
+      <Section rail="The Model" variant="paper" className="pt-14 md:pt-20 pb-32">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-16">
           <h2 className="col-span-12 font-display text-4xl md:text-6xl leading-[0.98] tracking-tight">
             One architecture.
@@ -437,7 +440,7 @@ export default function Products() {
         </div>
       </Section>
 
-      <Section rail="Roadmap" className="py-32">
+      <Section rail="Roadmap" className="pt-14 md:pt-20 pb-32">
         <div className="grid grid-cols-12 gap-6 sm:gap-8">
           {roadmap.map((r) => (
             <div key={r.h} className="col-span-12 md:col-span-4 border-t border-border pt-8">
@@ -454,7 +457,7 @@ export default function Products() {
         </div>
       </Section>
 
-      <Section rail="Enquire" className="py-24 border-t border-border">
+      <Section rail="Enquire" className="pt-14 md:pt-20 pb-24 border-t border-border">
         <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <blockquote className="col-span-12 md:col-span-8 font-display text-3xl md:text-4xl italic text-muted-foreground leading-tight">
             &ldquo;We do not build disconnected software. We design the invisible architecture

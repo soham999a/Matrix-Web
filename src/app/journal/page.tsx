@@ -69,7 +69,7 @@ export default function Journal() {
         </div>
       </Section>
 
-      <Section rail="The Premise" className="py-16">
+      <Section rail="The Premise" className="pt-14 md:pt-20 pb-16">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 border-y border-border py-16">
           <div className="col-span-12">
             <h2 className="font-display text-4xl md:text-6xl tracking-tight leading-[1.05]">
@@ -84,7 +84,7 @@ export default function Journal() {
         </div>
       </Section>
 
-      <Section rail="What Will Appear" className="py-12">
+      <Section rail="What Will Appear" className="pt-14 md:pt-20 pb-12">
         <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 grid grid-cols-1 md:grid-cols-3 gap-12">
             {kinds.map((k) => (
@@ -98,7 +98,7 @@ export default function Journal() {
         </div>
       </Section>
 
-      <Section rail="Quarterly" variant="paper" className="py-24 mt-12">
+      <Section rail="Quarterly" variant="paper" className="pt-14 md:pt-20 pb-24 mt-12">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
           <div className="col-span-12 md:col-span-7">
             <h2 className="font-display text-4xl md:text-5xl leading-tight tracking-tight mt-4">

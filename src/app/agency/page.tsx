@@ -220,7 +220,7 @@ export default function Agency() {
         </div>
       </Section>
 
-      <Section rail="What We Build" className="py-24">
+      <Section rail="What We Build" className="pt-14 md:pt-20 pb-24">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mt-12">
           <div className="col-span-12 md:col-span-5">
             <p className="font-display text-3xl md:text-4xl leading-tight">
@@ -263,7 +263,7 @@ export default function Agency() {
         </div>
       </Section>
 
-      <Section rail="How an engagement runs" variant="paper" className="py-32">
+      <Section rail="How an engagement runs" variant="paper" className="pt-14 md:pt-20 pb-32">
         <h2 className="font-display text-4xl md:text-6xl leading-[1] tracking-tight mt-6 max-w-4xl">
           We begin with the decision, <span className="italic">not the model.</span>
         </h2>
@@ -282,7 +282,7 @@ export default function Agency() {
         </div>
       </Section>
 
-      <Section rail="Consulting" id="consulting" className="pt-24 border-t border-border">
+      <Section rail="Consulting" id="consulting" className="pt-14 md:pt-20 border-t border-border">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
           <div className="col-span-12">
             <h1 className="font-display text-[clamp(3rem,7vw,7rem)] leading-[0.95] tracking-tight">
@@ -308,7 +308,7 @@ export default function Agency() {
         </div>
       </Section>
 
-      <Section rail="Engagements" className="py-24">
+      <Section rail="Engagements" className="pt-14 md:pt-20 pb-24">
         <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 md:col-span-4">
             <h2 className="font-display text-4xl md:text-5xl leading-tight tracking-tight mt-6">
@@ -333,7 +333,7 @@ export default function Agency() {
         </div>
       </Section>
 
-      <Section rail="For whom" variant="paper" className="py-32">
+      <Section rail="For whom" variant="paper" className="pt-14 md:pt-20 pb-32">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
           <div className="col-span-12 md:col-span-7">
             <h2 className="font-display text-4xl md:text-6xl leading-[0.98] tracking-tight mt-6">
@@ -364,7 +364,7 @@ export default function Agency() {
         </div>
       </Section>
 
-      <Section rail="The narrow door" className="py-32">
+      <Section rail="The narrow door" className="pt-14 md:pt-20 pb-32">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 border-t border-border pt-16">
           <div className="col-span-12 md:col-span-7">
             <h2 className="font-display text-4xl md:text-6xl leading-tight tracking-tight">
@@ -382,7 +382,7 @@ export default function Agency() {
         </div>
       </Section>
 
-      <Section rail="How it begins" variant="paper" className="py-32">
+      <Section rail="How it begins" variant="paper" className="pt-14 md:pt-20 pb-32">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-16">
           <div className="col-span-12">
             <h2 className="font-display text-4xl md:text-6xl leading-[0.98] tracking-tight">
@@ -405,7 +405,7 @@ export default function Agency() {
         </div>
       </Section>
 
-      <Section rail="Questions" className="py-32">
+      <Section rail="Questions" className="pt-14 md:pt-20 pb-32">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-16">
           <div className="col-span-12">
             <h2 className="font-display text-4xl md:text-6xl leading-[0.98] tracking-tight">
@@ -423,7 +423,7 @@ export default function Agency() {
         </div>
       </Section>
 
-      <Section rail="Discovery Call" variant="paper" className="py-32">
+      <Section rail="Discovery Call" variant="paper" className="pt-14 md:pt-20 pb-32">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-12">
           <div className="col-span-12">
             <h2 className="font-display text-4xl md:text-6xl leading-[0.98] tracking-tight">
@@ -452,7 +452,7 @@ export default function Agency() {
         </div>
       </Section>
 
-      <Section rail="Our Portfolio" className="py-24 border-t border-border" id="portfolio">
+      <Section rail="Our Portfolio" className="pt-14 md:pt-20 pb-24 border-t border-border" id="portfolio">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-12">
           <h2 className="col-span-12 font-display text-4xl md:text-5xl leading-[0.98] tracking-tight">
             Work that ships,{" "}
@@ -508,7 +508,7 @@ export default function Agency() {
         </div>
       </Section>
 
-      <Section rail="Describe the Problem" className="py-24 border-t border-border">
+      <Section rail="Describe the Problem" className="pt-14 md:pt-20 pb-24 border-t border-border">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
           <p className="col-span-12 md:col-span-7 font-display text-3xl md:text-5xl leading-tight">
             If your problem is unusual,{" "}
@@ -525,7 +525,7 @@ export default function Agency() {
         </div>
       </Section>
 
-      <Section rail="Nine Capabilities" className="py-24 border-t border-border">
+      <Section rail="Nine Capabilities" className="pt-14 md:pt-20 pb-24 border-t border-border">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
           <p className="col-span-12 md:col-span-7 font-display text-3xl md:text-5xl leading-tight">
             Every project draws from the nine capabilities.{" "}

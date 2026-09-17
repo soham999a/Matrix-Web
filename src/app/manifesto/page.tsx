@@ -106,7 +106,7 @@ export default function Manifesto() {
         </div>
       </Section>
 
-      <Section rail="Ten Beliefs" className="py-20">
+      <Section rail="Ten Beliefs" className="pt-14 md:pt-20 pb-20">
         <div className="border-t border-border">
           {tenets.map((t) => (
             <article
@@ -127,7 +127,7 @@ export default function Manifesto() {
         </div>
       </Section>
 
-      <Section rail="Closing" className="py-32">
+      <Section rail="Closing" className="pt-14 md:pt-20 pb-32">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
           <p className="col-span-12 md:col-span-7 font-display text-3xl md:text-4xl italic text-muted-foreground leading-tight">
             &quot;If we live by this, the work will recognize itself.&quot;

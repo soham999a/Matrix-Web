@@ -42,22 +42,19 @@ export default function About() {
       />
       <Section rail="About" className="pt-32 pb-16 grain">
         <div className="grid grid-cols-12 gap-6 sm:gap-8">
-          <div className="col-span-12 md:col-span-3">
-            <GoldenSpiralFigure className="mt-14 w-full max-w-[240px] text-foreground/70" />
-          </div>
           <h1 className="col-span-12 md:col-span-9 font-display text-[clamp(3rem,8vw,8rem)] leading-[0.95] tracking-tight">
             A small studio.
             <br />
             <span className="italic text-muted-foreground">A long horizon.</span>
           </h1>
+          <div className="col-span-12 md:col-span-3">
+            <GoldenSpiralFigure className="mt-14 w-full max-w-[240px] text-foreground/70" />
+          </div>
         </div>
       </Section>
 
-      <Section rail="The Studio" className="py-16">
+      <Section rail="The Studio" className="pt-14 md:pt-20 pb-16">
         <div className="grid grid-cols-12 gap-6 md:gap-12 items-start">
-          <div className="col-span-12 md:col-span-5">
-            <Roots className="w-full text-foreground/80" />
-          </div>
           <div className="col-span-12 md:col-span-7 space-y-8 text-lg leading-relaxed text-foreground/85">
             <p>
               Matrix is an intelligence architecture studio: researchers, designers, and engineers
@@ -74,10 +71,13 @@ export default function About() {
               leave a few things behind that were quietly true.
             </p>
           </div>
+          <div className="col-span-12 md:col-span-5">
+            <Roots className="w-full text-foreground/80" />
+          </div>
         </div>
       </Section>
 
-      <Section rail="How we work" className="py-24">
+      <Section rail="How we work" className="pt-14 md:pt-20 pb-24">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mt-10 border-t border-border pt-12">
           {[
             {
@@ -106,7 +106,7 @@ export default function About() {
         </div>
       </Section>
 
-      <Section rail="Disciplines" variant="paper" className="py-32">
+      <Section rail="Disciplines" variant="paper" className="pt-14 md:pt-20 pb-32">
         <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 grid grid-cols-1 md:grid-cols-3 gap-12">
             {[
@@ -143,7 +143,7 @@ export default function About() {
         </p>
       </Section>
 
-      <Section rail="Studio" className="py-32 border-t border-border">
+      <Section rail="Studio" className="pt-14 md:pt-20 pb-32 border-t border-border">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
           <h2 className="col-span-12 md:col-span-7 font-display text-4xl md:text-6xl leading-tight tracking-tight">
             If your work calls for ours,{" "}

@@ -109,7 +109,7 @@ export default function Index() {
       {/* ————— IDENTITY · ABOUT MATRIX ————— */}
       <Section rail="Identity" className="pt-14 md:pt-20 pb-24 border-t border-border">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-8">
-          <div className="col-span-12 lg:col-span-7 lg:pl-8">
+          <div className="col-span-12 lg:col-span-7">
             <h1 className="mt-8 font-display text-[clamp(1.75rem,3.2vw,2.75rem)] leading-[1.15] tracking-[-0.015em]">
               An Applied Intelligence firm building AI, analytics, intelligent software, and
               decision systems that help organisations solve complex problems and make better
@@ -251,7 +251,7 @@ export default function Index() {
       {/* ————— ACT III · METAPHOR SEQUENCE ————— */}
       <Section rail="Act III · Sequence" variant="paper" className="pt-14 md:pt-20 pb-20 md:pb-32">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-20">
-          <h2 className="col-span-12 pl-[40px] font-display text-5xl md:text-7xl leading-[0.92] tracking-tight">
+          <h2 className="col-span-12 font-display text-5xl md:text-7xl leading-[0.92] tracking-tight">
             <Reveal>Six figures</Reveal>
             <br />
             <Reveal className="italic text-muted-foreground" delay={120}>
@@ -327,7 +327,7 @@ export default function Index() {
       {/* ————— ACT IV · CAPABILITIES ————— */}
       <Section rail="Act IV · Capabilities" className="pt-14 md:pt-20 pb-24 md:pb-40">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-20">
-          <h2 className="col-span-12 pl-[31px] font-display text-5xl md:text-7xl leading-[0.92] tracking-tight">
+          <h2 className="col-span-12 font-display text-5xl md:text-7xl leading-[0.92] tracking-tight">
             <Reveal>Nine disciplines</Reveal>
             <br />
             <Reveal className="italic text-muted-foreground" delay={120}>
@@ -443,9 +443,6 @@ export default function Index() {
         className="pt-14 md:pt-20 pb-24 md:pb-40 border-t border-border"
       >
         <div className="grid grid-cols-12 gap-6 sm:gap-8 items-center">
-          <div className="col-span-12 md:col-span-5">
-            <Ripple className="w-full text-foreground/80 breathe" />
-          </div>
           <blockquote className="col-span-12 md:col-span-7 font-display text-3xl md:text-5xl leading-[1.15] tracking-tight">
             <span className="text-gold">“</span>The real revolution is the
             <span className="italic"> evolution of consciousness</span>. Intelligence, like steel or
@@ -455,6 +452,9 @@ export default function Index() {
               — Matrix Manifesto · II
             </footer>
           </blockquote>
+          <div className="col-span-12 md:col-span-5">
+            <Ripple className="w-full text-foreground/80 breathe" />
+          </div>
         </div>
       </Section>
 
@@ -496,9 +496,9 @@ export default function Index() {
       </Section>
 
       {/* ————— FURTHER · THE DOORS ————— */}
-      <Section rail="Further" className="py-16 md:py-20">
+      <Section rail="Further" className="pt-14 md:pt-20 pb-16 md:pb-20">
         <div className="pt-0">
-          <div className="flex items-baseline justify-end mb-8">
+          <div className="flex items-baseline mb-8">
             <span className="font-mono text-[10px] tracking-[0.22em] uppercase text-muted-foreground">
               Five chambers · One studio
             </span>

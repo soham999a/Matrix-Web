@@ -61,7 +61,7 @@ export default function Contact() {
         </div>
       </Section>
 
-      <Section rail="Studio" className="py-16">
+      <Section rail="Studio" className="pt-14 md:pt-20 pb-16">
         <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 md:col-span-3">
             <div className="mt-8 space-y-6">
@@ -98,7 +98,7 @@ export default function Contact() {
       <Section
         rail="Direct Correspondence"
         variant="paper"
-        className="py-20 md:py-28 border-t border-border"
+        className="pt-14 md:pt-20 pb-20 md:pb-28 border-t border-border"
       >
         <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 md:col-span-3">
@@ -118,7 +118,7 @@ export default function Contact() {
         </div>
       </Section>
 
-      <Section rail="The Narrow Door" className="py-24 border-t border-border">
+      <Section rail="The Narrow Door" className="pt-14 md:pt-20 pb-24 border-t border-border">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
           <p className="col-span-12 md:col-span-7 font-display text-3xl md:text-4xl leading-tight">
             The door is narrow on purpose.{" "}

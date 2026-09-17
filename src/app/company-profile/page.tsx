@@ -329,20 +329,41 @@ const platforms = [
   },
   {
     n: "07",
+    t: "Agile Plus",
+    tag: "Intelligent Project Management",
+    s: "In Development",
+    d: "Intelligent project management platform — AI-assisted planning, resource allocation, progress intelligence, and delivery risk modelling woven into the project lifecycle.",
+  },
+  {
+    n: "08",
+    t: "Metacare",
+    tag: "Intelligent Healthcare",
+    s: "In Development",
+    d: "Intelligent healthcare platform — AI-assisted clinical decision support, patient intelligence, and operational analytics for care delivery.",
+  },
+  {
+    n: "09",
+    t: "Quantum Learning Platform",
+    tag: "QuantumLab · Quantum Education",
+    s: "In Development",
+    d: "Quantum education platform — Quantum Computing Fundamentals, Quantum Visualisation & Labs, interactive simulations, and curriculum for schools and universities.",
+  },
+  {
+    n: "10",
     t: "MindMuse",
     tag: "AI Creativity & Cognition · Creative Intelligence Engine",
     s: "Designed · In Dev.",
     d: "AI creativity and cognition engine applying the KALPA framework to music, knowledge, and creative systems — including Hertz (FM radio & intelligent curation), Resonance (recommendation engine), Sonata (music dictionary), and AlgoVista (algorithm visualisation). Serving the Orange Economy.",
   },
   {
-    n: "08",
+    n: "11",
     t: "Digital Products",
     tag: "End-to-End Product Engineering · Knowledge Assets",
     s: "Commercial",
     d: "Commercial knowledge assets and enterprise advisory services — prompt engineering packs, AI strategy frameworks, automation playbooks, BI dashboard templates, and enterprise transformation consulting. Currently operational and generating revenue.",
   },
   {
-    n: "09",
+    n: "12",
     t: "Consulting",
     tag: "Applied AI Strategic Advisory · Enterprise Transformation",
     s: "Commercial",
@@ -369,28 +390,30 @@ export default function CompanyProfile() {
 
       {/* ——— COVER ——— */}
       <Section rail="Company Profile" className="pt-28 md:pt-40 pb-20 grain">
-        <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-gold">
-          Company Profile · 2026
-        </p>
-        <p className="mt-4 font-mono text-[10px] tracking-[0.22em] uppercase text-muted-foreground">
-          Applied AI Research Studio · Intelligence Architecture · Cohered by Design
-        </p>
-        <h1 className="font-display text-[clamp(3.5rem,12vw,11rem)] leading-[0.9] tracking-tight mt-16">
-          MATRIX.
-        </h1>
-        <p className="font-display text-2xl md:text-4xl italic text-gold mt-2">mātṛkā</p>
-        <p className="font-display text-3xl md:text-6xl leading-[1.02] tracking-tight mt-16 max-w-4xl">
-          Applied AI Research Studio
-        </p>
-        <div className="mt-8 grid grid-cols-12 gap-6 sm:gap-8 items-end">
-          <p className="col-span-12 md:col-span-7 max-w-2xl text-lg text-foreground/80 leading-relaxed">
-            Designing the invisible architecture through which intelligence becomes trustworthy,
-            scalable, and beneficial — for governments, enterprises, universities, and society.
-          </p>
-          <div className="col-span-12 md:col-span-5 flex justify-end">
-            <RhombicDodecahedronFigure className="w-full max-w-xs text-foreground/70" />
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 items-start">
+          <div className="col-span-12 md:col-span-7">
+            <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-gold">
+              Company Profile · 2026
+            </p>
+            <p className="mt-4 font-mono text-[10px] tracking-[0.22em] uppercase text-muted-foreground">
+              Applied AI Research Studio · Intelligence Architecture · Cohered by Design
+            </p>
+            <h1 className="font-display text-[clamp(3.5rem,12vw,11rem)] leading-[0.9] tracking-tight mt-16">
+              MATRIX.
+            </h1>
+            <p className="font-display text-2xl md:text-4xl italic text-gold mt-2">mātṛkā</p>
+            <p className="font-display text-3xl md:text-6xl leading-[1.02] tracking-tight mt-16 max-w-4xl">
+              Applied AI Research Studio
+            </p>
+          </div>
+          <div className="col-span-12 md:col-span-5 flex justify-end mt-12 md:mt-24">
+            <RhombicDodecahedronFigure className="fig-glow w-full max-w-[26rem] md:max-w-xs xl:max-w-sm text-foreground/80" />
           </div>
         </div>
+        <p className="mt-14 md:mt-16 max-w-2xl text-lg text-foreground/80 leading-relaxed">
+          Designing the invisible architecture through which intelligence becomes trustworthy,
+          scalable, and beneficial — for governments, enterprises, universities, and society.
+        </p>
         <div className="mt-16 flex flex-col gap-3 font-mono text-[10px] tracking-[0.28em] uppercase text-muted-foreground">
           <span className="text-foreground/80">
             Intelligence<span className="text-gold"> · </span>Architecture
@@ -404,7 +427,7 @@ export default function CompanyProfile() {
       </Section>
 
       {/* ——— 01 · WHO WE ARE ——— */}
-      <Section rail="Who We Are" className="py-20 md:py-28 border-t border-border">
+      <Section rail="Who We Are" className="pt-14 md:pt-20 pb-20 md:pb-28 border-t border-border">
         <Head
           n="01"
           t="Who We Are"
@@ -439,7 +462,7 @@ export default function CompanyProfile() {
       <Section
         rail="Vision & Mission"
         variant="paper"
-        className="py-20 md:py-28 border-t border-ink/10"
+        className="pt-14 md:pt-20 pb-20 md:pb-28 border-t border-ink/10"
       >
         <Head
           n="02"
@@ -480,7 +503,7 @@ export default function CompanyProfile() {
       </Section>
 
       {/* ——— 03 · NINE DISCIPLINES ——— */}
-      <Section rail="Nine Disciplines" className="py-20 md:py-28">
+      <Section rail="Nine Disciplines" className="pt-14 md:pt-20 pb-20 md:pb-28">
         <Head n="03" t="Nine Disciplines" k="The breadth of the MATRIX remit." />
         <p className="text-muted-foreground leading-relaxed max-w-3xl mb-8">
           MATRIX operates across nine interconnected disciplines. These are not siloed departments —
@@ -496,7 +519,7 @@ export default function CompanyProfile() {
       <Section
         rail="Research Foundations"
         variant="paper"
-        className="py-20 md:py-28 border-t border-ink/10"
+        className="pt-14 md:pt-20 pb-20 md:pb-28 border-t border-ink/10"
       >
         <Head n="04" t="Research Foundations" k="Every product emerges from original research." />
         <p className="text-ink/80 leading-relaxed max-w-3xl mb-6">
@@ -539,8 +562,8 @@ export default function CompanyProfile() {
       </Section>
 
       {/* ——— 05 · PLATFORM SUITE ——— */}
-      <Section rail="Platform Suite" className="py-20 md:py-28">
-        <Head n="05" t="Platform Suite" k="Nine platforms. One architecture." />
+      <Section rail="Platform Suite" className="pt-14 md:pt-20 pb-20 md:pb-28">
+        <Head n="05" t="Platform Suite" k="Twelve platforms. One architecture." />
         <p className="text-muted-foreground leading-relaxed max-w-3xl mb-6">
           Each platform in the MATRIX suite is a distinct commercial manifestation of the Omega
           Model reasoning infrastructure. They are not standalone products — they are nodes in a
@@ -556,7 +579,7 @@ export default function CompanyProfile() {
       <Section
         rail="Core Capabilities"
         variant="paper"
-        className="py-20 md:py-28 border-t border-ink/10"
+        className="pt-14 md:pt-20 pb-20 md:pb-28 border-t border-ink/10"
       >
         <Head n="06" t="Core Capabilities" k="What MATRIX brings to every engagement." />
         <p className="text-ink/80 leading-relaxed max-w-3xl mb-8">
@@ -569,7 +592,7 @@ export default function CompanyProfile() {
       </Section>
 
       {/* ——— 07 · FRONTIER RESEARCH ——— */}
-      <Section rail="Frontier Research" className="py-20 md:py-28 border-t border-border">
+      <Section rail="Frontier Research" className="pt-14 md:pt-20 pb-20 md:pb-28 border-t border-border">
         <Head
           n="07"
           t="Frontier Research"
@@ -635,7 +658,7 @@ export default function CompanyProfile() {
       <Section
         rail="Who We Work With"
         variant="paper"
-        className="py-20 md:py-28 border-t border-ink/10"
+        className="pt-14 md:pt-20 pb-20 md:pb-28 border-t border-ink/10"
       >
         <Head n="08" t="Who We Work With" k="Stakeholders across the intelligence economy." />
         <p className="text-ink/80 leading-relaxed max-w-3xl mb-6">
@@ -666,7 +689,7 @@ export default function CompanyProfile() {
       </Section>
 
       {/* ——— 09 · THE MATRIX IDENTITY ——— */}
-      <Section rail="The MATRIX Identity" className="py-20 md:py-28">
+      <Section rail="The MATRIX Identity" className="pt-14 md:pt-20 pb-20 md:pb-28">
         <Head
           n="09"
           t="The MATRIX Identity"
@@ -710,8 +733,8 @@ export default function CompanyProfile() {
       </Section>
 
       {/* ——— BACK COVER ——— */}
-      <Section rail="Back Cover" className="py-24 border-t border-border">
-        <div className="text-center">
+      <Section rail="Back Cover" className="pt-14 md:pt-20 pb-24 border-t border-border">
+        <div>
           <p className="font-display text-6xl md:text-8xl tracking-tight">MATRIX.</p>
           <p className="font-mono text-[10px] tracking-[0.4em] uppercase text-gold mt-6">
             L&nbsp;&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;B&nbsp;&nbsp;&nbsp;S
@@ -725,7 +748,7 @@ export default function CompanyProfile() {
           <p className="mt-3 font-mono text-[10px] tracking-[0.28em] uppercase text-muted-foreground">
             Somnath Banerjee, Founder · banerjeesomnath042@gmail.com
           </p>
-          <div className="mx-auto mt-12 max-w-md border-t border-border pt-10 space-y-2 font-mono text-[10px] tracking-[0.28em] uppercase text-muted-foreground">
+          <div className="mt-12 max-w-md border-t border-border pt-10 space-y-2 font-mono text-[10px] tracking-[0.28em] uppercase text-muted-foreground">
             <p>Company Profile · 2026</p>
             <p className="text-foreground/80">
               Intelligence<span className="text-gold"> · </span>Architecture
@@ -733,7 +756,7 @@ export default function CompanyProfile() {
             </p>
             <p className="text-gold">Cohered by Design</p>
           </div>
-          <p className="mx-auto mt-12 max-w-md text-sm text-muted-foreground leading-relaxed">
+          <p className="mt-12 max-w-md text-sm text-muted-foreground leading-relaxed">
             This document is confidential. For the full Applied Intelligence Portfolio, request the
             separate portfolio document.
           </p>

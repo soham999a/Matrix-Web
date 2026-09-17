@@ -91,7 +91,7 @@ export default function Capabilities() {
         </div>
       </Section>
 
-      <Section rail="The Nine" className="pb-20">
+      <Section rail="The Nine" className="pt-14 md:pt-20 pb-20">
         <div className="border-t border-border">
           {CAPABILITIES.map((d) => (
             <Link
@@ -123,7 +123,7 @@ export default function Capabilities() {
         </div>
       </Section>
 
-      <Section rail="The Portfolio" className="py-24 border-t border-border">
+      <Section rail="The Portfolio" className="pt-14 md:pt-20 pb-24 border-t border-border">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
           <p className="col-span-12 md:col-span-7 font-display text-3xl md:text-5xl leading-tight">
             Nine capabilities hold one portfolio.

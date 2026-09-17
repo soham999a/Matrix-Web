@@ -108,7 +108,7 @@ export default async function CapabilityPage({ params }: { params: Promise<{ slu
         </p>
       </Section>
 
-      <Section rail="The Nine" className="pb-20">
+      <Section rail="The Nine" className="pt-14 md:pt-20 pb-20">
         <div className="border-t border-border">
           {domain.sections.map((s) => (
             <div
@@ -131,7 +131,7 @@ export default async function CapabilityPage({ params }: { params: Promise<{ slu
         </div>
       </Section>
 
-      <Section rail="Adjacent" className="py-24 border-t border-border">
+      <Section rail="Adjacent" className="pt-14 md:pt-20 pb-24 border-t border-border">
         <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 grid grid-cols-2 md:grid-cols-4 gap-px bg-border border border-border">
             {others.map((d) => (

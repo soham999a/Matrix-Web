@@ -112,7 +112,7 @@ export default function Research() {
         </div>
       </Section>
 
-      <Section rail="Programs" className="py-20">
+      <Section rail="Programs" className="pt-14 md:pt-20 pb-20">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-16">
           <div className="col-span-12 grid grid-cols-1 md:grid-cols-3 gap-12">
             {[
@@ -139,7 +139,7 @@ export default function Research() {
         </div>
       </Section>
 
-      <Section rail="Questions" className="py-20">
+      <Section rail="Questions" className="pt-14 md:pt-20 pb-20">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-10">
           <p className="col-span-12 text-muted-foreground leading-relaxed max-w-2xl">
             We keep our notebooks open rather than our publication list long. These are the
@@ -163,7 +163,7 @@ export default function Research() {
         </div>
       </Section>
 
-      <Section rail="Foundations" variant="paper" id="frameworks" className="py-32">
+      <Section rail="Foundations" variant="paper" id="frameworks" className="pt-14 md:pt-20 pb-32">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-16">
           <p className="col-span-12 text-ink/75 leading-relaxed max-w-3xl">
             Our products do not originate from feature development. They emerge from original
@@ -222,7 +222,7 @@ export default function Research() {
         </div>
       </Section>
 
-      <Section rail="Whitepapers" id="whitepapers" className="py-20 border-t border-border">
+      <Section rail="Whitepapers" id="whitepapers" className="pt-14 md:pt-20 pb-20 border-t border-border">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-10">
           <p className="col-span-12 text-muted-foreground leading-relaxed max-w-2xl">
             Open-access preprints, deposited on Zenodo with a permanent DOI. Each is published only
@@ -271,7 +271,7 @@ export default function Research() {
         </div>
       </Section>
 
-      <Section rail="Case Studies" id="case-studies" className="py-20 border-t border-border">
+      <Section rail="Case Studies" id="case-studies" className="pt-14 md:pt-20 pb-20 border-t border-border">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-10">
           <p className="col-span-12 text-muted-foreground leading-relaxed max-w-2xl">
             Reconstructions of real engagements — what was asked, what we built, and what the
@@ -285,7 +285,7 @@ export default function Research() {
         </div>
       </Section>
 
-      <Section rail="Collaboration" className="py-32">
+      <Section rail="Collaboration" className="pt-14 md:pt-20 pb-32">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 items-center border-t border-border pt-16">
           <div className="col-span-12 md:col-span-7">
             <p className="font-display text-3xl md:text-4xl leading-tight mt-6">
@@ -303,7 +303,7 @@ export default function Research() {
         </div>
       </Section>
 
-      <Section rail="The Portfolio" className="py-24 border-t border-border">
+      <Section rail="The Portfolio" className="pt-14 md:pt-20 pb-24 border-t border-border">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
           <p className="col-span-12 md:col-span-7 font-display text-3xl md:text-5xl leading-tight">
             Research becomes platforms. Platforms become products.{" "}

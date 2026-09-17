@@ -907,6 +907,17 @@
   animation-duration: 8s;
 }
 
+/* luminous glow for cover / hero figures */
+.fig-glow {
+  filter: drop-shadow(0 0 18px oklch(0.72 0.1 85 / 0.30))
+    drop-shadow(0 0 52px oklch(0.72 0.1 85 / 0.16));
+  transition: filter 900ms ease;
+}
+.fig-glow:hover {
+  filter: drop-shadow(0 0 26px oklch(0.72 0.1 85 / 0.45))
+    drop-shadow(0 0 78px oklch(0.72 0.1 85 / 0.24));
+}
+
 @media (prefers-reduced-motion: reduce) {
   .mtx-caret {
     animation: none;

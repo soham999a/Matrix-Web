@@ -221,7 +221,10 @@ export function IntakeForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="border border-border p-6 sm:p-10 md:p-12"
+    >
       {/* Header */}
       <div className="mb-10">
         <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-gold">

@@ -170,7 +170,7 @@ export default function Identity() {
       </Section>
 
       {/* I — Marks */}
-      <Section rail="Marks" className="py-32">
+      <Section rail="Marks" className="pt-14 md:pt-20 pb-32">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-16">
           <h2 className="col-span-12 font-display text-5xl md:text-7xl leading-[0.95] tracking-tight">
             Three directions.
@@ -220,7 +220,7 @@ export default function Identity() {
       </Section>
 
       {/* II — Palette */}
-      <Section rail="Palette" variant="paper" className="py-32">
+      <Section rail="Palette" variant="paper" className="pt-14 md:pt-20 pb-32">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-12">
           <h2 className="col-span-12 font-display text-5xl md:text-7xl leading-[0.95] tracking-tight">
             Six values.
@@ -255,7 +255,7 @@ export default function Identity() {
       </Section>
 
       {/* III — Typography */}
-      <Section rail="Typography" className="py-32">
+      <Section rail="Typography" className="pt-14 md:pt-20 pb-32">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-12">
           <h2 className="col-span-12 font-display text-5xl md:text-7xl leading-[0.95] tracking-tight">
             One serif for thought.
@@ -354,7 +354,7 @@ export default function Identity() {
       </Section>
 
       {/* IV — Tokens */}
-      <Section rail="Design Tokens" variant="paper" className="py-32">
+      <Section rail="Design Tokens" variant="paper" className="pt-14 md:pt-20 pb-32">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-12">
           <h2 className="col-span-12 font-display text-5xl md:text-7xl leading-[0.95] tracking-tight">
             The constants
@@ -435,7 +435,7 @@ export default function Identity() {
       </Section>
 
       {/* V — Iconography & Metaphors */}
-      <Section rail="Iconography" className="py-32">
+      <Section rail="Iconography" className="pt-14 md:pt-20 pb-32">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-12">
           <h2 className="col-span-12 font-display text-5xl md:text-7xl leading-[0.95] tracking-tight">
             We do not use icons.
@@ -477,7 +477,7 @@ export default function Identity() {
       </Section>
 
       {/* VI — Closing */}
-      <Section rail="Onward" className="py-32 border-t border-border">
+      <Section rail="Onward" className="pt-14 md:pt-20 pb-32 border-t border-border">
         <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 md:col-span-7">
             <h2 className="font-display text-5xl md:text-7xl tracking-tight leading-[0.95] mt-8">
