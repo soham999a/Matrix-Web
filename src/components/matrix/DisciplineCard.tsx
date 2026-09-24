@@ -33,7 +33,7 @@ export function DisciplineCard({ c, i }: { c: Discipline; i: number }) {
       onMouseLeave={() => {
         if (!isCoarse()) setFlipped(false);
       }}
-      className={`col-span-12 md:col-span-6 xl:col-span-4 group p-8 md:p-10 min-h-[320px] md:min-h-[330px] border-border [perspective:1200px]
+      className={`col-span-12 md:col-span-6 xl:col-span-4 group p-8 md:p-10 min-h-[320px] md:min-h-[330px] border-gold/20 [perspective:1200px]
         border-t
         ${i % 2 === 0 ? "md:border-r" : ""}
         ${i === 8 ? "md:border-b" : ""}

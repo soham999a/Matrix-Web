@@ -406,8 +406,8 @@ export default function CompanyProfile() {
               Applied AI Research Studio
             </p>
           </div>
-          <div className="col-span-12 md:col-span-5 flex justify-end mt-12 md:mt-24">
-            <RhombicDodecahedronFigure className="fig-glow w-full max-w-[26rem] md:max-w-xs xl:max-w-sm text-foreground/80" />
+          <div className="col-span-12 md:col-span-5 flex justify-center mt-12 md:mt-24">
+            <RhombicDodecahedronFigure className="fig-glow w-full max-w-[26rem] md:max-w-md xl:max-w-lg text-foreground/80" />
           </div>
         </div>
         <p className="mt-14 md:mt-16 max-w-2xl text-lg text-foreground/80 leading-relaxed">
