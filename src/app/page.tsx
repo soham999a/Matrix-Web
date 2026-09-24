@@ -318,7 +318,9 @@ export default function Index() {
               <p className="font-display text-2xl md:text-3xl italic text-ink/70 mt-5">{row.k}</p>
               <p className="mt-6 max-w-xl text-ink/75 leading-relaxed">{row.d}</p>
               <p className="mt-6 font-mono text-[10px] tracking-[0.24em] uppercase text-ink/40">
-                Hover the figure · construction before form
+                <span className="sm:hidden">Tap the figure</span>
+                <span className="hidden sm:inline">Hover the figure</span> · construction before
+                form
               </p>
             </div>
           </article>
@@ -530,10 +532,10 @@ export default function Index() {
                 key={d.to}
                 href={d.to}
                 className={[
-                  "group border-t border-l border-border p-6 sm:p-8 min-h-[140px] sm:min-h-[180px] flex flex-col justify-between hover:bg-foreground/[0.03] transition-colors duration-700",
+                  "group border-t border-l border-r border-border p-6 sm:p-8 min-h-[140px] sm:min-h-[180px] flex flex-col justify-between hover:bg-foreground/[0.03] transition-colors duration-700",
                   "col-span-12",
                   i === 0 ? "md:col-span-4" : "md:col-span-2",
-                  i === 4 ? "md:border-r" : "",
+                  i === 4 ? "md:border-r" : "md:border-r-0",
                 ].join(" ")}
               >
                 <div className="font-mono text-[10px] tracking-[0.28em] text-gold">{d.n}</div>

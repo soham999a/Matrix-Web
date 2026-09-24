@@ -216,14 +216,14 @@ export function ContactForm() {
         </div>
       </div>
 
-      <div className="flex items-center justify-between pt-4">
-        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-muted-foreground">
+      <div className="flex flex-col-reverse items-stretch gap-4 pt-4 sm:flex-row sm:items-center sm:justify-between">
+        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-muted-foreground sm:text-left text-center">
           * Required fields
         </p>
         <button
           type="submit"
           disabled={isSubmitting}
-          className="inline-block border border-foreground px-8 py-4 font-mono text-[11px] tracking-[0.28em] uppercase hover:bg-foreground hover:text-background transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          className="inline-block border border-foreground px-8 py-4 font-mono text-[11px] tracking-[0.28em] uppercase hover:bg-foreground hover:text-background transition-colors disabled:opacity-50 disabled:cursor-not-allowed sm:w-auto"
         >
           {isSubmitting ? "Sending..." : "Send Correspondence →"}
         </button>

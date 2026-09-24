@@ -452,14 +452,14 @@ export function IntakeForm() {
       )}
 
       {/* Submit */}
-      <div className="flex items-center justify-between pt-2">
-        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-muted-foreground/50">
+      <div className="flex flex-col-reverse items-stretch gap-4 pt-2 sm:flex-row sm:items-center sm:justify-between">
+        <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-muted-foreground/50 sm:text-left text-center">
           * Required fields
         </p>
         <button
           type="submit"
           disabled={isSubmitting}
-          className="group relative border border-gold/60 px-10 py-4 font-mono text-[11px] tracking-[0.28em] uppercase text-gold hover:bg-gold hover:text-ink transition-all duration-500 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="group relative border border-gold/60 px-10 py-4 font-mono text-[11px] tracking-[0.28em] uppercase text-gold hover:bg-gold hover:text-ink transition-all duration-500 disabled:opacity-50 disabled:cursor-not-allowed sm:w-auto"
         >
           <span className="relative z-10">
             {isSubmitting ? "Assessing…" : "Submit · Intelligence Assessment →"}

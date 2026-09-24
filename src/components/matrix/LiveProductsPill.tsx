@@ -9,7 +9,7 @@ const liveProducts = [
 
 export function LiveProductsPill() {
   return (
-    <aside className="fixed bottom-5 right-5 sm:bottom-8 sm:right-8 z-40">
+    <aside className="live-pill fixed bottom-5 right-5 sm:bottom-8 sm:right-8 z-40">
       <div className="group flex items-center gap-4 border border-gold/60 bg-[#F2EFE9] px-5 py-3 shadow-2xl hover:border-gold transition-colors duration-500">
         <span className="flex items-center gap-2 font-mono text-[10px] tracking-[0.24em] uppercase text-ink whitespace-nowrap">
           <span className="relative flex h-2 w-2">

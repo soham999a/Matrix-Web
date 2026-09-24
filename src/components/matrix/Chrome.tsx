@@ -148,9 +148,9 @@ export function Header() {
       {open && (
         <div
           id="mobile-menu"
-          className="lg:hidden fixed inset-x-0 top-20 bottom-0 z-40 bg-background border-t border-border overflow-y-auto"
+          className="mobile-menu-panel lg:hidden fixed inset-x-0 top-20 bottom-0 z-40 bg-background border-t border-border overflow-y-auto"
         >
-          <nav className="mx-auto max-w-[1440px] px-5 sm:px-8 pb-16" aria-label="Primary mobile">
+          <nav className="mx-auto max-w-[1440px] px-5 sm:px-8" aria-label="Primary mobile">
             <ul>
               {nav.map((n, i) => (
                 <li

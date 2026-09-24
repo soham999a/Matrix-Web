@@ -173,6 +173,63 @@
   html.cursor-none * {
     cursor: none !important;
   }
+
+  /* Mobile / tablet UX — desktop is untouched (fine pointers, ≥ lg) ———— */
+
+  /* iOS Safari zooms any focused input whose font-size < 16px. Inputs are
+     16px already, but selects/labels rendered smaller would trigger the
+     zoom; keep every form control at the 16px floor. */
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+
+  /* Kill the ~300ms tap delay and the grey flash on touched links. */
+  a,
+  button,
+  [role="button"],
+  select,
+  label {
+    touch-action: manipulation;
+  }
+
+  /* In-page anchors (#manifesto, #portfolio, …) must not hide their target
+     under the fixed 80px header when jumped to from a phone. */
+  [id] {
+    scroll-margin-top: 96px;
+  }
+
+  /* Selects inherit the field hairline but ship with no visual affordance
+     once appearance-none is applied — give every closed select a chevron
+     so it reads as a control, not a dead line. */
+  select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path d='M1 1l4 4 4-4' fill='none' stroke='%23C9A14A' stroke-width='1.2'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 2px center;
+    padding-right: 20px;
+  }
+}
+
+/* The Live pill sits at the viewport corner; on notched phones the home
+   indicator / gesture bar can cover it. Lift it above the safe area. */
+@supports (padding: max(0px)) {
+  @media (max-width: 639px) {
+    .live-pill {
+      bottom: max(1.25rem, env(safe-area-inset-bottom));
+    }
+  }
+}
+
+/* The mobile menu overlay must scroll with momentum and respect the home
+   indicator on notched phones. */
+@supports (padding: max(0px)) {
+  @media (max-width: 1023px) {
+    .mobile-menu-panel {
+      padding-bottom: max(4rem, env(safe-area-inset-bottom));
+    }
+  }
 }
 
 /* ——— Typographic utilities ——— */
