@@ -217,10 +217,14 @@ export default function Index() {
       <Section
         rail="Act II · Manifesto"
         id="manifesto"
-        cursorInvert
-        railInvert
-        className="pt-14 md:pt-20 pb-24 md:pb-40 !text-ink"
-        style={{ backgroundColor: "#D4B16C" }}
+        className="pt-14 md:pt-20 pb-24 md:pb-40"
+        style={{
+          backgroundColor: "#0A0A0A",
+          backgroundImage:
+            "linear-gradient(180deg, rgba(8,8,8,0.88) 0%, rgba(8,8,8,0.6) 42%, rgba(8,8,8,0.55) 62%, rgba(8,8,8,0.9) 100%), url('/manifesto-portal.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
       >
         <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 md:col-span-10">
@@ -230,18 +234,18 @@ export default function Index() {
               We build the <span className="italic">conditions</span> under which intelligence can
               be trusted.
             </p>
-            <p className="font-display text-[clamp(1.5rem,3vw,3rem)] leading-[1.3] mt-16 text-ink/70 max-w-5xl">
+            <p className="font-display text-[clamp(1.5rem,3vw,3rem)] leading-[1.3] mt-16 text-fog/75 max-w-5xl">
               An interface is a confession. A protocol is a constitution. A model is a witness. A
               product is a promise kept, quietly, for a century.
             </p>
-            <p className="font-display text-[clamp(1.5rem,3vw,3rem)] leading-[1.3] mt-10 text-ink/70 max-w-5xl">
+            <p className="font-display text-[clamp(1.5rem,3vw,3rem)] leading-[1.3] mt-10 text-fog/75 max-w-5xl">
               We work for the people who will be remembered for what they refused to release — and
               for what they finally did.
             </p>
 
             <div className="mt-20 flex items-center gap-6">
               <span className="rule-gold !w-16" />
-              <span className="font-mono text-[10px] tracking-[0.28em] uppercase text-ink/70">
+              <span className="font-mono text-[10px] tracking-[0.28em] uppercase text-fog/70">
                 Matrix · I · The Quiet Vow
               </span>
             </div>
