@@ -141,29 +141,6 @@ function Framework({
   );
 }
 
-function Horizon({ t, items }: { t: string; items: { b?: string; d: string }[] }) {
-  return (
-    <div className="border-t border-border py-10 grid grid-cols-12 gap-6 sm:gap-8">
-      <div className="col-span-12 md:col-span-3">
-        <h3 className="font-mono text-[11px] tracking-[0.22em] uppercase text-gold">{t}</h3>
-      </div>
-      <div className="col-span-12 md:col-span-9">
-        <ul className="space-y-3">
-          {items.map((item) => (
-            <li
-              key={item.d}
-              className="flex items-baseline gap-3 text-foreground/85 leading-relaxed"
-            >
-              <span className="font-mono text-gold shrink-0">{item.b ? `${item.b} —` : "◌"}</span>
-              <span>{item.d}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
-  );
-}
-
 function CapCard({
   n,
   t,
@@ -1160,12 +1137,9 @@ function BlueprintCol({ t, items }: { t: string; items: { b?: string; d: string 
       <h3 className="font-mono text-[10px] tracking-[0.28em] uppercase text-gold mb-5">{t}</h3>
       <ul className="space-y-3">
         {items.map((item) => (
-          <li
-            key={item.d}
-            className="flex items-baseline gap-3 text-sm text-ink/80 leading-relaxed"
-          >
-            <span className="font-mono text-gold shrink-0">{item.b ? `${item.b} —` : "◌"}</span>
-            <span>{item.d}</span>
+          <li key={item.d} className="text-sm text-ink/80 leading-relaxed">
+            <span className="font-mono text-gold">{item.b ? `${item.b} — ` : "◌ "}</span>
+            {item.d}
           </li>
         ))}
       </ul>
@@ -1182,9 +1156,9 @@ function FrontierHorizon({ t, items }: { t: string; items: { b?: string; d: stri
       <div className="col-span-12 md:col-span-9">
         <ul className="space-y-3">
           {items.map((item) => (
-            <li key={item.d} className="flex items-baseline gap-3 text-ink/80 leading-relaxed">
-              <span className="font-mono text-gold shrink-0">{item.b ? `${item.b} —` : "◌"}</span>
-              <span>{item.d}</span>
+            <li key={item.d} className="text-ink/80 leading-relaxed">
+              <span className="font-mono text-gold">{item.b ? `${item.b} — ` : "◌ "}</span>
+              {item.d}
             </li>
           ))}
         </ul>
