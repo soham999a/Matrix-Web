@@ -1,0 +1,55 @@
+# Matrix
+
+> Matrix (mātṛkā) is an intelligence architecture studio in Kolkata, India. It designs the invisible architecture through which intelligence becomes trustworthy, scalable, and beneficial — original research, strategic counsel, and applied intelligence platforms for enterprises, governments, universities, and society. Products change over time; the capabilities and disciplines are permanent.
+
+Matrix is capability-led, discipline-grounded, and cohered by design. Its work spans nine permanent capabilities grounded in two proprietary research frameworks, CES-QN and KALPA, and delivered through the Omega Model — a shared intelligence infrastructure on which every product is a node.
+
+Key facts:
+- Founded by Somnath Banerjee; based in Kolkata, West Bengal, India.
+- Research is open access: six Zenodo preprints with permanent DOIs, plus a published patent application (QiDS, 202631019776 A).
+- Products include Gravity (multi-agent decision intelligence), QiDS (human intelligence development), ARPS (supply chain intelligence), Humming (operational intelligence), Datum (analytics), Mangrove (sustainability), and PLUTO (frontier research).
+- Contact: system@matrka.net · matrka.net · +91 9875 663 417
+
+## Company
+
+- [Company Profile 2026](https://www.matrka.net/company-profile): The full capability-led profile — vision, nine disciplines, capability framework, discipline footprint, product blueprints, research foundations, roadmap, and partnership model.
+- [About](https://www.matrka.net/about): Who Matrix is and how the studio works.
+- [Identity](https://www.matrka.net/identity): The name mātṛkā and the studio's design constitution.
+- [Manifesto](https://www.matrka.net/manifesto): Twelve theses on intelligence architecture.
+
+## Capabilities
+
+- [Artificial Intelligence](https://www.matrka.net/capabilities/ai): Copilots, agents, evaluation systems, and research into causal and self-evolving intelligence.
+- [Systems](https://www.matrka.net/capabilities/systems): Enterprise architecture, supply-chain intelligence, digital twins, and decision systems on the CES-QN framework.
+- [Engineering](https://www.matrka.net/capabilities/engineering): Platform engineering, SaaS infrastructure, API architecture, container-based hybrid compute.
+- [Consulting](https://www.matrka.net/capabilities/consulting): AI readiness assessment, enterprise transformation, responsible AI governance, technology strategy.
+- [Futurology](https://www.matrka.net/capabilities/futurology): Long-horizon research — NEO post-smartphone intelligence, ambient cognition, civilisation-scale decision systems.
+- [Sustainability](https://www.matrka.net/capabilities/sustainability): ESG measurement, carbon and water intelligence, climate risk, compliance via the Mangrove programme.
+- [Education & Social Innovation](https://www.matrka.net/capabilities/education): KALPA framework, curriculum intelligence, educational equity, NGO capability building.
+- [Quanta](https://www.matrka.net/capabilities/quanta): Quantum-inspired computation (Quantassical), quantum magnetometry, photonic secure communications, NP-hard optimisation.
+- [Design](https://www.matrka.net/capabilities/design): Applied intelligence design — human-centred interaction, information architecture, the design constitution.
+
+## Research
+
+- [Research index](https://www.matrka.net/research): All whitepapers, frameworks, and case studies.
+- [The Quadrant Intelligence Development System (QiDS): A Scientific Architecture for Human Capability Development in the Age of Artificial Intelligence](https://zenodo.org/records/21610823) (26 July 2026)
+- [QiDS: A Scientific Architecture for Human Sensemaking in the Age of Artificial Intelligence](https://zenodo.org/records/20573620) (6 June 2026)
+- [India 2026: A New Developmental Paradigm — Social Innovation, Liberal Arts and the Orange Economy](https://zenodo.org/records/20502701) (2 June 2026)
+- [Autonomous Procurement Systems for Resilient Global Supply Networks](https://zenodo.org/records/20492207) (1 June 2026)
+- [CES-QN: A Causal–Self-Evolving–Quantum-Neuromorphic Framework](https://zenodo.org/records/20364601) (24 May 2026)
+- [The Architecture of Intelligence: From Discrete Agency to Field-Based Cognition](https://zenodo.org/records/22242899) (2 September 2026)
+
+## Products
+
+- [Products](https://www.matrka.net/products): The applied intelligence portfolio — Gravity, QiDS, Humming, ARPS, Mangrove, Datum, and more.
+- [Agency](https://www.matrka.net/agency): Portfolio and consulting engagements.
+
+## Writing
+
+- [Journal](https://www.matrka.net/journal): Essays, field notes, and letters — published when something has settled.
+- [Newsletter](https://www.matrka.net/newsletter): Occasional correspondence.
+- [Contact](https://www.matrka.net/contact): system@matrka.net
+
+## Optional
+
+- [Sitemap](https://www.matrka.net/sitemap.xml): Full route index for crawlers.

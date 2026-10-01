@@ -23,6 +23,20 @@ export const SITE = {
     "Matrix is an intelligence architecture studio for civilization-scale AI — original research, strategic counsel, and applied intelligence platforms built in Kolkata, India.",
 } as const;
 
+/**
+ * Entity consolidation — `sameAs` for the Organization and founder Person.
+ * Paste REAL profile URLs here (one per line) and they flow into every
+ * JSON-LD node that references identity:
+ *   - LinkedIn company page
+ *   - X / Twitter profile
+ *   - YouTube channel
+ *   - GitHub org
+ *   - ORCID / Zenodo author profile
+ *   - Wikidata item (once created)
+ * Leave empty until real URLs exist — an empty array is omitted from JSON-LD.
+ */
+export const SAME_AS: string[] = [];
+
 type PageSeoArgs = {
   path: string;
   title: string | { absolute: string };

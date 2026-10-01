@@ -532,3 +532,140 @@ export const CAPABILITIES: Capability[] = [
 export function getCapability(slug: string): Capability | undefined {
   return CAPABILITIES.find((d) => d.slug === slug);
 }
+
+/**
+ * FAQ content per capability — rendered on each capability page and emitted
+ * as FAQPage JSON-LD. Question-shaped content is what featured snippets,
+ * People Also Ask, Google AI Overviews, and chatbot citations quote, so each
+ * answer stands alone without needing the rest of the page for context.
+ */
+export type CapabilityFaq = { q: string; a: string };
+
+export const CAPABILITY_FAQS: Record<string, CapabilityFaq[]> = {
+  ai: [
+    {
+      q: "What does an applied AI studio build for enterprises?",
+      a: "An applied AI studio builds copilots, custom AI agents, natural-language analytics, decision intelligence, and evaluation systems that earn their place in real operations — designed around the reasoning layer first, with the product interface derived from it.",
+    },
+    {
+      q: "What is decision intelligence?",
+      a: "Decision intelligence is the discipline of designing systems that help organisations make consequential decisions well — combining causal reasoning, multi-agent coordination, and adaptive inference so recommendations can be trusted, audited, and improved over time.",
+    },
+    {
+      q: "Why does Matrix research causal and self-evolving AI?",
+      a: "Because deployed intelligence must eventually explain itself. Matrix pairs commercial AI delivery with research into causal, agentic, and self-evolving intelligence so that what ships today is grounded in what will still be true tomorrow.",
+    },
+  ],
+  systems: [
+    {
+      q: "What is enterprise intelligence architecture?",
+      a: "Enterprise intelligence architecture is the coherent design of platforms, data, and reasoning layers so that ERP, supply-chain, and operational systems share one foundation instead of accumulating disconnected tools. Matrix anchors this work in its CES-QN research framework.",
+    },
+    {
+      q: "What is the CES-QN framework?",
+      a: "CES-QN (Coherence · Systems · Quantified Reasoning) is Matrix's original, conservation-law-grounded systems framework — drawing on Noether's theorem, the Constructal Law, and West's scaling principles — for AI systems that reason with physical and causal integrity. It is published on Zenodo under open access.",
+    },
+    {
+      q: "What is a digital twin in supply-chain intelligence?",
+      a: "A digital twin is a live, simulated model of a supply chain used to test decisions before committing them. Within Matrix's ARPS platform, digital twins combine with risk fusion and graph-based contagion modelling to make procurement resilient.",
+    },
+  ],
+  engineering: [
+    {
+      q: "What does platform engineering for AI products involve?",
+      a: "Platform engineering for AI covers SaaS infrastructure, API architecture, container-based hybrid compute, and the integration of neuromorphic and quantum capabilities — the invisible layer that lets intelligence systems run reliably at enterprise scale.",
+    },
+    {
+      q: "How does Matrix approach SaaS infrastructure?",
+      a: "Matrix builds SaaS platforms on shared reasoning infrastructure — capabilities developed for one product become foundational for the next, an approach formalised in its Omega Model architecture so research investment compounds across the portfolio.",
+    },
+    {
+      q: "Why does an AI studio build its own platform engineering practice?",
+      a: "Because intelligence is only as trustworthy as the substrate it runs on. Owning the engineering practice keeps evaluation, deployment, and operational monitoring inside the same architectural discipline as the models themselves.",
+    },
+  ],
+  consulting: [
+    {
+      q: "What is AI readiness assessment?",
+      a: "An AI readiness assessment measures how prepared an organisation is to deploy intelligence systems — its data availability, decision processes, governance, and operating model — and produces a prioritised, honest path to adoption rather than a generic transformation plan.",
+    },
+    {
+      q: "How is applied AI advisory different from generic IT consulting?",
+      a: "Applied AI advisory is grounded in running research and shipped platforms. Matrix's counsel draws on published frameworks (CES-QN, KALPA) and live products, so recommendations come from built systems, not slideware.",
+    },
+    {
+      q: "Who does Matrix consult for?",
+      a: "Enterprises, governments, universities, and institutions — across AI readiness, enterprise transformation, responsible AI governance, and technology strategy. Consulting is the primary entry point into Matrix's capability framework.",
+    },
+  ],
+  futurology: [
+    {
+      q: "What is post-smartphone intelligence (NEO)?",
+      a: "NEO is Matrix's long-horizon research programme into personal intelligence beyond the smartphone — ambient, context-aware systems where computing recedes into the environment instead of demanding a screen.",
+    },
+    {
+      q: "What does a futurology practice actually do?",
+      a: "It researches civilisation-scale decision systems, ambient cognition, and post-agentic intelligence — then translates those horizons into engineering choices that remain correct as conditions change. Matrix publishes this work as open-access preprints.",
+    },
+    {
+      q: "What is field-based cognition?",
+      a: "Field-based cognition is the research thesis that intelligence systems will move beyond discrete agents toward ambient, field-based architectures — where planning becomes traversal and the boundary between agent and environment dissolves. Matrix's 2026 preprint 'The Architecture of Intelligence' formalises the argument.",
+    },
+  ],
+  sustainability: [
+    {
+      q: "What is sustainability intelligence?",
+      a: "Sustainability intelligence applies AI to ESG measurement, climate risk, water intelligence, and compliance reporting — turning growing regulatory complexity into decision-grade, auditable intelligence.",
+    },
+    {
+      q: "How is AI used for climate risk modelling?",
+      a: "AI models climate risk by fusing multi-source data into scenario analysis and forward-looking risk estimates. Matrix's Mangrove platform researches carbon and water intelligence with the same evaluation rigour applied to its enterprise systems.",
+    },
+    {
+      q: "Why does ESG reporting need intelligence systems?",
+      a: "Because compliance obligations now outpace manual measurement. Intelligence systems make ESG data continuous, comparable, and decision-ready — the difference between reporting the past and managing the future.",
+    },
+  ],
+  education: [
+    {
+      q: "What is holistic human intelligence development?",
+      a: "Holistic human intelligence development develops capability across cognitive, emotional, social, and adaptive dimensions — IQ, EQ, SQ, and AQ together — rather than optimising test scores in isolation. Matrix's QiDS platform formalises this as an assessment-to-intervention lifecycle.",
+    },
+    {
+      q: "What is the KALPA framework?",
+      a: "KALPA (Knowledge · Arts · Liberal Practice) is Matrix's systemic framework for sustainable civilisational intelligence design — bridging technology with culture, ethics, creativity, and human flourishing. It grounds the studio's education and social innovation work.",
+    },
+    {
+      q: "How does AI improve curriculum design?",
+      a: "Curriculum intelligence uses AI to adapt learning paths to individual profiles while keeping human judgement in charge of what is worth learning — applied by Matrix to educational equity and institutional capability building through the KALPA framework.",
+    },
+  ],
+  quanta: [
+    {
+      q: "What is quantum-inspired computation?",
+      a: "Quantum-inspired computation applies quantum-mechanical principles to classical hardware to attack NP-hard optimisation problems. Matrix's Quantassical research develops quantum-classical hybrid methods that run on today's infrastructure.",
+    },
+    {
+      q: "What is quantum magnetometry used for?",
+      a: "NV-diamond quantum magnetometry senses magnetic fields with extreme precision — the foundation of Matrix's D1 research programme, with applications from materials inspection to biomedical sensing.",
+    },
+    {
+      q: "Why does an applied AI studio research quantum systems?",
+      a: "Because the next intelligence layer will need new substrates. Matrix's Quanta capability spans quantum-inspired computation, photonic secure communications, and neuromorphic integration — research-stage work that informs today's architecture decisions.",
+    },
+  ],
+  design: [
+    {
+      q: "What is applied intelligence design?",
+      a: "Applied intelligence design is the discipline that makes complex AI usable and trustworthy — human-centred interaction, information architecture, and visual identity for systems whose output people must be able to depend on.",
+    },
+    {
+      q: "What is a design constitution?",
+      a: "Matrix's design constitution is a binding visual operating system applied across every product and publication: Ink and Bone as ground, gold as the only permitted emphasis, a four-colour primary palette, and a documented typographic discipline.",
+    },
+    {
+      q: "Why does trustworthy AI need design?",
+      a: "Because trust is earned at the interface. A system that cannot be read, questioned, or understood will not be relied on — design is how intelligence becomes legible to the people who depend on it.",
+    },
+  ],
+};

@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { PageShell, Section } from "@/components/matrix/Chrome";
 import { pageSeo } from "@/lib/seo";
 import { SITE } from "@/lib/seo";
-import { CAPABILITIES, getCapability } from "@/lib/capabilities";
+import { CAPABILITIES, CAPABILITY_FAQS, getCapability } from "@/lib/capabilities";
 import { JsonLd } from "@/components/matrix/JsonLd";
 
 export function generateStaticParams() {
@@ -38,6 +38,7 @@ export default async function CapabilityPage({ params }: { params: Promise<{ slu
 
   const others = CAPABILITIES.filter((d) => d.slug !== domain.slug);
   const url = `${SITE.url}/capabilities/${domain.slug}`;
+  const faqs = CAPABILITY_FAQS[domain.slug] ?? [];
 
   return (
     <PageShell>
@@ -82,6 +83,19 @@ export default async function CapabilityPage({ params }: { params: Promise<{ slu
               availableLanguage: "en",
             },
           },
+          ...(faqs.length > 0
+            ? [
+                {
+                  "@context": "https://schema.org",
+                  "@type": "FAQPage",
+                  mainEntity: faqs.map((f) => ({
+                    "@type": "Question",
+                    name: f.q,
+                    acceptedAnswer: { "@type": "Answer", text: f.a },
+                  })),
+                },
+              ]
+            : []),
         ]}
       />
       <Section rail={`Capability ${domain.numeral}`} className="pt-32 pb-20">
@@ -130,6 +144,31 @@ export default async function CapabilityPage({ params }: { params: Promise<{ slu
           ))}
         </div>
       </Section>
+
+      {faqs.length > 0 && (
+        <Section rail="FAQ" className="pt-14 md:pt-20 pb-20 border-t border-border">
+          <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-10">
+            <h2 className="col-span-12 font-display text-4xl md:text-6xl tracking-tight leading-[1.05]">
+              Questions, <span className="italic text-muted-foreground">answered.</span>
+            </h2>
+          </div>
+          <div className="border-t border-border">
+            {faqs.map((f) => (
+              <div
+                key={f.q}
+                className="grid grid-cols-12 gap-6 sm:gap-8 py-10 border-b border-border"
+              >
+                <h3 className="col-span-12 md:col-span-5 font-display text-2xl md:text-3xl leading-tight tracking-tight">
+                  {f.q}
+                </h3>
+                <p className="col-span-12 md:col-span-7 text-foreground/80 leading-relaxed">
+                  {f.a}
+                </p>
+              </div>
+            ))}
+          </div>
+        </Section>
+      )}
 
       <Section rail="Adjacent" className="pt-14 md:pt-20 pb-24 border-t border-border">
         <div className="grid grid-cols-12 gap-6 sm:gap-8">

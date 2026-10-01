@@ -4,6 +4,7 @@ import { IBM_Plex_Mono, Instrument_Serif, Inter } from "next/font/google";
 
 import "./globals.css";
 import { GoogleAnalytics } from "@/components/matrix/Analytics";
+import { SAME_AS } from "@/lib/seo";
 
 const fontInter = Inter({
   subsets: ["latin"],
@@ -154,11 +155,7 @@ const orgJsonLd = {
         areaServed: "Worldwide",
         availableLanguage: ["en", "bn"],
       },
-      founder: {
-        "@type": "Person",
-        name: "Somnath Banerjee",
-        jobTitle: "Founder",
-      },
+      founder: { "@id": `${SITE_URL}/#founder` },
       knowsAbout: [
         "Artificial intelligence",
         "Intelligence architecture",
@@ -170,7 +167,17 @@ const orgJsonLd = {
         "Quantum computing",
         "Sustainability intelligence",
       ],
-      sameAs: [],
+      ...(SAME_AS.length > 0 ? { sameAs: SAME_AS } : {}),
+    },
+    {
+      "@type": "Person",
+      "@id": `${SITE_URL}/#founder`,
+      name: "Somnath Banerjee",
+      jobTitle: "Founder",
+      worksFor: { "@id": `${SITE_URL}/#organization` },
+      email: "system@matrka.net",
+      url: `${SITE_URL}/about`,
+      ...(SAME_AS.length > 0 ? { sameAs: SAME_AS } : {}),
     },
     {
       "@type": "WebSite",
