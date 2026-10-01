@@ -13,6 +13,13 @@ const ROUTES: RouteEntry[] = [
   { path: "", priority: 1.0, changeFrequency: "weekly", lastModified: "2026-08-12" },
   { path: "/capabilities", priority: 0.9, changeFrequency: "monthly", lastModified: "2026-08-12" },
   { path: "/products", priority: 0.9, changeFrequency: "monthly", lastModified: "2026-08-12" },
+  {
+    path: "/company-profile",
+    priority: 0.8,
+    changeFrequency: "monthly",
+    lastModified: "2026-10-01",
+  },
+  { path: "/contact", priority: 0.6, changeFrequency: "yearly", lastModified: "2026-10-01" },
   { path: "/research", priority: 0.8, changeFrequency: "monthly", lastModified: "2026-08-12" },
   { path: "/agency", priority: 0.7, changeFrequency: "monthly", lastModified: "2026-08-12" },
   { path: "/about", priority: 0.6, changeFrequency: "monthly", lastModified: "2026-08-12" },

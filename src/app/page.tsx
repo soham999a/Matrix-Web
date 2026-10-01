@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { PageShell, Section } from "@/components/matrix/Chrome";
-import { pageSeo } from "@/lib/seo";
+import { pageSeo, SITE } from "@/lib/seo";
+import { JsonLd } from "@/components/matrix/JsonLd";
 import { NetworkIntelligence } from "@/components/matrix/NetworkIntelligence";
 import {
   RecursiveIntelligence,
@@ -38,9 +39,44 @@ export const metadata = pageSeo({
   ],
 });
 
+/**
+ * Definitional questions — written to be quotable verbatim by featured
+ * snippets, People Also Ask, AI Overviews, and chatbot answers. Each answer
+ * stands alone without the rest of the page for context.
+ */
+const HOME_FAQS = [
+  {
+    q: "What is Matrix (mātṛkā)?",
+    a: "Matrix (mātṛkā) is an intelligence architecture studio based in Kolkata, India, founded by Somnath Banerjee. It designs the invisible architecture through which intelligence becomes trustworthy, scalable, and beneficial — original research, strategic counsel, and applied intelligence platforms for enterprises, governments, universities, and society.",
+  },
+  {
+    q: "What is intelligence architecture?",
+    a: "Intelligence architecture is the discipline of designing the reasoning, knowledge, and platform layers beneath AI systems so that intelligence becomes dependable infrastructure rather than a collection of features. Matrix practices it through the Omega Model and its CES-QN and KALPA research frameworks.",
+  },
+  {
+    q: "What does an applied intelligence firm do?",
+    a: "An applied intelligence firm turns frontier AI research into dependable systems — copilots, decision intelligence, supply-chain intelligence, analytics, and sustainability platforms — grounded in published research rather than feature development.",
+  },
+  {
+    q: "Where is Matrix based, and who does it work with?",
+    a: "Matrix is based in Kolkata, West Bengal, India, and works with enterprises, governments, universities, and research institutions worldwide. Correspondence: system@matrka.net.",
+  },
+];
+
 export default function Index() {
   return (
     <PageShell>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: HOME_FAQS.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }}
+      />
       {/* ————— ACT I · COVER ————— */}
       <Section
         rail="Act I · Cover"
@@ -508,6 +544,28 @@ export default function Index() {
               </Link>
             </Magnetic>
           </div>
+        </div>
+      </Section>
+
+      {/* ————— FAQ · DEFINITIONS ————— */}
+      <Section rail="FAQ" className="pt-14 md:pt-20 pb-20 md:pb-28 border-t border-border">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-10">
+          <h2 className="col-span-12 font-display text-4xl md:text-6xl tracking-tight leading-[1.05]">
+            Questions, <span className="italic text-muted-foreground">answered.</span>
+          </h2>
+        </div>
+        <div className="border-t border-border">
+          {HOME_FAQS.map((f) => (
+            <div
+              key={f.q}
+              className="grid grid-cols-12 gap-6 sm:gap-8 py-10 border-b border-border"
+            >
+              <h3 className="col-span-12 md:col-span-5 font-display text-2xl md:text-3xl leading-tight tracking-tight">
+                {f.q}
+              </h3>
+              <p className="col-span-12 md:col-span-7 text-foreground/80 leading-relaxed">{f.a}</p>
+            </div>
+          ))}
         </div>
       </Section>
 

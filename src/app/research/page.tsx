@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { PageShell, Section } from "@/components/matrix/Chrome";
-import { pageSeo } from "@/lib/seo";
+import { pageSeo, SITE } from "@/lib/seo";
+import { JsonLd } from "@/components/matrix/JsonLd";
 import { Observatory } from "@/components/matrix/Metaphors";
 
 export const metadata = pageSeo({
@@ -90,6 +91,28 @@ const papers = [
 export default function Research() {
   return (
     <PageShell>
+      {/*
+       * Each open-access preprint as a ScholarlyArticle, authored by the
+       * founder and published by the organization — this is what lets search
+       * engines treat Matrix as the canonical source for CES-QN, KALPA, and
+       * QiDS. `new Date(p.d)` parses the display strings (e.g. "26 July 2026")
+       * into ISO dates for schema.
+       */}
+      <JsonLd
+        data={papers.map((p) => ({
+          "@context": "https://schema.org",
+          "@type": "ScholarlyArticle",
+          headline: p.t,
+          name: p.t,
+          datePublished: new Date(p.d).toISOString(),
+          author: { "@id": `${SITE.url}/#founder` },
+          publisher: { "@id": `${SITE.url}/#organization` },
+          url: p.href,
+          sameAs: p.href,
+          inLanguage: "en",
+          isAccessibleForFree: true,
+        }))}
+      />
       <Section rail="Practice I · Research" className="pt-32 pb-20">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
           <div className="col-span-12 md:col-span-7">

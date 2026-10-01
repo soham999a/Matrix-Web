@@ -283,14 +283,9 @@ export default function Products() {
               },
             })),
           },
-          {
-            "@context": "https://schema.org",
-            "@type": "Person",
-            name: "Somnath Banerjee",
-            jobTitle: "Founder, Matrix",
-            url: SITE.url,
-            worksFor: { "@id": `${SITE.url}/#organization` },
-          },
+          // Reference the canonical Person node defined in the root layout
+          // rather than re-declaring the founder as a separate entity.
+          { "@id": `${SITE.url}/#founder` },
         ]}
       />
 

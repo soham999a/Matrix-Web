@@ -148,6 +148,17 @@ const orgJsonLd = {
         addressRegion: "West Bengal",
         addressCountry: "IN",
       },
+      // City-level location (Kolkata centre) for local-search signals.
+      location: {
+        "@type": "Place",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Kolkata",
+          addressRegion: "West Bengal",
+          addressCountry: "IN",
+        },
+        geo: { "@type": "GeoCoordinates", latitude: 22.5726, longitude: 88.3639 },
+      },
       contactPoint: {
         "@type": "ContactPoint",
         email: "system@matrka.net",

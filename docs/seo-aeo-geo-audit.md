@@ -79,9 +79,29 @@ LCP/INP/CLS numbers (needs a live run — not doable from the repo).
 
 ## 6. Open roadmap (P1/P2)
 
-- SoftwareApplication schema on `/products`; Article schema when journal
-  posts ship (with author + date).
+- ~~SoftwareApplication schema on `/products`~~ — already present (ItemList
+  of SoftwareApplication); no work was needed.
+- Article schema when journal posts ship (with author + date).
 - "Related capability" internal links between the nine discipline pages.
-- Alt-text pass on decorative images; `LocalBusiness` + geo coordinates.
-- HowTo schema on the consulting process; definitional snippet blocks on
-  the home page ("What is intelligence architecture?").
+- HowTo schema on the consulting process.
+
+## 7. Round 2 — same-day second batch
+
+1. **Sitemap fixed** — `/company-profile` (the largest content page!) and
+   `/contact` were missing from `sitemap.xml`; both added. Now 25 URLs.
+2. **ScholarlyArticle schema on `/research`** — all six Zenodo preprints
+   emitted as ScholarlyArticle nodes authored by `/#founder` and published
+   by `/#organization`, with ISO dates, DOI URLs, and open-access flags.
+   This is what makes Matrix the canonical entity for CES-QN / KALPA / QiDS
+   in search and AI answers.
+3. **Homepage FAQ + FAQPage schema** — four definitional Q&As ("What is
+   Matrix?", "What is intelligence architecture?", "What does an applied
+   intelligence firm do?", "Where is Matrix based?") rendered on the home
+   page and emitted as FAQPage JSON-LD — direct featured-snippet bait.
+4. **Geo signals** — Organization gained a `location` Place with Kolkata
+   GeoCoordinates for local search.
+5. **Entity hygiene** — products page's duplicate Person node replaced with
+   a reference to the canonical `/#founder` node.
+6. **Wikidata draft** — ready-to-submit item spec at
+   `docs/wikidata-matrix.md` (labels, statements, references, notability
+   guidance). Submission requires a Wikidata account — team action.
