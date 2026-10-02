@@ -64,7 +64,7 @@ export function DisciplineCard({ c, i }: { c: Discipline; i: number }) {
               alt={c.t}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1280px) 33vw, 25vw"
-              className="object-cover"
+              className="object-contain"
             />
           ) : (
             <div className="flex h-full flex-col justify-between">
