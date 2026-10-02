@@ -112,6 +112,9 @@ export function ContactForm() {
           <input
             id="name"
             type="text"
+            autoComplete="name"
+            required
+            aria-invalid={!!errors.name}
             {...register("name")}
             className="w-full bg-transparent border-b border-foreground/30 py-3 text-base placeholder:text-foreground/30 focus:outline-none focus:border-gold transition-colors"
             placeholder="Your full name"
@@ -129,6 +132,9 @@ export function ContactForm() {
           <input
             id="email"
             type="email"
+            autoComplete="email"
+            required
+            aria-invalid={!!errors.email}
             {...register("email")}
             className="w-full bg-transparent border-b border-foreground/30 py-3 text-base placeholder:text-foreground/30 focus:outline-none focus:border-gold transition-colors"
             placeholder="your@correspondence"
@@ -146,6 +152,7 @@ export function ContactForm() {
           <input
             id="organisation"
             type="text"
+            autoComplete="organization"
             {...register("organisation")}
             className="w-full bg-transparent border-b border-foreground/30 py-3 text-base placeholder:text-foreground/30 focus:outline-none focus:border-gold transition-colors"
             placeholder="Your organisation (optional)"
@@ -164,6 +171,8 @@ export function ContactForm() {
           </label>
           <select
             id="engagement"
+            required
+            aria-invalid={!!errors.engagement}
             {...register("engagement")}
             className="w-full bg-transparent border-b border-foreground/30 py-3 text-base focus:outline-none focus:border-gold transition-colors appearance-none cursor-pointer"
           >
@@ -191,6 +200,8 @@ export function ContactForm() {
           <input
             id="subject"
             type="text"
+            required
+            aria-invalid={!!errors.subject}
             {...register("subject")}
             className="w-full bg-transparent border-b border-foreground/30 py-3 text-base placeholder:text-foreground/30 focus:outline-none focus:border-gold transition-colors"
             placeholder="Brief subject of your enquiry"
@@ -207,6 +218,8 @@ export function ContactForm() {
           </label>
           <textarea
             id="message"
+            required
+            aria-invalid={!!errors.message}
             {...register("message")}
             rows={6}
             className="w-full bg-transparent border-b border-foreground/30 py-3 text-base placeholder:text-foreground/30 focus:outline-none focus:border-gold transition-colors resize-none"

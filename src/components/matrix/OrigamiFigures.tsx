@@ -296,7 +296,7 @@ export function NautilusFigure({ className }: Props) {
         />
         {/* orbiting node riding the outer arm */}
         <g className="fig-rotate">
-          <polyline points={outer} strokeDasharray="2 5" strokeOpacity="0.3" />
+          <path d={outer} strokeDasharray="2 5" strokeOpacity="0.3" />
           <circle
             cx={cx + rmax}
             cy={cy}

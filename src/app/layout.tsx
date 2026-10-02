@@ -136,8 +136,8 @@ const orgJsonLd = {
       logo: {
         "@type": "ImageObject",
         url: `${SITE_URL}/matrix-new-logo.png`,
-        width: 1774,
-        height: 887,
+        width: 960,
+        height: 633,
       },
       email: "system@matrka.net",
       telephone: "+91-9875663417",

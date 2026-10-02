@@ -119,7 +119,7 @@ export async function MatrixOgImage({ eyebrow, title, subtitle }: OgProps): Prom
         }}
       >
         {logo ? (
-          <img src={logo} alt="mātṛkā" width={430} height={215} style={{ display: "block" }} />
+          <img src={logo} alt="mātṛkā" width={400} height={264} style={{ display: "block" }} />
         ) : (
           <span style={{ fontSize: 40, letterSpacing: 12, fontFamily: mono }}>
             M · A · T · R · K · A

@@ -257,7 +257,7 @@ export default function Index() {
         style={{
           backgroundColor: "#0A0A0A",
           backgroundImage:
-            "linear-gradient(180deg, rgba(8,8,8,0.88) 0%, rgba(8,8,8,0.6) 42%, rgba(8,8,8,0.55) 62%, rgba(8,8,8,0.9) 100%), url('/manifesto-portal.png')",
+            "linear-gradient(180deg, rgba(8,8,8,0.88) 0%, rgba(8,8,8,0.6) 42%, rgba(8,8,8,0.55) 62%, rgba(8,8,8,0.9) 100%), url('/manifesto-portal.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
