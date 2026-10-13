@@ -85,8 +85,8 @@ export default function Index() {
         {/* hero background — looping neural animation + ambient field */}
         <div aria-hidden="true" className="absolute inset-0 -z-10 overflow-hidden">
           <LazyVideo
-            poster="/neuron-hero-poster.jpg"
-            src="/neuron-hero-720p.mp4"
+            poster="/hero-background-poster.jpg"
+            src="/hero-background.mp4"
             className="h-full w-full"
           />
           <HeroNetwork className="pointer-events-none absolute inset-0 h-full w-full opacity-80" />
@@ -101,11 +101,11 @@ export default function Index() {
         </div>
 
         <div className="flex-1 grid grid-cols-12 gap-6 sm:gap-8 items-center mt-12">
-          <div className="col-span-12 lg:col-span-7 rise">
+          <div className="col-span-12 lg:col-span-7 rise text-left">
             <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-muted-foreground mb-8">
               A Studio for Civilization-Scale Intelligence
             </div>
-            <h1 className="font-display text-[clamp(2.75rem,8vw,8rem)] leading-[0.92] tracking-[-0.02em]">
+            <h1 className="font-display text-left text-[clamp(2.75rem,8vw,8rem)] leading-[0.92] tracking-[-0.02em]">
               <Reveal>The invisible</Reveal>
               <br />
               <Reveal className="italic text-gold" delay={110}>
@@ -114,12 +114,6 @@ export default function Index() {
               <br />
               <Reveal delay={220}>behind the future.</Reveal>
             </h1>
-          </div>
-          <div className="col-span-12 lg:col-span-5 flex justify-center lg:justify-end -mt-12 sm:-mt-16 lg:mt-0">
-            <NetworkIntelligence
-              size={340}
-              className="w-full h-auto max-w-[340px] text-foreground"
-            />
           </div>
         </div>
 
@@ -164,37 +158,45 @@ export default function Index() {
           </div>
         </div>
 
-        {/* floating identity statements */}
-        <ul className="col-span-12 lg:w-7/12 lg:pl-8 mb-24 space-y-4 md:space-y-5">
-          {[
-            { n: "i.", t: "Cohered by Design." },
-            { n: "ii.", t: "The Real Revolution is the evolution of consciousness." },
-            {
-              n: "iii.",
-              t: "The end of science is not to prove a theory — but to improve mankind.",
-            },
-            {
-              n: "iv.",
-              t: "An intelligence architecture firm designing the next intelligence layer of civilization.",
-            },
-            { n: "v.", t: "Not a company. A culture. A phenomenon." },
-          ].map((l, i) => (
-            <li key={l.n} className="grid grid-cols-12 gap-6 items-baseline">
-              <span
-                className="col-span-2 md:col-span-1 font-mono text-[10px] tracking-[0.28em] uppercase text-gold float-line"
-                style={{ animationDelay: `${i * 0.9}s` }}
-              >
-                {l.n}
-              </span>
-              <p
-                className="col-span-10 md:col-span-11 font-display text-2xl md:text-4xl leading-[1.2] tracking-tight text-foreground/90 float-line"
-                style={{ animationDelay: `${i * 0.9}s` }}
-              >
-                {l.t}
-              </p>
-            </li>
-          ))}
-        </ul>
+        {/* floating identity statements + graph metaphor */}
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-24 items-center">
+          <ul className="col-span-12 lg:col-span-7 space-y-4 md:space-y-5">
+            {[
+              { n: "i.", t: "Cohered by Design." },
+              { n: "ii.", t: "The Real Revolution is the evolution of consciousness." },
+              {
+                n: "iii.",
+                t: "The end of science is not to prove a theory — but to improve mankind.",
+              },
+              {
+                n: "iv.",
+                t: "An intelligence architecture firm designing the next intelligence layer of civilization.",
+              },
+              { n: "v.", t: "Not a company. A culture. A phenomenon." },
+            ].map((l, i) => (
+              <li key={l.n} className="grid grid-cols-12 gap-6 items-baseline">
+                <span
+                  className="col-span-2 md:col-span-1 font-mono text-[10px] tracking-[0.28em] uppercase text-gold float-line"
+                  style={{ animationDelay: `${i * 0.9}s` }}
+                >
+                  {l.n}
+                </span>
+                <p
+                  className="col-span-10 md:col-span-11 font-display text-2xl md:text-4xl leading-[1.2] tracking-tight text-foreground/90 float-line"
+                  style={{ animationDelay: `${i * 0.9}s` }}
+                >
+                  {l.t}
+                </p>
+              </li>
+            ))}
+          </ul>
+          <div className="col-span-12 lg:col-span-5 flex justify-center lg:justify-end">
+            <NetworkIntelligence
+              size={380}
+              className="w-full max-w-[420px] h-auto text-foreground/80 fig-glow breathe"
+            />
+          </div>
+        </div>
 
         {/* Vision / Mission / Invisible Architecture grid */}
         <div className="grid grid-cols-12 border-t border-l border-r border-border bg-card">

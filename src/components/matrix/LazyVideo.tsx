@@ -39,6 +39,9 @@ export function LazyVideo({ poster, src, type = "video/mp4", className = "" }: P
           muted
           loop
           playsInline
+          preload="none"
+          disablePictureInPicture
+          aria-hidden="true"
           poster={poster}
           className="h-full w-full object-cover opacity-40"
         >

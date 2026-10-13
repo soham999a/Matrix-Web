@@ -27,6 +27,14 @@ const nextConfig: NextConfig = {
         ],
       },
       {
+        source: "/hero-background.mp4",
+        headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }],
+      },
+      {
+        source: "/hero-background-poster.jpg",
+        headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }],
+      },
+      {
         source: "/neuron-hero-720p.mp4",
         headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }],
       },
