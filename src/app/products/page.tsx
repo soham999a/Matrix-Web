@@ -171,7 +171,7 @@ const portfolio = [
     dh: "/capabilities/design",
     caps: [],
     apps: [
-      { name: "Hertz", href: "https://hertz.matrka.net/" },
+      { name: "Hertz", href: "https://fm.matrka.net/" },
       { name: "Resonance", href: "https://resonance.matrka.net/" },
       { name: "Sonata", href: "https://sonata.matrka.net/" },
       { name: "AlgoVista", href: "https://algovista.matrka.net/" },
