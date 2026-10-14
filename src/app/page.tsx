@@ -89,8 +89,8 @@ export default function Index() {
             src="/hero-background.mp4"
             className="h-full w-full"
           />
-          <HeroNetwork className="pointer-events-none absolute inset-0 h-full w-full opacity-80" />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/30 to-background" />
+          <HeroNetwork className="pointer-events-none absolute inset-0 h-full w-full opacity-50" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/45 via-background/15 to-background/85" />
         </div>
         {/* corner registration marks */}
         <div className="absolute top-24 left-5 sm:left-8 lg:left-14 font-mono text-[10px] tracking-[0.28em] uppercase text-gold pointer-events-none">
@@ -101,7 +101,7 @@ export default function Index() {
         </div>
 
         <div className="flex-1 grid grid-cols-12 gap-6 sm:gap-8 items-center mt-12">
-          <div className="col-span-12 lg:col-span-7 rise text-left">
+          <div className="col-span-12 lg:col-span-7 rise text-left [text-shadow:0_2px_24px_rgba(0,0,0,0.7)]">
             <div className="font-mono text-[10px] tracking-[0.32em] uppercase text-muted-foreground mb-8">
               A Studio for Civilization-Scale Intelligence
             </div>

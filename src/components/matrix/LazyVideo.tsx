@@ -43,7 +43,7 @@ export function LazyVideo({ poster, src, type = "video/mp4", className = "" }: P
           disablePictureInPicture
           aria-hidden="true"
           poster={poster}
-          className="h-full w-full object-cover opacity-40"
+          className="h-full w-full object-cover opacity-70"
         >
           <source src={src} type={type} />
         </video>
