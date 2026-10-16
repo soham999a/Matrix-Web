@@ -1,16 +1,16 @@
-import { MatrixOgImage } from "@/lib/og-image";
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 
 export const alt =
-  "MATRIX — Intelligence Architecture Studio. The invisible architecture behind the future.";
+  "Matrix homepage hero — dark neural field behind The invisible architecture behind the future.";
 
-export default function Image() {
-  return MatrixOgImage({
-    eyebrow: "M · A · T · R · I · X",
-    title: "The invisible architecture behind the future.",
-    subtitle: "AI · Research · Systems · Design · Quantum — Kolkata",
+export const size = { width: 1280, height: 720 };
+
+export const contentType = "image/jpeg";
+
+export default async function Image() {
+  const data = await readFile(join(process.cwd(), "public", "hero-background-poster.jpg"));
+  return new Response(new Uint8Array(data), {
+    headers: { "Content-Type": "image/jpeg" },
   });
 }
-
-export const size = { width: 1200, height: 630 };
-
-export const contentType = "image/png";
