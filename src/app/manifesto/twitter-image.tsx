@@ -9,3 +9,7 @@ export default function Image() {
     subtitle: "Design · Complexity · Civilization",
   });
 }
+
+export const size = { width: 1200, height: 630 };
+
+export const contentType = "image/png";

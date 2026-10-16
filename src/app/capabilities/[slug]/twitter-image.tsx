@@ -14,3 +14,7 @@ export default async function CapabilityTwitterImage({ params }: { params: Param
     subtitle: capability?.tagline,
   });
 }
+
+export const size = { width: 1200, height: 630 };
+
+export const contentType = "image/png";

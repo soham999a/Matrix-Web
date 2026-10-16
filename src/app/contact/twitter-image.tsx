@@ -9,3 +9,7 @@ export default function Image() {
     subtitle: "A small number of engagements each year",
   });
 }
+
+export const size = { width: 1200, height: 630 };
+
+export const contentType = "image/png";
