@@ -219,11 +219,16 @@ export function Footer() {
       <div className="border-t border-ink/10 bg-fog text-ink">
         <div className="mx-auto max-w-[1440px] px-5 sm:px-8 lg:px-14 py-16 md:py-20 grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 md:col-span-3">
-            <LogoLockup
-              height={38}
-              className="h-[30px]! sm:h-[34px]! lg:h-[38px]!"
-              taglineClassName="!text-[#B8924A]"
-            />
+            <div className="inline-block bg-ink px-3 pt-2 pb-1">
+              <LogoLockup
+                height={38}
+                showTagline={false}
+                className="h-[30px]! sm:h-[34px]! lg:h-[38px]!"
+              />
+            </div>
+            <p className="mt-2 font-mono text-[9px] tracking-[0.3em] uppercase text-[#B8924A]">
+              Evolution of Intelligence
+            </p>
             <p className="font-display text-2xl leading-tight mt-8 max-w-xs text-ink">
               Designing intelligence.
               <br />
