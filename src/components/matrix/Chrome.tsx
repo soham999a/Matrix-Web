@@ -8,6 +8,7 @@ import { Cursor } from "./Cursor";
 import { Magnetic } from "./Magnetic";
 import { ScrollProgress } from "./ScrollProgress";
 import { LogoLockup } from "./Mark";
+import { TypeTagline } from "./TypeTagline";
 
 const nav = [
   { to: "/research", label: "Research" },
@@ -226,9 +227,11 @@ export function Footer() {
                 className="h-[30px]! sm:h-[34px]! lg:h-[38px]!"
               />
             </div>
-            <p className="mt-2 font-mono text-[9px] tracking-[0.3em] uppercase text-[#B8924A]">
-              Evolution of Intelligence
-            </p>
+            <TypeTagline
+              first="Evolution of"
+              second="Intelligence"
+              className="mt-2 !items-start !text-[#B8924A]"
+            />
             <p className="font-display text-2xl leading-tight mt-8 max-w-xs text-ink">
               Designing intelligence.
               <br />
