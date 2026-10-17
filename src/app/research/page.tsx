@@ -46,6 +46,14 @@ const questions = [
 
 const papers = [
   {
+    t: "GRAVITY: A Problem-State-Driven Adaptive Computational Intelligence Fabric",
+    k: "Systems",
+    dh: "/capabilities/systems",
+    d: "12 October 2026",
+    href: "https://zenodo.org/records/23302918",
+    authors: ["Somnath Banerjee", "Soham Das"],
+  },
+  {
     t: "The Quadrant Intelligence Development System (QiDS): A Scientific Architecture for Human Capability Development in the Age of Artificial Intelligence",
     k: "Human Intelligence",
     dh: "/capabilities/design",
@@ -105,7 +113,13 @@ export default function Research() {
           headline: p.t,
           name: p.t,
           datePublished: new Date(p.d).toISOString(),
-          author: { "@id": `${SITE.url}/#founder` },
+          author: p.authors
+            ? p.authors.map((a) =>
+                a === SITE.founder
+                  ? { "@id": `${SITE.url}/#founder` }
+                  : { "@type": "Person", name: a },
+              )
+            : { "@id": `${SITE.url}/#founder` },
           publisher: { "@id": `${SITE.url}/#organization` },
           url: p.href,
           sameAs: p.href,

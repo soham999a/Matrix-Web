@@ -32,6 +32,7 @@ Key facts:
 ## Research
 
 - [Research index](https://www.matrka.net/research): All whitepapers, frameworks, and case studies.
+- [GRAVITY: A Problem-State-Driven Adaptive Computational Intelligence Fabric](https://zenodo.org/records/23302918) (12 October 2026)
 - [The Quadrant Intelligence Development System (QiDS): A Scientific Architecture for Human Capability Development in the Age of Artificial Intelligence](https://zenodo.org/records/21610823) (26 July 2026)
 - [QiDS: A Scientific Architecture for Human Sensemaking in the Age of Artificial Intelligence](https://zenodo.org/records/20573620) (6 June 2026)
 - [India 2026: A New Developmental Paradigm — Social Innovation, Liberal Arts and the Orange Economy](https://zenodo.org/records/20502701) (2 June 2026)
