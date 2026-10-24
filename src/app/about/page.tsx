@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { PageShell, Section } from "@/components/matrix/Chrome";
 import { pageSeo } from "@/lib/seo";
 import { SITE } from "@/lib/seo";
@@ -27,6 +28,51 @@ export const metadata = pageSeo({
 });
 
 export default function About() {
+  const team = [
+    {
+      name: "Somnath Banerjee",
+      role: "Founder & CEO",
+      bio: "Independent researcher, applied data science. Leads architectural vision, IP design, and algorithmic models.",
+      img: "/team/somnath-banerjee.png",
+      linkedin: "https://www.linkedin.com/in/somnath-b-banerjee/",
+    },
+    {
+      name: "Jaydeep Kumar Hela",
+      role: "Director",
+      bio: "IIT Madras alumnus. Hardware systems architecture, compute optimization, and engineering infrastructure.",
+      img: null as string | null,
+      linkedin: "https://www.linkedin.com/in/jaydeep-kumar-hela-8bb7a8366/",
+    },
+    {
+      name: "Rishabh Chakraborty",
+      role: "CEO Associate",
+      bio: "IIT Madras alumnus. Enterprise operations, project management, and commercial go-to-market execution.",
+      img: "/team/rishabh-chakraborty.jpg",
+      linkedin: "https://www.linkedin.com/in/rishabh-chakraborty-705682229/",
+    },
+    {
+      name: "Gurkirat Singh Randhawa",
+      role: "Founding Member & Marketing Officer",
+      bio: "Leads brand positioning, market strategy, and customer acquisition across the commercial suite.",
+      img: "/team/gurkirat-singh-randhawa.png",
+      linkedin: "https://www.linkedin.com/in/gurkirat-singh-randhawa-0b27932a3/",
+    },
+    {
+      name: "Soham Das",
+      role: "Founding Member & Forward Deployed Engineer",
+      bio: "Full-stack developer. Leads platform implementation, client integrations, and core web architecture.",
+      img: "/team/soham-das.png",
+      linkedin: "https://www.linkedin.com/in/sohamdev999/",
+    },
+  ].map((m) => ({
+    ...m,
+    initials: m.name
+      .split(" ")
+      .map((p) => p[0])
+      .slice(0, 2)
+      .join(""),
+  }));
+
   return (
     <PageShell>
       <JsonLd
@@ -141,6 +187,66 @@ export default function About() {
             Sustainability · Education &amp; Social · Quanta · Design →
           </Link>
         </p>
+      </Section>
+
+      <Section rail="Team" className="pt-14 md:pt-20 pb-32 border-t border-border">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
+          <h2 className="col-span-12 md:col-span-7 font-display text-4xl md:text-6xl leading-tight tracking-tight">
+            The people behind{" "}
+            <span className="italic text-muted-foreground">the systems.</span>
+          </h2>
+          <div className="col-span-12 md:col-span-5 md:text-right">
+            <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-muted-foreground">
+              Five people · One architecture
+            </p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 mt-14">
+          <div className="col-span-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-10">
+            {team.map((m) => (
+              <div key={m.name} className="group">
+                <div className="relative aspect-[4/5] overflow-hidden border border-border bg-fog">
+                  {m.img ? (
+                    <Image
+                      src={m.img}
+                      alt={m.name}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover grayscale group-hover:grayscale-0 transition-[filter] duration-700"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
+                      <span className="font-display text-6xl text-foreground/20 tracking-tight">
+                        {m.initials}
+                      </span>
+                      <span className="font-mono text-[9px] tracking-[0.28em] uppercase text-muted-foreground">
+                        Portrait pending
+                      </span>
+                    </div>
+                  )}
+                  <span className="absolute left-4 top-4 font-mono text-[10px] tracking-[0.28em] text-gold">
+                    ◌
+                  </span>
+                </div>
+                <h3 className="font-display text-2xl tracking-tight mt-5">{m.name}</h3>
+                <p className="font-mono text-[10px] tracking-[0.22em] uppercase text-gold mt-2">
+                  {m.role}
+                </p>
+                <div className="h-px w-8 bg-gold my-4" />
+                <p className="text-sm text-muted-foreground leading-relaxed">{m.bio}</p>
+                <a
+                  href={m.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-4 font-mono text-[10px] tracking-[0.22em] uppercase nav-glow-dim hover:nav-glow border-b border-gold/0 hover:border-gold transition-[color,text-shadow,border-color] duration-500"
+                >
+                  LinkedIn ↗
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
       </Section>
 
       <Section rail="Studio" className="pt-14 md:pt-20 pb-32 border-t border-border">

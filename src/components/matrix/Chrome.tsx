@@ -17,6 +17,7 @@ const nav = [
   { to: "/agency", label: "Agency" },
   { to: "/company-profile", label: "Profile" },
   { to: "/manifesto", label: "Manifesto" },
+  { to: "/about", label: "About" },
 ] as const;
 
 const researchSubLinks = [
@@ -196,12 +197,6 @@ export function Header() {
                 className="font-mono text-[11px] tracking-[0.28em] uppercase text-foreground border-b border-gold/0 hover:border-gold transition-colors duration-500 w-fit"
               >
                 Contact
-              </Link>
-              <Link
-                href="/about"
-                className="font-mono text-[11px] tracking-[0.28em] uppercase text-foreground border-b border-gold/0 hover:border-gold transition-colors duration-500 w-fit"
-              >
-                About
               </Link>
               <span className="font-mono text-[10px] tracking-[0.28em] uppercase text-muted-foreground">
                 M · A · T · R · I · X
