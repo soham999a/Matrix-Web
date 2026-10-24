@@ -192,8 +192,8 @@ export default function About() {
       <Section rail="Team" className="pt-14 md:pt-20 pb-32 border-t border-border">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
           <h2 className="col-span-12 md:col-span-7 font-display text-4xl md:text-6xl leading-tight tracking-tight">
-            The people behind{" "}
-            <span className="italic text-muted-foreground">the systems.</span>
+            The people behind
+            <span className="italic text-muted-foreground">&nbsp;the systems.</span>
           </h2>
           <div className="col-span-12 md:col-span-5 md:text-right">
             <p className="font-mono text-[10px] tracking-[0.28em] uppercase text-muted-foreground">
