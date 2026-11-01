@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { PageShell, Section } from "@/components/matrix/Chrome";
 import { NewsletterSubscribeForm } from "@/components/matrix/NewsletterSubscribeForm";
 import { pageSeo } from "@/lib/seo";
@@ -52,6 +53,30 @@ export default function Newsletter() {
               a development at a time. Unscheduled, unhurried, and written by the studio.
             </p>
           </div>
+        </div>
+      </Section>
+
+      <Section rail="Past Issues" className="pt-14 md:pt-20 pb-16">
+        <div className="border-t border-border">
+          <Link
+            href="/newsletter/the-end-of-which-model"
+            className="group grid grid-cols-12 gap-6 sm:gap-8 py-10 border-b border-border items-start"
+          >
+            <div className="col-span-2 font-mono text-xs tracking-widest text-gold pt-2">01</div>
+            <div className="col-span-10 md:col-span-7">
+              <p className="eyebrow !text-muted-foreground mb-3">17 October 2026 · GRAVITY</p>
+              <h2 className="font-display text-3xl md:text-4xl leading-tight tracking-tight group-hover:italic transition-all duration-300">
+                The End of &ldquo;Which Model?&rdquo;
+              </h2>
+              <p className="mt-4 text-muted-foreground leading-relaxed max-w-2xl">
+                Introducing GRAVITY and Minimum Sufficient Intelligence (MSI) — and the first
+                deterministic benchmark of the prototype.
+              </p>
+              <span className="mt-5 inline-block font-mono text-[10px] tracking-[0.22em] uppercase text-gold">
+                Read the issue →
+              </span>
+            </div>
+          </Link>
         </div>
       </Section>
 

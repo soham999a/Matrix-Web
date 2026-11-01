@@ -25,6 +25,19 @@ const ROUTES: RouteEntry[] = [
   { path: "/about", priority: 0.6, changeFrequency: "monthly", lastModified: "2026-08-12" },
   { path: "/manifesto", priority: 0.6, changeFrequency: "monthly", lastModified: "2026-08-12" },
   { path: "/journal", priority: 0.6, changeFrequency: "weekly", lastModified: "2026-08-12" },
+  { path: "/blog", priority: 0.7, changeFrequency: "weekly", lastModified: "2026-11-01" },
+  {
+    path: "/blog/beyond-the-prompt-the-power-of-context-aware-ai",
+    priority: 0.7,
+    changeFrequency: "weekly",
+    lastModified: "2026-11-01",
+  },
+  {
+    path: "/newsletter/the-end-of-which-model",
+    priority: 0.6,
+    changeFrequency: "monthly",
+    lastModified: "2026-10-17",
+  },
   { path: "/newsletter", priority: 0.5, changeFrequency: "monthly", lastModified: "2026-08-12" },
   { path: "/identity", priority: 0.3, changeFrequency: "yearly", lastModified: "2026-08-12" },
   ...CAPABILITIES.map((d) => ({

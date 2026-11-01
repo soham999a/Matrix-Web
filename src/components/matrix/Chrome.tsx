@@ -25,6 +25,7 @@ const researchSubLinks = [
   { t: "Frameworks", to: "/research#frameworks" },
   { t: "Case Studies", to: "/research#case-studies" },
   { t: "Journal", to: "/journal" },
+  { t: "Blog", to: "/blog" },
 ] as const;
 
 const agencySubLinks = [
@@ -280,7 +281,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/journal" className="group flex items-baseline gap-2.5 text-sm">
+                <Link href="/blog" className="group flex items-baseline gap-2.5 text-sm">
                   <span className="font-mono text-gold">◌</span>
                   <span className="text-ink/70 group-hover:text-ink transition-colors">Blog</span>
                 </Link>
