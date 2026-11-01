@@ -44,13 +44,6 @@ export default function About() {
       linkedin: "https://www.linkedin.com/in/jaydeep-kumar-hela-8bb7a8366/",
     },
     {
-      name: "Rishabh Chakraborty",
-      role: "CEO Associate",
-      bio: "IIT Madras alumnus. Enterprise operations, project management, and commercial go-to-market execution.",
-      img: "/team/rishabh-chakraborty.jpg",
-      linkedin: "https://www.linkedin.com/in/rishabh-chakraborty-705682229/",
-    },
-    {
       name: "Gurkirat Singh Randhawa",
       role: "Founding Member & Marketing Officer",
       bio: "Leads brand positioning, market strategy, and customer acquisition across the commercial suite.",
