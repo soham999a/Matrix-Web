@@ -2,7 +2,16 @@ import Link from "next/link";
 import { PageShell, Section } from "@/components/matrix/Chrome";
 import { pageSeo } from "@/lib/seo";
 import { SITE } from "@/lib/seo";
-import { Threads, Bridge, Compass } from "@/components/matrix/Metaphors";
+import { Bridge, Compass } from "@/components/matrix/Metaphors";
+import { Accordion } from "@/components/matrix/Accordion";
+import {
+  IconGovernment,
+  IconCultural,
+  IconUniversity,
+  IconPublicGood,
+  IconInvestor,
+  IconFounder,
+} from "@/components/matrix/Pictograms";
 
 export const metadata = pageSeo({
   path: "/agency",
@@ -158,6 +167,15 @@ const engagements = [
   },
 ];
 
+const audiences = [
+  { label: "Sovereign governments", Icon: IconGovernment },
+  { label: "Cultural foundations", Icon: IconCultural },
+  { label: "Universities and labs", Icon: IconUniversity },
+  { label: "Public-good companies", Icon: IconPublicGood },
+  { label: "Long-horizon investors", Icon: IconInvestor },
+  { label: "Founders of singular conviction", Icon: IconFounder },
+];
+
 const howToSteps = [
   {
     name: "Initial Correspondence",
@@ -204,19 +222,63 @@ const faqItems = [
   },
 ];
 
+const CALENDLY_URL = "https://calendly.com/matrkasystem";
+
 export default function Agency() {
   return (
     <PageShell>
-      <Section rail="Practice IV · AI Agency" className="pt-32 pb-12">
-        <div className="grid grid-cols-12 gap-6 sm:gap-8">
-          <h1 className="col-span-12 font-display text-[clamp(3rem,8vw,8rem)] leading-[0.95] tracking-tight">
-            Threads woven
-            <br />
-            into <span className="italic text-muted-foreground">fabric.</span>
-          </h1>
+      <Section
+        rail="Consulting"
+        id="consulting"
+        className="pt-32 md:pt-36 pb-24 border-t border-border"
+      >
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
+          <div className="col-span-12">
+            <h1 className="font-display text-[clamp(3rem,7vw,7rem)] leading-[0.95] tracking-tight">
+              A bridge
+              <br />
+              between <span className="italic text-muted-foreground">where you are</span>
+              <br />
+              and what you intend.
+            </h1>
+            <p className="mt-10 font-mono text-[11px] tracking-[0.22em] uppercase text-muted-foreground">
+              Capability IV of the Nine ·{" "}
+              <Link
+                href="/capabilities/consulting"
+                className="text-gold hover:text-foreground transition-colors duration-500"
+              >
+                Consulting →
+              </Link>
+            </p>
+          </div>
         </div>
-        <div className="mt-16">
-          <Threads className="w-full text-foreground/70" />
+        <div className="mt-20">
+          <Bridge className="w-full text-foreground/80" />
+        </div>
+      </Section>
+
+      <Section rail="Engagements" className="pt-14 md:pt-20 pb-24">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8">
+          <div className="col-span-12 md:col-span-4">
+            <h2 className="font-display text-4xl md:text-5xl leading-tight tracking-tight mt-6">
+              Four shapes of work.
+            </h2>
+            <Compass className="w-2/3 mt-12 text-foreground/70" />
+          </div>
+          <div className="col-span-12 md:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-12">
+            {engagements.map((e) => (
+              <div key={e.n} className="border-t border-border pt-6">
+                <div className="flex items-baseline justify-between">
+                  <span className="font-mono text-[11px] tracking-[0.22em] text-gold">{e.n}</span>
+                  <span className="font-mono text-[10px] tracking-[0.22em] uppercase text-muted-foreground">
+                    {e.p}
+                  </span>
+                </div>
+                <h3 className="font-display text-3xl mt-2 tracking-tight">{e.t}</h3>
+                <p className="text-muted-foreground mt-3 leading-relaxed">{e.d}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </Section>
 
@@ -282,57 +344,6 @@ export default function Agency() {
         </div>
       </Section>
 
-      <Section rail="Consulting" id="consulting" className="pt-14 md:pt-20 border-t border-border">
-        <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
-          <div className="col-span-12">
-            <h1 className="font-display text-[clamp(3rem,7vw,7rem)] leading-[0.95] tracking-tight">
-              A bridge
-              <br />
-              between <span className="italic text-muted-foreground">where you are</span>
-              <br />
-              and what you intend.
-            </h1>
-            <p className="mt-10 font-mono text-[11px] tracking-[0.22em] uppercase text-muted-foreground">
-              Capability IV of the Nine ·{" "}
-              <Link
-                href="/capabilities/consulting"
-                className="text-gold hover:text-foreground transition-colors duration-500"
-              >
-                Consulting →
-              </Link>
-            </p>
-          </div>
-        </div>
-        <div className="mt-20">
-          <Bridge className="w-full text-foreground/80" />
-        </div>
-      </Section>
-
-      <Section rail="Engagements" className="pt-14 md:pt-20 pb-24">
-        <div className="grid grid-cols-12 gap-6 sm:gap-8">
-          <div className="col-span-12 md:col-span-4">
-            <h2 className="font-display text-4xl md:text-5xl leading-tight tracking-tight mt-6">
-              Four shapes of work.
-            </h2>
-            <Compass className="w-2/3 mt-12 text-foreground/70" />
-          </div>
-          <div className="col-span-12 md:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-12">
-            {engagements.map((e) => (
-              <div key={e.n} className="border-t border-border pt-6">
-                <div className="flex items-baseline justify-between">
-                  <span className="font-mono text-[11px] tracking-[0.22em] text-gold">{e.n}</span>
-                  <span className="font-mono text-[10px] tracking-[0.22em] uppercase text-muted-foreground">
-                    {e.p}
-                  </span>
-                </div>
-                <h3 className="font-display text-3xl mt-2 tracking-tight">{e.t}</h3>
-                <p className="text-muted-foreground mt-3 leading-relaxed">{e.d}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </Section>
-
       <Section rail="For whom" variant="paper" className="pt-14 md:pt-20 pb-32">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 items-end">
           <div className="col-span-12 md:col-span-7">
@@ -342,112 +353,19 @@ export default function Agency() {
             </h2>
           </div>
           <div className="col-span-12 md:col-span-5">
-            <ul className="space-y-3 text-base">
-              {[
-                "Sovereign governments",
-                "Cultural foundations",
-                "Universities and labs",
-                "Public-good companies",
-                "Long-horizon investors",
-                "Founders of singular conviction",
-              ].map((x) => (
+            <ul className="space-y-3">
+              {audiences.map(({ label, Icon }) => (
                 <li
-                  key={x}
-                  className="flex items-baseline gap-4 border-b border-foreground/15 pb-3"
+                  key={label}
+                  className="flex items-center gap-4 border-b border-foreground/15 pb-3"
                 >
-                  <span className="font-mono text-[10px] text-gold">·</span>
-                  <span>{x}</span>
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center border border-foreground/20 text-gold">
+                    <Icon className="h-5 w-5" />
+                  </span>
+                  <span>{label}</span>
                 </li>
               ))}
             </ul>
-          </div>
-        </div>
-      </Section>
-
-      <Section rail="The narrow door" className="pt-14 md:pt-20 pb-32">
-        <div className="grid grid-cols-12 gap-6 sm:gap-8 border-t border-border pt-16">
-          <div className="col-span-12 md:col-span-7">
-            <h2 className="font-display text-4xl md:text-6xl leading-tight tracking-tight">
-              We take on a small number of engagements. The door is narrow on purpose.
-            </h2>
-          </div>
-          <div className="col-span-12 md:col-span-5 md:text-right flex md:justify-end items-end">
-            <a
-              href="mailto:system@matrka.net"
-              className="inline-block border border-foreground px-7 py-4 font-mono text-[11px] tracking-[0.28em] uppercase hover:bg-foreground hover:text-background transition-colors"
-            >
-              Request an Introduction →
-            </a>
-          </div>
-        </div>
-      </Section>
-
-      <Section rail="How it begins" variant="paper" className="pt-14 md:pt-20 pb-32">
-        <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-16">
-          <div className="col-span-12">
-            <h2 className="font-display text-4xl md:text-6xl leading-[0.98] tracking-tight">
-              From first letter to lasting system.
-            </h2>
-          </div>
-        </div>
-        <div className="grid grid-cols-12 gap-6 sm:gap-8">
-          {howToSteps.map((step, i) => (
-            <div key={step.name} className="col-span-12 md:col-span-4 border-t border-ink/15 pt-6">
-              <div className="flex items-baseline gap-3">
-                <span className="font-mono text-[11px] tracking-[0.22em] text-gold">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <h3 className="font-display text-2xl tracking-tight">{step.name}</h3>
-              </div>
-              <p className="text-ink/75 leading-relaxed mt-4 text-sm">{step.text}</p>
-            </div>
-          ))}
-        </div>
-      </Section>
-
-      <Section rail="Questions" className="pt-14 md:pt-20 pb-32">
-        <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-16">
-          <div className="col-span-12">
-            <h2 className="font-display text-4xl md:text-6xl leading-[0.98] tracking-tight">
-              Frequently asked.
-            </h2>
-          </div>
-        </div>
-        <div className="border-t border-border">
-          {faqItems.map((item) => (
-            <div key={item.q} className="border-b border-border py-8">
-              <h3 className="font-display text-2xl md:text-3xl tracking-tight">{item.q}</h3>
-              <p className="text-muted-foreground leading-relaxed mt-4 max-w-3xl">{item.a}</p>
-            </div>
-          ))}
-        </div>
-      </Section>
-
-      <Section rail="Discovery Call" variant="paper" className="pt-14 md:pt-20 pb-32">
-        <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-12">
-          <div className="col-span-12">
-            <h2 className="font-display text-4xl md:text-6xl leading-[0.98] tracking-tight">
-              Schedule a conversation.
-            </h2>
-            <p className="text-ink/75 leading-relaxed mt-6 max-w-2xl">
-              Book a 45-minute discovery call. No pitch, no deck — just a careful listen to
-              understand the shape of your challenge.
-            </p>
-          </div>
-        </div>
-        <div className="border-t border-ink/15 pt-12">
-          <div className="bg-fog border border-ink/15 p-12 text-center">
-            <p className="font-display text-3xl text-ink/70 mb-6">Calendly booking link</p>
-            <p className="text-ink/50 text-sm leading-relaxed max-w-lg mx-auto mb-8">
-              Replace this section with your Calendly embed. Add your Calendly URL to the consulting
-              section of the agency page to enable direct scheduling.
-            </p>
-            <a
-              href="mailto:system@matrka.net"
-              className="inline-block border border-ink px-7 py-4 font-mono text-[11px] tracking-[0.28em] uppercase hover:bg-ink hover:text-fog transition-colors"
-            >
-              Or write to us directly →
-            </a>
           </div>
         </div>
       </Section>
@@ -508,6 +426,99 @@ export default function Agency() {
                 )}
               </div>
             </article>
+          ))}
+        </div>
+      </Section>
+
+      <Section rail="Questions" className="pt-14 md:pt-20 pb-32">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-16">
+          <div className="col-span-12">
+            <h2 className="font-display text-4xl md:text-6xl leading-[0.98] tracking-tight">
+              Frequently asked.
+            </h2>
+          </div>
+        </div>
+        <Accordion items={faqItems} />
+      </Section>
+
+      <Section rail="Discovery Call" variant="paper" className="pt-14 md:pt-20 pb-32">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-12">
+          <div className="col-span-12">
+            <h2 className="font-display text-4xl md:text-6xl leading-[0.98] tracking-tight">
+              Schedule a conversation.
+            </h2>
+            <p className="text-ink/75 leading-relaxed mt-6 max-w-2xl">
+              Book a 45-minute discovery call. No pitch, no deck — just a careful listen to
+              understand the shape of your challenge.
+            </p>
+          </div>
+        </div>
+        <div className="border-t border-ink/15 pt-12">
+          <iframe
+            src={CALENDLY_URL}
+            title="Book a discovery call with Matrix — Calendly"
+            loading="lazy"
+            className="w-full min-h-[760px] border border-ink/15 bg-fog"
+          />
+          <p className="text-ink/50 text-sm leading-relaxed mt-6">
+            Having trouble with the booking widget?{" "}
+            <a
+              href={CALENDLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-ink/75 underline hover:text-ink transition-colors"
+            >
+              Open Calendly directly
+            </a>{" "}
+            or write to{" "}
+            <a
+              href="mailto:system@matrka.net"
+              className="text-ink/75 underline hover:text-ink transition-colors"
+            >
+              system@matrka.net
+            </a>
+            .
+          </p>
+        </div>
+      </Section>
+
+      <Section rail="The narrow door" className="pt-14 md:pt-20 pb-32">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 border-t border-border pt-16">
+          <div className="col-span-12 md:col-span-7">
+            <h2 className="font-display text-4xl md:text-6xl leading-tight tracking-tight">
+              We take on a small number of engagements. The door is narrow on purpose.
+            </h2>
+          </div>
+          <div className="col-span-12 md:col-span-5 md:text-right flex md:justify-end items-end">
+            <a
+              href="mailto:system@matrka.net"
+              className="inline-block border border-foreground px-7 py-4 font-mono text-[11px] tracking-[0.28em] uppercase hover:bg-foreground hover:text-background transition-colors"
+            >
+              Request an Introduction →
+            </a>
+          </div>
+        </div>
+      </Section>
+
+      <Section rail="How it begins" variant="paper" className="pt-14 md:pt-20 pb-32">
+        <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-16">
+          <div className="col-span-12">
+            <h2 className="font-display text-4xl md:text-6xl leading-[0.98] tracking-tight">
+              From first letter to lasting system.
+            </h2>
+          </div>
+        </div>
+        <div className="grid grid-cols-12 gap-6 sm:gap-8">
+          {howToSteps.map((step, i) => (
+            <div key={step.name} className="col-span-12 md:col-span-4 border-t border-ink/15 pt-6">
+              <div className="flex items-baseline gap-3">
+                <span className="font-mono text-[11px] tracking-[0.22em] text-gold">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <h3 className="font-display text-2xl tracking-tight">{step.name}</h3>
+              </div>
+              <p className="text-ink/75 leading-relaxed mt-4 text-sm">{step.text}</p>
+            </div>
           ))}
         </div>
       </Section>

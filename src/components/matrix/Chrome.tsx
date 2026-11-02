@@ -28,11 +28,6 @@ const researchSubLinks = [
   { t: "Blog", to: "/blog" },
 ] as const;
 
-const agencySubLinks = [
-  { t: "Our Portfolio", to: "/agency#portfolio" },
-  { t: "Consulting", to: "/agency#consulting" },
-] as const;
-
 function FooterItem({ label }: { label: string }) {
   return (
     <li className="flex items-baseline gap-2.5 text-sm">
@@ -80,8 +75,8 @@ export function Header() {
             const linkClass = `inline-flex items-center whitespace-nowrap leading-none font-mono text-[10px] tracking-[0.22em] uppercase transition-[color,text-shadow] duration-500 ${
               active ? "nav-glow" : "nav-glow-dim hover:nav-glow"
             }`;
-            if (n.to === "/research" || n.to === "/agency") {
-              const subs = n.to === "/research" ? researchSubLinks : agencySubLinks;
+            if (n.to === "/research") {
+              const subs = researchSubLinks;
               return (
                 <div key={n.to} className="group relative inline-flex items-center">
                   <Link href={n.to} className={linkClass}>
@@ -175,9 +170,9 @@ export function Header() {
                       →
                     </span>
                   </Link>
-                  {(n.to === "/research" || n.to === "/agency") && (
+                  {n.to === "/research" && (
                     <ul className="pb-6 pl-12 space-y-3">
-                      {(n.to === "/research" ? researchSubLinks : agencySubLinks).map((s) => (
+                      {researchSubLinks.map((s) => (
                         <li key={s.to}>
                           <Link
                             href={s.to}
