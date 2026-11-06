@@ -217,7 +217,7 @@ export default function Index() {
       <Section
         rail="Act II · Manifesto"
         id="manifesto"
-        className="pt-14 md:pt-20 pb-24 md:pb-40"
+        className="pt-10 md:pt-14 pb-24 md:pb-40"
         style={{
           backgroundColor: "#0A0A0A",
           backgroundImage:
@@ -228,7 +228,7 @@ export default function Index() {
       >
         <div className="grid grid-cols-12 gap-6 sm:gap-8">
           <div className="col-span-12 md:col-span-10">
-            <p className="font-display text-[clamp(2rem,5vw,4.75rem)] leading-[1.08] tracking-[-0.015em]">
+            <p className="font-display text-[clamp(1.75rem,3.5vw,3.25rem)] leading-[1.12] tracking-[-0.01em]">
               We do not build software.
               <br />
               We build the <span className="italic">conditions</span> under which intelligence can
