@@ -109,18 +109,11 @@ export default function Index() {
       <Section rail="Identity" className="pt-14 md:pt-20 pb-24 border-t border-border">
         <div className="grid grid-cols-12 gap-6 sm:gap-8 mb-8">
           <div className="col-span-12 lg:col-span-7">
-            <h1 className="mt-8 font-display text-[clamp(1.75rem,3.2vw,2.75rem)] leading-[1.15] tracking-[-0.015em]">
+            <h1 className="mt-8 font-display text-2xl md:text-4xl leading-[1.2] tracking-tight">
               An Applied Intelligence firm building AI, analytics, intelligent software, and
               decision systems that help organisations solve complex problems and make better
               decisions.
             </h1>
-            <p className="mt-8 max-w-3xl text-muted-foreground leading-relaxed">
-              MATRIX operates across nine interconnected disciplines — from applied AI, systems, and
-              engineering to consulting, design, human intelligence, education, and social
-              innovation. Our integrated intelligence ecosystem serves education, enterprises,
-              manufacturing, supply chains, sustainability, and government sectors through scalable,
-              explainable, and practical solutions.
-            </p>
           </div>
           <div className="hidden lg:flex col-span-5 items-center justify-center">
             <NautilusFigure className="w-full max-w-[420px] h-auto text-foreground/80" />
@@ -240,14 +233,6 @@ export default function Index() {
               <br />
               We build the <span className="italic">conditions</span> under which intelligence can
               be trusted.
-            </p>
-            <p className="font-display text-[clamp(1.5rem,3vw,3rem)] leading-[1.3] mt-16 text-fog/75 max-w-5xl">
-              An interface is a confession. A protocol is a constitution. A model is a witness. A
-              product is a promise kept, quietly, for a century.
-            </p>
-            <p className="font-display text-[clamp(1.5rem,3vw,3rem)] leading-[1.3] mt-10 text-fog/75 max-w-5xl">
-              We work for the people who will be remembered for what they refused to release — and
-              for what they finally did.
             </p>
 
             <div className="mt-20 flex items-center gap-6">
