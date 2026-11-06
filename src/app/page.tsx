@@ -231,8 +231,9 @@ export default function Index() {
             <p className="font-display text-[clamp(1.75rem,3.5vw,3.25rem)] leading-[1.12] tracking-[-0.01em]">
               We do not build software.
               <br />
-              We build the <span className="italic">conditions</span> under which intelligence can
-              be trusted.
+              We build the <span className="italic">conditions</span> under which
+              <br />
+              intelligence can be trusted.
             </p>
 
             <div className="mt-20 flex items-center gap-6">
